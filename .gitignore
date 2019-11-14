@@ -65,7 +65,7 @@ hyperterm_access*
 *.log
 *.txt
 *.sass-cache
-*.html
+# *.html
 
 *.dat
 *.conf
