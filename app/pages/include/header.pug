@@ -1,0 +1,48 @@
+include blocks/logo
+include blocks/logo-mini
+include blocks/h-contacts
+include blocks/btn-actions-icon
+include blocks/mobile-menu
+
+.header-buffer
+header.header
+	.header__container.container
+		.header__wrap
+			.header__top.header__top_show_desktop
+				.header__column.header__column_size_1
+					+logo()
+				.header__column.header__column_size_2
+					include blocks/main-menu
+				.header__column.header__column_size_3
+					+h-contacts()
+					+btn-actions-icon({"icon": "basket", "order-count": "2"})
+				//.header__column.header__column_size_4
+			.header__bottom.header__bottom_show_laptop
+				.header__bottom-column.header__bottom-column_pos_1
+					.header__inner-bottom-column
+						+logo-mini()
+					.header__inner-bottom-column
+						a.btn-actions-icon( href="#" data-mobile-menu-btn)
+							.btn-actions-icon__icon-box
+								img.btn-actions-icon__img.btn-actions-icon__img_prop_close(src="img/mobile-menu-btn.png", alt='' )
+								img.btn-actions-icon__img.btn-actions-icon__img_prop_open(src="img/menu-close.png", alt='' )
+				.header__bottom-column.header__bottom-column_pos_2
+					.header__inner-bottom-column
+						+btn-actions-icon({"icon": "h-phone"})("data-h-phone-btn")
+					.header__inner-bottom-column
+						+btn-actions-icon({"icon": "basket-black"})
+			.h-mobile-contacts(data-h-mobile-contacts)
+				.h-mobile-contacts__column.h-mobile-contacts__column_pos_1
+					a.h-mobile-contacts__link(href="tel:84951279564") Позвоните нам
+				.h-mobile-contacts__column.h-mobile-contacts__column_pos_2
+					a.h-mobile-contacts__link(href="mailto:name@email.com") Напишите нам
+			+mobile-menu()('data-mobile-menu')
+
+
+
+
+
+
+
+
+.test

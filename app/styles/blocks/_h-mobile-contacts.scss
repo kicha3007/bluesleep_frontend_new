@@ -1,0 +1,33 @@
+.h-mobile-contacts {
+  display: none;
+  &.active {
+    @include desktop {
+      display: flex;
+    }
+  }
+  &__column {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &_pos_1 {
+      position: relative;
+      &:before {
+      	content: '';
+      	display: block;
+      	position: absolute;
+      	top: 0;
+      	right: 0;
+      	width: 1px;
+      	height: 90%;
+        background-color: #565654;
+      }
+    }
+  }
+  &__link {
+    color: #565654;
+    font-size: 12px;
+  }
+}

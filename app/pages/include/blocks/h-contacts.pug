@@ -1,0 +1,14 @@
+mixin h-contacts(data)
+	.h-contacts&attributes(attributes)
+		.h-contacts__inner-wrap
+			//a(href="mailto:multibrand@mail.ru" ).h-contacts__item.h-contacts__item_link
+				+icon('mail', "h-contacts__icon").
+				span.h-contacts__text multibrand@mail.ru
+			a(href="tel:84951279564" ).h-contacts__item.h-contacts__item_link
+				//+icon('phone', "h-contacts__icon").
+				.h-contacts__info.h-contacts__info_number 8 (495) 127-95-64
+				.h-contacts__info.h-contacts__info_text Позвоните нам сейчас!
+
+		//.h-contacts__item
+			+icon('time', "h-contacts__icon")
+			span.h-contacts__text 08:00–19:00

@@ -1,0 +1,97 @@
+footer.footer.footer_mtop
+	.container.footer__container
+		.footer__row.footer__row_top
+			.footer__desktop.js--footer-menu
+				section.footer__column.footer__column_contacts.footer-column
+					span.footer__title.js--open-footer-menu
+						+icon('triangle', 'svg-icon_menu-arrow')
+						span Контакты
+					.footer-column__content
+						.footer-contacts
+							span.footer-contacts__item г. Москва, ул. Дорожная, 48
+							a.footer-contacts__item(href="tel:+74995193018") +7 (499) 519-30-18
+							a.footer-contacts__item(href="mailto:mail@feron.ru") mail@feron.ru
+
+				nav.footer__column.footer__column_menu
+					span.footer__title.js--open-footer-menu
+						+icon('triangle', 'svg-icon_menu-arrow')
+						span Информация
+					.footer-column__content
+						ul.footer-menu
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Основной каталог
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Рекламные листовки
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Фото продукции
+
+				nav.footer__column.footer__column_menu
+					span.footer__title.js--open-footer-menu
+						+icon('triangle', 'svg-icon_menu-arrow')
+						span Пресс-центр
+					.footer-column__content
+						ul.footer-menu
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Новости
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Акции
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Статьи
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Видео
+
+				section.footer__column.footer__column_subscribe.footer-column
+					span.footer__title.footer__title_subscribe Подписаться на рассылку
+					.footer-column__content
+						.subscribe
+							form.subscribe__form(action="/")
+								input.input-line.subscribe__input(type="mail", placeholder="Оставьте вашу почту")
+								button.btn.subscribe__btn(type="submit") Готово!
+			.footer__tablet
+				ul.logs-icons
+					li.logs-icons__item
+						a.logs-icons__link(href="#", target="_blank")
+							+icon('soc-vk', 'footer_soc-vk')
+					li.logs-icons__item
+						a.logs-icons__link(href="#", target="_blank")
+							+icon('soc-fb', 'footer_soc-fb')
+					li.logs-icons__item
+						a.logs-icons__link(href="#", target="_blank")
+							+icon('soc-tw', 'footer_soc-tw')
+					li.logs-icons__item
+						a.logs-icons__link(href="#", target="_blank")
+							+icon('triangle', 'footer_soc-yt')
+
+		.footer__row.footer__row_bottom
+			.footer__column.footer__column_social
+				ul.logs-icons
+					li.logs-icons__item
+						a.logs-icons__link(href="#", target="_blank")
+							+icon('soc-vk', 'footer_soc-vk')
+					li.logs-icons__item
+						a.logs-icons__link(href="#", target="_blank")
+							+icon('soc-fb', 'footer_soc-fb')
+					li.logs-icons__item
+						a.logs-icons__link(href="#", target="_blank")
+							+icon('soc-tw', 'footer_soc-tw')
+					li.logs-icons__item
+						a.logs-icons__link(href="#", target="_blank")
+							+icon('triangle', 'footer_soc-yt')
+			.footer__column.footer__column_developed
+				.footer__developed.developed
+					a.developed__link(href="https://endorphine.agency/", target="_blank")
+						span.developed__text Разработка:
+						img.developed__img(src="/img/endorphine_studio.png", alt="Endorphine Studio")
+			.footer__column.footer__column_subs-mob
+				span.footer__title.footer__title_subscribe Подписаться на рассылку
+				.subscribe
+					form.subscribe__form(action="/")
+						input.input-line.subscribe__input(type="mail", placeholder="Оставьте вашу почту")
+						button.btn.subscribe__btn(type="submit") ок
+
+
+
+
+
+
+

@@ -1,0 +1,170 @@
+// Общие кнопки
+
+.btn-main{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	display: block;
+	border-radius: 2px;
+	background-color: $color_base;
+	border: 1px solid transparent;
+	color: #fff;
+	padding: 10px 23px;
+	user-select: none;
+	outline: none !important;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all .3s ease;
+	&_full-width{
+		display: block;
+		width: 100%;
+	}
+	&:hover{
+		border-color: $color_base;
+		background-color: transparent;
+		color: $color_base;
+	}
+	&:focus,
+	&:active{
+		color: #fff;
+	}
+	&__text {
+		color: #ffffff;
+	}
+	// gray
+	&_gray.btn-main {
+		background-color: #f0f0f0;
+		color: #999999;
+		&:hover {
+			background-color: transparent;
+			border-color: #e0e0e0;
+			color: #777777;
+		}
+			&:focus,
+		&:active{
+			color: #999999;
+		}
+	}
+
+	// gray-blue
+	&_gray-blue {
+		background-color: #f0f0f0;
+		border-color: transparent;
+		color: #999999;
+		&:hover {
+			background-color: #e0e0e0;
+			color: #777777;
+			border-color: transparent;
+		}
+		&:focus,
+		&:active{
+			color: #ffffff;
+			background-color: $color_base;
+			border-color: transparent;
+		}
+	}
+
+	// transparent
+	&_transparent {
+		background-color: transparent;
+		border: 1px solid #e0e0e0;
+		border-radius: 2px;
+		color: #777777;
+		&:hover {
+			background-color: $color_base;
+			border-color: transparent;
+			color: #ffffff;
+		}
+		&:focus,
+		&:active {
+			color: #777777;
+		}
+	}
+
+	// transparent-color
+	&_transparent-color {
+		background-color: transparent;
+		border: 1px solid #e0e0e0;
+		border-radius: 2px;
+		color: #777777;
+		&:focus,
+		&:active {
+			color: #777777;
+		}
+		&:hover {
+			background-color: transparent;
+			border-color: transparent;
+			color: $color_base;
+			border-color: #e0e0e0;
+		}
+	}
+
+	// icon
+	&_icon {
+		background-color: #ffffff;
+		color: $color_base;
+		border-color: $color_base;
+		display: flex;
+		align-items: center;
+		padding-left: 13px;
+		padding-right: 13px;
+		justify-content: center;
+		.btn-main__text {
+			color: $color_base;
+		}
+		.btn-main__svg-icon {
+			fill: $color_base;
+			margin-right: 13px;
+		}
+		&:focus,
+		&:active {
+			#{&}__text {
+				color: $color_base;
+			}
+			color: $color_base;
+		}
+		&:hover {
+			background-color: $color_base;
+			color: #ffffff;
+			.btn-main__text {
+				color: #ffffff;
+		}
+		.btn-main__svg-icon {
+				fill: #ffffff;
+			}
+		}
+
+		&__text {
+		color: $color_base;
+		}
+	}
+
+	// shadow_blue
+ 	&_shadow_blue {
+		box-shadow: 0 0 15px rgba(51, 102, 204, 0.4);
+	}
+	// border_white
+	&_border_white {
+		border-color: #ffffff;
+			&:hover {
+			border-color: #ffffff;
+		}
+	}
+	// border_transparent
+	&_border_transparent {
+		border-color: transparent;
+			&:hover {
+			border-color: transparent;
+		}
+	}
+	// gray-turquoise
+ 	&_gray-turquoise {
+		background-color: #f0f0f0;
+		color:  #777777;
+		&:hover {
+			background-color: #3399ff;
+			color: #ffffff;
+			border-color: transparent;
+		}
+	}
+}

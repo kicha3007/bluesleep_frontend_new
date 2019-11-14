@@ -1,0 +1,23 @@
+.logo-mini {
+	&__link {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 77px;
+		height: 58px;
+		background-color: #005eff;
+	}
+	// Если лого в svg
+	&__icon {
+		max-width: 100%;
+		fill: #000000;
+	}
+
+	// Если лого в png
+	//&__img {
+	//	display: block;
+	//	max-width: 100%;
+	//	height: auto;
+	//}
+}

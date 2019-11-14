@@ -1,0 +1,73 @@
+mixin mobile-menu(data)
+	.mobile-menu&attributes(attributes)
+		.mobile-menu__wrapper
+			.mobile-menu__inner-wrap.js-mobile-menu-inner-wrap
+				.mobile-menu__item(data-accord-item)
+					.mobile-menu__toggle(data-accord-toggle)
+						.mobile-menu__column.mobile-menu__column_pos_1
+							.mobile-menu__toggle-title Матрасы
+						.mobile-menu__column.mobile-menu__column_pos_2
+							.mobile-menu__toggle-inner-btn
+								img.mobile-menu__toggle-inner-btn-img.mobile-menu__toggle-inner-btn-img_prop_plus(src="img/plus.png", alt='' data-toggle-inner-btn-plus)
+								img.mobile-menu__toggle-inner-btn-img.mobile-menu__toggle-inner-btn-img_prop_minus.hide(src="img/minus.png", alt='' data-toggle-inner-btn-minus)
+						.mobile-menu__title
+					.mobile-menu__content(data-accord-content)
+						ul.mobile-menu__list
+							li.mobile-menu__inner-item
+								a.mobile-menu__link(href="#") Hybrid
+							li.mobile-menu__inner-item
+								a.mobile-menu__link(href="#") Concept
+							li.mobile-menu__inner-item
+								a.mobile-menu__link(href="#") Sonnic
+									.mobile-menu__tooltip Новинка
+						a.mobile-menu__show-more(href="#") Смотреть все матрасы
+				.mobile-menu__item(data-accord-item)
+					.mobile-menu__toggle(data-accord-toggle)
+						.mobile-menu__column.mobile-menu__column_pos_1
+							.mobile-menu__toggle-title Кровати
+						.mobile-menu__column.mobile-menu__column_pos_2
+							.mobile-menu__toggle-inner-btn(data-toggle-inner-btn)
+								img.mobile-menu__toggle-inner-btn-img.mobile-menu__toggle-inner-btn-img_prop_plus(src="img/plus.png", alt='' )
+								img.mobile-menu__toggle-inner-btn-img.mobile-menu__toggle-inner-btn-img_prop_minus.hide(src="img/minus.png", alt='')
+						.mobile-menu__title
+					.mobile-menu__content(data-accord-content)
+						ul.mobile-menu__list
+							li.mobile-menu__inner-item
+								a.mobile-menu__link(href="#") Hybrid
+							li.mobile-menu__inner-item
+								a.mobile-menu__link(href="#") Concept
+							li.mobile-menu__inner-item
+								a.mobile-menu__link(href="#") Sonnic
+									.mobile-menu__tooltip Новинка
+						a.mobile-menu__show-more(href="#") Смотреть все матрасы
+				.mobile-menu__item(data-accord-item)
+					.mobile-menu__toggle(data-accord-toggle)
+						.mobile-menu__column.mobile-menu__column_pos_1
+							.mobile-menu__toggle-title Подушки
+						.mobile-menu__column.mobile-menu__column_pos_2
+							.mobile-menu__toggle-inner-btn
+								img.mobile-menu__toggle-inner-btn-img.mobile-menu__toggle-inner-btn-img_prop_plus(src="img/plus.png", alt='' data-toggle-inner-btn-plus)
+								img.mobile-menu__toggle-inner-btn-img.mobile-menu__toggle-inner-btn-img_prop_minus.hide(src="img/minus.png", alt='' data-toggle-inner-btn-minus)
+						.mobile-menu__title
+					.mobile-menu__content(data-accord-content)
+						ul.mobile-menu__list
+							li.mobile-menu__inner-item
+								a.mobile-menu__link(href="#") Hybrid
+							li.mobile-menu__inner-item
+								a.mobile-menu__link(href="#") Concept
+							li.mobile-menu__inner-item
+								a.mobile-menu__link(href="#") Sonnic
+									.mobile-menu__tooltip Новинка
+						a.mobile-menu__show-more(href="#") Смотреть все матрасы
+			.mobile-menu__other
+				.mobile-menu__other-item
+					.mobile-menu__other-item-column.mobile-menu__other-item-column_pos_1
+						a.mobile-menu__text(href="#") Отзывы
+					.mobile-menu__other-item-column.mobile-menu__other-item-column_pos_2
+						a.mobile-menu__city(href="#") Москва
+				.mobile-menu__other-item
+					.mobile-menu__other-item-column.mobile-menu__other-item-column_pos_1
+						a.mobile-menu__text(href="#") Оферта
+					.mobile-menu__other-item-column.mobile-menu__other-item-column_pos_2
+						a.mobile-menu__phone(href="tel:84951279564" )
+							.mobile-menu__phone-text 8 (495) 127-95-64

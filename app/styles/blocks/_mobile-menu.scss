@@ -1,0 +1,133 @@
+.mobile-menu {
+  padding-bottom: 60px;
+  display: none;
+  &.active {
+    @include desktop {
+      display: block;
+    }
+  }
+
+
+  &__item {
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid #f8f8f8;
+    padding: 15px 15px;
+    cursor: pointer;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__toggle-title {
+    color: #005eff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &__column {
+    display: flex;
+    line-height: 1;
+
+    &_pos_1 {
+      flex-grow: 1;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    margin-bottom: 24px;
+  }
+
+  &__inner-item {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  &__inner-item:hover #{&}__link {
+    text-decoration: underline;
+  }
+
+  &__link {
+    color: #010101;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+  }
+
+  &__tooltip {
+    position: absolute;
+    color: #fefefe;
+    font-size: 6px;
+    width: 40px;
+    min-height: 9px;
+    border-radius: 5px;
+    background-image: linear-gradient(-58deg, #005eff 0%, #7270d0 52%, #dc80a5 100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 8px;
+    line-height: 1;
+    right: -45px;
+    top: 0;
+
+  }
+
+  &__show-more {
+    padding-left: 40px;
+    color: #010101;
+    font-size: 14px;
+    text-decoration: underline;
+
+  }
+
+  &__content {
+    //display: none;
+  }
+
+  &__item.active #{&}__toggle-inner-btn-img_prop_plus {
+    display: none;
+  }
+  &__item.active #{&}__toggle-inner-btn-img_prop_minus {
+    display: block;
+  }
+
+  &__other-item {
+    display: flex;
+
+  }
+
+  &__other-item-column {
+    display: flex;
+    padding: 6px 15px;
+
+    &_pos_1 {
+      flex-grow: 1;
+    }
+  }
+
+  &__text {
+    color: #000000;
+    font-size: 14px;
+  }
+
+  &__city {
+    color: #000000;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__phone-text {
+    color: #005eff;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+}

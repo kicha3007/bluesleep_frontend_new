@@ -1,0 +1,26 @@
+mixin dropdown-menu(data)
+	.dropdown-menu&attributes(attributes)
+		.dropdown-menu__container.container
+			.dropdown-menu__wrap
+				.dropdown-menu__column.dropdown-menu__column_pos_1
+					.dropdown-menu__list-title Матрасы + !{data.count}
+					ul.dropdown-menu__list
+						li.dropdown-menu__item
+							a.dropdown-menu__link(href="#") Hybrid
+						li.dropdown-menu__item
+							a.dropdown-menu__link(href="#") Concept
+						li.dropdown-menu__item
+							a.dropdown-menu__link(href="#") Gravity
+								.dropdown-menu__tooltip Новинка
+					a.dropdown-menu__show-more(href="#") Все матрасы
+				.dropdown-menu__column.dropdown-menu__column_pos_2
+					.dropdown-menu__img-box
+						img.dropdown-menu__img(src="img/c/11.jpg", alt='')
+					.dropdown-menu__title
+						| Blue sleep Hybrid
+					.dropdown-menu__desc
+						| Cамый популярный матрас из Британии,  на нем уже спит более
+						|    10 000 счастливых семей.
+						b
+							u
+								| Цена от 23 000 руб.

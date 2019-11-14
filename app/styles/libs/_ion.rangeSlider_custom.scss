@@ -1,0 +1,57 @@
+/* Ion.RangeSlider, Simple Skin
+// css version 2.0.3
+// © Denis Ineshin, 2014    https://github.com/IonDen
+// © guybowden, 2014        https://github.com/guybowden
+// ===================================================================================================================*/
+
+/* =====================================================================================================================
+// Skin details */
+
+
+.range-slider{
+	.irs {
+		height: 43px;
+	}
+
+	.irs-line {
+		top: 33px;
+		@include size(100%, 2px);
+		background-color: #ccc;
+	}
+
+	.irs-bar {
+		@include size(100%, 2px);
+		background-color: $color_base;
+		top: 33px;
+	}
+
+	.irs-slider {
+		@include size(16px);
+		border-radius: 50%;
+		background-color: $color_base;
+		top: 26px;
+		cursor: pointer;
+	}
+
+	.irs-from,
+	.irs-to,
+	.irs-single {
+		color: #fff;
+		font-size: 14px;
+		line-height: 1.333;
+		text-shadow: none;
+		padding: 1px 5px;
+		background: #428bca;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+	}
+
+	.irs-grid {
+		height: 27px;
+	}
+
+	.irs-grid-text {
+		bottom: 5px;
+		color: #99a4ac;
+	}
+}

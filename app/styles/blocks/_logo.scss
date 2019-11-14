@@ -1,0 +1,17 @@
+.logo {
+	&__link {
+		display: block;
+	}
+	// Если лого в svg
+	&__icon {
+		max-width: 100%;
+		fill: #000000;
+	}
+
+	// Если лого в png
+	//&__img {
+	//	display: block;
+	//	max-width: 100%;
+	//	height: auto;
+	//}
+}

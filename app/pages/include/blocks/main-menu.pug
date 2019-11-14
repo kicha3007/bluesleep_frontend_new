@@ -1,0 +1,24 @@
+include dropdown-menu
+
+ul.main-menu
+	li.main-menu__item.active(data-main-menu-item)
+		a.main-menu__link(href="index.html") Матрасы
+		+dropdown-menu({"count": "1"})(class="main-menu__dropdown" data-dropdown-menu)
+
+	li.main-menu__item(data-main-menu-item)
+		a.main-menu__link(href="#") Подушки
+	li.main-menu__item(data-main-menu-item)
+		a.main-menu__link(href="#" ) Аксессуары
+		+dropdown-menu({"count": "2"})(class="main-menu__dropdown" data-dropdown-menu)
+	li.main-menu__item(data-main-menu-item)
+		a.main-menu__link(href="#") Комплекты
+	li.main-menu__item(data-main-menu-item)
+		a.main-menu__link(href="#") Подарки
+	li.main-menu__item(data-main-menu-item)
+		a.main-menu__link(href="#") Доставка
+	li.main-menu__item(data-main-menu-item)
+		a.main-menu__link(href="#") Подарки
+		+dropdown-menu({"count": "3"})(class="main-menu__dropdown" data-dropdown-menu)
+	li.main-menu__item(data-main-menu-item)
+		a.main-menu__link(href="#") Подарки
+		+dropdown-menu({"count": "4"})(class="main-menu__dropdown" data-dropdown-menu)
