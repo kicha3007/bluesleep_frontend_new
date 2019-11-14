@@ -5,7 +5,7 @@
 /PSD/
 node_modules/
 
-public/
+# public/
 
 /local/modules/endorphin.pphug/
 
