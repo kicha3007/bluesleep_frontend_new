@@ -2968,6 +2968,12 @@ body.compensate-for-scrollbar {
   fill: #000000;
 }
 
+.logo__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .logo-mini__link {
   display: -webkit-box;
   display: -ms-flexbox;
