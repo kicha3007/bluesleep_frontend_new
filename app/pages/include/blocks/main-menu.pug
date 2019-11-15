@@ -1,6 +1,6 @@
 include dropdown-menu
 
-ul.main-menu
+ul.main-menu(data-main-menu)
 	li.main-menu__item.active(data-main-menu-item)
 		a.main-menu__link(href="index.html") Матрасы
 		+dropdown-menu({"count": "1"})(class="main-menu__dropdown" data-dropdown-menu)

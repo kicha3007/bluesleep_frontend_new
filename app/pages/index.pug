@@ -1,7 +1,12 @@
 extend include/template_base
 
+include include/blocks/main-banner
+include include/blocks/choice
+
 
 block variables
 	- var title = 'Главная';
 
 block content
+	//+main-banner(class="main-banner__indent")
+	//+choice()

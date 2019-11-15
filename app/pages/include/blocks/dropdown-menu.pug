@@ -1,26 +1,63 @@
 mixin dropdown-menu(data)
 	.dropdown-menu&attributes(attributes)
 		.dropdown-menu__container.container
-			.dropdown-menu__wrap
+			.dropdown-menu__wrap(data-dropdown-menu-wrap)
 				.dropdown-menu__column.dropdown-menu__column_pos_1
 					.dropdown-menu__list-title Матрасы + !{data.count}
 					ul.dropdown-menu__list
-						li.dropdown-menu__item
-							a.dropdown-menu__link(href="#") Hybrid
-						li.dropdown-menu__item
-							a.dropdown-menu__link(href="#") Concept
-						li.dropdown-menu__item
-							a.dropdown-menu__link(href="#") Gravity
+						li.dropdown-menu__item(data-dropdown-menu-id="hybrid")
+							a.dropdown-menu__link(href="#" ) Hybrid
+						li.dropdown-menu__item(data-dropdown-menu-id="concept")
+							a.dropdown-menu__link(href="#" ) Concept
+						li.dropdown-menu__item(data-dropdown-menu-id="gravity" data-dropdown-menu-new="true")
+							a.dropdown-menu__link(href="#" ) Gravity
 								.dropdown-menu__tooltip Новинка
-					a.dropdown-menu__show-more(href="#") Все матрасы
+						li.dropdown-menu__item(data-dropdown-menu-id="matrass")
+							a.dropdown-menu__link(href="#" ) Чехол на матрас
+					a.dropdown-menu__show-more(href="#") Смотреть все
 				.dropdown-menu__column.dropdown-menu__column_pos_2
-					.dropdown-menu__img-box
-						img.dropdown-menu__img(src="img/c/11.jpg", alt='')
-					.dropdown-menu__title
-						| Blue sleep Hybrid
-					.dropdown-menu__desc
-						| Cамый популярный матрас из Британии,  на нем уже спит более
-						|    10 000 счастливых семей.
-						b
-							u
-								| Цена от 23 000 руб.
+					.dropdown-menu__inner-wrap
+						.dropdown-menu__inner-item.active(id="hybrid" data-dropdown-menu-inner-item)
+							.dropdown-menu__img-box
+								img.dropdown-menu__img(src="img/c/11.jpg", alt='' )
+							.dropdown-menu__title
+								| Blue sleep Hybrid
+							.dropdown-menu__desc
+								span.dropdown-menu__text
+									| Cамый популярный матрас из Британии,  на нем уже спит более
+									|    10 000 счастливых семей.
+								span.dropdown-menu__price
+									|Цена от 23 020 руб.
+						.dropdown-menu__inner-item(id="concept" data-dropdown-menu-inner-item)
+							.dropdown-menu__img-box
+								img.dropdown-menu__img(src="img/c/choice_2.png", alt='' )
+							.dropdown-menu__title
+								| Blue sleep Concept
+							.dropdown-menu__desc
+								span.dropdown-menu__text
+									| Cамый популярный матрас из Британии,  на нем уже спит более
+									|    13 000 счастливых семей!
+								span.dropdown-menu__price
+									|Цена от 23 000 руб.
+						.dropdown-menu__inner-item(id="gravity" data-dropdown-menu-inner-item)
+							.dropdown-menu__img-box
+								img.dropdown-menu__img(src="img/c/choice_3.png", alt='' )
+							.dropdown-menu__title
+								| Blue sleep Gravity
+							.dropdown-menu__desc
+								span.dropdown-menu__text
+									| Cамый популярный матрас из Британии,  на нем уже спит более
+									|    10 000 счастливых семей.
+								span.dropdown-menu__price
+									|Цена от 26 000 руб.
+						.dropdown-menu__inner-item(id="matrass" data-dropdown-menu-inner-item)
+							.dropdown-menu__img-box
+								img.dropdown-menu__img(src="img/c/banner_2.png", alt='' )
+							.dropdown-menu__title
+								| Чехол на матрас
+							.dropdown-menu__desc
+								span.dropdown-menu__text
+									| Cамый популярный матрас из Британии,  на нем уже спит более
+									|    10 000 счастливых семей.
+								span.dropdown-menu__price
+									|Цена от 63 000 руб.

@@ -80,7 +80,7 @@
   &__img-box {
     overflow: hidden;
     max-width: 100%;
-    max-height: 250px;
+    height: 207px;
     margin-bottom: 10px;
   }
   &__img {
@@ -98,6 +98,22 @@
     color: #010101;
     font-size: 12px;
   }
+  &__price {
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 12px;
+
+  }
+  &__text + &__price {
+    margin-left: 3px;
+  }
+  &__inner-item {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
 
 
 }

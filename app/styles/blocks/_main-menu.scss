@@ -61,6 +61,7 @@
       border-radius: 3px;
       background-color: #005eff;
       transition: .3s ease;
+      z-index: 4;
     }
 
   }
@@ -70,5 +71,16 @@
   &__item.active #{&}__link:after {
     opacity: 1;
   }
+  &__item.hide-active #{&}__link:after {
+    opacity: 0;
+  }
+
+
+
+  &__item:hover #{&}__link:after {
+    opacity: 1;
+  }
+
+
 
 }

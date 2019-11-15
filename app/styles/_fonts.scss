@@ -9,4 +9,6 @@
 // 800	Дополнительный жирный (Сверхжирный) Extra Bold (Ultra Bold)
 // 900	Черный (Густой) Black (Heavy)
 
-@include font-face("co_text", "../fonts/co_text");
+@include font-face("CoText-Bold", "../fonts/CoText-Bold");
+@include font-face("CoText-Light", "../fonts/CoText-Light");
+@include font-face("CoText-Regular", "../fonts/CoText-Regular");

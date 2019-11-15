@@ -5,6 +5,9 @@
   width: 100%;
   background-color: #fff;
   z-index: 60;
+  top: 0;
+  left: 0;
+  right: 0;
 
   @include desktop {
     padding: 0;
@@ -14,7 +17,17 @@
     display: flex;
     align-items: flex-start;
     margin: 0 -15px;
-    border-bottom: 1px solid #000;
+    position: relative;
+    &::before {
+    	content: '';
+    	display: block;
+    	position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 1px;
+       background-image: linear-gradient(-42deg, #0047b0 0%, #0047b0 1%, #ff8597 100%);
+    }
     &_show_desktop {
       @include desktop {
         display: none;
@@ -91,6 +104,10 @@
 }
 
 .header-buffer {
+  height: 143px;
+  @include desktop {
+    height: 58px;
+  }
 
 }
 

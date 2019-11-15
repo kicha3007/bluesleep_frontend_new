@@ -26,27 +26,51 @@
                       <div class="logo"><a class="logo__link" href="#"><img class="logo__img" src="img/logo.png" alt=""/></a></div>
               </div>
               <div class="header__column header__column_size_2">
-                <ul class="main-menu">
+                <ul class="main-menu" data-main-menu="data-main-menu">
                   <li class="main-menu__item active" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="index.html">Матрасы</a>
                                     <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
                                       <div class="dropdown-menu__container container">
-                                        <div class="dropdown-menu__wrap">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_1">
                                             <div class="dropdown-menu__list-title">Матрасы + 1</div>
                                             <ul class="dropdown-menu__list">
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Hybrid</a></li>
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Concept</a></li>
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Gravity
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="hybrid"><a class="dropdown-menu__link" href="#">Hybrid</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="concept"><a class="dropdown-menu__link" href="#">Concept</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="gravity" data-dropdown-menu-new="true"><a class="dropdown-menu__link" href="#">Gravity
                                                   <div class="dropdown-menu__tooltip">Новинка</div></a></li>
-                                            </ul><a class="dropdown-menu__show-more" href="#">Все матрасы</a>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="matrass"><a class="dropdown-menu__link" href="#">Чехол на матрас</a></li>
+                                            </ul><a class="dropdown-menu__show-more" href="#">Смотреть все</a>
                                           </div>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_2">
-                                            <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
-                                            <div class="dropdown-menu__title">Blue sleep Hybrid</div>
-                                            <div class="dropdown-menu__desc">
-                                              Cамый популярный матрас из Британии,  на нем уже спит более
-                                                 10 000 счастливых семей.<b>
-                                                <u>Цена от 23 000 руб.</u></b>
+                                            <div class="dropdown-menu__inner-wrap">
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Hybrid</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Concept</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Gravity</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Чехол на матрас</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 63 000 руб.</span></div>
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
@@ -57,23 +81,47 @@
                   <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Аксессуары</a>
                                     <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
                                       <div class="dropdown-menu__container container">
-                                        <div class="dropdown-menu__wrap">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_1">
                                             <div class="dropdown-menu__list-title">Матрасы + 2</div>
                                             <ul class="dropdown-menu__list">
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Hybrid</a></li>
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Concept</a></li>
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Gravity
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="hybrid"><a class="dropdown-menu__link" href="#">Hybrid</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="concept"><a class="dropdown-menu__link" href="#">Concept</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="gravity" data-dropdown-menu-new="true"><a class="dropdown-menu__link" href="#">Gravity
                                                   <div class="dropdown-menu__tooltip">Новинка</div></a></li>
-                                            </ul><a class="dropdown-menu__show-more" href="#">Все матрасы</a>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="matrass"><a class="dropdown-menu__link" href="#">Чехол на матрас</a></li>
+                                            </ul><a class="dropdown-menu__show-more" href="#">Смотреть все</a>
                                           </div>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_2">
-                                            <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
-                                            <div class="dropdown-menu__title">Blue sleep Hybrid</div>
-                                            <div class="dropdown-menu__desc">
-                                              Cамый популярный матрас из Британии,  на нем уже спит более
-                                                 10 000 счастливых семей.<b>
-                                                <u>Цена от 23 000 руб.</u></b>
+                                            <div class="dropdown-menu__inner-wrap">
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Hybrid</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Concept</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Gravity</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Чехол на матрас</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 63 000 руб.</span></div>
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
@@ -86,23 +134,47 @@
                   <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Подарки</a>
                                     <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
                                       <div class="dropdown-menu__container container">
-                                        <div class="dropdown-menu__wrap">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_1">
                                             <div class="dropdown-menu__list-title">Матрасы + 3</div>
                                             <ul class="dropdown-menu__list">
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Hybrid</a></li>
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Concept</a></li>
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Gravity
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="hybrid"><a class="dropdown-menu__link" href="#">Hybrid</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="concept"><a class="dropdown-menu__link" href="#">Concept</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="gravity" data-dropdown-menu-new="true"><a class="dropdown-menu__link" href="#">Gravity
                                                   <div class="dropdown-menu__tooltip">Новинка</div></a></li>
-                                            </ul><a class="dropdown-menu__show-more" href="#">Все матрасы</a>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="matrass"><a class="dropdown-menu__link" href="#">Чехол на матрас</a></li>
+                                            </ul><a class="dropdown-menu__show-more" href="#">Смотреть все</a>
                                           </div>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_2">
-                                            <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
-                                            <div class="dropdown-menu__title">Blue sleep Hybrid</div>
-                                            <div class="dropdown-menu__desc">
-                                              Cамый популярный матрас из Британии,  на нем уже спит более
-                                                 10 000 счастливых семей.<b>
-                                                <u>Цена от 23 000 руб.</u></b>
+                                            <div class="dropdown-menu__inner-wrap">
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Hybrid</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Concept</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Gravity</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Чехол на матрас</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 63 000 руб.</span></div>
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
@@ -112,23 +184,47 @@
                   <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Подарки</a>
                                     <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
                                       <div class="dropdown-menu__container container">
-                                        <div class="dropdown-menu__wrap">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_1">
                                             <div class="dropdown-menu__list-title">Матрасы + 4</div>
                                             <ul class="dropdown-menu__list">
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Hybrid</a></li>
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Concept</a></li>
-                                              <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Gravity
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="hybrid"><a class="dropdown-menu__link" href="#">Hybrid</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="concept"><a class="dropdown-menu__link" href="#">Concept</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="gravity" data-dropdown-menu-new="true"><a class="dropdown-menu__link" href="#">Gravity
                                                   <div class="dropdown-menu__tooltip">Новинка</div></a></li>
-                                            </ul><a class="dropdown-menu__show-more" href="#">Все матрасы</a>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="matrass"><a class="dropdown-menu__link" href="#">Чехол на матрас</a></li>
+                                            </ul><a class="dropdown-menu__show-more" href="#">Смотреть все</a>
                                           </div>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_2">
-                                            <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
-                                            <div class="dropdown-menu__title">Blue sleep Hybrid</div>
-                                            <div class="dropdown-menu__desc">
-                                              Cамый популярный матрас из Британии,  на нем уже спит более
-                                                 10 000 счастливых семей.<b>
-                                                <u>Цена от 23 000 руб.</u></b>
+                                            <div class="dropdown-menu__inner-wrap">
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Hybrid</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Concept</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Gravity</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Чехол на матрас</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 63 000 руб.</span></div>
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
@@ -259,8 +355,9 @@
           </div>
         </div>
       </header>
-      <div class="test"></div>
       <main class="main">
+        <!--+main-banner(class="main-banner__indent")-->
+        <!--+choice()-->
       </main>
     </div>
     <!--include footer.pug-->

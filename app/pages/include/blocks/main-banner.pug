@@ -1,0 +1,21 @@
+mixin main-banner(data)
+	.main-banner&attributes(attributes)
+		.main-banner__container.container
+			.main-banner__wrap
+				.main-banner__bg
+				.main-banner__column.main-banner__column_pos_1
+					.main-banner__img-wrapper
+						.main-banner__img-box.main-banner__img-box_size_1
+							img.main-banner__img(src="img/c/banner_1.jpg", alt='')
+						.main-banner__img-box.main-banner__img-box_size_2
+							img.main-banner__img(src="img/c/banner_2.png", alt='')
+				.main-banner__column.main-banner__column_pos_2
+					.main-banner__content
+						.main-banner__title
+							| Покупай комплектом — экономь
+							|	до 25% стоимости
+						.main-banner__desc
+							| Мы настолько уверены в наших матрасах,
+							| что даем 100 дней на проверку!
+						.main-banner__btn-wrap
+							.main-banner__btn.btn Купить сейчас

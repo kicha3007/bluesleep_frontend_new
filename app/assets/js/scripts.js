@@ -24,6 +24,7 @@ function DOMready() {
 	}, function () {
 		$.data(this,'timer', setTimeout($.proxy(function() {
 			$('[data-dropdown-menu]',this).stop(true,true).slideUp(200);
+			showActiveDropdownMenuItem.call($("[data-dropdown-menu-new='true']"));
 		}, this), 100));
 	});
 
@@ -84,6 +85,45 @@ function DOMready() {
 		$("html").toggleClass("overflow-hidden");
 
 	});
+
+	//Скрываем выбор активного пункта в главном меню
+	$("[data-main-menu]").mouseenter(function () {
+		var $this = $(this),
+		activeItem = $this.find("[data-main-menu-item].active");
+		activeItem.addClass("hide-active");
+
+	}).mouseleave(function () {
+		console.log("data", $("[data-main-menu-item='active']"));
+		var $this = $(this),
+			activeItem = $this.find("[data-main-menu-item].hide-active");
+		activeItem.removeClass("hide-active");
+	});
+
+
+
+	// Выпадающее меню, показ информации
+	$("[data-dropdown-menu-id]").mouseenter(function () {
+		showActiveDropdownMenuItem.call(this);
+	});
+
+	showActiveDropdownMenuItem.call($("[data-dropdown-menu-new='true']"));
+
+
+	function showActiveDropdownMenuItem () {
+		var $this = $(this),
+			id = $this.data("dropdown-menu-id"),
+			wrap = $this.closest("[data-dropdown-menu-wrap]"),
+			items = wrap.find("[data-dropdown-menu-inner-item]"),
+			item = wrap.find("#" + id );
+		items.removeClass("active");
+		item.addClass("active");
+
+	}
+
+	
+
+
+
 
 
 	/*
