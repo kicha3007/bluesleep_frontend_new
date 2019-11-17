@@ -1,0 +1,147 @@
+.convenience {
+  &__wrap {
+    background-image: linear-gradient(-42deg, #005eff 0%, #0047b0 100%);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-right: 80px;
+    @include desktop {
+      padding-right: 0;
+    }
+    @include phones {
+      padding-top: 45px;
+      padding-bottom: 25px;
+    }
+  }
+  &__column {
+    width: 50%;
+
+    @include desktop {
+      width: 100%;
+      padding-right: 95px;
+      padding-left: 95px;
+    }
+
+    &_pos_1 {
+      padding-top: 27px;
+      padding-right: 95px;
+      padding-left: 8%;
+      @include desktop {
+          order: 2;
+      }
+      @include tablets {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      @include phones {
+        padding-top: 20px;
+      }
+
+    }
+    &_pos_2 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      @include desktop {
+        order: 1;
+        justify-content: center;
+      }
+      @include tablets {
+        padding-left: 50px;
+        padding-right: 15px;
+      }
+
+
+
+    }
+
+  }
+  &__container {
+    @include desktop {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__img-wrap {
+    background-image: linear-gradient(to top, #ff8597 0%, #005eff 100%);
+    max-width: 691px;
+
+
+  }
+  &__img-box {
+    max-width: 691px;
+    max-height: 550px;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+
+
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+  &__main-title {
+    color: #fefefe;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 80px;
+    @include desktop {
+      margin-bottom: 50px;
+    }
+    @include phones {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  &__inner-content {
+    display: flex;
+    margin-bottom: 60px;
+    @include phones {
+      margin-bottom: 40px;
+    }
+
+  }
+  &__inner-column {
+    width: 50%;
+    &_pos_1 {
+      padding-right: 40px;
+
+
+    }
+
+  }
+  &__decor-img {
+    margin-bottom: 20px;
+    width: 30px;
+    @include phones {
+      margin-bottom: 10px;
+      width: 18px;
+    }
+
+  }
+  &__text {
+    color: #fefefe;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: "CoText-Light", sans-serif;
+    @include phones {
+      font-size: 12px;
+    }
+
+  }
+  &__link {
+    color: #fefefe;
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: underline;
+    font-family: "CoText-Light", sans-serif;
+    @include phones {
+      font-size: 8px;
+    }
+  }
+}
+

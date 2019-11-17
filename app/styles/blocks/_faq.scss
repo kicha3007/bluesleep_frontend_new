@@ -1,0 +1,149 @@
+.faq {
+  padding: 60px 0;
+  margin-bottom: 80px;
+  @include phones {
+    margin-bottom: 35px;
+    padding-bottom: 0;
+  }
+
+  &__item {
+    //border-top: 1px solid #f8f8f8;
+    //border-bottom: 1px solid #f8f8f8;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  &__toggle {
+    padding: 24px 15px;
+    background-color: #ff8597;
+  }
+  &__inner-container {
+    display: flex;
+    align-items: center;
+    max-width: 1028px;
+  }
+  &__main-title {
+    text-align: center;
+    color: #000000;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    @include phones {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  &__toggle-title {
+    color: #010101;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "CoText-Light", sans-serif;
+    text-transform: uppercase;
+    @include phones {
+      font-size: 10px;
+    }
+  }
+  &__column {
+    display: flex;
+    align-items: center;
+
+    &_pos_1 {
+      padding-right: 40px;
+      @include phones {
+        padding-right: 20px;
+      }
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    margin-bottom: 24px;
+  }
+  &__content {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #ebebeb;
+    display: none;
+    @include phones {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  &__item.active #{&}__content {
+    margin-bottom: 20px;
+    @include laptop {
+      margin-bottom: 8px;
+    }
+  }
+  &__desc {
+    color: #010101;
+    font-family: "CoText-Light", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 55px;
+    @include phones {
+      font-size: 10px;
+      padding-left: 45px;
+    }
+  }
+  &__item.active #{&}__toggle-inner-btn-img {
+    transform: rotate(45deg);
+  }
+  &__toggle-inner-btn {
+    @include phones {
+        max-width: 10px;
+    }
+  }
+  &__toggle-inner-btn-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__bottom-wrap {
+    display: none;
+  }
+  &__btn-wrap {
+    text-align: center;;
+  }
+  &__btn {
+    max-width: 325px;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: 1px solid #a0988e;
+
+    padding: 14px 23px;
+    user-select: none;
+    outline: none !important;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    line-height: 16px;
+
+
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 5px;
+    margin-right: 5px;
+
+    color: #a0988e;
+    font-size: 13px;
+    font-family: "CoText-Light", sans-serif;
+  }
+  &__btn-text {
+    padding-right: 10px;
+  }
+  &__top-wrap {
+    margin-bottom: 45px;
+    @include phones {
+      margin-bottom: 25px;
+    }
+  }
+
+}

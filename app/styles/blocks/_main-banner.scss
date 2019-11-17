@@ -4,15 +4,23 @@
     @include desktop {
       margin-top: 0;
     }
+
   }
   &__container {
     padding: 0;
+
   }
   &__wrap {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     padding: 20px 0;
+    @include laptop {
+      padding-bottom: 40px;
+    }
+    @include phones {
+      padding-bottom: 30px;
+    }
   }
   &__bg {
     position: absolute;
@@ -93,24 +101,45 @@
     padding-top: 100px;
     position: relative;
     z-index: 1;
+    @include laptop {
+      padding-top: 30px;
+    }
+    @include phones {
+      padding-top: 20px;
+    }
   }
   &__title {
     color: #fefefe;
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 40px;
+    @include phones {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    br {
+      @include phones {
+        display: none;
+      }
+    }
   }
   &__desc {
     color: #fefefe;
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 50px;
+    font-family: "CoText-Light", sans-serif;
+    @include phones {
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
 
   }
   &__btn-wrap {
 
   }
   &__btn {
+
 
   }
 }

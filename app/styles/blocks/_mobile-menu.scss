@@ -90,6 +90,9 @@
   &__content {
     //display: none;
   }
+  &__toggle-inner-btn-img_prop_minus {
+    display: none;
+  }
 
   &__item.active #{&}__toggle-inner-btn-img_prop_plus {
     display: none;

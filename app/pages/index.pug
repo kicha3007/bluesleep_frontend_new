@@ -2,11 +2,22 @@ extend include/template_base
 
 include include/blocks/main-banner
 include include/blocks/choice
+include include/blocks/advantages
+include include/blocks/main-category
+include include/blocks/blogers
+include include/blocks/partners
+include include/blocks/convenience
+include include/blocks/faq
 
 
 block variables
 	- var title = 'Главная';
 
 block content
-	//+main-banner(class="main-banner__indent")
-	//+choice()
+	+main-banner(class="main-banner__indent")
+	+choice()
+	+advantages()()
+	+main-category()()
+	+blogers()()
+	+convenience()()
+	+faq()()

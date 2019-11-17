@@ -3,130 +3,249 @@
 
 function DOMready() {
 
-	var globParam = {
-		sizes: {
-			DESKTOP: "1200",
-			LAPTOP: "980",
-			TABLETS: "768",
-			PHONES: "576"
-		},
-	};
+    // Глобальные настройки
+    var globParam = (function () {
+        var sizes = {
+            DESKTOP: "1199",
+            LAPTOP: "991",
+            TABLETS: "767",
+            PHONES: "575"
+        };
+
+        return {
+            getMediaSize: function () {
+                return sizes;
+            },
+            windowWidth: function () {
+                return $(window).width();
+            }
+        }
+
+    })();
+
+    // Показать телефон в мобильное версии
+    var phoneMobile = (function(){
+        return  {
+            setlistenerOnBtn: function () {
+                $("[data-h-phone-btn]").on("click", function () {
+                    $("[data-h-mobile-contacts]").toggleClass("active");
+                });
+            }
+        }
 
 
-	$("[data-h-phone-btn]").on("click", function () {
-		console.log("work");
-		$("[data-h-mobile-contacts]").toggleClass("active");
-	});
+    })();
+    phoneMobile.setlistenerOnBtn();
 
-	$('[data-main-menu-item]').hover(function () {
-		clearTimeout($.data(this,'timer'));
-		$('[data-dropdown-menu]',this).stop(true,true).slideDown(200);
-	}, function () {
-		$.data(this,'timer', setTimeout($.proxy(function() {
-			$('[data-dropdown-menu]',this).stop(true,true).slideUp(200);
-			showActiveDropdownMenuItem.call($("[data-dropdown-menu-new='true']"));
-		}, this), 100));
-	});
+    // Главное меню
+    var mainMenu = (function(){
 
+        $("[data-main-menu]").mouseenter(function () {
+            var $this = $(this),
+                activeItem = $this.find("[data-main-menu-item].active");
+            activeItem.addClass("hide-active");
 
+        }).mouseleave(function () {
+            var $this = $(this),
+                activeItem = $this.find("[data-main-menu-item].hide-active");
+            activeItem.removeClass("hide-active");
+        });
 
-	
-	accordSlideUp(".js-mobile-menu-inner-wrap", false);
-	addAccordListener(".js-mobile-menu-inner-wrap", true);
+        $("[data-dropdown-menu-id]").mouseenter(function () {
+            mainMenu.showInfoForActiveDropdownItem.call(this);
+        });
 
-	// Аккордеон
-	function accordStart(e, showItem, callback) {
-		e.preventDefault();
-		var $this = $(this),
-			accordItems = $(e.delegateTarget).find("[data-accord-item]"),
-			$thisItem = $this.closest("[data-accord-item]");
-		accordItems.not($thisItem).removeClass("active");
-		accordItems.find("[data-accord-toggle]").not($this).siblings("[data-accord-content]").slideUp();
-
-		$this.addClass("active");
-		accordItems.find("[data-accord-toggle]").not($this).removeClass("active");
-
-		if (showItem) {
-			$thisItem.addClass("active");
-			$this.siblings("[data-accord-content]").slideDown();
-		} else {
-			$thisItem.toggleClass("active");
-			$this.siblings("[data-accord-content]").slideToggle();
-		}
-		if (typeof(callback) !== "undefined" && callback) {
-			callback.call(this)
-		}
-
-	}
-
-	// Закрытие вкладок аккордеона при загрузке
-	function accordSlideUp(wrap, showActive) {
-		$(wrap + " [data-accord-item]" + (showActive ? ":not(.active)" : "")).find("[data-accord-content]").slideUp();
-		if (!showActive) {
-			$(wrap + " [data-accord-item]").removeClass("active");
-		}
-	}
-
-	//Добавляем слушатель для аккордеона
-	function addAccordListener(wrap, showItem, callback) {
-
-		$(wrap).on("click", "[data-accord-toggle]", function (e) {
-			accordStart.call(this, e, showItem, callback);
-		});
-	}
+        return {
+            toggleVisible: function () {
+                var self = this;
 
 
-	// Мобильное меню
-	$("[data-mobile-menu-btn]").on("click", function () {
-		$(this).toggleClass("active");
-		$("[data-mobile-menu]").toggleClass("active");
+                $('[data-main-menu-item]').hover(function () {
+                    clearTimeout($.data(this, 'timer'));
+                    $('[data-dropdown-menu]', this).stop(true, true).slideDown(200);
+                }, function () {
+                    $.data(this, 'timer', setTimeout($.proxy(function () {
+                        $('[data-dropdown-menu]', this).stop(true, true).slideUp(200);
 
-		$("[data-voerlay]").toggleClass("active");
-		$("html").toggleClass("overflow-hidden");
+                        self.showInfoForActiveDropdownItem.call($("[data-dropdown-menu-new='true']"));
 
-	});
+                        }, this), 100));
+                });
+            },
+            showInfoForActiveDropdownItem: function () {
+                var $this = $(this),
+                    id = $this.data("dropdown-menu-id"),
+                    wrap = $this.closest("[data-dropdown-menu-wrap]"),
+                    items = wrap.find("[data-dropdown-menu-inner-item]"),
+                    item = wrap.find("#" + id);
+                items.removeClass("active");
+                item.addClass("active");
+            },
+            showNewOnLoadInDropdown: function () {
+                var self = this;
+                self.showInfoForActiveDropdownItem.call($("[data-dropdown-menu-new='true']"));
+            }
+        };
 
-	//Скрываем выбор активного пункта в главном меню
-	$("[data-main-menu]").mouseenter(function () {
-		var $this = $(this),
-		activeItem = $this.find("[data-main-menu-item].active");
-		activeItem.addClass("hide-active");
+    })();
+    mainMenu.toggleVisible();
 
-	}).mouseleave(function () {
-		console.log("data", $("[data-main-menu-item='active']"));
-		var $this = $(this),
-			activeItem = $this.find("[data-main-menu-item].hide-active");
-		activeItem.removeClass("hide-active");
-	});
+    // Аккордеон
+    var accordeonBase = (function () {
+
+        return {
+            start: function (e, showItem, callback) {
+                e.preventDefault();
+                var $this = $(this),
+                    accordItems = $(e.delegateTarget).find("[data-accord-item]"),
+                    $thisItem = $this.closest("[data-accord-item]");
+                accordItems.not($thisItem).removeClass("active");
+                accordItems.find("[data-accord-toggle]").not($this).siblings("[data-accord-content]").slideUp();
+
+                $this.addClass("active");
+                accordItems.find("[data-accord-toggle]").not($this).removeClass("active");
+
+                if (showItem) {
+                    $thisItem.addClass("active");
+                    $this.siblings("[data-accord-content]").slideDown();
+                } else {
+                    $thisItem.toggleClass("active");
+                    $this.siblings("[data-accord-content]").slideToggle();
+                }
+                if (typeof (callback) !== "undefined" && callback) {
+                    callback.call(this)
+                }
+            },
+            setListener: function (wrap, showItem, callback) {
+                var self = this;
+
+                $(wrap).on("click", "[data-accord-toggle]", function (e) {
+					self.start.call(this, e, showItem, callback);
+                });
+            },
+            slideUpOnLoad: function (wrap, showActive) {
+                $(wrap + " [data-accord-item]" + (showActive ? ":not(.active)" : "")).find("[data-accord-content]").slideUp();
+                if (!showActive) {
+                    $(wrap + " [data-accord-item]").removeClass("active");
+                }
+            }
+        }
+    })();
+    accordeonBase.slideUpOnLoad(".js-mobile-menu-inner-wrap", false);
+    accordeonBase.setListener(".js-mobile-menu-inner-wrap", true);
+
+    accordeonBase.slideUpOnLoad(".js-faq-top-wrap", false);
+    accordeonBase.setListener(".js-faq-top-wrap", true);
+
+   var overlayMain = (function () {
+
+       $("[data-overlay]").on("click", function () {
+           mobileMenu.toggleShow.call($("[data-mobile-menu-btn]"));
+       });
+
+       return {
+           toggleOverlayShowHide: function () {
+               $("[data-overlay]").toggleClass("active");
+               $("html").toggleClass("overflow-hidden");
+           },
+       }
+   })();
+
+    // Мобильное меню
+    var mobileMenu = (function(){
+        return  {
+            addlistenerOnBtn: function () {
+                var self = this;
+                $("[data-mobile-menu-btn]").on("click", function () {
+
+                    self.toggleShow.call(this);
+                });
+            },
+            toggleShow: function () {
+                $(this).toggleClass("active");
+                $("[data-mobile-menu]").toggleClass("active");
+
+                overlayMain.toggleOverlayShowHide();
+            }
+
+
+        };
+    })();
+    mobileMenu.addlistenerOnBtn();
+
+    // Показ всех пукнктов в аккордеоне faq
+    var faqAccord = (function () {
+        $("[data-faq-btn]").on("click", function () {
+            var items = $("[data-faq-bottom-wrap]").find("[data-accord-item]");
+            items.appendTo("[data-faq-top-wrap]");
+            $(this).remove();
+        });
+    })();
+
+    if (globParam.windowWidth() < globParam.getMediaSize().LAPTOP) {
+        // Инициализация слайдера advantages
+        $(".js-advantages-wrap").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+            centerMode: true,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+
+    }
+
+
+        // Инициализация слайдера blogers
+        $(".js-blogers-wrap").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+
+            responsive: [
+            	{
+            		breakpoint: 1199,
+            		settings: {
+            			slidesToShow: 3,
+            		}
+            	},
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+            	{
+            		breakpoint: 575,
+            		settings: {
+            			slidesToShow: 1,
+                        centerMode: true,
+                        variableWidth: true,
+            		}
+            	}
+            ]
+        });
 
 
 
-	// Выпадающее меню, показ информации
-	$("[data-dropdown-menu-id]").mouseenter(function () {
-		showActiveDropdownMenuItem.call(this);
-	});
-
-	showActiveDropdownMenuItem.call($("[data-dropdown-menu-new='true']"));
-
-
-	function showActiveDropdownMenuItem () {
-		var $this = $(this),
-			id = $this.data("dropdown-menu-id"),
-			wrap = $this.closest("[data-dropdown-menu-wrap]"),
-			items = wrap.find("[data-dropdown-menu-inner-item]"),
-			item = wrap.find("#" + id );
-		items.removeClass("active");
-		item.addClass("active");
-
-	}
-
-	
-
-
-
-
-
-	/*
+    /*
         //dropdown
         $('body').on('click', '.js--dropdown', function (e) {
             e.preventDefault();
