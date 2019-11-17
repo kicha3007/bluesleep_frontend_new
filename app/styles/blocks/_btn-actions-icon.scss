@@ -1,5 +1,7 @@
 .btn-actions-icon {
 	display: block;
+
+
 	&__img_prop_open {
 		display: none;
 	}
@@ -18,9 +20,9 @@
 	border-radius: 50%;
 	outline: none;
 	position: relative;
-	svg {
-		fill: red;
-	}
+	//svg {
+	//	fill: red;
+	//}
 	&:hover,
 	&:active,
 	&:focus {
@@ -37,14 +39,14 @@
 	}
 	&__icon {
 		transition: fill .1s ease;
-		fill: #ffffff;
+		fill: #005eff;
 		transform: scale(1.3);
 
 	}
 	&:hover #{&}__icon,
 	&:active #{&}__icon,
 	&:focus #{&}__icon {
-		fill: #ffffff;
+		fill: #000;
 	}
 	&__order-count {
 		position: absolute;

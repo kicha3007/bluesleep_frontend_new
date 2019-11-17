@@ -5,13 +5,41 @@
 // ! Ничего кроме размеров в заданном формате!!!
 
 .svg-icon {
-	&-logo {
-		@include size(283px, 76px)
-
-	}
 	&-basket {
 		@include size(28px, 26px)
-
+	}
+	&-phone_chat {
+		@include size(25px, 27px)
+	}
+	&-advantages_1 {
+		@include size(47px)
+	}
+	&-advantages_2 {
+		@include size(48px, 57px)
+	}
+	&-advantages_3 {
+		@include size(66px, 40px)
+	}
+	&-advantages_4 {
+		@include size(52px, 43px)
+	}
+	&-advantages_5 {
+		@include size(62px)
+	}
+	&-i-fb {
+		@include size(111px)
+	}
+	&-i-inst {
+		@include size(111px)
+	}
+	&-i-odn {
+		@include size(111px)
+	}
+	&-i-vk {
+		@include size(111px)
+	}
+	&-i-ytb {
+		@include size(111px)
 	}
 }
 
