@@ -3045,6 +3045,15 @@ body.compensate-for-scrollbar {
   opacity: 1;
 }
 
+@media screen and (max-width: 1450px) {
+  .main-menu__item:nth-child(n+7) {
+    display: none;
+  }
+  .main-menu__item:nth-child(n+6) .main-menu__link:before {
+    display: none;
+  }
+}
+
 .h-contacts {
   padding-right: 20px;
 }
