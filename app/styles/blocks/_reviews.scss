@@ -1,0 +1,109 @@
+.reviews {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+    padding-bottom: 30px;
+  }
+  &__column {
+    margin: 0 30px;
+    @include laptop {
+      width: 100%;
+      flex-grow: 1;
+    }
+    &_pos_2 {
+      flex-grow: 1;
+    }
+
+  }
+  &__main-title {
+    color: #000000;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 130px;
+    position: relative;
+    @include phones {
+      font-size: 18px;
+      padding-top: 25px;
+      margin-bottom: 60px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -55px;
+      left: 50%;
+      max-width: 338px;
+      margin-left: -169px;
+      width: 100%;
+      height: 18px;
+      background: url("../img/decor_waves.png") no-repeat center;
+      @include phones {
+        max-width: 145px;
+        height: 8px;
+        margin-left: -72px;
+        background-size: cover;
+        bottom: -25px;
+      }
+
+    }
+  }
+  &__main-sub-title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 80px;
+    @include phones {
+      margin-bottom: 40px;
+    }
+    a {
+      color: #0081ff;;
+    }
+
+  }
+  &__raiting {
+    @include laptop {
+        display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    @include phones {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__raiting-img-box + #{&}__raiting-img-box {
+    margin-top: 20px;
+    @include laptop {
+      margin-top: 0;
+      margin-left: 50px;
+    }
+    @include phones {
+      margin-top: 20px;
+      margin-right: auto;
+      margin-left: auto;
+
+    }
+  }
+  &__raiting-img-box {
+    @include laptop {
+      max-width: 118px;
+
+    }
+    @include phones {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  &__raiting-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
