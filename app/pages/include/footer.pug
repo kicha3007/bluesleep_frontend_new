@@ -1,93 +1,133 @@
-footer.footer.footer_mtop
-	.container.footer__container
-		.footer__row.footer__row_top
-			.footer__desktop.js--footer-menu
-				section.footer__column.footer__column_contacts.footer-column
-					span.footer__title.js--open-footer-menu
-						+icon('triangle', 'svg-icon_menu-arrow')
-						span Контакты
-					.footer-column__content
-						.footer-contacts
-							span.footer-contacts__item г. Москва, ул. Дорожная, 48
-							a.footer-contacts__item(href="tel:+74995193018") +7 (499) 519-30-18
-							a.footer-contacts__item(href="mailto:mail@feron.ru") mail@feron.ru
+include blocks/subscription
 
-				nav.footer__column.footer__column_menu
-					span.footer__title.js--open-footer-menu
-						+icon('triangle', 'svg-icon_menu-arrow')
-						span Информация
-					.footer-column__content
-						ul.footer-menu
-							li.footer-menu__item
-								a.footer-menu__link(href="#") Основной каталог
-							li.footer-menu__item
-								a.footer-menu__link(href="#") Рекламные листовки
-							li.footer-menu__item
-								a.footer-menu__link(href="#") Фото продукции
+footer.footer
+	.footer__container.container
+		+subscription()(class="footer__subscription_show-mobile")
+		.footer__wrap
+			.footer__inner-wrap
+				.footer__column.footer__column_pos_1
+					.footer__logo
+						.footer__logo-img-box
+							img.footer__logo-img(src="img/b-logo.png", alt='')
+					.footer__scl.scl
+						.scl__list
+							a.scl__item(href="#")
+								+icon("i-fb", "scl__icon")
+								.scl__text  Facebook
+							a.scl__item(href="#")
+								+icon("i-vk", "scl__icon")
+								.scl__text Vkontakte
+							a.scl__item(href="#")
+								+icon("i-inst", "scl__icon")
+								.scl__text Instagram
+							a.scl__item(href="#")
+								+icon("i-odn", "scl__icon")
+								.scl__text Odnoklassniki
+							a.scl__item(href="#")
+								+icon("i-ytb", "scl__icon")
+								.scl__text Youtube
+					.footer__pay.pay
+						.pay__top
+							.pay__img-box
+								img.pay__img(src="img/pay_ya.png", alt='')
+						.pay__bottom
+							.pay__list
+								.pay__item
+									img.pay__list-img(src="img/ps-visa.png", alt='')
+								.pay__item
+									img.pay__list-img(src="img/ps-maca.png", alt='')
+								.pay__item
+									img.pay__list-img(src="img/ps-mir.png", alt='')
+								.pay__item
+									img.pay__list-img.pay__list-img_size_min(src="img/ps-ap_pay.png", alt='')
 
-				nav.footer__column.footer__column_menu
-					span.footer__title.js--open-footer-menu
-						+icon('triangle', 'svg-icon_menu-arrow')
-						span Пресс-центр
-					.footer-column__content
-						ul.footer-menu
-							li.footer-menu__item
-								a.footer-menu__link(href="#") Новости
-							li.footer-menu__item
-								a.footer-menu__link(href="#") Акции
-							li.footer-menu__item
-								a.footer-menu__link(href="#") Статьи
-							li.footer-menu__item
-								a.footer-menu__link(href="#") Видео
+				.footer__column.footer__column_pos_2
+					.bottom-menu__list
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Матрасы
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Кровати
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Подушки
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Аксессуары
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Комплекты
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Подарки
+				.footer__column.footer__column_pos_3
+					.bottom-menu__list
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") О нас
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Отзывы
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Где полежать
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Контакты
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Доставка и оплата
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Условия возврата и обмена
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") FAQ
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Оптовым клиентам
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Политика конфиденциальности
+						.bottom-menu__item
+							a.bottom-menu__link(href="#") Публичная оферта
+				.footer__column.footer__column_pos_4
+					.bottom-contacts
+						.bottom-contacts__text Клиентская поддержка
+						a.bottom-contacts__phone(href="tel:84951279564") 8 (495) 153-50-27
+						a.bottom-contacts__phone(href="tel:84951279564") 8 (800) 153-50-27
+						.bottom-contacts__text.bottom-contacts__text_indent_big
+							| (по будням с 10:00 до 20:00
+							br
+							|	по выходным с 11:00 до 18:00)
+						a.bottom-contacts__mail(href="mailto:info@bluesleep.ru") info@bluesleep.ru
+					a.footer__city(href="#") Москва
+				.footer__column.footer__column_pos_5
+					+subscription()(class="footer__subscription")
 
-				section.footer__column.footer__column_subscribe.footer-column
-					span.footer__title.footer__title_subscribe Подписаться на рассылку
-					.footer-column__content
-						.subscribe
-							form.subscribe__form(action="/")
-								input.input-line.subscribe__input(type="mail", placeholder="Оставьте вашу почту")
-								button.btn.subscribe__btn(type="submit") Готово!
-			.footer__tablet
-				ul.logs-icons
-					li.logs-icons__item
-						a.logs-icons__link(href="#", target="_blank")
-							+icon('soc-vk', 'footer_soc-vk')
-					li.logs-icons__item
-						a.logs-icons__link(href="#", target="_blank")
-							+icon('soc-fb', 'footer_soc-fb')
-					li.logs-icons__item
-						a.logs-icons__link(href="#", target="_blank")
-							+icon('soc-tw', 'footer_soc-tw')
-					li.logs-icons__item
-						a.logs-icons__link(href="#", target="_blank")
-							+icon('triangle', 'footer_soc-yt')
 
-		.footer__row.footer__row_bottom
-			.footer__column.footer__column_social
-				ul.logs-icons
-					li.logs-icons__item
-						a.logs-icons__link(href="#", target="_blank")
-							+icon('soc-vk', 'footer_soc-vk')
-					li.logs-icons__item
-						a.logs-icons__link(href="#", target="_blank")
-							+icon('soc-fb', 'footer_soc-fb')
-					li.logs-icons__item
-						a.logs-icons__link(href="#", target="_blank")
-							+icon('soc-tw', 'footer_soc-tw')
-					li.logs-icons__item
-						a.logs-icons__link(href="#", target="_blank")
-							+icon('triangle', 'footer_soc-yt')
-			.footer__column.footer__column_developed
-				.footer__developed.developed
-					a.developed__link(href="https://endorphine.agency/", target="_blank")
-						span.developed__text Разработка:
-						img.developed__img(src="/img/endorphine_studio.png", alt="Endorphine Studio")
-			.footer__column.footer__column_subs-mob
-				span.footer__title.footer__title_subscribe Подписаться на рассылку
-				.subscribe
-					form.subscribe__form(action="/")
-						input.input-line.subscribe__input(type="mail", placeholder="Оставьте вашу почту")
-						button.btn.subscribe__btn(type="submit") ок
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

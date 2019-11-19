@@ -1,0 +1,22 @@
+.pay {
+  &__top {
+    margin-bottom: 20px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    width: 30px;
+    height: 19px;
+    border-radius: 3px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+  }
+  &__list-img {
+    max-width: 23px;
+    max-height: 11px;
+  }
+}

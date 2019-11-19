@@ -1,0 +1,11 @@
+mixin subscription(data, mods)
+	.subscription&attributes(attributes)
+		.subscription__wrap
+			.subscription__title Останемся на связи?
+			.subscription__sub-title
+				|	Подпишитесь на новости и акции,
+				br
+				|	обещаем не будем спамить бла бла
+			.subscription__input-wrap
+				input.subscription__input(name="" type="text" placeholder="Ваш e-mail")
+			button.subscription__btn.btn Подписаться

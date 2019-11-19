@@ -1,0 +1,81 @@
+.subscription {
+  max-width: 100%;
+    &__wrap {
+      background-color: #ff8597;
+      padding: 20px 20px 30px;
+      @include phones {
+        padding: 15px 15px 20px;
+      }
+
+    }
+  &__title {
+    color: #fffefe;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    @include phones {
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+  }
+  &__sub-title {
+    color: #fffefe;
+    font-family: "CoText-Light", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 27px;
+    text-align: center;
+    @include phones {
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+  }
+  &__input-wrap {
+    margin-bottom: 17px;
+    @include phones {
+      margin-bottom: 10px;
+    }
+  }
+  &__input {
+    background-color: #ffffff;
+    color: #000;
+    font-family: "CoText-Light", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    @include phones {
+      font-size: 11px;
+      height: 35px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    padding: 14px 23px 16px;
+    @include phones {
+      padding: 9px 23px 11px;
+    }
+    &:before,
+    &:after {
+      background-color: #fff;
+    }
+  }
+
+
+}
+
+.subscription__input::-webkit-input-placeholder {
+  color: #a0988e;
+}
+.subscription__input::-moz-placeholder {
+  color: #a0988e;
+}
+.subscription__input:-ms-input-placeholder {
+  color: #a0988e;
+}
+.subscription__input:-moz-placeholder {
+  color: #a0988e;
+}

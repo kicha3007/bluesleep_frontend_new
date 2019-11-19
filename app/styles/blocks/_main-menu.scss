@@ -74,9 +74,6 @@
   &__item.hide-active #{&}__link:after {
     opacity: 0;
   }
-
-
-
   &__item:hover #{&}__link:after {
     opacity: 1;
   }

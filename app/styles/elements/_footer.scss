@@ -1,5 +1,115 @@
 .footer {
+  &__wrap {
+
+    background-color: #005eff;
+    padding: 35px 50px;
+    margin: 0 0;
+    @include desktop {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @include phones {
+      padding-top: 15px;
+      padding-bottom: 100px;
+    }
+
+  }
+  &__container {
+    @include tablets {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__column {
+    margin: 0 25px;
+    &_pos_3 {
+      flex-grow: 1;
+      @include desktop {
+          flex-grow: 0;
+      }
+    }
+
+    &_pos_2,
+    &_pos_3 {
+      @include laptop {
+        display: none;
+      }
+    }
+    &_pos_1 {
+      @include tablets {
+          flex-grow: 1;
+      }
+    }
+    &_pos_4 {
+      @include laptop {
+          flex-grow: 1;
+      }
+    }
+    &_pos_5 {
+      flex-grow: 1;
+      max-width: 485px;
+      flex-basis: 420px;
+      @include desktop {
+          flex-grow: 1000;
+      }
+      @include tablets {
+        display: none;
+      }
+    }
+  }
+  &__subscription {
+    position: relative;
+    top: -60px;
+    &_show-mobile {
+      display: none;
+      @include tablets {
+        display: block;
+      }
+    }
+  }
+  &__scl {
+    margin-bottom: 15px;
+  }
+  &__logo {
+    margin-bottom: 30px;
+    @include phones {
+      margin-bottom: 10px;
+    }
+  }
+  &__logo-img-box {
+    @include phones {
+        max-width: 74px;
+    }
+  }
+  &__logo-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__pay {
+    @include phones {
+      display: none;
+    }
+  }
+  &__inner-wrap {
+    display: flex;
+    margin: 0 -25px;
+  }
+  &__city {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: underline;
+    @include phones {
+      font-size: 10px;
+    }
+  }
+  &__city:hover {
+    text-decoration: none;
+  }
+  
+
 }
+
 
 
 
