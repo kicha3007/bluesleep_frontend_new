@@ -1,6 +1,8 @@
 .mobile-menu {
   padding-bottom: 60px;
   display: none;
+  overflow: scroll;
+  height: calc(100vh - 150px);
   &.active {
     @include desktop {
       display: block;

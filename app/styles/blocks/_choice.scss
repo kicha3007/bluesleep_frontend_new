@@ -106,6 +106,7 @@
     text-align: center;
     line-height: 1.2;
     margin-bottom: 90px;
+    font-family: "CoText-Light", sans-serif;
     @include laptop {
       margin-bottom: 60px;
     }
@@ -153,11 +154,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 2px 8px 4px;
+    padding: 3px 8px 3px;
     line-height: 1;
     width: 80px;
     min-height: 21px;
     border-radius: 8px;
+    font-family: "CoHeadline-Bold", sans-serif;
 
   }
 
@@ -190,6 +192,7 @@
     font-weight: 300;
     margin-bottom: 25px;
     text-align: center;
+    font-family: "CoText-Light", sans-serif;
     @include phones {
       font-size: 13px;
       display: none;

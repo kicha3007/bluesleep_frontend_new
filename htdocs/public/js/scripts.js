@@ -190,8 +190,6 @@ function DOMready() {
             arrows: false,
             dots: true,
             infinite: false,
-            centerMode: true,
-            variableWidth: true,
             responsive: [
                 {
                     breakpoint: 767,
@@ -203,6 +201,8 @@ function DOMready() {
                     breakpoint: 575,
                     settings: {
                         slidesToShow: 1,
+                        centerMode: true,
+                        variableWidth: true,
                     }
                 }
             ]

@@ -1,37 +1,38 @@
 mixin faq(data, mods)
 	.faq&attributes(attributes)
-		.faq__main-title FAQ
-		.faq__wrap
-			.faq__top-wrap.js-faq-top-wrap(data-faq-top-wrap)
-				each itemFirst, indxFirst in $faqList
-					if (indxFirst <= 3)
-						.faq__item(data-accord-item)
-							.faq__toggle(data-accord-toggle)
-								.faq__inner-container.container
-									.faq__column.faq__column_pos_1
-										.faq__toggle-inner-btn
-											img.faq__toggle-inner-btn-img(src="img/close_accord.png", alt='')
-									.faq__column.faq__column_pos_2
-										.faq__toggle-title #{itemFirst.title}
-							.faq__content(data-accord-content)
-								.faq__inner-container.container
-									.faq__desc #{itemFirst.desc}
-			.faq__bottom-wrap(data-faq-bottom-wrap)
-				each itemSecond, indxSecond in $faqList
-					if (indxSecond > 3)
-						.faq__item(data-accord-item)
-							.faq__toggle(data-accord-toggle)
-								.faq__inner-container.container
-									.faq__column.faq__column_pos_1
-										.faq__toggle-inner-btn
-											img.faq__toggle-inner-btn-img(src="img/close_accord.png", alt='')
-									.faq__column.faq__column_pos_2
-										.faq__toggle-title #{itemSecond.title}
-							.faq__content(data-accord-content)
-								.faq__inner-container.container
-									.faq__desc #{itemSecond.desc}
-			.faq__btn-wrap
-				button.faq__btn(data-faq-btn)
-					span.faq__btn-text Смотреть больше
-					img.faq__btn-img(src="img/show_more_cross.png", alt='')
+		.faq__container.container
+			.faq__main-title FAQ
+			.faq__wrap
+				.faq__top-wrap.js-faq-top-wrap(data-faq-top-wrap)
+					each itemFirst, indxFirst in $faqList
+						if (indxFirst <= 3)
+							.faq__item(data-accord-item)
+								.faq__toggle(data-accord-toggle)
+									.faq__inner-container.container
+										.faq__column.faq__column_pos_1
+											.faq__toggle-inner-btn
+												img.faq__toggle-inner-btn-img(src="img/close_accord.png", alt='')
+										.faq__column.faq__column_pos_2
+											.faq__toggle-title #{itemFirst.title}
+								.faq__content(data-accord-content)
+									.faq__inner-container.container
+										.faq__desc #{itemFirst.desc}
+				.faq__bottom-wrap(data-faq-bottom-wrap)
+					each itemSecond, indxSecond in $faqList
+						if (indxSecond > 3)
+							.faq__item(data-accord-item)
+								.faq__toggle(data-accord-toggle)
+									.faq__inner-container.container
+										.faq__column.faq__column_pos_1
+											.faq__toggle-inner-btn
+												img.faq__toggle-inner-btn-img(src="img/close_accord.png", alt='')
+										.faq__column.faq__column_pos_2
+											.faq__toggle-title #{itemSecond.title}
+								.faq__content(data-accord-content)
+									.faq__inner-container.container
+										.faq__desc #{itemSecond.desc}
+				.faq__btn-wrap
+					button.faq__btn(data-faq-btn)
+						span.faq__btn-text Смотреть больше
+						img.faq__btn-img(src="img/show_more_cross.png", alt='')
 
