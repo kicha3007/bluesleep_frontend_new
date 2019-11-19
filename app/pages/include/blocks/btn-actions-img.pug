@@ -1,7 +1,7 @@
 mixin btn-actions-icon(data)
 	a(href="#").btn-actions-icon&attributes(attributes)
 		.btn-actions-icon__icon-box
-			img(src="/img/" + data.icon + ".png", alt='' class="btn-actions-icon__img")
+			img(src="img/" + data.icon + ".png", alt='' class="btn-actions-icon__img")
 			if(typeof (data["order-count"]) !== "undefined" && data["order-count"])
 				.btn-actions-icon__order-count!= data["order-count"]
 
