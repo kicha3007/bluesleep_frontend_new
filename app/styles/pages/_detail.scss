@@ -1,0 +1,27 @@
+.detail {
+  margin-bottom: 200px;
+  &__wrap {
+    margin: 0 -70px;
+    display: flex;
+    padding-top: 90px;
+
+
+  }
+  &__column {
+    margin: 0 70px;
+    &_pos_1 {
+      width: calc(56% - 70px);
+      * {
+        min-height: 1px;
+        min-width: 1px;
+      }
+    }
+    &__pos_2 {
+      width: calc(44% - 70px);
+
+    }
+  }
+}
+
+
+

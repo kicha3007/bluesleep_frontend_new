@@ -1,0 +1,20 @@
+extend include/template_base
+
+include include/blocks/slider-derail
+include include/blocks/card-info
+
+block variables
+	- var title = 'Детальная страница';
+
+block content
+	.detail
+		.detail__container.container
+			.detail__wrap
+				.detail__column.detail__column_pos_1
+					+slider-derail()()
+				.detail__column.detail__column_pos_2
+					+card-info()()
+
+	// список ТП
+	- var $offersListJson = JSON.stringify($offersList)
+	script var offersList = "#{$offersListJson}".replace(/&quot;/g, '"');

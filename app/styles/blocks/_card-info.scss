@@ -1,0 +1,111 @@
+.card-info {
+  &__wrap {
+
+  }
+  &__main-title {
+    color: #005eff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  &__desc {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'CoText-Light', sans-serif;
+    margin-bottom: 50px;
+
+  }
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  &__price-new {
+    color: #005eff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 15px;
+
+  }
+  &__price-old {
+    color: #a9a9a9;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: line-through;
+  }
+  &__price-other {
+    font-size: 14px;
+    font-family: 'CoText-Light', sans-serif;
+    margin-bottom: 30px;
+
+
+  }
+  &__price-other-numeric {
+    font-weight: 700;
+    margin: 0 4px;
+    display: inline-block;
+
+
+  }
+  &__choice-size {
+
+  }
+  &__tabs {
+
+  }
+  &__star-rating {
+    margin-bottom: 50px;
+  }
+  &__delivery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  &__delivery-img-box {
+    padding-right: 10px;
+
+  }
+  &__delivery-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+  &__delivery-text {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'CoText-Light', sans-serif;
+    padding-right: 10px;
+
+  }
+  &__delivery-tooltip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 23px;
+    background-color: #ff8596;
+    border-radius: 50%;
+
+
+  }
+  &__delivery-tooltip-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+  &__btn-wrap {
+
+  }
+  &__btn {
+    &_prop_disabled {
+
+    }
+
+  }
+}

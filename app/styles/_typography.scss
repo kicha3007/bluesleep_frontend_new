@@ -1,16 +1,18 @@
 @import "_silent-helpers.scss";
 
-* {
-	font-family: "CoText-Regular";
-}
 
 body {
-	@extend %ff-fira;
+	
 	font-weight: 400;
+	* {
+
+		font-family: "CoText-Regular", sans-serif;
+	}
+
 }
 
 .title {
-	@extend %ff-play;
+	
 }
 
 .html-area {
@@ -45,7 +47,6 @@ body {
 		}
 	}
 	p {
-		@extend %ff-fira;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 24px;
@@ -63,30 +64,30 @@ body {
 	}
 
 	h1 {
-		@extend %ff-play;
+		
 		font-size: 54px;
 		font-weight: 700;
 		line-height: 1;
 	}
 	h2 {
-		@extend %ff-fira;
+		
 		font-size: 30px;
 		font-weight: 500;
 	}
 	h3 {
-		@extend %ff-fira;
+		
 		font-size: 22px;
 		font-weight: 500;
 		line-height: 21.96px;
 	}
 	h4 {
-		@extend %ff-fira;
+		
 		font-size: 20px;
 		font-weight: 500;
 		line-height: 25px;
 	}
 	h5 {
-		@extend %ff-fira;
+		
 		font-size: 18px;
 		font-weight: 600;
 	}

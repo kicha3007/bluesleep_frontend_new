@@ -1,0 +1,45 @@
+.choice-size {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -20px;
+
+  }
+  &__column {
+    &_pos_1 {
+      width: calc(60% - 20px);
+
+    }
+    &_pos_2 {
+      width: calc(40% - 20px);
+
+    }
+
+  }
+  &__title {
+    color: #1d1d1d;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+
+  }
+  &__value {
+    color: #1d1d1d;
+    font-size: 14px;
+    font-family: 'CoText-Light', sans-serif;
+
+  }
+  &__column {
+
+  }
+  &__test {
+
+  }
+  &__test {
+
+  }
+  &__test {
+
+  }
+}

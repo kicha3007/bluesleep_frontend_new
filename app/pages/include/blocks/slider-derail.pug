@@ -1,0 +1,19 @@
+include label
+
+mixin slider-derail(data)
+	sectionn.slider-detail&attributes(attributes)
+		.slider-detail__wrap
+			+label()(class="slider-detail__label")
+			.slider-detail__top
+				.slider-detail__icon-wrap
+					//each iconItem in $detailList.slides.icons
+						.label.catalog-item__label(title=iconItem.description)
+							+icon(iconItem.label, 'svg-icon_label-normal slider-detail__icon')
+				.slider-detail__inner-wrap.js--slider-detail-for
+					each imgItem, imgIndex in $sliderDetailList
+							a(href=imgItem.img data-fancybox="slider-detail").slider-detail__view
+								img(src=imgItem.img , alt='').slider-detail__img
+			.slider-detail__bottom
+				each imgItem, imgIndex in $sliderDetailList
+					.slider-detail__preview(data-slide-detail-nav=imgItem.id)
+							img(src=imgItem.img, alt='').slider-detail__preview-img

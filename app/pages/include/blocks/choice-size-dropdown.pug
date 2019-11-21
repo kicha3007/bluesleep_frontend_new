@@ -1,0 +1,13 @@
+mixin choice-size-dropdown(data)
+	.choice-size-dropdown(data-choice-size-dropdown)&attributes(attributes)
+		.choice-size-dropdown__wrap(data-choice-size-dropdown-wrap)
+			.choice-size-dropdown__active-item(data-choice-size-dropdown-active-item="")
+				.choice-size-dropdown__active-item-text(data-choice-size-dropdown-active-item-text="") #{$offersList[0].SIZE}
+				.choice-size-dropdown__active-item-arrow
+					img.choice-size-dropdown__active-item-img(src="img/dropdown_arrow.png", alt='')
+			.choice-size-dropdown__inner-wrap(data-choice-size-dropdown-inner-wrap)
+				.choice-size-dropdown__list
+					each  sizeItem, sizeIndx in $offersList
+						- var activeSize = sizeIndx == 0 ? "active" : ""
+						.choice-size-dropdown__item(data-choice-size-dropdown-item="" + sizeItem.ID  class="" + activeSize) #{sizeItem.SIZE}
+				a.choice-size-dropdown__other-size(href="#") Свой размер

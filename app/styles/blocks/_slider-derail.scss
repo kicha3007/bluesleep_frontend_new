@@ -1,0 +1,213 @@
+.slider-detail {
+  flex-grow: 1;
+  &__label {
+    position: absolute;
+    top: -30px;
+    left: 50px;
+    z-index: 4;
+  }
+  &__wrap {
+    position: relative;
+  }
+  &__icon-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin: 0 -10px 0 0;
+    max-height: 165px;
+    max-width: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 0 0 10px;
+    padding-bottom: 10px;
+  }
+  &__icon {
+    @include laptop {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__top {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &__inner-wrap {
+    //padding: 0 15px;
+    margin-bottom: 40px;
+    position: relative;
+    &:before,
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 70px;
+      z-index: 2;
+      opacity: 0;
+      transition: .3s ease opacity;
+      pointer-events: none;
+    }
+    &:before {
+      left: 0;
+      right: auto;
+      background-image: linear-gradient(to left, rgba(240, 240, 240, 0) 0%, #f0f0f0 100%);
+
+    }
+    &:after {
+      right: 0;
+      left:  auto;
+      background-image: linear-gradient(to right, rgba(240, 240, 240, 0) 0%, #f0f0f0 100%);
+    }
+    &#{&}_shadow_left:after {
+      opacity: 1;
+    }
+    &#{&}_shadow_right:before {
+      opacity: 1;
+    }
+
+  }
+  &__view {
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-height: 616px;
+    border-radius: 10px;
+    &:focus {
+      outline: none;
+    }
+    @include tablets {
+      height: 350px;
+    }
+    @include phones {
+      height: auto;
+    }
+
+  }
+  &__img {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    //border-radius: 10px;
+    //overflow: hidden;
+  }
+  &__preview-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    min-height: 100%;
+  }
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -5px -14px;
+    @include laptop {
+      display: none;
+    }
+  }
+  &__preview {
+    border-radius: 10px;
+    border: 1px solid transparent;
+    width: 105px;
+    height: 105px;
+    overflow: hidden;
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition:  0.3s ease border-color;
+    cursor: pointer;
+    margin: 0 5px 14px;
+    &.active {
+      border-color: #005eff;
+    }
+  }
+  &__video-preview {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  &__play-icon.play-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .slick {
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      font-size: 0;
+      width: 0;
+      height: 0;
+      border-right: none;
+      border-left: 10px solid #999999;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      background-color: transparent;
+      outline: none;
+      padding: 0;
+      cursor: pointer;
+      transition: border-color .1s ease;
+      z-index: 4;
+      @include phones {
+        border-top-width: 6px;
+        border-bottom-width: 6px;
+        border-left-width: 6px;
+      }
+    }
+    &-dots {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      right: calc(50% - 40px);
+      bottom: -30px;
+      padding: 0;
+      @include phones {
+        margin-bottom: 0;
+      }
+      & > li {
+        width: 6px;
+        height: 6px;
+        background-color: #f0f0f0;
+        margin-right: 10px;
+        border-radius: 50%;
+        list-style-type: none;
+        cursor: pointer;
+        &.slick-active {
+          box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+          background-color: $color_base;
+        }
+        button {
+          display: none;
+        }
+      }
+    }
+    &-disabled {
+      border-left-color: #ebebeb;
+      cursor: auto;
+    }
+    &-next {
+      left: auto;
+      right: 0;
+    }
+    &-prev {
+      transform: rotate(180deg);
+    }
+  }
+
+}

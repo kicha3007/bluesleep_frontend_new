@@ -1,0 +1,27 @@
+mixin card-info-tabs(data, mods)
+	//.card-info-tabs.js--card-info-tabs&attributes(attributes)
+		.card-info-tabs__container.container
+			.card-info-tabs__title Документация
+			.card-info-tabs__wrap
+				.card-info-tabs__nav
+					ul.card-info-tabs__nav-list(data-tabs-nav-list)
+						each item, index in data.items
+							li.card-info-tabs__nav-item.js--card-info-tabs-nav-item(class={"active": (index == 0)} data-tabs-nav-item)
+								a(href=`#${item.id}` data-tabs-toggle).card-info-tabs__nav-link!= item.category
+				.card-info-tabs__inner-wrap
+					each itemTab, indexTab in data.items
+						.card-info-tabs__tab.js--card-info-tabs-tab(id=itemTab.id class={"active": (indexTab == 0)} data-tabs-tab data-block-for-hide-wrap="LAPTOP")
+							.card-info-tabs__list.js--card-info-tabs-list(data-block-for-hide="260" id=`${itemTab.id}-list`)
+								each subItem, subIndxItem in itemTab.subitems
+									if(typeof(subItem.href) !== "undefined" && subItem.href)
+										a(href=subItem.href data-fancybox=itemTab.category).card-info-tabs__item.card-info-tabs-item
+											.card-info-tabs-item__img-box.card-info-tabs__img-box
+												img.card-info-tabs-item__img(src=subItem.img.src, alt=subItem.img.alt)
+											.card-info-tabs-item__title!= subItem.title
+									else
+										.card-info-tabs__item.card-info-tabs-item
+											.card-info-tabs-item__img-box.card-info-tabs__img-box
+												img.card-info-tabs-item__img(src=subItem.img.src, alt=subItem.img.alt)
+							.card-info-tabs__show-all-btn-wrap
+								.show-all-btn.card-info-tabs__show-all-btn.js--card-info-tabs-show-all(data-show-all='Скрыть' data-show-all-block=`${itemTab.id}-list` data-show-all-default=['Скрыть', 'Смотреть все'])
+									span.show-all-btn__text(data-show-all-text='')  Смотреть все

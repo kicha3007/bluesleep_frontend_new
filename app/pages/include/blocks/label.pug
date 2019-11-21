@@ -1,0 +1,10 @@
+mixin label(data)
+	sectionn.label(data-label)&attributes(attributes)
+		.label__wrap
+			.label__top
+				.label__number
+						span.label__number-numeric(data-label-numeric) #{$offersList[0].DISCOUNT} &#32;
+						span.label__number-format(data-label-format)  #{$offersList[0].DISCOUNT_TYPE}
+				.label__text скидка
+			.label__bottom
+				.label__date(data-label-date) #{$offersList[0].DISCOUNT_PERCENT_TIME}
