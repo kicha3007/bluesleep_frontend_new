@@ -1,0 +1,73 @@
+.characteristics {
+  &__container {
+    max-width: 1240px;
+  }
+  &__img-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    margin-bottom: 120px;
+    @include phones {
+      margin-bottom: 30px;
+    }
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__list {
+    display: flex;
+    margin: 0 -20px -40px;
+    flex-wrap: wrap;
+    @include desktop {
+        justify-content: center;
+    }
+    @include phones {
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-bottom: -10px;
+    }
+
+  }
+  &__item {
+    margin: 0 20px 40px;
+    width: calc(20% - 40px);
+    @include desktop {
+      width: calc(33.333333% - 40px);
+    }
+    @include tablets {
+      width: calc(50% - 40px);
+    }
+    @include phones {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  &__title {
+    color: #005eff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+  &__desc {
+    color: #1d1d1d;
+  font-family: 'CoText-Light', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    @include phones {
+      font-size: 11px;
+    }
+
+  }
+
+}

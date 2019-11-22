@@ -3,22 +3,37 @@
   height: 136px;
   background-color: #005eff;
   border-radius: 50%;
+  @include phones {
+    width: 64px;
+    height: 64px;
+  }
 
   &__wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 30px;
     position: relative;
     height: 100%;
+    @include phones {
+      padding-top: 13px;
+    }
   }
 
   &__number {
     color: #ffffff;
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 1px;
-    line-height: 1.1;
+    line-height: 1;
+    @include phones {
+      font-size: 17px;
+    }
+    span {
+      line-height: 1;
+    }
+
   }
 
   &__text {
@@ -27,11 +42,14 @@
     font-weight: 300;
     font-family: "CoText-Light", sans-serif;
     line-height: 1;
+    @include phones {
+      font-size: 11px;
+    }
   }
 
   &__bottom {
     position: absolute;
-    bottom: -10px;
+    bottom: -5px;
     left: 50%;
     width: 96px;
     margin-left: -48px;
@@ -45,6 +63,13 @@
     justify-content: center;
     align-items: center;
     min-height: 30px;
+    @include phones {
+      font-size: 7px;
+      width: 46px;
+      min-height: 14px;
+      margin-left: -23px;
+      border-radius: 7px;
+    }
 
   }
 

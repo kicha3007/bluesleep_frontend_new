@@ -7,13 +7,20 @@
 
   }
   &__column {
+    margin: 0 20px;
     &_pos_1 {
-      width: calc(60% - 20px);
+      width: calc(60% - 40px);
+      @include phones {
+        display: none;
+      }
 
     }
     &_pos_2 {
-      width: calc(40% - 20px);
+      width: calc(40% - 40px);
 
+    }
+    @include phones {
+      width: 100%;
     }
 
   }
@@ -28,18 +35,6 @@
     color: #1d1d1d;
     font-size: 14px;
     font-family: 'CoText-Light', sans-serif;
-
-  }
-  &__column {
-
-  }
-  &__test {
-
-  }
-  &__test {
-
-  }
-  &__test {
 
   }
 }

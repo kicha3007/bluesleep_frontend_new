@@ -1,27 +1,34 @@
 mixin card-info-tabs(data, mods)
-	//.card-info-tabs.js--card-info-tabs&attributes(attributes)
-		.card-info-tabs__container.container
-			.card-info-tabs__title Документация
-			.card-info-tabs__wrap
-				.card-info-tabs__nav
-					ul.card-info-tabs__nav-list(data-tabs-nav-list)
-						each item, index in data.items
-							li.card-info-tabs__nav-item.js--card-info-tabs-nav-item(class={"active": (index == 0)} data-tabs-nav-item)
-								a(href=`#${item.id}` data-tabs-toggle).card-info-tabs__nav-link!= item.category
-				.card-info-tabs__inner-wrap
-					each itemTab, indexTab in data.items
-						.card-info-tabs__tab.js--card-info-tabs-tab(id=itemTab.id class={"active": (indexTab == 0)} data-tabs-tab data-block-for-hide-wrap="LAPTOP")
-							.card-info-tabs__list.js--card-info-tabs-list(data-block-for-hide="260" id=`${itemTab.id}-list`)
-								each subItem, subIndxItem in itemTab.subitems
-									if(typeof(subItem.href) !== "undefined" && subItem.href)
-										a(href=subItem.href data-fancybox=itemTab.category).card-info-tabs__item.card-info-tabs-item
-											.card-info-tabs-item__img-box.card-info-tabs__img-box
-												img.card-info-tabs-item__img(src=subItem.img.src, alt=subItem.img.alt)
-											.card-info-tabs-item__title!= subItem.title
-									else
-										.card-info-tabs__item.card-info-tabs-item
-											.card-info-tabs-item__img-box.card-info-tabs__img-box
-												img.card-info-tabs-item__img(src=subItem.img.src, alt=subItem.img.alt)
-							.card-info-tabs__show-all-btn-wrap
-								.show-all-btn.card-info-tabs__show-all-btn.js--card-info-tabs-show-all(data-show-all='Скрыть' data-show-all-block=`${itemTab.id}-list` data-show-all-default=['Скрыть', 'Смотреть все'])
-									span.show-all-btn__text(data-show-all-text='')  Смотреть все
+	.card-info-tabs.js--card-info-tabs&attributes(attributes)
+		.card-info-tabs__wrap
+			.card-info-tabs__nav
+				ul.card-info-tabs__nav-list(data-tabs-nav-list)
+					each item, index in $otherProductsList
+						li.card-info-tabs__nav-item.js--card-info-tabs-nav-item(class={"active": (index == 2)} data-tabs-nav-item)
+							a(href=`#${item.ID}` data-tabs-toggle).card-info-tabs__nav-link!= item.COMBINATION_NAME
+							if(item.SAVING)
+								.card-info-tabs__saving
+									span.card-info-tabs__saving-text
+										|	Экономия
+										br
+										|	до
+									span.card-info-tabs__saving-number 25%
+			.card-info-tabs__inner-wrap
+				each itemTab, indexTab in $otherProductsList
+					if(indexTab < 2)
+						.card-info-tabs__tab(id=itemTab.ID  data-tabs-tab)
+							.card-info-tabs__top
+								.card-info-tabs__title #{itemTab.NAME}
+								a.card-info-tabs__choice-other(href="#") Выбрать другой комплект
+							.card-info-tabs__desc #{itemTab.DESC}
+							.card-info-tabs__img-wrap
+								each imgItem in itemTab.IMGS
+									.card-info-tabs__img-box
+										img.card-info-tabs__img(src=imgItem.src, alt=imgItem.alt)
+							.card-info-tabs__combination !{itemTab.COMBINATION}
+							.card-info-tabs__price
+								.card-info-tabs__price-new #{itemTab.BASE_PRICE}
+								.card-info-tabs__price-old #{itemTab.OLD_PRICE}
+							.card-info-tabs__profit
+								span.card-info-tabs__profit-text Выгода
+								span.card-info-tabs__profit-number #{itemTab.PROFIT}

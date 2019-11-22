@@ -207,6 +207,34 @@ function DOMready() {
 
     }
 
+    if (globParam.windowWidth() < globParam.getMediaSize().LAPTOP) {
+        // Инициализация слайдера advantages-detail
+        $(".js-advantages-detail-wrap").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: true,
+                        variableWidth: true,
+                    }
+                }
+            ]
+        });
+
+    }
+
     // Инициализация слайдера blogers
     $(".js-blogers-wrap").slick({
         slidesToShow: 4,
@@ -264,6 +292,7 @@ function DOMready() {
                         fade: true,
                         infinite: false,
                         lazyLoad: 'ondemand',
+                        adaptiveHeight: true,
                         responsive: [
                             {
                                 breakpoint: 980,
@@ -308,22 +337,7 @@ function DOMready() {
 
     });
 
-    // // Переключение "размеров" в виде селекта
 
-    // if ($(main + '.js-offers__sizes__select').length)
-    // {
-    //     $(main + '.js-offers__sizes__select').change(function(){
-    //         var offerId = $(this).val();
-    //         if (offerId == 'custom_size')
-    //         {
-    //             showCustomSizePopup();
-    //             return;
-    //         }
-    //
-    //         UpdateColorsHTML(offerId);
-    //         ChangeOffer(offerId);
-    //     });
-    // }
 
     offersList = JSON.parse(offersList);
 
@@ -391,15 +405,12 @@ function DOMready() {
                 }
 
 
-
-
-
                 //скрываем/показываем блок зачеркнутой цены
-                var $oldPrice = $("[ data-card-info-price-old]");
-                if (currOffer['OLD_PRICE'] == '' && $oldPrice.hasClass('hide') == true)
-                    $oldPrice.removeClass('hide');
-                else if (currOffer['OLD_PRICE'] != '' && $oldPrice.hasClass('hide') == false)
-                    $oldPrice.addClass('hide');
+            var $oldPrice = $("[ data-card-info-price-old]");
+            if (currOffer['OLD_PRICE'] == '' && $oldPrice.hasClass('hide') == false)
+                $oldPrice.removeClass('hide');
+            else if (currOffer['OLD_PRICE'] != '' && $oldPrice.hasClass('hide') == true)
+                $oldPrice.addClass('hide');
             }
 
             // скрываем/показываем блок "В рассрочку"
@@ -417,27 +428,35 @@ function DOMready() {
                     $creditBtn.addClass('hide');
             }
 
-
-
-
-
-
-        // $(main + '.js-product__subtitle__dimensions').html(currOffer['DIMENSIONS_LABEL']);
-        // $(main + '.js-product__weight_place').html(currOffer['WEIGHT_PLACE']);
-        // if (currOffer['WEIGHT_PLACE'] != '')
-        //     $(main + '.js-product__weight_place').removeClass('hidden');
-        // else
-        //     $(main + '.js-product__weight_place').addClass('hidden');
-        //
-        // // Габариты
-        // $(main + '.js-product__gabarity').html(currOffer['GABARITY']);
-        // if (currOffer['GABARITY'] != '')
-        //     $(main + '.js-product__gabarity').removeClass('hidden');
-        // else
-        //     $(main + '.js-product__gabarity').addClass('hidden');
-
         }
     }
+
+
+
+
+
+
+    // Табы
+    function tabsStart(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var $this = $(this),
+            target = $this.attr('href');
+
+        $this.closest("[data-tabs-nav-list]").find("[data-tabs-nav-item].active").removeClass("active");
+        $this.closest("[data-tabs-nav-item]").addClass("active");
+
+        $(e.delegateTarget).find("[data-tabs-tab].active").removeClass("active");
+        $(e.delegateTarget).find(target).addClass("active");
+    }
+
+
+    $(".js--card-info-tabs").on("click", "[data-tabs-toggle]", function (e) {
+        tabsStart.call(this, e);
+    });
+
+
 
     // Обработчик смены ТП в деталке товара
     // function ChangeOffer(offerId) {

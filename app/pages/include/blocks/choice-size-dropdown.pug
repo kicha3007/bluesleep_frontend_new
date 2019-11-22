@@ -2,9 +2,12 @@ mixin choice-size-dropdown(data)
 	.choice-size-dropdown(data-choice-size-dropdown)&attributes(attributes)
 		.choice-size-dropdown__wrap(data-choice-size-dropdown-wrap)
 			.choice-size-dropdown__active-item(data-choice-size-dropdown-active-item="")
+				.choice-size-dropdown__active-item-pre-text.choice-size-dropdown__active-item-pre-text_show_mobile Размер
 				.choice-size-dropdown__active-item-text(data-choice-size-dropdown-active-item-text="") #{$offersList[0].SIZE}
+				.choice-size-dropdown__active-item-price.choice-size-dropdown__active-item-price_show_mobile(data-card-info-price-new) #{$offersList[0].BASE_PRICE}
 				.choice-size-dropdown__active-item-arrow
-					img.choice-size-dropdown__active-item-img(src="img/dropdown_arrow.png", alt='')
+					img.choice-size-dropdown__active-item-img.choice-size-dropdown__active-item-img_show_desktop(src="img/dropdown_arrow.png", alt='')
+					img.choice-size-dropdown__active-item-img.choice-size-dropdown__active-item-img_show_mobile(src="img/plus.png", alt='')
 			.choice-size-dropdown__inner-wrap(data-choice-size-dropdown-inner-wrap)
 				.choice-size-dropdown__list
 					each  sizeItem, sizeIndx in $offersList

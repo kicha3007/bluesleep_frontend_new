@@ -12,11 +12,20 @@
     background-image: url("../svg/star_blank.svg");
     background-repeat: repeat-x;
     margin-right: 10px;
+    @include phones {
+      height: 12px;
+      background-size: 14px 12px;
+      width: 70px;
+    }
   }
   &__on {
     height: 20px;
     background-image: url("../svg/star.svg");
     background-repeat: repeat-x;
+    @include phones {
+      height: 12px;
+      background-size: 14px 12px;
+    }
   }
   &__live {
     position: absolute;
@@ -35,9 +44,16 @@
     background-repeat: no-repeat;
     padding-right: 4px;
     background-position: top left;
+    @include phones {
+      width: 14px;
+      height: 12px;
+      padding-right: 2px;
+      background-size: 14px 12px;
+    }
   }
   &__live &__star:hover ~ &__star {
     background-image: url("../svg/star_blank.svg");
+    background-size: 14px 12px;
   }
   &__live:hover {
     opacity: 1;
@@ -48,6 +64,9 @@
     font-family: 'CoText-Light', sans-serif;
     font-size: 15px;
     font-weight: 300;
+    @include phones {
+      font-size: 9px;
+    }
   }
   
   

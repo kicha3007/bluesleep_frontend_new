@@ -2,6 +2,8 @@ extend include/template_base
 
 include include/blocks/slider-derail
 include include/blocks/card-info
+include include/blocks/advantages-detail
+include include/blocks/characteristics
 
 block variables
 	- var title = 'Детальная страница';
@@ -14,6 +16,9 @@ block content
 					+slider-derail()()
 				.detail__column.detail__column_pos_2
 					+card-info()()
+			.detail__title Преимущества матраса
+			+advantages-detail()(class="detail__advantages")
+			+characteristics()()
 
 	// список ТП
 	- var $offersListJson = JSON.stringify($offersList)

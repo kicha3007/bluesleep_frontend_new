@@ -1,0 +1,135 @@
+.advantages-detail {
+  justify-content: center;
+  position: relative;
+
+
+  &__wrap {
+    display: flex;
+    margin: 0 -60px;
+    padding: 55px 0;
+    @include laptop {
+      display: block;
+      padding: 15px 0;
+    }
+
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1060px;
+    @include laptop {
+      display: block;
+    }
+  }
+
+  &__item {
+    margin: 0 60px;
+    text-align: center;
+    @include phones {
+        max-width: 160px;
+    }
+  }
+
+  &__img-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    @include phones {
+      width: 41px;
+      height: 41px;
+    }
+
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  &__title {
+    color: #1d1d1d;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    @include phones {
+      font-size: 11px;
+      font-weight: 400;
+
+
+      
+    }
+
+  }
+  &__icon {
+    fill: #005eff;
+  }
+
+  &__desc {
+    color: #1d1d1d;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    @include phones {
+      font-size: 12px;
+    }
+
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    display: inline-flex;
+    left: 50%;
+    padding: 0;
+    z-index: 10;
+    margin-left: -33px;
+    @include phones {
+      bottom: -20px;
+    }
+
+    & > li {
+      width: 6px;
+      height: 6px;
+      margin-right: 12px;
+      border-radius: 50%;
+      list-style-type: none;
+      cursor: pointer;
+      border: 1px solid #124afd;
+      @include laptop {
+        width: 5px;
+        height: 5px;
+        margin-right: 8px;
+      }
+
+      &.slick-active {
+        border-color: #124afd;
+        background-color: #124afd;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+
+  .slick-slide {
+    //width: 150px !important;;
+  }
+
+  .slick-list {
+    overflow: visible !important;
+  }
+
+
+}
+
