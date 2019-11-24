@@ -3,7 +3,12 @@ mixin characteristics(data)
 		.characteristics__container.container
 			.characteristics__wrap
 				.characteristics__img-box
-					img.characteristics__img(src="img/c/characteristics_1.png", alt='')
+					img.characteristics__img.characteristics__img_show_mobile(src="img/c/characteristics_1.png", alt="Слои матраса Blue Sleep" title="Слои матраса Blue Sleep")
+					video.characteristics__video.characteristics__video_show_desktop(muted="" data-characteristics-video)
+						source(src="video/bluesleep_presentation.mp4" type="video/mp4")
+						source(src="video/bluesleep_presentation.ogv" type="video/ogg")
+						source(src="video/bluesleep_presentation.webm" type="video/webm")
+
 				.characteristics__list
 					.characteristics__item
 						.characteristics__title

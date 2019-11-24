@@ -9,14 +9,32 @@
     align-items: flex-start;
     overflow: hidden;
     margin-bottom: 120px;
+
+
     @include phones {
       margin-bottom: 30px;
     }
   }
   &__img {
-    display: block;
     max-width: 100%;
     height: auto;
+
+    &_show_mobile {
+      display: none;
+      @include tablets {
+        display: block;
+      }
+    }
+  }
+  &__video {
+    width: 100%;
+    max-width: none;
+    &_show_desktop {
+      display: inline-block;
+      @include tablets {
+        display: none;
+      }
+    }
   }
   &__list {
     display: flex;

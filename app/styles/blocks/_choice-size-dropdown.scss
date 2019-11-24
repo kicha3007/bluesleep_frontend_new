@@ -40,6 +40,19 @@
     }
 
 
+
+  }
+  &__active-item-discount {
+    border-radius: 10px;
+    background-color: #005eff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    font-size: 14px;
+    margin-right: 10px;
+    color: #fff;
   }
 
   &__inner-wrap {
@@ -75,7 +88,7 @@
     padding-left: 30px;
     height: 32px;
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     line-height: 32px;
     align-items: center;
     &.active {

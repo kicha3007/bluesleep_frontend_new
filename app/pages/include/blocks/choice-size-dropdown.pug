@@ -4,6 +4,8 @@ mixin choice-size-dropdown(data)
 			.choice-size-dropdown__active-item(data-choice-size-dropdown-active-item="")
 				.choice-size-dropdown__active-item-pre-text.choice-size-dropdown__active-item-pre-text_show_mobile Размер
 				.choice-size-dropdown__active-item-text(data-choice-size-dropdown-active-item-text="") #{$offersList[0].SIZE}
+
+				.choice-size-dropdown__active-item-discount(data-choice-size-dropdown-active-item-discount) - &#32; #{$offersList[0].DISCOUNT}  &#32; #{$offersList[0].DISCOUNT_TYPE}
 				.choice-size-dropdown__active-item-price.choice-size-dropdown__active-item-price_show_mobile(data-card-info-price-new) #{$offersList[0].BASE_PRICE}
 				.choice-size-dropdown__active-item-arrow
 					img.choice-size-dropdown__active-item-img.choice-size-dropdown__active-item-img_show_desktop(src="img/dropdown_arrow.png", alt='')

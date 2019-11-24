@@ -60,14 +60,14 @@ function DOMready() {
 
                 $('[data-main-menu-item]').hover(function () {
                     clearTimeout($.data(this, 'timer'));
-                    $('[data-dropdown-menu]', this).stop(true, true).slideDown(200);
+                    $('[data-dropdown-menu]', this).stop(true, false).slideDown(400);
                 }, function () {
                     $.data(this, 'timer', setTimeout($.proxy(function () {
-                        $('[data-dropdown-menu]', this).stop(true, true).slideUp(200);
+                        $('[data-dropdown-menu]', this).stop(true, false).slideUp(400);
 
                         self.showInfoForActiveDropdownItem.call($("[data-dropdown-menu-new='true']"));
 
-                    }, this), 100));
+                    }, this), 200));
                 });
             },
             showInfoForActiveDropdownItem: function () {
@@ -331,7 +331,6 @@ function DOMready() {
         $(e.delegateTarget).find("[data-choice-size-dropdown-active-item-text]").text($this.text());
 
         var offerId = $this.data("choice-size-dropdown-item");
-        console.log("idd", offerId);
 
         ChangeOffer(offerId);
 
@@ -375,6 +374,22 @@ function DOMready() {
                         $label.addClass("hide");
                     }
                 }
+
+                // Показываем скидку в селекте размеров
+                var $discountSize = $("[data-choice-size-dropdown-active-item-discount]");
+                if (currOffer['DISCOUNT'] > 0) {
+
+                    if ($discountSize.hasClass("hide")) {
+                        $discountSize.removeClass("hide");
+                    }
+                    $discountSize.html( "- " + currOffer['DISCOUNT'] +  " " + currOffer['DISCOUNT_TYPE']);
+                } else {
+                    if (!$discountSize.hasClass("hide")) {
+                        $discountSize.addClass("hide");
+                    }
+                }
+
+
 
                 // Меняем Размеры
                 var $gabarity = $("[data-choice-size-value-size]");
@@ -455,6 +470,35 @@ function DOMready() {
     $(".js--card-info-tabs").on("click", "[data-tabs-toggle]", function (e) {
         tabsStart.call(this, e);
     });
+
+
+    //Включаем видео при скролле
+    function presentation(){
+
+        var presentation_video = document.querySelector("[data-characteristics-video]"),
+            videoPlayed = false, // проигралось ли видео
+            hintOpen;
+
+        $(window).on('scroll', function(e){
+            var windowHeight = $(window).height() // высота окна
+            var posVideo = presentation_video.getBoundingClientRect().top; //Текущая позиция видео относительно окна
+            if (!videoPlayed && (posVideo < windowHeight - 300)){
+                videoPlayed = true;
+
+                setTimeout(function(){
+                    if (presentation_video ){
+                        presentation_video.play();
+                    }
+                }, 1000);
+
+            }
+        });
+
+    }
+
+    if ($('[data-characteristics-video]')){
+        presentation();
+    }
 
 
 
