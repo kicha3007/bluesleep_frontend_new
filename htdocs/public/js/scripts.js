@@ -338,7 +338,10 @@ function DOMready() {
 
 
 
+    if(typeof offersList !== typeof undefined && offersList) {
+
     offersList = JSON.parse(offersList);
+    }
 
     // Обработчик смены ТП в деталке товара
     function ChangeOffer(offerId) {
@@ -480,7 +483,7 @@ function DOMready() {
             hintOpen;
 
         $(window).on('scroll', function(e){
-            var windowHeight = $(window).height() // высота окна
+            var windowHeight = $(window).height(); // высота окна
             var posVideo = presentation_video.getBoundingClientRect().top; //Текущая позиция видео относительно окна
             if (!videoPlayed && (posVideo < windowHeight - 300)){
                 videoPlayed = true;
@@ -496,7 +499,7 @@ function DOMready() {
 
     }
 
-    if ($('[data-characteristics-video]')){
+    if ($('[data-characteristics-video]').length){
         presentation();
     }
 

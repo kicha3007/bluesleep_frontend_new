@@ -1,0 +1,26 @@
+.promo {
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  &__btn-text {
+    color: #005eff;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  &__input {
+    display: none;
+  }
+  &__btn-img {
+    margin-left: 5px;
+    display: inline-block;
+  }
+
+}

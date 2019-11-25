@@ -1,0 +1,35 @@
+.counter-amount {
+    display: inline-flex;
+    &__btn {
+        color: #cccccc;
+        outline: none;
+        background-color: #fff;
+        transition: .3s ease;
+        cursor: pointer;
+        text-align: center;
+        width: 28px;
+        height: 28px;
+        border: 1px solid #6c6c6c;
+        border-radius: 50%;
+        &_minus {
+            margin-right: 5px;
+
+        }
+        &_plus {
+            margin-left: 5px;
+        }
+    }
+    &__btn:hover {
+        color: #ffffff;
+        background-color: #ececec;
+    }
+    &__value {
+        max-width: 50px;
+        width: 100%;
+        text-align: center;
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 18px;
+        border: none;
+    }
+}

@@ -1,0 +1,22 @@
+mixin more-products(data)
+	.more-products&attributes(attributes)
+		.more-products__wrap
+			.more-products__main-title Идеальная пара к Вашему заказу
+			.more-products__list(data-more-products-list)
+				.more-products__item
+					.more-products__top
+						.more-products__title Одеяло Blue Sleep Duvet
+					.more-products__bottom
+						.more-products__bottom-column.more-products__bottom-column_pos_1
+							.more-products__img-box
+								img.more-products__img(src="", alt='')
+						.more-products__bottom-column.more-products__bottom-column_pos_2
+							.counter-amount.js--counter-amount.basket-order__counter-amount
+								button.counter-amount__btn.counter-amount__btn_minus(data-counter-amount-btn="minus").basket-order__counter-amount-btn
+									+icon('minus', 'svg-icon_minus basket-order__svg-icon')
+								input.counter-amount__value( value="1").js--counter-amount-value.basket-order__counter-amount-value
+								button.counter-amount__btn.counter-amount__btn_plus(data-counter-amount-btn="plus").basket-order__counter-amount-btn
+							.more-products__btn-wrap
+								button.more-products__btn.btn Добавить
+
+						
