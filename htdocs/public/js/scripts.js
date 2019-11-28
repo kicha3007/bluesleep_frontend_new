@@ -135,16 +135,23 @@ function DOMready() {
     accordeonBase.slideUpOnLoad(".js-faq-top-wrap", false);
     accordeonBase.setListener(".js-faq-top-wrap", true);
 
+    var overleyCheck = false;
+
     var overlayMain = (function () {
 
 
 
             $("[data-overlay]").on("click", function () {
-                if($("[data-mobile-menu-btn]").hasClass("active")) {
+                if($("[data-overlay]").hasClass("under-all")) {
+                    $("[data-overlay]").removeClass("under-all");
+                }
+
+                if($("[data-mobile-menu-btn]").hasClass("active") ) {
                     mobileMenu.toggleShow.call($("[data-mobile-menu-btn]"));
                 }
-                if($("[data-basket-modal]").hasClass("active")) {
-                    mobileMenu.toggleShow.call($("[data-basket-modal]"));
+                if($("[data-basket-modal]").hasClass("active") ) {
+                    $("[data-basket-modal]").removeClass("active");
+                    overlayMain.toggleOverlayShowHide();
                 }
             });
 
@@ -152,11 +159,19 @@ function DOMready() {
         return {
             toggleOverlayShowHide: function (underAll) {
                 if(typeof underAll !== typeof undefined && underAll) {
-                    $("[data-overlay]") .toggleClass("under-all");
+                    $("[data-overlay]").toggleClass("under-all");
                 }
+
+
 
                 $("[data-overlay]").toggleClass("active");
                 $("html").toggleClass("overflow-hidden");
+                if($("[data-overlay]").hasClass("active")) {
+                     overleyCheck = true;
+
+                } else {
+                    overleyCheck = false;
+                }
             },
         }
     })();
@@ -168,7 +183,9 @@ function DOMready() {
                 var self = this;
                 $("[data-mobile-menu-btn]").on("click", function () {
 
-                    self.toggleShow.call(this);
+                    if(overleyCheck == false) {
+                        self.toggleShow.call(this);
+                    }
                 });
             },
             toggleShow: function () {
@@ -253,7 +270,7 @@ function DOMready() {
         slidesToScroll: 1,
         arrows: true,
         dots: false,
-        infinite: false,
+        infinite: true,
         // responsive: [
         //     {
         //         breakpoint: 767,
@@ -532,9 +549,17 @@ function DOMready() {
 
     //Показываем модалку корзины
     $("[data-actions-btn-basket]").on("click", function () {
+        if(overleyCheck == false) {
+            overlayMain.toggleOverlayShowHide(true);
+            $("[data-basket-modal]").toggleClass("active");
+        }
+
+    });
+
+    //Скрываем модалку корзины
+    $("[data-basket-modal-close]").on("click", function () {
         overlayMain.toggleOverlayShowHide(true);
         $("[data-basket-modal]").toggleClass("active");
-
     });
 
 
@@ -558,7 +583,7 @@ function DOMready() {
 
 
     // Корзина минус кол-во
-    $('[data-counter-amount-row]').on('click', '[data-counter-amount-btn="minus"]', function(e){
+    $('[data-counter-amount-wrap]').on('click', '[data-counter-amount-btn="minus"]', function(e){
         var $input = $(e.delegateTarget).find('[data-counter-amount-value]');
         var basketId = parseInt($input.data('counter-amount-basket-id'));
         var productId = parseInt($input.data('counter-amount-product-id'));
@@ -580,7 +605,7 @@ function DOMready() {
     });
 
     // Корзина плюс кол-во
-    $('[data-counter-amount-row]').on('click', '[data-counter-amount-btn="plus"]', function(e){
+    $('[data-counter-amount-wrap]').on('click', '[data-counter-amount-btn="plus"]', function(e){
         var $input = $(e.delegateTarget).find('[data-counter-amount-value]');
         var basketId = parseInt($input.data('counter-amount-basket-id'));
         var productId = parseInt($input.data('counter-amount-product-id'));
@@ -661,11 +686,31 @@ function DOMready() {
         });
     });
 
-    // Открыть поле купон
-    $('#bx-soa-order-form').on('click', '#order__promocode_open', function () {
-        $('.order__promocode-filler').hide();
-        $('.order__promocode-real').show();
+
+    //Блок с промо кодом
+    $("[data-promo-wrap]").on("click", "[data-promo-top]",  function(e) {
+        var $this = $(this);
+        $this.removeClass("active");
+        $(e.delegateTarget).find("[data-promo-bottom]").addClass("active");
     });
+
+    $("[data-promo-wrap]").on("click", "[data-promo-btn-submit]",  function(e) {
+        var inputValue = $(e.delegateTarget).find("[data-promo-input]").val();
+        var wrapBottom = $(e.delegateTarget).find("[data-promo-bottom]");
+        var promoPart = $(this).closest("[data-basket-modal]").find("[data-promo-part]");
+        if(typeof  inputValue !== typeof undefined && inputValue) {
+            wrapBottom.removeClass("active");
+            promoPart.addClass("active");
+            promoPart.find("[data-promo-part-title]").text(inputValue);
+        }
+
+    });
+
+    $("[ data-promo-part]").on("click", "[data-promo-part-btn]", function(e) {
+        $(e.delegateTarget).removeClass("active");
+        $(this).closest("[data-basket-modal]").find("[data-promo-top]").addClass("active");
+    })
+
 
 
 

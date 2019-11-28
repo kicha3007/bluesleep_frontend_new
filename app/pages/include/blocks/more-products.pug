@@ -11,10 +11,10 @@ mixin more-products(data)
 							a.more-products__img-box(href="#")
 								img.more-products__img(src="img/c/blogers_1.jpg", alt='')
 						.more-products__bottom-column.more-products__bottom-column_pos_2
-							.counter-amount.more-products__counter-amount
+							.counter-amount.more-products__counter-amount(data-counter-amount-wrap)
 								button.counter-amount__btn.counter-amount__btn_minus(data-counter-amount-btn="minus").basket-order__counter-amount-btn
 									img.basket-modal__counter-amount-btn-img(src="img/minus.png", alt='')
-								input.counter-amount__value( value="1").js--counter-amount-value.basket-order__counter-amount-value
+								input.counter-amount__value( value="1" data-counter-amount-value)
 								button.counter-amount__btn.counter-amount__btn_plus(data-counter-amount-btn="plus").basket-order__counter-amount-btn
 									img.basket-modal__counter-amount-btn-img(src="img/plus.png", alt='')
 							.more-products__btn-wrap
@@ -29,10 +29,10 @@ mixin more-products(data)
 						.more-products__bottom-column.more-products__bottom-column_pos_2
 							.counter-amount.more-products__counter-amount
 								button.counter-amount__btn.counter-amount__btn_minus(data-counter-amount-btn="minus").basket-order__counter-amount-btn
-									img.basket-modal__counter-amount-btn-img(src="img/minus.png", alt='')
+									img.basket-modal__counter-amount-btn-img(src="img/basket_minus.png", alt='')
 								input.counter-amount__value( value="1").js--counter-amount-value.basket-order__counter-amount-value
 								button.counter-amount__btn.counter-amount__btn_plus(data-counter-amount-btn="plus").basket-order__counter-amount-btn
-									img.basket-modal__counter-amount-btn-img(src="img/plus.png", alt='')
+									img.basket-modal__counter-amount-btn-img(src="img/basket_plus.png", alt='')
 							.more-products__btn-wrap
 								button.more-products__btn.btn Добавить
 				.more-products__item

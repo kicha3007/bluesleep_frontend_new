@@ -76,6 +76,9 @@ body {
   z-index: 55;
   &.under-all {
     z-index: 100;
+    @include phones {
+      z-index: 55;
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 mixin promo(data)
 	sectionn.promo&attributes(attributes)
-		.promo__wrap
-			.promo__top(data-promo-top)
+		.promo__wrap(data-promo-wrap)
+			.promo__top.active(data-promo-top)
 				button.promo__btn
 					span.promo__btn-text У меня есть промокод
 					img.promo__btn-img(src="img/plus_blue.png", alt='')
@@ -9,8 +9,8 @@ mixin promo(data)
 				.promo__btn-text.promo__btn-text_indent_big Промокод
 				.promo__inner-wrap
 					//span.promo__legend Промокод:
-					input.promo__input(type="search", placeholder=""   data-promo-input value="fdsfsddfssdsdfsdf")
-				button.promo__btn-submit
+					input.promo__input(type="search", placeholder=""   data-promo-input value="")
+				button.promo__btn-submit(data-promo-btn-submit)
 					span.promo__btn-submit-text Применить
 				.promo__error Промокод устарел
 					

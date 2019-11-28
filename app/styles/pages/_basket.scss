@@ -1,7 +1,8 @@
 .basket {
-  background-color: rgba(0, 0, 0, 0.4);
-  min-width: 100vh;
   min-height: 100vh;
-  z-index: 99999;
+
+  @include phones {
+      position: relative;
+  }
 
 }

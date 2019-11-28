@@ -1,7 +1,10 @@
 .promo-part {
   margin-top: 20px;
   margin-bottom: 45px;
-
+  display: none;
+  &.active {
+    display: block;
+  }
   &__row {
     display: flex;
     align-items: center;
@@ -9,6 +12,7 @@
     &_pos_1 {
       //margin-bottom: 5px;
     }
+
   }
   &__column {
     &_pos_2 {

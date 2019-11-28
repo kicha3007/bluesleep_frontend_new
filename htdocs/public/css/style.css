@@ -1291,6 +1291,12 @@ body {
   z-index: 100;
 }
 
+@media screen and (max-width: 575px) {
+  .overlay.active.under-all {
+    z-index: 55;
+  }
+}
+
 .hide {
   display: none;
 }
@@ -3151,10 +3157,13 @@ body.compensate-for-scrollbar {
 }
 
 .basket {
-  background-color: rgba(0, 0, 0, 0.4);
-  min-width: 100vh;
   min-height: 100vh;
-  z-index: 99999;
+}
+
+@media screen and (max-width: 575px) {
+  .basket {
+    position: relative;
+  }
 }
 
 .btn {
@@ -7372,15 +7381,18 @@ body.compensate-for-scrollbar {
   max-width: 418px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   z-index: 101;
   min-height: 100vh;
   padding-bottom: 50px;
-  display: none;
+  -webkit-transition: right .5s;
+  transition: right .5s;
+  overflow: scroll;
+  max-height: 100vh;
 }
 
 .basket-modal.active {
-  display: block;
+  right: 0;
 }
 
 .basket-modal__title-count {
@@ -7400,6 +7412,21 @@ body.compensate-for-scrollbar {
 
 @media screen and (max-width: 575px) {
   .basket-modal__title-count {
+    display: none;
+  }
+}
+
+.basket-modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 575px) {
+  .basket-modal__close {
     display: none;
   }
 }
@@ -7838,6 +7865,7 @@ body.compensate-for-scrollbar {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-right: 5px;
 }
 
 @media screen and (max-width: 575px) {
@@ -7889,12 +7917,20 @@ body.compensate-for-scrollbar {
   }
 }
 
+.promo__top.active {
+  display: block;
+}
+
 .promo__bottom {
   width: 100%;
   border-bottom: 1px solid #005eff;
   padding-bottom: 5px;
   margin-bottom: 15px;
   display: none;
+}
+
+.promo__bottom.active {
+  display: block;
 }
 
 .promo__btn {
@@ -8232,6 +8268,11 @@ body.compensate-for-scrollbar {
 .promo-part {
   margin-top: 20px;
   margin-bottom: 45px;
+  display: none;
+}
+
+.promo-part.active {
+  display: block;
 }
 
 .promo-part__row {

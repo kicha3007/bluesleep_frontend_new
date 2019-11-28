@@ -4,15 +4,17 @@
   max-width: 418px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   z-index: 101;
   min-height: 100vh;
   padding-bottom: 50px;
-  display: none;
+  transition: right .5s;
+  overflow: scroll;
+  max-height: 100vh;
+  //height: 100vh;
   &.active {
-    display: block;
+    right: 0;
   }
-
   &__title-count {
     display: flex;
     flex-wrap: wrap;
@@ -24,6 +26,16 @@
     }
 
 
+  }
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    @include phones {
+        display: none;
+    }
   }
   &__title-count-text,
   &__title-count-number {
