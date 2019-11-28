@@ -1,16 +1,24 @@
 .counter-amount {
     display: inline-flex;
+    align-items: flex-start;
     &__btn {
         color: #cccccc;
         outline: none;
-        background-color: #fff;
         transition: .3s ease;
         cursor: pointer;
         text-align: center;
         width: 28px;
         height: 28px;
         border: 1px solid #6c6c6c;
+        background-color: transparent;
         border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include phones {
+            width: 21px;
+            height: 21px;
+        }
         &_minus {
             margin-right: 5px;
 
@@ -24,12 +32,17 @@
         background-color: #ececec;
     }
     &__value {
-        max-width: 50px;
+        max-width: 15px;
         width: 100%;
         text-align: center;
         background-color: #ffffff;
         color: #000000;
         font-size: 18px;
         border: none;
+        line-height: 28px;
+        max-height: 22px;
+        @include phones {
+            font-size: 14px;
+        }
     }
 }

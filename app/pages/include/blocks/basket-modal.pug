@@ -1,70 +1,70 @@
 include more-products
+include promo
+include promo-part
 
 mixin basket-modal(data)
 	.basket-modal&attributes(attributes)
-		.basket-modal__wrap
-			.basket-modal__title-count
-				span.basket-modal__title-count-text.basket-modal__title-count-text_size_big В вашей корзине
-				span.basket-modal__title-count-number(data-basket-modal-title-count-number) 2
-				span.basket-modal__title-count-text товара
-			.basket-modal__delivery
-				.basket-modal__delivery-img-box
-					img.basket-modal__delivery-img(src="img/delivery.png", alt='')
-				.basket-modal__delivery-text Беслптная доставка в день заказа
-			.basket-modal__inner-wrap
-				.basket-modal__list
-					each itemBasket, itemBasketIndx in $basketList.mindboxProductList
-						.basket-modal__item(data-basket-modal-item data-basket-modal-item-data-prop-id=itemBasket.product.ids.bluesleepRu)
-							.basket-modal__column.basket-modal__column_pos_1
-								a.basket-modal__img-box(href=itemBasket.product.url)
-									img.basket-modal__img(src=itemBasket.product.pictureUrl , alt=itemBasket.product.name title=itemBasket.product.name)
-							.basket-modal__column.basket-modal__column_pos_2
-								.basket-modal__row.basket-modal__row_pos_1
-									.basket-modal__inner-column.basket-modal__inner-column_pos_1
-										a.basket-modal__title(href=itemBasket.product.url basket-modal-title) #{itemBasket.product.name}
-									.basket-modal__inner-column.basket-modal__inner-column_pos_2
-										button.basket-modal__remove(data-basket-modal-remove)
-											img.basket-modal__remove-img(src="img/basket-remove.png", alt='')
-								.basket-modal__row.basket-modal__row_pos_2
-									.basket-modal__inner-column.basket-modal__inner-column_pos_1
-										.basket-modal__price
-											span.basket-modal__price-text #{itemBasket.product.price}
-											span.basket-modal__price-currency руб.
-										.basket-modal__price-free.hide Бесплатно
-								.basket-modal__row.basket-modal__row_pos_3(data-counter-amount)
-									.basket-modal__inner-column.basket-modal__inner-column_pos_1
-										input.basket-modal__counter-amount-value( value=itemBasket.count data-counter-amount-value)
-										.basket-modal__counter-amount-text шт.
-									.basket-modal__inner-column.basket-modal__inner-column_pos_2
-										.counter-amount(data-counter-amount)
-											button.counter-amount__btn.counter-amount__btn_minus(data-counter-amount-btn="minus").basket-order__counter-amount-btn
-												img.basket-modal__counter-amount-btn-img(src="img/minus.png", alt='')
-											button.counter-amount__btn.counter-amount__btn_plus(data-counter-amount-btn="plus").basket-order__counter-amount-btn
-												img.basket-modal__counter-amount-btn-img(src="img/plus.png", alt='')
-				.basket-modal__promo.promo
-					button.promo__btn
-						span.promo__btn-text У меня есть промокод
-						img.promo__btn-img(src="img/plus_blue.png", alt='')
-					input(value="" name="promo" data-promo-input).promo__input
-				.basket-modal__bottom
-					.basket-modal__bottom-row
-						.basket-modal__bottom-column.basket-modal__bottom-column_pos_1
-							.basket-modal__bottom-text Общая сумма:
-						.basket-modal__bottom-column.basket-modal__bottom-column_pos_2
-							.basket-modal__sum
-								span.basket-modal__sum-text-number 75 787
-								span.basket-modal__sum-text-currency руБ.
-					.basket-modal__bottom-row
-						.basket-modal__bottom-column.basket-modal__bottom-column_pos_1
-							.basket-modal__bottom-text Доставка:
-						.basket-modal__bottom-column.basket-modal__bottom-column_pos_2
-							.basket-modal__bottom-text Бесплатно
-					.basket-modal__btn-wrap
-						a.basket-modal__btn.btn(href="#") Оформить заказ
-					.basket-modal__credit
-						span.basket-modal__credit-text 0-0-24 от  3 000 руб./месяц
-						a.basket-modal__credit-link(href="#") Подробнее
-				+more-products()()
+		.basket-modal__form(action="" data-basket-modal-form)
+			.basket-modal__wrap
+				.basket-modal__title-count
+					span.basket-modal__title-count-text.basket-modal__title-count-text_size_big В вашей корзине
+					span.basket-modal__title-count-number(data-basket-modal-title-count-number) #{$basketList.countProductInBasket}
+					span.basket-modal__title-count-text товара
+				.basket-modal__delivery
+					.basket-modal__delivery-img-box
+						img.basket-modal__delivery-img(src="img/delivery.png", alt='')
+					.basket-modal__delivery-text Беслптная доставка в день заказа
+				.basket-modal__inner-wrap
+					.basket-modal__list
+						each itemBasket, itemBasketIndx in $basketList.mindboxProductList
+							.basket-modal__item(data-basket-modal-item data-basket-modal-item-data-prop-id=itemBasket.product.ids.bluesleepRu)
+								.basket-modal__column.basket-modal__column_pos_1
+									a.basket-modal__img-box(href=itemBasket.product.url)
+										img.basket-modal__img(src=itemBasket.product.pictureUrl , alt=itemBasket.product.name title=itemBasket.product.name)
+								.basket-modal__column.basket-modal__column_pos_2
+									.basket-modal__row.basket-modal__row_pos_1
+										.basket-modal__inner-column.basket-modal__inner-column_pos_1
+											a.basket-modal__title(href=itemBasket.product.url basket-modal-title) #{itemBasket.product.name}
+										.basket-modal__inner-column.basket-modal__inner-column_pos_2
+											button.basket-modal__remove(data-basket-modal-remove)
+												img.basket-modal__remove-img(src="img/basket-remove.png", alt='')
+									.basket-modal__row.basket-modal__row_pos_2
+										.basket-modal__inner-column.basket-modal__inner-column_pos_1
+											.basket-modal__price
+												span.basket-modal__price-text #{itemBasket.product.price}
+												span.basket-modal__price-currency руб.
+											.basket-modal__price-free.hide Бесплатно
+									.basket-modal__row.basket-modal__row_pos_3(data-counter-amount-row)
+										.basket-modal__inner-column.basket-modal__inner-column_pos_1
+											input.basket-modal__counter-amount-value( value=itemBasket.count data-counter-amount-value data-counter-amount-basket-id data-counter-amount-product-id)
+											.basket-modal__counter-amount-text шт.
+										.basket-modal__inner-column.basket-modal__inner-column_pos_2
+											.counter-amount(data-counter-amount)
+												button.counter-amount__btn.counter-amount__btn_minus(data-counter-amount-btn="minus").basket-order__counter-amount-btn
+													img.basket-modal__counter-amount-btn-img(src="img/minus.png", alt='')
+												button.counter-amount__btn.counter-amount__btn_plus(data-counter-amount-btn="plus").basket-order__counter-amount-btn
+													img.basket-modal__counter-amount-btn-img(src="img/plus.png", alt='')
+					+promo()(class="basket-modal__promo")
+					.basket-modal__bottom
+						.basket-modal__bottom-row
+							.basket-modal__bottom-column.basket-modal__bottom-column_pos_1
+								.basket-modal__bottom-text Общая сумма:
+							.basket-modal__bottom-column.basket-modal__bottom-column_pos_2
+								.basket-modal__sum
+									span.basket-modal__sum-text-number 75 787
+									span.basket-modal__sum-text-currency руБ.
+						.basket-modal__bottom-row
+							.basket-modal__bottom-column.basket-modal__bottom-column_pos_1
+								.basket-modal__bottom-text Доставка:
+							.basket-modal__bottom-column.basket-modal__bottom-column_pos_2
+								.basket-modal__bottom-text Бесплатно
+						+promo-part()(data-promo-part)
+						.basket-modal__btn-wrap
+							a.basket-modal__btn.btn(href="#") Оформить заказ
+						.basket-modal__credit
+							span.basket-modal__credit-text 0-0-24 от  3 000 руб./месяц
+							a.basket-modal__credit-link(href="#") Подробнее
+					+more-products()()
 
 
 

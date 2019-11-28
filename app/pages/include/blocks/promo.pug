@@ -1,0 +1,16 @@
+mixin promo(data)
+	sectionn.promo&attributes(attributes)
+		.promo__wrap
+			.promo__top(data-promo-top)
+				button.promo__btn
+					span.promo__btn-text У меня есть промокод
+					img.promo__btn-img(src="img/plus_blue.png", alt='')
+			.promo__bottom(data-promo-bottom)
+				.promo__btn-text.promo__btn-text_indent_big Промокод
+				.promo__inner-wrap
+					//span.promo__legend Промокод:
+					input.promo__input(type="search", placeholder=""   data-promo-input value="fdsfsddfssdsdfsdf")
+				button.promo__btn-submit
+					span.promo__btn-submit-text Применить
+				.promo__error Промокод устарел
+					

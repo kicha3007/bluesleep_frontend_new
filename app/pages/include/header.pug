@@ -15,7 +15,7 @@ header.header
 					include blocks/main-menu
 				.header__column.header__column_size_3
 					+h-contacts()
-					+btn-actions-icon({"icon": "basket", "order-count": "2"})
+					+btn-actions-icon({"icon": "basket", "order-count": "2"} )(data-actions-btn-basket)
 				//.header__column.header__column_size_4
 			.header__bottom.header__bottom_show_laptop
 				.header__bottom-column.header__bottom-column_pos_1
@@ -30,7 +30,7 @@ header.header
 					.header__inner-bottom-column
 						+btn-actions-icon({"icon": "phone_chat"})(data-h-phone-btn)
 					.header__inner-bottom-column
-						+btn-actions-icon({"icon": "basket"})
+						+btn-actions-icon({"icon": "basket"})(data-mobile-menu-btn)
 			.h-mobile-contacts(data-h-mobile-contacts)
 				.h-mobile-contacts__column.h-mobile-contacts__column_pos_1
 					a.h-mobile-contacts__link(href="tel:84951279564") Позвоните нам

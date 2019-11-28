@@ -1,0 +1,99 @@
+.promo-part {
+  margin-top: 20px;
+  margin-bottom: 45px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_pos_1 {
+      //margin-bottom: 5px;
+    }
+  }
+  &__column {
+    &_pos_2 {
+      justify-content: flex-end;
+    }
+  }
+  &__title {
+    color: #005eff;
+  font-family: 'CoText-Light', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-right: 5px;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+  &__btn {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #6c6c6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    @include phones {
+      width: 18px;
+      height: 18px;
+    }
+    &:hover {
+      background-color: #ececec;;
+    }
+  }
+  &__discount {
+    color: #005eff;
+    font-size: 14px;
+    font-family: 'CoText-Light', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+
+  &__new-price {
+    color: #005eff;
+    font-family: 'CoText-Light', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+  &__old-price {
+    color: #000000;
+    font-family: 'CoText-Light', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: line-through;
+    margin-right: 5px;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+  &__title-sum {
+    color: #000000;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18.35px;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+  &__inner-wrap {
+    display: flex;
+    align-items: center;
+  }
+  &__price {
+    display: flex;
+  }
+  &__img {
+    transform: rotate(45deg);
+  }
+
+}

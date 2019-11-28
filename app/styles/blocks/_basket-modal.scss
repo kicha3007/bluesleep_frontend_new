@@ -2,41 +2,53 @@
   background-color: #fff;
   width: 100%;
   max-width: 418px;
-  position: fixed;
-  top: 0px;
+  position: absolute;
+  top: 0;
   right: 0;
-  z-index: 99;
-  border: 1px solid #1e1e1e;
+  z-index: 101;
   min-height: 100vh;
+  padding-bottom: 50px;
+  display: none;
+  &.active {
+    display: block;
+  }
+
   &__title-count {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px 15px;
+    padding: 15px 20px 15px;
+    @include phones {
+      display: none;
+    }
+
 
   }
   &__title-count-text,
-  &__title-count-number{
+  &__title-count-number {
     color: #005eff;
     font-size: 13px;
     text-align: center;
   }
   &__title-count-text {
+    @include phones {
+      font-size: 11px;
+    }
     &_size_big {
       width: 100%;
     }
   }
+  &__title-count-number {
+    margin-right: 5px;
+  }
   &__delivery {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     justify-content: center;
     background-color: #ececec;
-    padding: 20px 15px;
+    padding: 18px 15px;
     text-align: center;
-    @include phones {
-      margin-bottom: 30px;
-    }
   }
   &__delivery-img-box {
     padding-right: 10px;
@@ -64,21 +76,34 @@
   }
   &__inner-wrap {
     padding: 0 20px;
+    @include phones {
+      padding: 0 15px;
+    }
   }
   &__list {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    @include phones {
+      margin-bottom: 0;
+    }
   }
   &__item {
     padding: 30px 0;
     margin: 0 -6px;
     display: flex;
     border-bottom: 1px solid #c1c1c1;
+    @include phones {
+      padding: 25px 0;
+      margin: 0 -5px;
+    }
   }
   &__column {
     display: flex;
     flex-wrap: wrap;
 
-    margin: 0 6px;
+    margin: 0 5px;
+    @include phones {
+      margin: 0 4px;
+    }
   }
   &__img-box {
     display: flex;
@@ -88,6 +113,10 @@
     width: 114px;
     height: 97px;
     overflow: hidden;
+    @include phones {
+      width: 87px;
+      height: 74px;
+    }
 
     background-color: #ececec;
   }
@@ -101,13 +130,16 @@
     font-family: 'CoText-Light', sans-serif;
     font-size: 14px;
     font-weight: 300;
+    @include phones {
+      font-size: 11px;
+    }
   }
   &__row {
     display: flex;
     flex-grow: 1;
     width: 100%;
     &_pos_1 {
-      margin-bottom: 10px;
+      margin-bottom: 2px;
     }
     &_pos_3 {
       align-items: center;
@@ -119,12 +151,27 @@
     background-color: transparent;
     border: none;
     outline: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    @include phones {
+        width: 23px;
+    }
+   
+  }
+  &__remove-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
   &__price {
     color: #ff8596;
     font-size: 16px;
     font-weight: 700;
     display: inline-block;
+    @include phones {
+      font-size: 12px;
+    }
     &.free {
       color: #575757;
       text-decoration: line-through;
@@ -147,20 +194,30 @@
     }
   }
   &__counter-amount-value {
-    max-width: 15px;
+    max-width: 18px;
     width: 100%;
     text-align: center;
     background-color: #ffffff;
-    color: #000000;
-    font-size: 18px;
+    font-size: 14px;
     border: none;
+    color: #7d7d7d;
+    font-family: 'CoText-Light', sans-serif;
+    @include phones {
+      font-size: 11px;
+    }
 
   }
   &__counter-amount-text {
     display: inline-block;
+    font-size: 14px;
+    color: #7d7d7d;
+    font-family: 'CoText-Light', sans-serif;
+    @include phones {
+      font-size: 11px;
+    }
   }
   &__promo {
-    margin-bottom: 45px;
+    margin-bottom: 50px;
   }
   &__bottom {
     margin-bottom: -5px;
@@ -177,9 +234,18 @@
     font-family: 'CoText-Light', sans-serif;
     font-size: 14px;
     font-weight: 300;
+    @include phones {
+      font-size: 11px;
+    }
   }
   &__sum {
     text-transform: uppercase;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+  &__sum-text-currency {
+    margin-left: 5px;
   }
   &__btn-wrap {
     display: flex;
@@ -187,13 +253,29 @@
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    @include phones {
+      margin-bottom: 10px;
+    }
   }
   &__btn {
     min-width: 223px;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    font-family: "CoHeadlineCorp-Regular", sans-serif;
+    @include phones {
+        min-width: 170px;
+      font-size: 10px;
+    }
   }
   &__credit {
     text-align: center;
     margin-bottom: 30px;
+    @include phones {
+      margin-bottom: 20px;
+    }
+
     a {
       text-decoration: underline;
       margin-left: 3px;
@@ -201,6 +283,9 @@
       font-family: 'CoText-Light', sans-serif;
       font-size: 13px;
       font-weight: 300;
+      @include phones {
+        font-size: 10px;
+      }
       &:hover {
         text-decoration: none;
       }
@@ -211,6 +296,9 @@
     font-family: 'CoText-Light', sans-serif;
     font-size: 13px;
     font-weight: 300;
+    @include phones {
+      font-size: 10px;
+    }
   }
 
 }

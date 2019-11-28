@@ -1,0 +1,20 @@
+mixin promo-part(data)
+	.promo-part&attributes(attributes )
+		.promo-part__wrap
+			.promo-part__row.promo-part__row_pos_1
+				.promo-part__column.promo-part__column_pos_1
+					.promo-part__inner-wrap
+						span.promo-part__title(data-promo-part-title) BLACKFRIDAY
+						.promo-part__btn(data-promo-part-btn)
+							img.promo-part__img(src="img/plus.png", alt='')
+				.promo-part__column.promo-part__column_pos_2
+					.promo-part__discount(data-promo-part-count) - 13 123 руб.
+			.promo-part__row.promo-part__row_pos_2
+				.promo-part__column.promo-part__column_pos_1
+					.promo-part__title-sum Общая сумма:
+				.promo-part__column.promo-part__column_pos_2
+					.promo-part__price
+						.promo-part__old-price(data-promo-part-old-price) 75 789 РУБ.
+						.promo-part__new-price(data-promo-part-new-price) 62 666 РУБ.
+
+					

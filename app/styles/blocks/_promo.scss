@@ -1,4 +1,20 @@
 .promo {
+  &__top {
+    display: none;
+    margin-bottom: 50px;
+    @include phones {
+      margin-bottom: 35px;
+    }
+
+  }
+  &__bottom {
+    width: 100%;
+    border-bottom: 1px solid #005eff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    display: none;
+
+  }
 
   &__btn {
     background-color: transparent;
@@ -8,19 +24,133 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    padding: 0;
+    
   }
   &__btn-text {
     color: #005eff;
     font-family: 'CoText-Light', sans-serif;
     font-size: 14px;
     font-weight: 300;
-  }
-  &__input {
-    display: none;
+    @include phones {
+      font-size: 11px;
+    }
+    &_indent_big {
+      margin-bottom: 5px;
+    }
   }
   &__btn-img {
     margin-left: 5px;
     display: inline-block;
+    @include phones {
+      width: 10px;
+    }
   }
 
+  &__wrap {
+    display: flex;
+    align-items: center;
+    padding: 8px 4px 4px 0;
+    position: relative;
+  }
+  &__inner-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &.error #{&}__inner-wrap {
+    animation: shake .7s linear;
+  }
+  &.success #{&}__wrap {
+    border-bottom-color: #f0f0f0;
+  }
+  &__legend {
+    font-size: 16px;
+    color: #005eff;
+    margin-right: 5px;
+  }
+  &.success #{&}__legend{
+    display: none;
+  }
+  &__input {
+    color: #000000;
+    font-size: 16px;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    border: none;
+    @include phones {
+      font-size: 12px;
+    }
+  }
+
+  &__btn-submit {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+    color: #005eff;
+    background: transparent;
+    &:hover {
+
+    }
+  }
+  &__btn-submit-text {
+    color: #005eff;
+    font-size: 13px;
+     font-family: 'CoText-Light', sans-serif;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+  &.success #{&}__btn-submit {
+    background-color: #005eff;
+  }
+  &_enter #{&}__btn-submit {
+    opacity: 1;
+  }
+  &__error {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    color: #ff3333;
+    font-size: 12px;
+    opacity: 0;
+  }
+  &.error #{&}__error {
+    opacity: 1;
+  }
+
+}
+
+
+@-webkit-keyframes shake {
+  0% {
+    left:-10px;
+  }
+  16% {
+    left:9px;
+  }
+  33% {
+    left:-6px;
+  }
+  50% {
+    left:5px;
+  }
+  66% {
+    left:-2px;
+  }
+  83% {
+    left:1px;
+  }
+  100% {
+    left: 0px;
+  }
 }

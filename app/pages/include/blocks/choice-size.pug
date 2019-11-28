@@ -6,8 +6,8 @@ mixin choice-size(data)
 			.choice-size__column.choice-size__column_pos_1
 				.choice-size__title Выберите размер
 				.choice-size__value(data-choice-size-value="" )
-					span.choice-size__value-size(data-choice-size-value-size) #{$offersList[0].GABARITY}
+					span.choice-size__value-size(data-choice-size-value-size) #{$offersList[0]["data"].GABARITY}
 					span.choice-size__value-divider /
-					span.choice-size__value-weight(data-choice-size-value-weight) #{$offersList[0].WEIGHT}
+					span.choice-size__value-weight(data-choice-size-value-weight) #{$offersList[0]["data"].WEIGHT}
 			.choice-size__column.choice-size__column_pos_2
 				+choice-size-dropdown()(class="choice-size__dropdown")
