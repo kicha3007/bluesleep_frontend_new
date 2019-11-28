@@ -55,6 +55,11 @@ body {
 .main-wrapper {
   flex: 1 0 auto;
 }
+.main {
+  @include phones {
+      position: relative;
+  }
+}
 
 .footer {
   flex: 0 0 auto;

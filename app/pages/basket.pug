@@ -1,10 +1,9 @@
 extend include/template_base
 
-include include/blocks/basket-modal
+
 
 block variables
 	- var title = 'Корзина';
 
 block content
 	.basket
-		+basket-modal()(data-basket-modal)

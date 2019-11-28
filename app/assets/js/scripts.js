@@ -183,7 +183,7 @@ function DOMready() {
                 var self = this;
                 $("[data-mobile-menu-btn]").on("click", function () {
 
-                    if(overleyCheck == false) {
+                    if(overleyCheck == false || $("[data-mobile-menu]").hasClass("active")) {
                         self.toggleShow.call(this);
                     }
                 });
@@ -549,7 +549,7 @@ function DOMready() {
 
     //Показываем модалку корзины
     $("[data-actions-btn-basket]").on("click", function () {
-        if(overleyCheck == false) {
+        if(overleyCheck == false || $("[data-basket-modal]").hasClass("active")) {
             overlayMain.toggleOverlayShowHide(true);
             $("[data-basket-modal]").toggleClass("active");
         }

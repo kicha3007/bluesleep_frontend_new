@@ -2,6 +2,8 @@ include mixins
 include variables
 block variables
 
+include blocks/basket-modal
+
 doctype hmtl
 html(lang="ru")
 	head
@@ -34,6 +36,7 @@ html(lang="ru")
 
 			main.main
 				block content
+				+basket-modal()(data-basket-modal)
 
 		include footer.pug
 
