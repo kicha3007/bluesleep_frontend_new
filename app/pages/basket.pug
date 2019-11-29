@@ -1,5 +1,12 @@
 extend include/template_base
 
+include include/blocks/basket-form
+include include/blocks/basket-payment
+include include/blocks/basket-list
+include include/blocks/basket-sum
+include include/blocks/basket-advantages
+
+
 
 
 block variables
@@ -7,3 +14,14 @@ block variables
 
 block content
 	.basket
+		.basket__container.container
+			.basket__wrap
+				.basket__column.basket__column_pos_1
+					+basket-form()()
+					+basket-payment()()
+				.basket__column.basket__column_pos_2
+					+basket-list()()
+					+basket-sum()()
+					+basket-advantages()()
+					.basket__column-bottom
+						a.basket__link(href="#") Назад к корзине

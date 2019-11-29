@@ -1,0 +1,32 @@
+mixin basket-form(data)
+	sectionn.basket-form&attributes(attributes)
+		.basket-form__title Контактне данные
+		.basket-form__sub-title * Поля со звездочками обязательны к заполнению
+		.basket-form__wrap
+			.basket-form__inner-wrap
+				.basket-form__column.basket-form__column_1
+					label.basket-form__legend(for="basket-form-input-name") Ваше имя:
+					.basket-form__input-wrap
+						input#basket-form-input-name.basket-form__input(type="text", placeholder="", name="name")
+				.basket-form__column.basket-form__column_2
+					label.basket-form__legend(for="basket-form-input-phone") Номер телефона*
+					.basket-form__input-wrap
+						input#basket-form-input-phone.basket-form__input(type="phone", name="phone", required)
+			.basket-form__inner-wrap
+				.basket-form__column.basket-form__column_1
+					label.basket-form__legend(for="basket-form-input-mail") Email* (для квитанции)
+					.basket-form__input-wrap
+						input#basket-form-input-mail.basket-form__input(type="mail", placeholder="", name="mail")
+				.basket-form__column.basket-form__column_2
+					label.basket-form__legend(for="basket-form-input-city") Город
+					.basket-form__input-wrap
+						input#basket-form-input-city.basket-form__input(type="text", placeholder="Москва", name="city", required)
+			.basket-form__inner-wrap
+				.basket-form__column.basket-form__column_1
+					label.basket-form__legend(for="basket-form-input-location") Адрес
+					.basket-form__input-wrap
+						input#basket-form-input-location.basket-form__input(type="text", placeholder="", name="location")
+			.basket-form__textarea
+				label.basket-form__textarea-legend(for="basket-form-input-comment") Комментарии к заказу
+				.basket-form__input-wrap
+					textarea#basket-form-input-comment.basket-form__textarea-input(type="text", placeholder="", name="comment")

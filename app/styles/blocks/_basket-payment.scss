@@ -1,0 +1,27 @@
+.basket-payment {
+  &__main-title {
+    color: #005eff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 35px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+  &__item {
+    margin: 0 10px;
+
+    &_size_1 {
+      width: calc(28% - 20px);
+    }
+    &_size_2 {
+      width: calc(44% - 20px);
+    }
+    &_size_full {
+      width: 100%;
+    }
+  }
+
+}

@@ -1,3 +1,5 @@
+include tooltip
+
 mixin choice(data, mods)
 	section.choice&attributes(attributes)
 		.choice__container.container
@@ -41,7 +43,7 @@ mixin choice(data, mods)
 				.choice__item
 					.choice__img-box
 						img.choice__img(src="img/c/choice_3.png", alt='')
-					.choice__tooltip Новинка
+					+tooltip({"title": "Новинка"})(class="choice__tooltip")
 					.choice__content
 						.choice__title Blue Sleep Hybrid
 						.choice__param 24 см | 4 слоя | 2000 микропружин

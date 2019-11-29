@@ -3162,14 +3162,18 @@ body.compensate-for-scrollbar {
   }
 }
 
-.basket {
-  min-height: 100vh;
+.basket__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@media screen and (max-width: 575px) {
-  .basket {
-    position: relative;
-  }
+.basket__column {
+  width: 50%;
+}
+
+.basket__column_pos_2 {
+  background-color: #f4f4f4;
 }
 
 .btn {
@@ -4165,26 +4169,7 @@ body.compensate-for-scrollbar {
   left: 50%;
   top: -21px;
   margin-left: -40px;
-  color: #fefefe;
-  font-size: 11px;
-  background-image: linear-gradient(-58deg, #005eff 0%, #7270d0 52%, #dc80a5 100%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 3px 8px 3px;
-  line-height: 1;
   width: 80px;
-  min-height: 21px;
-  border-radius: 8px;
-  font-family: "CoHeadline-Bold", sans-serif;
 }
 
 @media screen and (max-width: 991px) {
@@ -8418,6 +8403,174 @@ body.compensate-for-scrollbar {
 .promo-part__img {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.basket-form {
+  margin-bottom: 40px;
+}
+
+.basket-form__title {
+  color: #005eff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.basket-form__sub-title {
+  color: #010101;
+  font-family: 'CoText-Light', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+  margin-bottom: 50px;
+}
+
+.basket-form__inner-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 38px;
+  margin: 0 -10px;
+  margin-bottom: 15px;
+}
+
+.basket-form__inner-wrap_pos_column {
+  display: block;
+}
+
+.basket-form__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px 5px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 7px;
+  border: 1px solid #bababa;
+  margin: 0 10px;
+  width: 50%;
+}
+
+.basket-form__legend {
+  color: #6c6c6c;
+  font-family: 'CoText-Light', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15.64px;
+  margin-right: 5px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.basket-form__input-wrap {
+  position: relative;
+  -ms-flex-preferred-size: 20px;
+  flex-basis: 20px;
+  -webkit-box-flex: 1000;
+  -ms-flex-positive: 1000;
+  flex-grow: 1000;
+}
+
+.basket-form__input {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  outline: none;
+  line-height: 16px;
+  border: none;
+  width: 100%;
+}
+
+.basket-form__textarea {
+  border: 1px solid #bababa;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.basket-form__textarea-legend {
+  color: #6c6c6c;
+  font-family: 'CoText-Light', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15.64px;
+  margin-right: 5px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.basket-form__textarea-input {
+  width: 100%;
+  resize: vertical;
+  border: none;
+  min-height: 100px;
+  color: #6c6c6c;
+  font-family: 'CoText-Light', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 14px;
+  padding: 5px 5px;
+  outline: none;
+}
+
+.basket-payment__main-title {
+  color: #005eff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.basket-payment__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.basket-payment__item {
+  margin: 0 10px;
+}
+
+.basket-payment__item_size_1 {
+  width: calc(28% - 20px);
+}
+
+.basket-payment__item_size_2 {
+  width: calc(44% - 20px);
+}
+
+.basket-payment__item_size_full {
+  width: 100%;
+}
+
+.tooltip {
+  color: #fefefe;
+  font-size: 11px;
+  background-image: linear-gradient(-58deg, #005eff 0%, #7270d0 52%, #dc80a5 100%);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3px 8px 3px;
+  line-height: 1;
+  min-height: 21px;
+  border-radius: 8px;
+  font-family: "CoHeadlineCorp-Regular", sans-serif;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

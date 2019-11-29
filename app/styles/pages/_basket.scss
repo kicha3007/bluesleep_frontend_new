@@ -1,8 +1,13 @@
 .basket {
-  min-height: 100vh;
-
-  @include phones {
-      position: relative;
+  &__wrap {
+    display: flex;
   }
+  &__column {
+    width: 50%;
+    &_pos_2 {
+      background-color: #f4f4f4;
+    }
+  }
+
 
 }
