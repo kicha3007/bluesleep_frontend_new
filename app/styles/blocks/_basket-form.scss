@@ -1,10 +1,18 @@
 .basket-form {
   margin-bottom: 40px;
+  display: block;
+  @include phones {
+    margin-bottom: 30px;
+  }
   &__title {
     color: #005eff;
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    @include phones {
+        text-align: center;
+      font-size: 14px;
+    }
   }
   &__sub-title {
     color: #010101;
@@ -12,37 +20,50 @@
     font-size: 12px;
     font-weight: 300;
     line-height: 14px;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
+    @include phones {
+      text-align: center;
+      font-size: 9px;
+      margin-bottom: 25px;
+    }
   }
   &__inner-wrap {
     display: flex;
     align-items: center;
-    height: 38px;
     margin: 0 -10px;
-    margin-bottom: 15px;
+    @include phones {
+        flex-wrap: wrap;
+    }
     &_pos_column {
       display: block;
     }
+    
 
   }
   &__column {
     display: flex;
     align-items: center;
-    padding: 5px 5px;
+    overflow: hidden;
     flex-grow: 1;
     border-radius: 7px;
     border: 1px solid #bababa;
-    margin: 0 10px;
+    margin: 0 10px 20px;
     width: 50%;
+    padding: 0 15px;
+    @include phones {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
   }
   &__legend {
     color: #6c6c6c;
     font-family: 'CoText-Light', sans-serif;
     font-size: 12px;
     font-weight: 300;
-    line-height: 15.64px;
-    margin-right: 5px;
+    margin-right: 20px;
     flex-shrink: 0;
+    line-height: 1.2;
   }
   &__input-wrap {
     position: relative;
@@ -53,17 +74,35 @@
   }
   &__input {
     font-size: 16px;
-    font-weight: 400;
     color: #000000;
     outline: none;
     line-height: 16px;
     border: none;
     width: 100%;
+    height: 36px;
+    @include phones {
+      height: 33px;
+      font-size: 12px;
+    }
+    @include input-placeholder {
+      color: #000000;
+    }
+
   }
   &__textarea {
     border: 1px solid #bababa;
     border-radius: 7px;
     overflow: hidden;
+    padding: 5px 15px;
+    margin: 0 0 20px;
+    @include phones {
+      display: flex;
+      padding-top: 0;
+      padding-bottom: 0;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
   }
   &__textarea-legend {
     color: #6c6c6c;
@@ -71,23 +110,32 @@
     font-size: 12px;
     font-weight: 300;
     line-height: 15.64px;
-    margin-right: 5px;
+    margin-right: 20px;
     flex-shrink: 0;
   }
 
     &__textarea-input {
-
       width: 100%;
-      resize: vertical;
+      //resize: vertical;
+      resize: none;
       border: none;
-      min-height: 100px;
-      color: #6c6c6c;
-      font-family: 'CoText-Light', sans-serif;
-      font-size: 11px;
-      font-weight: 300;
+      min-height: 73px;
+      color: #000000;
+      font-size: 16px;
       line-height: 14px;
-      padding: 5px 5px;
+      padding: 5px 0;
       outline: none;
+
+      &_size_min {
+        height: 35px;
+        min-height: auto;
+      }
+      @include phones {
+        font-size: 12px;
+        height: 33px;
+        min-height: auto;
+        line-height: 23px;
+      }
     }
 
 

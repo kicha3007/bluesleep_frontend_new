@@ -19,9 +19,12 @@ block content
 				.basket__column.basket__column_pos_1
 					+basket-form()()
 					+basket-payment()()
-				.basket__column.basket__column_pos_2
-					+basket-list()()
-					+basket-sum()()
-					+basket-advantages()()
-					.basket__column-bottom
-						a.basket__link(href="#") Назад к корзине
+				.basket__column.basket__column_pos_2(data-promo-outer-wrap)
+					.basket__content
+						+basket-list()()
+						+promo()(class="basket__promo")
+						+basket-sum()()
+						+promo-part()(data-promo-part class="basket__promo-part")
+						+basket-advantages()(class="basket__basket-advantages")
+						.basket__column-bottom
+							a.basket__link(href="#") Назад к корзине

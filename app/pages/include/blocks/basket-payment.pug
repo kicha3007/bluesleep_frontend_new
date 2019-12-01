@@ -3,35 +3,48 @@ include tooltip
 mixin basket-payment(data)
 	sectionn.basket-payment&attributes(attributes)
 		.basket-payment__wrap
-			.basket-payment__list
-				.basket-payment__item.basket-payment__item_size_full
+			.basket-payment__list(data-basket-payment-list)
+				.basket-payment__item.basket-payment__item_size_full.basket-payment__item_order_1
 					.basket-payment__main-title Выберите способ оплаты
-				.basket-payment__item.basket-payment__item_size_1
-					.basket-payment__inner-wrap
+				.basket-payment__item.basket-payment__item_size_1.basket-payment__item_order_2
+					.basket-payment__inner-wrap.active(data-basket-payment-inner-wrap)
+						.basket-payment__content
+							.basket-payment__title
+								| Наличными
+								br
+								| или картой курьеру
+				.basket-payment__item.basket-payment__item_size_1.basket-payment__item_order_3
+					.basket-payment__inner-wrap(data-basket-payment-inner-wrap)
+						.basket-payment__content
+							+tooltip({"title": "Скидка 3%"})(class="basket-payment__tooltip").
+							.basket-payment__title
+								|Банковской картой
+								br
+								| онлайн
+				.basket-payment__item.basket-payment__item_size_2.basket-payment__item_indent_right.basket-payment__item_order_4
+					.basket-payment__inner-wrap(data-basket-payment-inner-wrap)
+						.basket-payment__content
+							+tooltip({"title": "Скидка 3%"})(class="basket-payment__tooltip").
+							.basket-payment__img-wrap
+								.basket-payment__img-box
+									img.basket-payment__img(src="img/basket-payment-system.png", alt='')
+				.basket-payment__item.basket-payment__item_size_1.basket-payment__item_order_5
+					.basket-payment__inner-wrap(data-basket-payment-inner-wrap)
+						.basket-payment__content
+							.basket-payment__title-top 0-0-24
+							.basket-payment__title В рассрочку
+				.basket-payment__item.basket-payment__item_size_1.basket-payment__item_order_6
+					.basket-payment__inner-wrap(data-basket-payment-inner-wrap)
+						.basket-payment__title-img-box
+							img.basket-payment__title-img(src="img/basket-payment-pay.png", alt='')
 						.basket-payment__title
-							| Наличными
-							| или картой курьеру
-				.basket-payment__item.basket-payment__item_size_1
-					+tooltip({"title": "Скидка 3%"})(class="basket-payment__tooltip").
-					.basket-payment__title
-						|Банковской картой
-						| онлайн
-				.basket-payment__item.basket-payment__item_size_2
-					+tooltip({"title": "Скидка 3%"})(class="basket-payment__tooltip").
-					.basket-payment__img-wrap
-						.basket-payment__img-box
-							img.basket-payment__img(src="img/basket-payment-system.png", alt='')
-				.basket-payment__item.basket-payment__item_size_1
-					.basket-payment__title-top 0-0-24
-					.basket-payment__title В рассрочку
-				.basket-payment__item.basket-payment__item_size_1
-					.basket-payment__title-img-box
-						img.basket-payment__title-img(src="img/basket-payment-pay.png", alt='')
-					.basket-payment__title
-						| В крелит без
-						|	переплат
-				.basket-payment__item.basket-payment__item_size_2.basket-payment__item_pos_end
+							| В кредит без
+							br
+							|	переплат
+				.basket-payment__item.basket-payment__item_show_mobile.basket-payment__item_order_7
+					+basket-sum()(class="basket-payment__basket-sum basket-payment__basket-sum_indent_big")
+				.basket-payment__item.basket-payment__item_size_2.basket-payment__item_pos_end.basket-payment__item_order_8
 					.basket-payment__btn-wrap
-						.basket-payment__btn.btn Оформить заказ
+							.basket-payment__btn.btn Оформить заказ
 					.basket-payment__politics
 						| Нажимая кнопку «Оформить заказ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных

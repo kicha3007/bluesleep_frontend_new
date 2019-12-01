@@ -1,17 +1,28 @@
 .basket-payment {
+
   &__main-title {
     color: #005eff;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 35px;
+    @include phones {
+      color: #005eff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
   }
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px;
+    margin: 0 -10px -38px;
+    @include phones {
+        display: flex;
+        flex-wrap: wrap;
+    }
   }
   &__item {
-    margin: 0 10px;
+    margin: 0 10px 38px;
 
     &_size_1 {
       width: calc(28% - 20px);
@@ -21,7 +32,187 @@
     }
     &_size_full {
       width: 100%;
+      height: auto;
+      margin-bottom: 0;
+      @include phones {
+          display: flex;
+          flex-wrap: wrap;
+        align-items: center;
+        margin: 0 10px 38px;
+      }
+    }
+
+    &_indent_right {
+      padding-right: 16%;
+    }
+    @include phones {
+      width:  calc(50% - 20px);
+      padding-right: 0;
+      margin-bottom: 12px;
+    }
+    &_order {
+      &_1 {
+        @include phones {
+        order:1;
+        }
+
+      }
+      &_2 {
+        @include phones {
+        order:3;
+        }
+
+      }
+      &_3 {
+        @include phones {
+        order:4;
+        }
+      }
+      &_4 {
+        @include phones {
+        order:2;
+        }
+
+      }
+      &_5 {
+        @include phones {
+        order:5;
+        }
+      }
+      &_6 {
+        @include phones {
+        order:6;
+        }
+      }
+      &_7 {
+        @include phones {
+        order:7;
+        }
+      }
+      &_8 {
+        @include phones {
+          order:8;
+        }
+      }
+    }
+    &_pos_end {
+      @include phones {
+        width: 100%;
+      }
+    }
+    &_show_mobile {
+      display: none;
+      @include phones {
+        display: flex;
+        width: 100% ;
+      }
+    }
+
+  }
+  &__inner-wrap {
+    cursor: pointer;
+    border-radius: 7px;
+    border: 1px solid #bababa;
+    max-width: 176px;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 94px;
+    position: relative;
+    @include phones {
+      max-width: none;
+      height: 74px;
+      padding: 5px;
+
+    }
+    &.active{
+      border-color: #005eff;
+      box-shadow: 0 1px 3px rgba(0,35,126,.3);
+      .basket-payment__title-top,
+      .basket-payment__title {
+        color: #005eff;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      border: 2px solid transparent;
+      border-radius: .25rem;
+      transition: border-color .2s ease;
+    }
+    &.active:after {
+      border-color: #005eff;
     }
   }
+  &__title {
+    color: #424242;
+    font-family: "CoHeadlineCorp-Regular", sans-serif;
+    font-size: 12px;
+    @include tablets {
+      font-size: 11px;
+      line-height: 1.1;
+    }
+  }
+  &__tooltip {
+    margin-bottom: 10px;
+  }
+  &__title-top {
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 18px;
+    @include tablets {
+      font-size: 14px;
+    }
+  }
+  &__img,
+  &__title-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__politics {
+    opacity: 0.46;
+    color: #000000;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 8px;
+    font-weight: 300;
+  }
+  &__btn-wrap {
+    margin-bottom: 15px;
+    @include phones {
+        text-align: center;
+    }
+  }
+  &__btn {
+    color: #fefefe;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    max-width: 170px;
+    width: 100%;
+    @include phones {
+      font-size: 10px;
+    }
+  }
+  &__basket-sum {
+    &_indent_big {
+      @include phones {
+        padding-top: 25px;
+        border-top: 1px solid #c1c1c1;
+        margin-top: 10px;
+        padding-bottom: 5px !important;
+      }
+
+    }
+  }
+
 
 }

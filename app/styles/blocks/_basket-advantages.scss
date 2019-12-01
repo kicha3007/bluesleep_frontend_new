@@ -1,3 +1,60 @@
 .basket-advantages {
+  justify-content: center;
+  &__wrap {
+    display: flex;
+    margin: 0 -27px;
+    padding: 27px 0;
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+  }
+  &__item {
+    margin: 0 27px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
 
+  &__img-box {
+    width: 48px;
+    height: 41px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 20px;
+    .svg-icon-advantages_1 {
+      width: 34px;
+      height: 34px;
+
+    }
+    .svg-icon-advantages_2 {
+      width: 35px;
+      height: 41px;
+
+    }
+    .svg-icon-advantages_3 {
+      width: 48px;
+      height: 29px;
+
+    }
+
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  &__title {
+    color: #1d1d1d;
+    font-size: 14px;
+    font-family: "CoHeadlineCorp-Regular", sans-serif;
+
+  }
+  &__icon {
+    fill: #005eff;
+  }
 }

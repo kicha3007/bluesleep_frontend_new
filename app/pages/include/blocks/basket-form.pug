@@ -21,11 +21,10 @@ mixin basket-form(data)
 					label.basket-form__legend(for="basket-form-input-city") Город
 					.basket-form__input-wrap
 						input#basket-form-input-city.basket-form__input(type="text", placeholder="Москва", name="city", required)
-			.basket-form__inner-wrap
-				.basket-form__column.basket-form__column_1
-					label.basket-form__legend(for="basket-form-input-location") Адрес
-					.basket-form__input-wrap
-						input#basket-form-input-location.basket-form__input(type="text", placeholder="", name="location")
+			.basket-form__textarea
+				label.basket-form__textarea-legend(for="basket-form-input-location") Адрес
+				.basket-form__input-wrap
+					textarea#basket-form-input-location.basket-form__textarea-input.basket-form__textarea-input_size_min(type="text", placeholder="", name="location")
 			.basket-form__textarea
 				label.basket-form__textarea-legend(for="basket-form-input-comment") Комментарии к заказу
 				.basket-form__input-wrap

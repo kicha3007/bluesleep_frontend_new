@@ -1,0 +1,35 @@
+.basket-sum {
+  //padding-top: 17px;
+  padding-bottom: 30px;
+  width: 100%;
+  &__bottom {
+    margin-bottom: -5px;
+
+  }
+  &__bottom-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  &__bottom-text {
+    color: #000000;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+  &__sum {
+    text-transform: uppercase;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+  &__sum-text-currency {
+    margin-left: 5px;
+  }
+
+
+}

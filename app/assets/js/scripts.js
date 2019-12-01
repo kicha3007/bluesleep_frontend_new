@@ -582,6 +582,7 @@ function DOMready() {
 
 
 
+
     // Корзина минус кол-во
     $('[data-counter-amount-wrap]').on('click', '[data-counter-amount-btn="minus"]', function(e){
         var $input = $(e.delegateTarget).find('[data-counter-amount-value]');
@@ -697,7 +698,7 @@ function DOMready() {
     $("[data-promo-wrap]").on("click", "[data-promo-btn-submit]",  function(e) {
         var inputValue = $(e.delegateTarget).find("[data-promo-input]").val();
         var wrapBottom = $(e.delegateTarget).find("[data-promo-bottom]");
-        var promoPart = $(this).closest("[data-basket-modal]").find("[data-promo-part]");
+        var promoPart = $(this).closest("[data-promo-outer-wrap]").find("[data-promo-part]");
         if(typeof  inputValue !== typeof undefined && inputValue) {
             wrapBottom.removeClass("active");
             promoPart.addClass("active");
@@ -708,9 +709,17 @@ function DOMready() {
 
     $("[ data-promo-part]").on("click", "[data-promo-part-btn]", function(e) {
         $(e.delegateTarget).removeClass("active");
-        $(this).closest("[data-basket-modal]").find("[data-promo-top]").addClass("active");
+        $(this).closest("[data-promo-outer-wrap]").find("[data-promo-top]").addClass("active");
     })
 
+    //Переключаем платежные системы
+    $("[data-basket-payment-list]").on("click", "[data-basket-payment-inner-wrap]", function (e) {
+        var $this = $(this);
+        if(!$this.hasClass("active")) {
+            $(e.delegateTarget).find("[data-basket-payment-inner-wrap]").removeClass("active");
+            $this.addClass("active");
+        }
+    });
 
 
 

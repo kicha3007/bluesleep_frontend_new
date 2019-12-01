@@ -1,2 +1,22 @@
 mixin basket-list(data)
 	.basket-list&attributes(attributes)
+		.basket-list__list
+			each itemBasket, itemBasketIndx in $basketList.mindboxProductList
+				.basket-list__item(data-basket-list-item data-basket-list-item-data-prop-id=itemBasket.product.ids.bluesleepRu)
+					.basket-list__column.basket-list__column_pos_1
+						a.basket-list__img-box(href=itemBasket.product.url)
+							img.basket-list__img(src=itemBasket.product.pictureUrl , alt=itemBasket.product.name title=itemBasket.product.name)
+					.basket-list__column.basket-list__column_pos_2
+						.basket-list__row.basket-list__row_pos_1
+							.basket-list__inner-column.basket-list__inner-column_pos_1
+								a.basket-list__title(href=itemBasket.product.url basket-list-title) #{itemBasket.product.name}
+						.basket-list__row.basket-list__row_pos_2
+							.basket-list__inner-column.basket-list__inner-column_pos_1
+								.basket-list__price
+									span.basket-list__price-text #{itemBasket.product.price}
+									span.basket-list__price-currency руб.
+								.basket-list__price-free.hide Бесплатно
+						.basket-list__row.basket-list__row_pos_3
+							.basket-list__inner-column.basket-list__inner-column_pos_1
+								input.basket-list__counter-amount-value( value=itemBasket.count data-counter-amount-value data-counter-amount-basket-id data-counter-amount-product-id disabled)
+								.basket-list__counter-amount-text шт.

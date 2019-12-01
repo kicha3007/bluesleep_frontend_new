@@ -1,7 +1,7 @@
 .promo {
   &__top {
     display: none;
-    margin-bottom: 50px;
+
     @include phones {
       margin-bottom: 35px;
     }
