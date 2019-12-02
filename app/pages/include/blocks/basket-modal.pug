@@ -15,7 +15,7 @@ mixin basket-modal(data)
 				.basket-modal__delivery
 					.basket-modal__delivery-img-box
 						img.basket-modal__delivery-img(src="img/delivery.png", alt='')
-					.basket-modal__delivery-text Беслптная доставка в день заказа
+					.basket-modal__delivery-text Бесплатная доставка в день заказа
 				.basket-modal__inner-wrap(data-promo-outer-wrap)
 					.basket-modal__list
 						each itemBasket, itemBasketIndx in $basketList.mindboxProductList
@@ -61,12 +61,12 @@ mixin basket-modal(data)
 							.basket-modal__bottom-column.basket-modal__bottom-column_pos_2
 								.basket-modal__bottom-text Бесплатно
 					+promo-part()(data-promo-part)
-						.basket-modal__btn-wrap
-							a.basket-modal__btn.btn(href="#") Оформить заказ
-						.basket-modal__credit
-							span.basket-modal__credit-text 0-0-24 от  3 000 руб./месяц
-							a.basket-modal__credit-link(href="#") Подробнее
-					+more-products()()
+					.basket-modal__btn-wrap
+						a.basket-modal__btn.btn(href="#") Оформить заказ
+					.basket-modal__credit
+						span.basket-modal__credit-text 0-0-24 от  3 000 руб./месяц
+						a.basket-modal__credit-link(href="#") Подробнее
+					+more-products()(class="basket-modal__more-products")
 
 
 

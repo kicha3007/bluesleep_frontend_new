@@ -1,7 +1,10 @@
 .basket-sum {
-  //padding-top: 17px;
+  padding-top: 17px;
   padding-bottom: 30px;
   width: 100%;
+  @include phones {
+    padding-top: 0;
+  }
   &__bottom {
     margin-bottom: -5px;
 

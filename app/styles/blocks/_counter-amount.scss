@@ -15,7 +15,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-right: 5px;
+
         @include phones {
             width: 21px;
             height: 21px;
@@ -26,6 +26,7 @@
         }
         &_plus {
             margin-left: 5px;
+            padding-right: 4px;
         }
     }
     &__btn:hover {
