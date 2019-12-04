@@ -14,7 +14,12 @@
   }
   &__toggle {
     padding: 24px 15px;
-    background-color: #ff8597;
+    transition: .3s ease;
+    background-color: #ebebeb;
+
+    &.active {
+      background-color: #ff8597;
+    }
   }
   &__inner-container {
     display: flex;

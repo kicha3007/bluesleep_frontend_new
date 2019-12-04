@@ -1,0 +1,40 @@
+.banner-simple {
+  background: url("../img/bg_catalog-section.jpg") top center no-repeat;
+
+  &__wrap {
+    padding-top:8%;
+    padding-bottom: 12%;
+    @include phones {
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+
+  }
+  &__content {
+    max-width: 430px;
+  }
+  &__title {
+    color: #ff8597;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+    @include phones {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+  }
+  &__desc{
+    color: #000000;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.3;
+    @include phones {
+      font-size: 11px;
+    }
+
+  }
+
+}

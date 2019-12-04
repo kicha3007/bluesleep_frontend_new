@@ -1,0 +1,14 @@
+extend include/template_base
+
+include include/blocks/banner-simple
+include include/blocks/list-section
+include include/blocks/faq
+
+block variables
+	- var title = 'Страница раздела';
+
+block content
+	.catalog-section
+		+banner-simple()()
+		+list-section()()
+		+faq()()
