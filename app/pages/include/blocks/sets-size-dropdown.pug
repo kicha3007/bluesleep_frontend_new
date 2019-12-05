@@ -1,0 +1,18 @@
+mixin sets-size-dropdown(data)
+	.sets-size-dropdown(data-choice-size-dropdown)&attributes(attributes)
+		.sets-size-dropdown__wrap(data-choice-size-dropdown-wrap)
+			.sets-size-dropdown__active-item(data-choice-size-dropdown-active-item="")
+				.sets-size-dropdown__active-item-pre-text.sets-size-dropdown__active-item-pre-text_show_mobile Размер
+				.sets-size-dropdown__active-item-text(data-choice-size-dropdown-active-item-text="") #{$offersList[0]["data"].SIZE}
+
+				.sets-size-dropdown__active-item-discount(data-choice-size-dropdown-active-item-discount) - &#32; #{$offersList[0]["data"].DISCOUNT}  &#32; #{$offersList[0]["data"].DISCOUNT_TYPE}
+				.sets-size-dropdown__active-item-price.sets-size-dropdown__active-item-price_show_mobile(data-card-info-price-new) #{$offersList[0]["data"].BASE_PRICE}
+				.sets-size-dropdown__active-item-arrow
+					img.sets-size-dropdown__active-item-img.sets-size-dropdown__active-item-img_show_desktop(src="img/dropdown_arrow.png", alt='')
+					img.sets-size-dropdown__active-item-img.sets-size-dropdown__active-item-img_show_mobile(src="img/plus.png", alt='')
+			.sets-size-dropdown__inner-wrap(data-choice-size-dropdown-inner-wrap)
+				.sets-size-dropdown__list
+					each  sizeItem, sizeIndx in $offersList
+						- var activeSize = sizeIndx == 0 ? "active" : ""
+						.sets-size-dropdown__item(data-choice-size-dropdown-item="" + sizeItem["data"].PRODUCT_ID  class="" + activeSize) #{sizeItem["data"].SIZE}
+				a.sets-size-dropdown__other-size(href="#") Свой размер

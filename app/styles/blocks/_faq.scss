@@ -17,9 +17,9 @@
     transition: .3s ease;
     background-color: #ebebeb;
 
-    &.active {
-      background-color: #ff8597;
-    }
+  }
+  &__item.active #{&}__toggle {
+    background-color: #ff8597;
   }
   &__inner-container {
     display: flex;
@@ -54,6 +54,7 @@
 
     &_pos_1 {
       padding-right: 40px;
+      flex-shrink: 1;
       @include phones {
         padding-right: 20px;
       }

@@ -1,0 +1,16 @@
+extend include/template_base
+
+include include/blocks/sets-banner
+include include/blocks/sets-tabs
+
+
+block variables
+	- var title = 'Страница комплектов';
+
+block content
+	.sets
+		+sets-tabs()()
+
+	// список ТП
+	- var $offersListJson = JSON.stringify($offersList)
+	script var offersList = "#{$offersListJson}".replace(/&quot;/g, '"');

@@ -1,0 +1,31 @@
+include sets-info
+
+mixin sets-tabs(data)
+	sectionn.sets-tabs&attributes(attributes)
+		.sets
+			+sets-banner()()
+			.sets-tabs
+				.sets-tabs__container.container
+					.sets-tabs__wrap
+						.sets-tabs__nav
+							ul.sets-tabs__nav-list(data-tabs-nav-list)
+								each item, index in $otherProductsList
+									li.sets-tabs__nav-item.js--card-info-tabs-nav-item(class={"active": (index == 2)} data-tabs-nav-item)
+										a(href=`#${item.ID}` data-tabs-toggle).sets-tabs__nav-link!= item.COMBINATION_NAME
+										if(item.SAVING)
+											.sets-tabs__saving
+												span.sets-tabs__saving-text
+													|    Экономия
+													br
+													|    до
+												span.sets-tabs__saving-number 25%
+						.sets-tabs__inner-wrap
+							each itemTab, indexTab in $otherProductsList
+								.sets-tabs__tab(id=itemTab.ID  data-tabs-tab)
+									.sets-tabs__list
+										.sets-tabs__item
+											.sets-tabs__column.sets-tabs__column_pos_1
+												.sets-tabs__img-box
+													img.sets-tabs__img(src="img/c/sets_1.jpg", alt='')
+											.sets-tabs__column.sets-tabs__column_pos_2
+													+sets-info()()

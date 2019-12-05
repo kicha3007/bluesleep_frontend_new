@@ -1,0 +1,124 @@
+.sets-tabs {
+  margin-bottom: 200px;
+  &__wrap {
+
+
+
+  }
+  &__item {
+    margin: 0 -70px;
+    display: flex;
+    padding-top: 90px;
+    max-width: 100%;
+    margin-bottom: 100px;
+    @include desktop {
+      margin: 0 -20px 100px;
+    }
+    @include laptop {
+      flex-wrap: wrap;
+    }
+    @include phones {
+      padding-top: 0;
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+  }
+
+  &__img-box{
+
+    overflow: hidden;
+    text-align: center;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    @include phones {
+      border-radius: 0;
+      display: block !important;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+  &__img {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    //border-radius: 10px;
+    //overflow: hidden;
+  }
+
+
+  &__container {
+    @include phones {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__column {
+    margin: 0 70px;
+
+
+
+    &_pos_1 {
+      //flex-basis: calc(56% - 70px);
+      width: calc(56% - 70px);
+      @include phones {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+    &_pos_2 {
+      width: calc(44% - 70px);
+      //flex-basis:calc(44% - 140px);
+      flex-grow: 10000;
+      min-width: 450px;
+      flex-shrink: 0;
+      @include phones {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+    }
+    @include desktop {
+      width: calc(50% - 20px);
+      margin: 0 20px;
+    }
+    @include laptop {
+      width: calc(100% - 20px);
+      flex-shrink: 1;
+      flex-basis: auto;
+      min-width: auto;
+    }
+    @include phones {
+      margin: 0;
+      width:100% ;
+    }
+
+  }
+  &__title {
+    color: #005eff;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -0.38px;
+    text-align: center;
+    margin-bottom: 40px;
+    @include phones {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  &__advantages {
+    margin-bottom: 70px;
+    @include phones {
+      margin-bottom: 40px;
+    }
+  }
+}

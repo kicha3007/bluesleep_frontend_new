@@ -1,0 +1,46 @@
+.sets-size {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -20px;
+
+  }
+  &__column {
+    margin: 0 20px;
+    &_pos_1 {
+      width: calc(50% - 40px);
+      @include laptop {
+        width: calc(55% - 40px);
+      }
+      @include phones {
+        display: none;
+      }
+
+    }
+    &_pos_2 {
+      width: calc(50% - 40px);
+      @include laptop {
+        width: calc(45% - 40px);
+      }
+
+    }
+    @include phones {
+      width: 100%;
+    }
+
+  }
+  &__title {
+    color: #1d1d1d;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+
+  }
+  &__value {
+    color: #1d1d1d;
+    font-size: 14px;
+    font-family: 'CoText-Light', sans-serif;
+
+  }
+}

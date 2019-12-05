@@ -53,7 +53,10 @@
   }
   &__live &__star:hover ~ &__star {
     background-image: url("../svg/star_blank.svg");
-    background-size: 14px 12px;
+    @include phones {
+      background-size: 14px 12px;
+    }
+
   }
   &__live:hover {
     opacity: 1;

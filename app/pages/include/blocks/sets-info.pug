@@ -1,0 +1,48 @@
+include sets-size
+
+mixin sets-info(data)
+	.sets-info&attributes(attributes)
+		.sets-info__wrap
+			.sets-info__top
+				.sets-info__main-title Матрас Blue Sleep Hybrid
+				.sets-info__desc
+					| 20 см, 3 слоя, беспружинный.
+					| Равномерное распределение давления и активная поддержка
+					| позвоночника; жесткость — выше среднего, для людей,
+					| предпочитающих спать на спине и на боку.
+				.sets-info__list-wrap
+					.sets-info__list-title Состав комплекта:
+					ul.sets-info__list
+						li.sets-info__list-item Гибридный матрас BlueSleep 140х200
+						li.sets-info__list-item Чехол на матрас 140x200
+						li.sets-info__list-item Одеяло Blue Sleep Duvet 205x172
+						li.sets-info__list-item Подушка в подушке BlueSleep (2 шт.)
+						li.sets-info__list-item Чехол на подушку (2 шт.)
+						li.sets-info__list-item КПБ Bluesleep satin white двухспальный
+				+sets-size()(class="sets-info__choice-size")
+				.sets-info__price
+					.sets-info__price-new(data-card-info-price-new) #{$offersList[0]["data"].BASE_PRICE}
+					.sets-info__price-old(data-card-info-price-old) #{$offersList[0]["data"].OLD_PRICE}
+				.sets-info__price-other(data-card-info-price-other)
+					| Или
+					span.sets-info__price-other-numeric
+						| от
+						span.sets-info__price-other-number(data-card-info-price-other-number) &#32; #{$offersList[0]["data"].CREDIT_RENT}
+						| &#32; р. /мес
+					|    без переплат
+			.sets-info__bottom
+				.sets-info__btn-wrap
+					.sets-info__btn.btn
+						span.sets-info__btn-text.sets-info__btn-text_pos_1 Купить
+							span.sets-info__btn-text.sets-info__btn-text_pos_2  сейчас
+					.sets-info__btn.btn.sets-info__btn_credit(data-card-info-btn-credit)
+						span.sets-info__btn-text.sets-info__btn-text_credit_pos_1 0-0-024
+						span.sets-info__btn-text.sets-info__btn-text_credit_pos_2  Рассрочка
+				.sets-info__delivery
+					.sets-info__delivery-img-box
+						img.sets-info__delivery-img(src="img/delivery.png", alt='')
+					.sets-info__delivery-text Бесплатная доставка в день заказа
+					.sets-info__delivery-tooltip(title="текст подсказки")
+						img.sets-info__delivery-tooltip-img(src="img/question.png", alt='')
+
+

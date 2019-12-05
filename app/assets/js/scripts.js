@@ -130,10 +130,10 @@ function DOMready() {
         }
     })();
     accordeonBase.slideUpOnLoad(".js-mobile-menu-inner-wrap", false);
-    accordeonBase.setListener(".js-mobile-menu-inner-wrap", true);
+    accordeonBase.setListener(".js-mobile-menu-inner-wrap", false);
 
     accordeonBase.slideUpOnLoad(".js-faq-top-wrap", false);
-    accordeonBase.setListener(".js-faq-top-wrap", true);
+    accordeonBase.setListener(".js-faq-top-wrap", false);
 
     var overleyCheck = false;
 

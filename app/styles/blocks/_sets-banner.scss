@@ -1,0 +1,50 @@
+
+.sets-banner {
+  background: url("../img/bg_catalog-set.jpg") top center no-repeat;
+
+  &__wrap {
+    padding-top:7%;
+    padding-bottom: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    @include phones {
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+
+  }
+  &__content {
+    //max-width: 430px;
+    text-align: center;
+    max-width: 500px;
+  }
+  &__title {
+
+    margin-bottom: 60px;
+    color: #005eff;
+    font-family: "CoHeadlineCorp-Regular", sans-serif;
+    font-size: 36px;
+    line-height: 1.1;
+
+
+    @include phones {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+  }
+  &__desc{
+    font-weight: 300;
+    line-height: 1.3;
+    color: #000000;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    @include phones {
+      font-size: 11px;
+    }
+
+  }
+
+}

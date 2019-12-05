@@ -1,0 +1,13 @@
+include sets-size-dropdown
+
+mixin sets-size(data)
+	.sets-size&attributes(attributes)
+		.sets-size__wrap
+			.sets-size__column.sets-size__column_pos_1
+				.sets-size__title Выберите размер
+				.sets-size__value(data-choice-size-value="" )
+					span.sets-size__value-size(data-choice-size-value-size) #{$offersList[0]["data"].GABARITY}
+					span.sets-size__value-divider /
+					span.sets-size__value-weight(data-choice-size-value-weight) #{$offersList[0]["data"].WEIGHT}
+			.sets-size__column.sets-size__column_pos_2
+				+sets-size-dropdown()(class="sets-size__dropdown")

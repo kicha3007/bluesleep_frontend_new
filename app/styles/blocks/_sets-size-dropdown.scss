@@ -1,0 +1,157 @@
+.sets-size-dropdown {
+  &__wrap {
+    position: relative;
+  }
+  &__active-item {
+    border-radius: 10px;
+    border: 1px solid #726fd1;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #1d1d1d;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include phones {
+      padding: 0;
+      border: none;
+      border-bottom: 1px solid  #000000;
+      border-radius: 0;
+      text-transform: none;
+      padding-bottom: 5px;
+    }
+
+  }
+  &__active-item-arrow {
+
+  }
+  &__active-item-text {
+    margin-right: 15px;
+    @include phones {
+      color: #000000;
+      //font-family: 'CoText-Light', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 14px;
+      flex-grow: 1;
+    }
+
+
+
+  }
+  &__active-item-discount {
+    border-radius: 10px;
+    background-color: #005eff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    font-size: 14px;
+    margin-right: 10px;
+    color: #fff;
+  }
+
+  &__inner-wrap {
+    position: absolute;
+    top: calc(100% - 1px);
+    width: 100%;
+    z-index: 3;
+    border-radius: 10px;
+    border: 1px solid #726fd1;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &.active {
+      display: block;
+    }
+
+  }
+  &__list {
+
+
+
+  }
+  &__item {
+    cursor: pointer;
+    color: #1d1d1d;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0 5px;
+    padding-left: 30px;
+    height: 32px;
+    display: flex;
+    //flex-wrap: wrap;
+    line-height: 32px;
+    align-items: center;
+    &.active {
+      background-color: #e0ebff;
+      font-size: 16px;
+      font-weight: 700;
+
+    }
+
+  }
+  &__other-size {
+    display: block;
+    color: #1d1d1d;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 12px;
+    padding: 8px 0;
+    padding-left: 30px;
+
+  }
+  &__active-item-pre-text {
+    color: #000000;
+    //font-family: 'CoText-Light', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 14px;
+    padding-right: 5px;
+    &_show_mobile {
+      display: none;
+      @include phones {
+        display: inline-block;
+      }
+    }
+
+  }
+  &__active-item-price {
+    color: #005eff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 12.34px;
+    margin-right: 10px;
+    padding-bottom: 3px;
+    &_show_mobile {
+      display: none;
+      @include phones {
+        display: inline-block;
+      }
+    }
+
+  }
+  &__active-item-img {
+    &_show_mobile {
+      display: none;
+      @include phones {
+        display: inline-block;
+      }
+    }
+    &_show_desktop {
+      display: inline-block;
+      @include phones {
+        display: none;
+      }
+    }
+
+  }
+
+}

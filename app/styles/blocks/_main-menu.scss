@@ -16,8 +16,8 @@
     padding-left: 0;
     }
 
-  &__item.active #{&}__link,
-  &__item:hover #{&}__link {
+  &__item.active .main-menu__link,
+  &__item:hover .main-menu__link {
     color: #3e52e7;
   }
 
