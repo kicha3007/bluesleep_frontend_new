@@ -5,7 +5,7 @@
 
   &__top {
     @include phones {
-      padding-left: 25px;
+      padding-left: 40px;
       padding-right: 25px;
     }
 
@@ -13,8 +13,12 @@
 
   &__bottom {
     @include phones {
-      padding-left: 25px;
-      padding-right: 25px;
+      padding-left: 35px;
+      padding-right: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
     }
 
   }
@@ -23,7 +27,7 @@
     color: #005eff;
     font-size: 36px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 40px;
     font-family: "CoHeadlineCorp-Regular", "CoHeadline-Bold", sans-serif;
     @include phones {
       font-size: 24px;
@@ -37,7 +41,7 @@
     font-size: 16px;
     font-weight: 300;
     font-family: 'CoText-Light', sans-serif;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     line-height: 1.2;
     @include phones {
       font-size: 11px;
@@ -72,9 +76,10 @@
   }
 
   &__price-other {
-    font-size: 14px;
-    font-family: 'CoText-Light', sans-serif;
-    margin-bottom: 50px;
+    color: #ff8597;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
     @include phones {
       display: none;
     }
@@ -82,16 +87,12 @@
 
   }
 
-  &__price-other-numeric {
-    font-weight: 700;
-    margin: 0 4px;
-    display: inline-block;
 
-
-  }
-
-  &__choice-size {
-    margin-bottom: 65px;
+  &__sets-size {
+    margin-bottom: 20px;
+    @include phones {
+      margin-bottom: 10px;
+    }
 
   }
 
@@ -110,11 +111,13 @@
   }
 
   &__delivery {
+
     display: flex;
-    margin-bottom: 50px;
     @include phones {
       margin-bottom: 30px;
+      order: 1;
     }
+
   }
 
   &__delivery-img-box {
@@ -178,6 +181,10 @@
 
   &__btn-wrap {
     display: flex;
+    margin-bottom: 25px;
+    @include phones {
+        order: 2;
+    }
 
 
   }
@@ -226,6 +233,10 @@
 
   &__list-wrap {
     margin-bottom: 60px;
+    @include phones {
+      margin-bottom: 45px;
+
+    }
   }
 
   &__list {
@@ -236,27 +247,37 @@
 
   &__list-item {
     list-style-type: none;
-    padding-left: 25px;
+    padding-left: 35px;
     position: relative;
-
     color: #000000;
     font-size: 16px;
-   font-family: 'CoText-Light', sans-serif;
+    font-family: 'CoText-Light', sans-serif;
     font-weight: 300;
 
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    @include phones {
+      padding-left: 25px;
+      font-size: 11px;
+      font-family: 'CoText-Light', sans-serif;
+      margin-bottom: 3px;
+    }
 
     &::before {
       content: '';
       display: block;
       position: absolute;
       top: 7px;
-      left: 0;
+      left: 8px;
       width: 9px;
       height: 9px;
       background-color: #005eff;
       opacity: 0.59;
       border-radius: 50%;
+      @include phones {
+        width: 5px;
+        height: 5px;
+        top: 5px;
+      }
     }
   }
 
@@ -264,7 +285,21 @@
     font-size: 16px;
     font-weight: 700;
     color: #000000;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    @include phones {
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+  }
+  &__inner-top {
+    &_show_desktop {
+      @include laptop {
+          display: none;
+      }
+    }
+    
+    
   }
 
 }

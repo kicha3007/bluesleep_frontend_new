@@ -1,32 +1,33 @@
 .sets-size {
   &__wrap {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    margin: 0 -20px;
+    margin: 0 -15px;
 
   }
   &__column {
-    margin: 0 20px;
+    margin: 0 15px;
     &_pos_1 {
-      width: calc(50% - 40px);
+      width: calc(42% - 15px);
       @include laptop {
-        width: calc(55% - 40px);
+        width: calc(55% - 15px);
       }
       @include phones {
         display: none;
+
       }
 
     }
     &_pos_2 {
-      width: calc(50% - 40px);
+      width: calc(58% - 15px);
       @include laptop {
-        width: calc(45% - 40px);
+        width: calc(45% - 15px);
       }
 
     }
     @include phones {
       width: 100%;
+      padding-right: 15px;
     }
 
   }

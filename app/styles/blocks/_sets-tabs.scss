@@ -1,42 +1,113 @@
 .sets-tabs {
-  margin-bottom: 200px;
-  &__wrap {
-
-
+  padding-top: 20px;
+  @include phones {
+    padding-top: 7px;
 
   }
-  &__item {
-    margin: 0 -70px;
+
+
+  &__nav {
     display: flex;
-    padding-top: 90px;
-    max-width: 100%;
-    margin-bottom: 100px;
-    @include desktop {
-      margin: 0 -20px 100px;
-    }
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 65px;
+    padding: 0 15px;
     @include laptop {
-      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
     @include phones {
-      padding-top: 0;
-      margin: 0;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
+
   }
+  &__nav-title {
+    color: #565654;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 14px;
+    margin-bottom: 10px;
+    @include phones {
+      color: #565654;
+      font-size: 11px;
+      margin-bottom: 5px;
+    }
+  
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 -3px;
+    @include phones {
+      justify-content: center;
+    }
+
+
+  }
+
+  &__nav-item {
+    list-style-type: none;
+    margin: 0 3px;
+
+  }
+
+  &__list {
+    margin-bottom: -140px;
+  }
+
+
+  &__nav-link {
+    display: block;
+    color: #565654;
+    font-family: 'CoText-Light', sans-serif;
+    font-weight: 300;
+    transition: .3s ease;
+    font-size: 16px;
+    @include phones {
+      font-size: 11px;
+    }
+  }
+
+  &__nav-item.active #{&}__nav-link {
+
+    color: #005eff;
+    font-weight: 400;
+  }
+
+  &__tab {
+    display: none;
+    width: 100%;
+
+
+  }
+
+  &__tab.active {
+    display: block;
+  }
+
+
+
 
   &__img-box{
 
     overflow: hidden;
     text-align: center;
-    display: flex !important;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    @include laptop {
+        justify-content: flex-start;
+    }
     @include phones {
+      //max-height: 144px;;
       border-radius: 0;
-      display: block !important;
+      margin-bottom: 10px;
     }
 
     &:focus {
@@ -61,64 +132,109 @@
       padding-right: 0;
     }
   }
-  &__column {
-    margin: 0 70px;
 
+  &__item {
+    display: flex;
+    margin: 0 -50px 0;
+    @include laptop {
+      flex-wrap: wrap;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 50px;
+
+    }
+    @include phones {
+      padding-top: 0;
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+  }
+
+  &__column {
+    margin: 0 50px 140px;
+    max-width: 100%;
+    width: 100%;
 
 
     &_pos_1 {
-      //flex-basis: calc(56% - 70px);
-      width: calc(56% - 70px);
+      width: calc(68% - 50px);
+      @include desktop {
+        width: calc(50% - 50px);
+      }
+
       @include phones {
         margin-right: 0;
         margin-left: 0;
       }
     }
     &_pos_2 {
-      width: calc(44% - 70px);
-      //flex-basis:calc(44% - 140px);
-      flex-grow: 10000;
-      min-width: 450px;
-      flex-shrink: 0;
+      width: calc(42% - 50px);
+
+      @include desktop {
+        width: calc(50% - 50px);
+      }
       @include phones {
         padding-left: 15px;
         padding-right: 15px;
       }
 
     }
-    @include desktop {
-      width: calc(50% - 20px);
-      margin: 0 20px;
-    }
+
     @include laptop {
-      width: calc(100% - 20px);
-      flex-shrink: 1;
-      flex-basis: auto;
-      min-width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 40px;
+
     }
     @include phones {
       margin: 0;
       width:100% ;
+      padding-left: 0;
+      padding-right: 0;
     }
 
   }
-  &__title {
-    color: #005eff;
-    font-family: 'CoText-Light', sans-serif;
-    font-size: 30px;
-    font-weight: 300;
-    letter-spacing: -0.38px;
+  &__inner-top {
+    display: none;
     text-align: center;
-    margin-bottom: 40px;
+
+    @include laptop {
+        display: block;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     @include phones {
-      font-size: 18px;
-      margin-bottom: 20px;
+
     }
   }
-  &__advantages {
-    margin-bottom: 70px;
-    @include phones {
-      margin-bottom: 40px;
-    }
+  &__top-main-title {
+    color: #005eff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family:  "CoHeadline-Bold", sans-serif;
+      @include phones {
+        font-size: 18px;
+        font-family: "CoHeadlineCorp-Regular", sans-serif;
+        margin-bottom: 5px;
+      }
   }
+  &__top-desc {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'CoText-Light', sans-serif;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    @include phones {
+      font-size: 10px;
+      margin-bottom: 15px;
+    }
+
+
+  }
+
+
 }

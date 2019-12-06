@@ -6,26 +6,36 @@ mixin sets-tabs(data)
 			+sets-banner()()
 			.sets-tabs
 				.sets-tabs__container.container
-					.sets-tabs__wrap
+					.sets-tabs__wrap.js--sets-tabs
 						.sets-tabs__nav
+							.sets-tabs__nav-title Фильтры:
 							ul.sets-tabs__nav-list(data-tabs-nav-list)
-								each item, index in $otherProductsList
-									li.sets-tabs__nav-item.js--card-info-tabs-nav-item(class={"active": (index == 2)} data-tabs-nav-item)
-										a(href=`#${item.ID}` data-tabs-toggle).sets-tabs__nav-link!= item.COMBINATION_NAME
-										if(item.SAVING)
-											.sets-tabs__saving
-												span.sets-tabs__saving-text
-													|    Экономия
-													br
-													|    до
-												span.sets-tabs__saving-number 25%
+								each item, index in $setsList
+									li.sets-tabs__nav-item.js--card-info-tabs-nav-item(class={"active": (index == 0)} data-tabs-nav-item)
+										a(href=`#${item.ID}` data-tabs-toggle).sets-tabs__nav-link!= item.title
+
 						.sets-tabs__inner-wrap
-							each itemTab, indexTab in $otherProductsList
-								.sets-tabs__tab(id=itemTab.ID  data-tabs-tab)
+							each itemTab, indexTab in $setsList
+								.sets-tabs__tab(id=itemTab.ID  data-tabs-tab class={"active": (indexTab == 0)})
 									.sets-tabs__list
-										.sets-tabs__item
-											.sets-tabs__column.sets-tabs__column_pos_1
-												.sets-tabs__img-box
-													img.sets-tabs__img(src="img/c/sets_1.jpg", alt='')
-											.sets-tabs__column.sets-tabs__column_pos_2
-													+sets-info()()
+										each itemInnerTab, indexInnerTab in [$offersList, $offersList_2 , $offersList_2]
+											if indexInnerTab < itemTab.count
+												// список ТП
+												- var $offersListJson = JSON.stringify(itemInnerTab)
+												script var offersList = "#{$offersListJson}".replace(/&quot;/g, '"');
+												.sets-tabs__item
+													.sets-tabs__column.sets-tabs__column_pos_1
+														.sets-tabs__inner-top
+															.sets-tabs__top-main-title Матрас Blue Sleep Hybrid
+															.sets-tabs__top-desc
+																| 20 см, 3 слоя, беспружинный.
+																| Равномерное распределение давления и активная поддержка
+																| позвоночника; жесткость — выше среднего, для людей,
+																| предпочитающих спать на спине и на боку.
+														.sets-tabs__img-box
+															img.sets-tabs__img(src=itemInnerTab[0]["data"]["IMG"], alt='')
+													.sets-tabs__column.sets-tabs__column_pos_2
+															+sets-info({"offersList": itemInnerTab})()
+
+
+

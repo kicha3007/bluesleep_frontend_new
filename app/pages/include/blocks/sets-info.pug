@@ -4,12 +4,13 @@ mixin sets-info(data)
 	.sets-info&attributes(attributes)
 		.sets-info__wrap
 			.sets-info__top
-				.sets-info__main-title Матрас Blue Sleep Hybrid
-				.sets-info__desc
-					| 20 см, 3 слоя, беспружинный.
-					| Равномерное распределение давления и активная поддержка
-					| позвоночника; жесткость — выше среднего, для людей,
-					| предпочитающих спать на спине и на боку.
+				.sets-info__inner-top.sets-info__inner-top_show_desktop
+					.sets-info__main-title Матрас Blue Sleep Hybrid
+					.sets-info__desc
+						| 20 см, 3 слоя, беспружинный.
+						| Равномерное распределение давления и активная поддержка
+						| позвоночника; жесткость — выше среднего, для людей,
+						| предпочитающих спать на спине и на боку.
 				.sets-info__list-wrap
 					.sets-info__list-title Состав комплекта:
 					ul.sets-info__list
@@ -19,17 +20,12 @@ mixin sets-info(data)
 						li.sets-info__list-item Подушка в подушке BlueSleep (2 шт.)
 						li.sets-info__list-item Чехол на подушку (2 шт.)
 						li.sets-info__list-item КПБ Bluesleep satin white двухспальный
-				+sets-size()(class="sets-info__choice-size")
+				+sets-size()(class="sets-info__sets-size")
 				.sets-info__price
-					.sets-info__price-new(data-card-info-price-new) #{$offersList[0]["data"].BASE_PRICE}
-					.sets-info__price-old(data-card-info-price-old) #{$offersList[0]["data"].OLD_PRICE}
+					.sets-info__price-new(data-card-info-price-new) #{data.offersList[0]["data"].BASE_PRICE}
+					.sets-info__price-old(data-card-info-price-old) #{data.offersList[0]["data"].OLD_PRICE}
 				.sets-info__price-other(data-card-info-price-other)
-					| Или
-					span.sets-info__price-other-numeric
-						| от
-						span.sets-info__price-other-number(data-card-info-price-other-number) &#32; #{$offersList[0]["data"].CREDIT_RENT}
-						| &#32; р. /мес
-					|    без переплат
+					| Выгода 34 000 р.
 			.sets-info__bottom
 				.sets-info__btn-wrap
 					.sets-info__btn.btn

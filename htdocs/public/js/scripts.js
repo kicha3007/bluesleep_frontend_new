@@ -513,7 +513,7 @@ function DOMready() {
         $(e.delegateTarget).find(target).addClass("active");
     }
 
-    $(".js--card-info-tabs").on("click", "[data-tabs-toggle]", function (e) {
+    $(".js--card-info-tabs, .js--sets-tabs").on("click", "[data-tabs-toggle]", function (e) {
         tabsStart.call(this, e);
     });
 
