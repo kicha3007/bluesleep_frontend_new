@@ -70,6 +70,9 @@
     @include phones {
       display: none;
     }
+    &_indent_min {
+      margin-bottom: 15px;
+    }
 
 
   }
@@ -80,20 +83,39 @@
 
 
   }
+  &__colors {
+    &_indent_big {
+      margin-bottom: 30px;
+      @include phones {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+
   &__choice-size {
     margin-bottom: 65px;
+    &_indent_min {
+      margin-bottom: 20px;
+    }
 
   }
   &__tabs {
     margin-bottom: 30px;
     @include phones {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
   }
   &__star-rating {
     margin-bottom: 50px;
     @include phones {
       margin-bottom: 30px;
+    }
+    &_indent_min {
+      margin-bottom: 40px;
+      @include phones {
+        margin-bottom: 20px;
+      }
     }
   }
   &__delivery {

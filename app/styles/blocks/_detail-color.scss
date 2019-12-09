@@ -1,0 +1,63 @@
+.detail-color {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__btn + .detail-color__btn {
+    margin-left: 18px;
+    @include phones {
+      margin-left: 10px;
+    }
+  }
+  &__input {
+    display: none;
+  }
+  &__label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    margin-right: 0;
+    user-select: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e4e2e5;
+    @include phones {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  &__label:before {
+    content: "";
+    display: inline-block;
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    @include phones {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  /* Checked */
+  &__input:checked + .detail-color__label:before {
+    border-color: #124afd;
+
+  }
+
+  /* Hover */
+  &__radio .detail-color__label:hover:before {
+    filter: brightness(120%);
+  }
+
+  /* Disabled */
+  &__radio .detail-color__input:disabled + .detail-color__label:before {
+    filter: grayscale(100%);
+  }
+}

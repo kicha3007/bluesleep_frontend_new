@@ -1,0 +1,21 @@
+.detail-parameters {
+  margin-bottom: 80px;
+  @include phones {
+    margin-bottom: 50px;
+  }
+  &__text {
+    color: #000000;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    @include phones {
+      font-size: 11px;
+      line-height: 1.2;
+    }
+  }
+  //&__text + .detail-parameters__text {
+  //  margin-left: 3px;
+  //  display: inline-block;
+  //}
+
+}

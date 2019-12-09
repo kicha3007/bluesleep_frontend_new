@@ -1,0 +1,30 @@
+extend include/template_base
+
+include include/blocks/slider-derail
+include include/blocks/card-info_2
+include include/blocks/advantages-detail_2
+include include/blocks/self-made
+include include/blocks/self-made-advantages
+include include/blocks/self-made-desc
+
+
+block variables
+	- var title = 'Детальная страница Матраса';
+
+block content
+	.detail
+		.detail__container.container
+			.detail__wrap
+				.detail__column.detail__column_pos_1
+					+slider-detail()()
+				.detail__column.detail__column_pos_2
+					+card-info_2()()
+			.detail__title Преимущества матраса
+			+advantages-detail_2()()
+			+self-made()()
+			+self-made-desc()()
+		+self-made-advantages()()
+
+	// список ТП
+	- var $offersListJson = JSON.stringify($offersList)
+	script var offersList = "#{$offersListJson}".replace(/&quot;/g, '"');

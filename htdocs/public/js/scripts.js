@@ -239,18 +239,12 @@ function DOMready() {
     if (globParam.windowWidth() < globParam.getMediaSize().LAPTOP) {
         // Инициализация слайдера advantages-detail
         $(".js-advantages-detail-wrap").slick({
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
             arrows: false,
             dots: true,
             infinite: false,
             responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
                 {
                     breakpoint: 575,
                     settings: {
@@ -261,6 +255,41 @@ function DOMready() {
                 }
             ]
         });
+
+        // Инициализация слайдера self-made
+        $(".js-self-made-wrap").slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+
+        // Инициализация слайдера self-made-advantages
+        $(".js-self-made-advantages-list").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+
 
     }
 

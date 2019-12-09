@@ -1,0 +1,108 @@
+.self-made-desc {
+  margin-top: 115px;
+  margin-bottom: 70px;
+  @include phones {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &_pos_2 {
+      justify-content: flex-end;
+      margin-top: 50px;
+      @include laptop {
+        margin-top: 0;
+      }
+    }
+
+    @include laptop {
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__column {
+
+    &_pos_1 {
+      width: 60%;
+
+    }
+
+    &_pos_2 {
+      width: calc(40% + 80px);
+      position: absolute;
+      right: 0;
+
+    }
+
+    &_pos-second_1 {
+      width: calc(40% + 100px);
+      position: absolute;
+      left: 0;
+      @include laptop {
+        order: 2;
+      }
+    }
+
+    &_pos-second_2 {
+      width: 60%;
+      @include laptop {
+        order: 1;
+      }
+    }
+
+    @include laptop {
+      width: 100%;
+      position: static;
+    }
+
+  }
+
+  &__img-box {
+    display: flex;
+    align-items: flex-start;
+    background-color: #e7e7eb;
+    @include laptop {
+      margin: 0 -15px;
+    }
+
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  &__desc-wrap {
+    box-shadow: 7px 5px 18px rgba(59, 55, 53, 0.24);
+    background-color: #fefefe;
+    padding: 80px 40px;
+    @include laptop {
+      box-shadow: none;
+      background: #fff;
+    }
+    @include phones {
+      padding: 20px 25px;
+    }
+
+  }
+
+  &__desk {
+    color: #1f2633;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    @include phones {
+      font-size: 12px;
+    }
+
+  }
+
+
+}
