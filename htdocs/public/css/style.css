@@ -9800,7 +9800,12 @@ body.compensate-for-scrollbar {
 
 .sets-banner {
   background: url("../img/bg_catalog-set.jpg") top center no-repeat;
-  background-size: cover;
+}
+
+@media screen and (max-width: 1199px) {
+  .sets-banner {
+    background-size: cover;
+  }
 }
 
 .sets-banner__wrap {
@@ -11187,6 +11192,188 @@ body.compensate-for-scrollbar {
 
 .self-made-advantages .slick-list {
   overflow: visible !important;
+}
+
+.sets-size-dropdown__wrap {
+  position: relative;
+}
+
+.sets-size-dropdown__active-item {
+  border-radius: 10px;
+  border: 1px solid #726fd1;
+  padding: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #1d1d1d;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 575px) {
+  .sets-size-dropdown__active-item {
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid  #000000;
+    border-radius: 0;
+    text-transform: none;
+    padding-bottom: 5px;
+  }
+}
+
+.sets-size-dropdown__active-item-text {
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 575px) {
+  .sets-size-dropdown__active-item-text {
+    color: #000000;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 14px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+
+.sets-size-dropdown__active-item-discount {
+  border-radius: 10px;
+  background-color: #005eff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px;
+  font-size: 14px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.sets-size-dropdown__inner-wrap {
+  position: absolute;
+  top: calc(100% - 1px);
+  width: 100%;
+  z-index: 3;
+  border-radius: 10px;
+  border: 1px solid #726fd1;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sets-size-dropdown__inner-wrap.active {
+  display: block;
+}
+
+.sets-size-dropdown__item {
+  cursor: pointer;
+  color: #1d1d1d;
+  font-family: 'CoText-Light', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0 5px;
+  padding-left: 30px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 32px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sets-size-dropdown__item.active {
+  background-color: #e0ebff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sets-size-dropdown__other-size {
+  display: block;
+  color: #1d1d1d;
+  font-family: 'CoText-Light', sans-serif;
+  font-size: 12px;
+  padding: 8px 0;
+  padding-left: 30px;
+}
+
+.sets-size-dropdown__active-item-pre-text {
+  color: #000000;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 14px;
+  padding-right: 5px;
+}
+
+.sets-size-dropdown__active-item-pre-text_show_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .sets-size-dropdown__active-item-pre-text_show_mobile {
+    display: inline-block;
+  }
+}
+
+.sets-size-dropdown__active-item-price {
+  color: #005eff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 12.34px;
+  margin-right: 10px;
+  padding-bottom: 3px;
+}
+
+.sets-size-dropdown__active-item-price_show_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .sets-size-dropdown__active-item-price_show_mobile {
+    display: inline-block;
+  }
+}
+
+.sets-size-dropdown__active-item-img_show_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .sets-size-dropdown__active-item-img_show_mobile {
+    display: inline-block;
+  }
+}
+
+.sets-size-dropdown__active-item-img_show_desktop {
+  display: inline-block;
+}
+
+@media screen and (max-width: 575px) {
+  .sets-size-dropdown__active-item-img_show_desktop {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=maps/style.css.map */
