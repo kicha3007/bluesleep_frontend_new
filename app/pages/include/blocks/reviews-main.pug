@@ -1,0 +1,32 @@
+mixin reviews-main(data, mods)
+	section#reviews-main.reviews-main(style='background-color: #f4f4f4;;', name='reviews')
+		.reviews-main__header
+			h2.reviews-main__main-title
+				| Отзывы о матрасах Blue Sleep.
+			.reviews-main__main-sub-title
+				| Прямо из facebook. &#32;
+				a(href='https://www.facebook.com/bluesleep.ru/reviews/', target='_blank') Оставьте свой.
+		.reviews-main__container.container
+			.reviews-main__wrap
+				//.reviews-main__raiting.reviews-main__raiting__show_mobile
+				//	img.reviews-main__raiting-img(src='https://embedsocial.com/api/source_image_badges/badge-2-f/ru/facebook/34607')
+				//	img.reviews-main__raiting-img(src='https://embedsocial.com/api/source_image_badges/badge-2-g/ru/google/12594')
+				.reviews-main__column.reviews-main__column_pos_1
+					.reviews-main__raiting.reviews-main__raiting__show_desktop
+						.reviews-main__raiting-img-box
+							img.reviews-main__raiting-img(src='https://embedsocial.com/api/source_image_badges/badge-2-f/ru/facebook/34607')
+						.reviews-main__raiting-img-box
+							img.reviews-main__raiting-img(src='https://embedsocial.com/api/source_image_badges/badge-2-g/ru/google/12594')
+				.reviews-main__column.reviews-main__column_pos_2
+					.embedsocial-reviews(data-ref='5d2e3aaa8d86e3722dcd57558ab6ce6096dd8eea')
+					script.
+						(function (d, s, id) {
+							var js;
+							if (d.getElementById(id)) {
+								return;
+							}
+							js = d.createElement(s);
+							js.id = id;
+							js.src = "https://embedsocial.com/embedscript/ri.js";
+							d.getElementsByTagName("head")[0].appendChild(js);
+						}(document, "script", "EmbedSocialReviewsScript"));

@@ -350,6 +350,32 @@ function DOMready() {
         ]
     });
 
+    // Инициализация слайдера reviews-slider
+    $(".js-reviews-slider-wrap").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        infinite: true,
+
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+
+                }
+            },
+
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
     // Подключаем детальный слайдер
     if ($('.js--slider-detail-for').length > 0) {
 

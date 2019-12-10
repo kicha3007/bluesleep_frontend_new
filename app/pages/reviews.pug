@@ -1,0 +1,39 @@
+extend include/template_base
+
+include include/blocks/reviews-slider
+
+
+block variables
+	- var title = 'Отзывы';
+	- var titlePage = 'Отзывы';
+
+block content
+	.reviews
+		.reviews__subtitle
+			| Прямо из facebook.
+			a(href='https://www.facebook.com/bluesleep.ru/reviews/', target='_blank') &#32;Оставьте свой.
+		.reviews__container.container
+			.reviews__wrap(id="embed-reviews-block")
+				.reviews__column.reviews__column_pos_1
+					.reviews__img-wrap
+						.reviews__img-box
+							img.reviews__img(src="https://embedsocial.com/api/source_image_badges/badge-2-f/ru/facebook/34607", alt='')
+						.reviews__img-box
+							img.reviews__img(src="https://embedsocial.com/api/source_image_badges/badge-2-g/ru/google/12594", alt='')
+
+				.reviews__column.reviews__column_pos_2
+					.reviews__content( class='embedsocial-reviews' data-ref='eda193a103ec847e83eeb32ac53c67447859219a')
+					script.
+						(function (d, s, id) {
+							var js;
+							if (d.getElementById(id)) {
+								return;
+							}
+							js = d.createElement(s);
+							js.id = id;
+							js.src = "https://embedsocial.com/embedscript/ri.js";
+							d.getElementsByTagName("head")[0].appendChild(js);
+						}(document, "script", "EmbedSocialReviewsScript"));
+
+			.reviews__bottom
+				+reviews-slider()()
