@@ -22,31 +22,10 @@
 	margin-right: 5px;
 	line-height: 1.2;
 	font-family: "CoText-Light", sans-serif;
+	box-shadow: 5px 5px 0px 0px rgba(255,133,151,1);
 	@include phones {
 		font-size: 10px;
 		padding: 5px 23px 7px;
-	}
-	&::before {
-		content: '';
-		display: block;
-		position: absolute;
-		bottom: -5px;
-		right: -5px;
-		width: 5px;
-		height: 100%;
-		background-color: #ff8597;
-		z-index: 1;
-	}
-	&::after {
-		content: '';
-		display: block;
-		position: absolute;
-		bottom: -5px;
-		left: 5px;
-		width: 100%;
-		height: 5px;
-		background-color: #ff8597;
-		z-index: 1;
 	}
 
 	&_full-width{

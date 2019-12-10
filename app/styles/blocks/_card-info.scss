@@ -190,10 +190,7 @@
     text-align: center;
     &_credit {
       background-color: #a0978e;
-      &:before,
-      &:after {
-        background-color: #d0cdc6;
-      }
+      box-shadow: 5px 5px 0px 0px #d0cdc6;
 
     }
 

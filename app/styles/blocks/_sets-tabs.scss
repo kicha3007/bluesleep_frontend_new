@@ -57,6 +57,9 @@
 
   &__list {
     margin-bottom: -140px;
+    @include laptop {
+      margin-bottom: -50px;
+    }
   }
 
 

@@ -1,32 +1,24 @@
 .choice-size {
   &__wrap {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    margin: 0 -20px;
 
   }
   &__column {
-    margin: 0 20px;
     &_pos_1 {
-      width: calc(50% - 40px);
-      @include laptop {
-        width: calc(55% - 40px);
-      }
+      flex-grow: 1;
       @include phones {
         display: none;
       }
 
     }
     &_pos_2 {
-      width: calc(50% - 40px);
-      @include laptop {
-        width: calc(45% - 40px);
-      }
+      min-width: 190px;
 
     }
     @include phones {
       width: 100%;
+
     }
 
   }
