@@ -1239,7 +1239,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 @media screen and (max-width: 767px) {
@@ -6439,6 +6439,14 @@ body.compensate-for-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 991px) {
+  .card-info__btn-wrap {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 .card-info__btn {

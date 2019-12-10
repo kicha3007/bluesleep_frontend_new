@@ -181,6 +181,9 @@
   }
   &__btn-wrap {
     display: flex;
+    @include laptop {
+      justify-content: center;
+    }
 
 
   }
