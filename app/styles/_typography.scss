@@ -2,26 +2,79 @@
 
 
 body {
-	
 	font-weight: 400;
 	font-family: "CoText-Regular", sans-serif;
-
-
 }
 
-.title {
-	
-}
+
 
 .html-area {
+
+
+
+	.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+		font-weight: 800
+	}
+
+	.h1, h1 {
+		font-size: 44px;
+		line-height: 3.3125;
+		@include tablets {
+			font-size: 24px;
+			line-height: 1.8125;
+		}
+	}
+
+	.h2, h2 {
+		font-size: 28px;
+		line-height: 2.125;
+		@include tablets {
+			font-size: 22px;
+			line-height: 1.6875;
+		}
+	}
+
+	.h3, .h4, h3, h4 {
+		font-size: 22px;
+		line-height: 1.6875;
+		@include tablets {
+			font-size: 16px;
+			line-height: 1.25;
+		}
+	}
+
+	.h5, h5 {
+		font-size: 14px;
+		line-height: 1.125;
+
+	}
+
+	.h6, h6 {
+			font-size: 12px;
+			line-height: 1.0625;
+	}
+
+
+	p {
+		font-size: 14px;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+
 	a {
-		text-decoration: underline;
-		color: $color_base;
+		color: #005eff;
+		text-decoration: none;
+		transition: color .2s ease;
 		&:hover {
 			text-decoration: none;
 		}
 	}
-	ul {
+	ul{
 		padding-left: 0;
 		li {
 			color: #000;
@@ -29,7 +82,7 @@ body {
 			line-height: 1.6;
 			list-style-type: none;
 			position: relative;
-			padding-left: 30px;
+			padding-left: 25px;
 			margin-bottom: 5px;
 			&::before {
 				content: '';
@@ -40,58 +93,19 @@ body {
 				width: 6px;
 				height: 6px;
 				border-radius: 50%;
-				background-color: $color_base;
+				background-color: #005eff;
 			}
 		}
+	}
+	ol {
+		padding-left: 25px;
 	}
 	p {
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 24px;
 	}
-	span {
 
-	}
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-
-	}
-
-	h1 {
-		
-		font-size: 54px;
-		font-weight: 700;
-		line-height: 1;
-	}
-	h2 {
-		
-		font-size: 30px;
-		font-weight: 500;
-	}
-	h3 {
-		
-		font-size: 22px;
-		font-weight: 500;
-		line-height: 21.96px;
-	}
-	h4 {
-		
-		font-size: 20px;
-		font-weight: 500;
-		line-height: 25px;
-	}
-	h5 {
-		
-		font-size: 18px;
-		font-weight: 600;
-	}
-	h6 {
-
-	}
 
 	table {
 			border-collapse: collapse;
@@ -102,7 +116,7 @@ body {
 		caption {
 			font-size: 16px;
 			color: #ffffff;
-			background-color: #3366cc;
+			background-color: #005eff;
 			padding: 8px 30px;
 			text-align: left;
 		}
@@ -136,6 +150,39 @@ body {
 		td span {
 			color: #777777;
 		}
+	}
+
+	audio:not([controls]), body:after {
+		display: none
+	}
+
+
+	iframe {
+		max-height: 100%;
+		display: block;
+		max-width: 100% !important;
+	}
+
+	video {
+		width: 100%;
+		height: auto;
+		max-height: 100%;
+	}
+
+	.thumb-wrap {
+		position: relative;
+		padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+		height: 0;
+		overflow: hidden;
+	}
+	.thumb-wrap iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-width: 0;
+		outline-width: 0;
 	}
 
 

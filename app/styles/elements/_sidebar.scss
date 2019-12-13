@@ -1,0 +1,36 @@
+.sidebar {
+  &__list {
+    list-style:none;
+    margin:0; padding:0;
+    margin-bottom:8px;
+    position: relative; /*IE bug*/
+  }
+  &__item {
+    padding: 10px 16px;
+
+  }
+  &__link {
+    font-size:18px;
+    color:#000;
+    font-weight:bold;
+    text-decoration:none;
+    transition: .3s ease;
+    &:visited {
+      color:#000;
+    }
+
+
+    &:hover {
+      color:#8189a5;
+
+    }
+
+  }
+  &__item.active .sidebar__link:link,
+  &__item.active .sidebar__link:visited,
+  &__item.active .sidebar__link:active,
+  &__item.active .sidebar__link,
+  &__item.active .sidebar__link:hover {
+    color:#8189a5;
+  }
+}
