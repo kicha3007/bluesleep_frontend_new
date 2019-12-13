@@ -1,0 +1,22 @@
+extend include/template_base
+
+include include/blocks/sidebar
+include include/blocks/certificates-list
+
+block variables
+	-
+		var title = 'Спасибо за заказ';
+
+
+block content
+	.static-content
+		.static-content__container.container
+			.static-content__wrap
+				.static-content__column.static-content__column_pos_1
+					+sidebar()()
+				.static-content__column.static-content__column_pos_2
+					.static-content__head
+						.static-content__main-title.all-page-title Где купить матрас?
+					.static-content__content.html-area
+						+certificates-list()()
+

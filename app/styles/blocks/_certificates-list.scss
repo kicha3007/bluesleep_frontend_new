@@ -1,0 +1,52 @@
+.certificates-list {
+  min-height: 500px;
+  width: 95%;
+  margin-right: 0px;
+  margin-left: auto;
+
+  &__item {
+    margin-bottom: 5%;
+    min-height: 200px;
+    display: flex;
+    @include tablets {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__picture {
+    width: 40%;
+    min-height: 200px;
+  }
+
+  &__text {
+    width: 70%;
+    min-height: 200px;
+    margin-left: 7%;
+    padding-right: 10%;
+    @include tablets {
+      width: 100%;
+      margin-left: 0px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+
+  }
+
+
+  &__picture-slider {
+    width: 30%;
+    display: flex;
+    @include tablets {
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__slider-item {
+    width: initial;
+    height: 437px;
+    border: 1px solid grey;
+  }
+}
