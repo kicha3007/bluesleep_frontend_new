@@ -1,0 +1,12 @@
+.address-list{
+  @extend %ul-default;
+  overflow-y: scroll;
+  height: 100%;
+  padding-bottom: 20px;
+  @include phones {
+    overflow-y: auto;
+  }
+  &__item{
+    margin-top: 45px;
+  }
+}

@@ -1,0 +1,53 @@
+.address-detail{
+  &__container{
+    @include ph(75px);
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      @include size(19px, 26px);
+      position: absolute;
+      top: 3px;
+      left: 40px;
+      background-image: url('../img/location-1.png');
+      background-repeat: no-repeat;
+    }
+    @include laptop {
+      padding-right: 18px;
+      padding-left: 39px;
+      &:before{
+        left: 13px;
+      }
+
+    }
+  }
+  &__title{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color_text_blue;
+  }
+  &__subtitle {
+    color: $color_red;
+    font-size: 14px;
+    text-transform: none;
+    font-family: 'CoText-Light', sans-serif;
+    font-weight: bold;
+  }
+  &__description{
+    font-size: 12px;
+    font-family: 'CoText-Light', sans-serif;
+    font-weight: 300;
+    color: $color_text_black;
+    line-height: 18px;
+  }
+  &__link{
+    margin-top: 14px;
+  }
+  &__title + .address-detail__subtitle {
+    margin-left: 3px;
+  }
+}
+
+

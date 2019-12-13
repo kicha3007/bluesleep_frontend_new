@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
-    <title>Bluesleep | Корзина</title>
+    <title>Bluesleep | Партнеры</title>
     <meta name="viewport" content="width=device-width initial-scale=1.0"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,600,700|Play:400,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
@@ -368,293 +368,97 @@
         </div>
       </header>
       <main class="main">
-        <div class="basket">
-          <div class="basket__container container">
-            <div class="basket__wrap">
-              <div class="basket__column basket__column_pos_1">
-                <sectionn class="basket-form">
-                  <div class="basket-form__title">Контактне данные</div>
-                  <div class="basket-form__sub-title">* Поля со звездочками обязательны к заполнению</div>
-                  <div class="basket-form__wrap">
-                    <div class="basket-form__inner-wrap">
-                      <div class="basket-form__column basket-form__column_1">
-                        <label class="basket-form__legend" for="basket-form-input-name">Ваше имя:</label>
-                        <div class="basket-form__input-wrap">
-                          <input class="basket-form__input" id="basket-form-input-name" type="text" placeholder="" name="name"/>
-                        </div>
-                      </div>
-                      <div class="basket-form__column basket-form__column_2">
-                        <label class="basket-form__legend" for="basket-form-input-phone">Номер телефона*</label>
-                        <div class="basket-form__input-wrap">
-                          <input class="basket-form__input" id="basket-form-input-phone" type="phone" name="phone" required="required"/>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="basket-form__inner-wrap">
-                      <div class="basket-form__column basket-form__column_1">
-                        <label class="basket-form__legend" for="basket-form-input-mail">Email* (для квитанции)</label>
-                        <div class="basket-form__input-wrap">
-                          <input class="basket-form__input" id="basket-form-input-mail" type="mail" placeholder="" name="mail"/>
-                        </div>
-                      </div>
-                      <div class="basket-form__column basket-form__column_2">
-                        <label class="basket-form__legend" for="basket-form-input-city">Город</label>
-                        <div class="basket-form__input-wrap">
-                          <input class="basket-form__input" id="basket-form-input-city" type="text" placeholder="Москва" name="city" required="required"/>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="basket-form__textarea">
-                      <label class="basket-form__textarea-legend" for="basket-form-input-location">Адрес</label>
-                      <div class="basket-form__input-wrap">
-                        <textarea class="basket-form__textarea-input basket-form__textarea-input_size_min" id="basket-form-input-location" type="text" placeholder="" name="location"></textarea>
-                      </div>
-                    </div>
-                    <div class="basket-form__textarea">
-                      <label class="basket-form__textarea-legend" for="basket-form-input-comment">Комментарии к заказу</label>
-                      <div class="basket-form__input-wrap">
-                        <textarea class="basket-form__textarea-input" id="basket-form-input-comment" type="text" placeholder="" name="comment"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </sectionn>
-                <sectionn class="basket-payment">
-                  <div class="basket-payment__wrap">
-                    <div class="basket-payment__list" data-basket-payment-list="data-basket-payment-list">
-                      <div class="basket-payment__item basket-payment__item_size_full basket-payment__item_order_1">
-                        <div class="basket-payment__main-title">Выберите способ оплаты</div>
-                      </div>
-                      <div class="basket-payment__item basket-payment__item_size_1 basket-payment__item_order_2">
-                        <div class="basket-payment__inner-wrap active" data-basket-payment-inner-wrap="data-basket-payment-inner-wrap">
-                          <div class="basket-payment__content">
-                            <div class="basket-payment__title">Наличными<br/>или картой курьеру</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="basket-payment__item basket-payment__item_size_1 basket-payment__item_order_3">
-                        <div class="basket-payment__inner-wrap" data-basket-payment-inner-wrap="data-basket-payment-inner-wrap">
-                          <div class="basket-payment__content">
-                            <div class="tooltip basket-payment__tooltip">Скидка 3%</div>
-                            <div class="basket-payment__title">Банковской картой<br/>онлайн</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="basket-payment__item basket-payment__item_size_2 basket-payment__item_indent_right basket-payment__item_order_4">
-                        <div class="basket-payment__inner-wrap" data-basket-payment-inner-wrap="data-basket-payment-inner-wrap">
-                          <div class="basket-payment__content">
-                            <div class="tooltip basket-payment__tooltip">Скидка 3%</div>
-                            <div class="basket-payment__img-wrap">
-                              <div class="basket-payment__img-box"><img class="basket-payment__img" src="img/basket-payment-system.png" alt=""/></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="basket-payment__item basket-payment__item_size_1 basket-payment__item_order_5">
-                        <div class="basket-payment__inner-wrap" data-basket-payment-inner-wrap="data-basket-payment-inner-wrap">
-                          <div class="basket-payment__content">
-                            <div class="basket-payment__title-top">0-0-24</div>
-                            <div class="basket-payment__title">В рассрочку</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="basket-payment__item basket-payment__item_size_1 basket-payment__item_order_6">
-                        <div class="basket-payment__inner-wrap" data-basket-payment-inner-wrap="data-basket-payment-inner-wrap">
-                          <div class="basket-payment__title-img-box"><img class="basket-payment__title-img" src="img/basket-payment-pay.png" alt=""/></div>
-                          <div class="basket-payment__title">В кредит без<br/>	переплат</div>
-                        </div>
-                      </div>
-                      <div class="basket-payment__item basket-payment__item_show_mobile basket-payment__item_order_7">
-                        <div class="basket-sum basket-payment__basket-sum basket-payment__basket-sum_indent_big">
-                          <div class="basket-sum__bottom">
-                            <div class="basket-sum__bottom-row">
-                              <div class="basket-sum__bottom-column basket-sum__bottom-column_pos_1">
-                                <div class="basket-sum__bottom-text">Общая сумма:</div>
-                              </div>
-                              <div class="basket-sum__bottom-column basket-sum__bottom-column_pos_2">
-                                <div class="basket-sum__sum"><span class="basket-sum__sum-text-number">75 787</span><span class="basket-sum__sum-text-currency">руБ.</span></div>
-                              </div>
-                            </div>
-                            <div class="basket-sum__bottom-row">
-                              <div class="basket-sum__bottom-column basket-sum__bottom-column_pos_1">
-                                <div class="basket-sum__bottom-text">Доставка:</div>
-                              </div>
-                              <div class="basket-sum__bottom-column basket-sum__bottom-column_pos_2">
-                                <div class="basket-sum__bottom-text">Бесплатно</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="basket-payment__item basket-payment__item_size_2 basket-payment__item_pos_end basket-payment__item_order_8">
-                        <div class="basket-payment__btn-wrap">
-                          <div class="basket-payment__btn btn">Оформить заказ</div>
-                        </div>
-                        <div class="basket-payment__politics">Нажимая кнопку «Оформить заказ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных</div>
-                      </div>
-                    </div>
-                  </div>
-                </sectionn>
-              </div>
-              <div class="basket__column basket__column_pos_2" data-promo-outer-wrap="data-promo-outer-wrap">
-                <div class="basket__content">
-                  <div class="basket-list">
-                    <div class="basket-list__list">
-                      <div class="basket-list__item" data-basket-list-item="data-basket-list-item" data-basket-list-item-data-prop-id="831">
-                        <div class="basket-list__column basket-list__column_pos_1"><a class="basket-list__img-box" href="https://bluesleep.ru/catalog/odeyalo/odeyalo_duvet/"><img class="basket-list__img" src="img/c/basket_1.jpg" alt="Одеяло Blue Sleep Duvet 205x140" title="Одеяло Blue Sleep Duvet 205x140"/></a></div>
-                        <div class="basket-list__column basket-list__column_pos_2">
-                          <div class="basket-list__row basket-list__row_pos_1">
-                            <div class="basket-list__inner-column basket-list__inner-column_pos_1"><a class="basket-list__title" href="https://bluesleep.ru/catalog/odeyalo/odeyalo_duvet/" basket-list-title="basket-list-title">Одеяло Blue Sleep Duvet 205x140</a></div>
-                          </div>
-                          <div class="basket-list__row basket-list__row_pos_2">
-                            <div class="basket-list__inner-column basket-list__inner-column_pos_1">
-                              <div class="basket-list__price"><span class="basket-list__price-text">12 990</span><span class="basket-list__price-currency">руб.</span></div>
-                              <div class="basket-list__price-free hide">Бесплатно</div>
-                            </div>
-                          </div>
-                          <div class="basket-list__row basket-list__row_pos_3">
-                            <div class="basket-list__inner-column basket-list__inner-column_pos_1">
-                              <input class="basket-list__counter-amount-value" value="2" data-counter-amount-value="data-counter-amount-value" data-counter-amount-basket-id="data-counter-amount-basket-id" data-counter-amount-product-id="data-counter-amount-product-id" disabled="disabled"/>
-                              <div class="basket-list__counter-amount-text">шт.</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="basket-list__item" data-basket-list-item="data-basket-list-item" data-basket-list-item-data-prop-id="836">
-                        <div class="basket-list__column basket-list__column_pos_1"><a class="basket-list__img-box" href="https://bluesleep.ru/catalog/pillow/podushka_anatomicheskay/"><img class="basket-list__img" src="img/c/basket_2.jpg" alt="Комплект Perfect Hybrid 160" title="Комплект Perfect Hybrid 160"/></a></div>
-                        <div class="basket-list__column basket-list__column_pos_2">
-                          <div class="basket-list__row basket-list__row_pos_1">
-                            <div class="basket-list__inner-column basket-list__inner-column_pos_1"><a class="basket-list__title" href="https://bluesleep.ru/catalog/pillow/podushka_anatomicheskay/" basket-list-title="basket-list-title">Комплект Perfect Hybrid 160</a></div>
-                          </div>
-                          <div class="basket-list__row basket-list__row_pos_2">
-                            <div class="basket-list__inner-column basket-list__inner-column_pos_1">
-                              <div class="basket-list__price"><span class="basket-list__price-text">66 495</span><span class="basket-list__price-currency">руб.</span></div>
-                              <div class="basket-list__price-free hide">Бесплатно</div>
-                            </div>
-                          </div>
-                          <div class="basket-list__row basket-list__row_pos_3">
-                            <div class="basket-list__inner-column basket-list__inner-column_pos_1">
-                              <input class="basket-list__counter-amount-value" value="1" data-counter-amount-value="data-counter-amount-value" data-counter-amount-basket-id="data-counter-amount-basket-id" data-counter-amount-product-id="data-counter-amount-product-id" disabled="disabled"/>
-                              <div class="basket-list__counter-amount-text">шт.</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="basket-list__item" data-basket-list-item="data-basket-list-item" data-basket-list-item-data-prop-id="836">
-                        <div class="basket-list__column basket-list__column_pos_1"><a class="basket-list__img-box" href="https://bluesleep.ru/catalog/pillow/podushka_anatomicheskay/"><img class="basket-list__img" src="img/c/basket_3.jpg" alt="Комплект Perfect Hybrid 160" title="Комплект Perfect Hybrid 160"/></a></div>
-                        <div class="basket-list__column basket-list__column_pos_2">
-                          <div class="basket-list__row basket-list__row_pos_1">
-                            <div class="basket-list__inner-column basket-list__inner-column_pos_1"><a class="basket-list__title" href="https://bluesleep.ru/catalog/pillow/podushka_anatomicheskay/" basket-list-title="basket-list-title">Комплект Perfect Hybrid 160</a></div>
-                          </div>
-                          <div class="basket-list__row basket-list__row_pos_2">
-                            <div class="basket-list__inner-column basket-list__inner-column_pos_1">
-                              <div class="basket-list__price"><span class="basket-list__price-text">66 495</span><span class="basket-list__price-currency">руб.</span></div>
-                              <div class="basket-list__price-free hide">Бесплатно</div>
-                            </div>
-                          </div>
-                          <div class="basket-list__row basket-list__row_pos_3">
-                            <div class="basket-list__inner-column basket-list__inner-column_pos_1">
-                              <input class="basket-list__counter-amount-value" value="1" data-counter-amount-value="data-counter-amount-value" data-counter-amount-basket-id="data-counter-amount-basket-id" data-counter-amount-product-id="data-counter-amount-product-id" disabled="disabled"/>
-                              <div class="basket-list__counter-amount-text">шт.</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <sectionn class="promo basket__promo">
-                    <div class="promo__wrap" data-promo-wrap="data-promo-wrap">
-                      <div class="promo__top active" data-promo-top="data-promo-top">
-                        <button class="promo__btn"><span class="promo__btn-text">У меня есть промокод</span><img class="promo__btn-img" src="img/plus_blue.png" alt=""/></button>
-                      </div>
-                      <div class="promo__bottom" data-promo-bottom="data-promo-bottom">
-                        <div class="promo__btn-text promo__btn-text_indent_big">Промокод</div>
-                        <div class="promo__inner-wrap">
-                          <!--span.promo__legend Промокод:-->
-                          <input class="promo__input" type="search" placeholder="" data-promo-input="data-promo-input" value=""/>
-                        </div>
-                        <button class="promo__btn-submit" data-promo-btn-submit="data-promo-btn-submit"><span class="promo__btn-submit-text">Применить</span></button>
-                        <div class="promo__error">Промокод устарел</div>
-                      </div>
-                    </div>
-                  </sectionn>
-                  <div class="basket-sum">
-                    <div class="basket-sum__bottom">
-                      <div class="basket-sum__bottom-row">
-                        <div class="basket-sum__bottom-column basket-sum__bottom-column_pos_1">
-                          <div class="basket-sum__bottom-text">Общая сумма:</div>
-                        </div>
-                        <div class="basket-sum__bottom-column basket-sum__bottom-column_pos_2">
-                          <div class="basket-sum__sum"><span class="basket-sum__sum-text-number">75 787</span><span class="basket-sum__sum-text-currency">руБ.</span></div>
-                        </div>
-                      </div>
-                      <div class="basket-sum__bottom-row">
-                        <div class="basket-sum__bottom-column basket-sum__bottom-column_pos_1">
-                          <div class="basket-sum__bottom-text">Доставка:</div>
-                        </div>
-                        <div class="basket-sum__bottom-column basket-sum__bottom-column_pos_2">
-                          <div class="basket-sum__bottom-text">Бесплатно</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="promo-part basket__promo-part" data-promo-part="data-promo-part">
-                    <div class="promo-part__wrap">
-                      <div class="promo-part__row promo-part__row_pos_1">
-                        <div class="promo-part__column promo-part__column_pos_1">
-                          <div class="promo-part__inner-wrap"><span class="promo-part__title" data-promo-part-title="data-promo-part-title">BLACKFRIDAY</span>
-                            <div class="promo-part__btn" data-promo-part-btn="data-promo-part-btn"><img class="promo-part__img" src="img/plus.png" alt=""/></div>
-                          </div>
-                        </div>
-                        <div class="promo-part__column promo-part__column_pos_2">
-                          <div class="promo-part__discount" data-promo-part-count="data-promo-part-count">- 13 123 руб.</div>
-                        </div>
-                      </div>
-                      <div class="promo-part__row promo-part__row_pos_2">
-                        <div class="promo-part__column promo-part__column_pos_1">
-                          <div class="promo-part__title-sum">Общая сумма:</div>
-                        </div>
-                        <div class="promo-part__column promo-part__column_pos_2">
-                          <div class="promo-part__price">
-                            <div class="promo-part__old-price" data-promo-part-old-price="data-promo-part-old-price">75 789 РУБ.</div>
-                            <div class="promo-part__new-price" data-promo-part-new-price="data-promo-part-new-price">62 666 РУБ.</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="basket-advantages basket__basket-advantages">
-                    <div class="basket-advantages__wrap">
-                      <div class="basket-advantages__item">
-                        <div class="basket-advantages__img-box">
-                          <svg class="svg-icon svg-icon-advantages_1 advantages__icon">
-                            <use xlink:href="#icon-advantages_1"></use>
-                          </svg>
-                        </div>
-                        <div class="basket-advantages__title">100 дней на тест</div>
-                      </div>
-                      <div class="basket-advantages__item">
-                        <div class="basket-advantages__img-box">
-                          <svg class="svg-icon svg-icon-advantages_2 advantages__icon">
-                            <use xlink:href="#icon-advantages_2"></use>
-                          </svg>
-                        </div>
-                        <div class="basket-advantages__title">10 лет гарантии</div>
-                      </div>
-                      <div class="basket-advantages__item">
-                        <div class="basket-advantages__img-box">
-                          <svg class="svg-icon svg-icon-advantages_3 advantages__icon">
-                            <use xlink:href="#icon-advantages_3"></use>
-                          </svg>
-                        </div>
-                        <div class="basket-advantages__title">Бесплатная доставка</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="basket__column-bottom"><a class="basket__link" href="#">Назад к корзине</a></div>
-                </div>
-              </div>
+        <div class="partners">
+          <div class="partners__head">
+            <div class="partners__main-title">Адреса шоу-румов в <span class="partners__dropdown-wrap"><span class="partners__dropdown-head" data-partners-dropdown-head="data-partners-dropdown-head">Москве</span><span class="partners__dropdown-content">
+                  <ul class="partners__dropdown-list">
+                    <li class="partners__dropdown-item"><a class="partners__dropdown-link" href="?city=#{dropdownTitleIndx}">Санкт-Петербург</a></li>
+                    <li class="partners__dropdown-item"><a class="partners__dropdown-link" href="?city=#{dropdownTitleIndx}">Краснодар</a></li>
+                    <li class="partners__dropdown-item"><a class="partners__dropdown-link" href="?city=#{dropdownTitleIndx}">Владивосток</a></li>
+                  </ul></span></span>
             </div>
           </div>
+          <div class="partners__container container">
+            <div class="partners__wrap">
+              <div class="partners__addresses">
+                <ul class="address-list">
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">Blue Sleep</span><span class="address-detail__subtitle">Hybrid+Concept</span></div>
+                      <div class="address-detail__description">г. Москва, Малый Черкасский переулок, дом 2, Cabinet Lounge, 6 этаж, шоу-рум 7 <br/>пн - пт 10-20, cб - вс  11-18<br/>8-495-127-86-15<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.625950042328, 55.758321371448&amp;z=13&amp;l=map&amp;pt=37.625950042328, 55.758321371448" data-index="0" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">Orthosleep</span><span class="address-detail__subtitle">Hybrid+Concept</span></div>
+                      <div class="address-detail__description">г. Москва, ул. Профсоюзная, д.56 Третий этаж, линия 3Ж, рядом с WC<br/>10-21<br/>8-916-775-65-55<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.552349471942, 55.670407846831&amp;z=13&amp;l=map&amp;pt=37.552349471942, 55.670407846831" data-index="1" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">Orthosleep</span><span class="address-detail__subtitle">Hybrid</span></div>
+                      <div class="address-detail__description">г. Москва, Киевское шоссе, 22-й километр, дв4с1кА, БЦ Румянцево, Корпус А, вход №3, 2 этаж<br/>10-21<br/>8-925-465-66-18<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.440125277771, 55.633903446315&amp;z=13&amp;l=map&amp;pt=37.440125277771, 55.633903446315" data-index="2" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">Шатура Dream Store</span><span class="address-detail__subtitle">Hybrid</span></div>
+                      <div class="address-detail__description">г. Москва, ул. Кировоградская д. 11, к.1  ТЦ 'Армада' 3 этаж.<br/>10-20<br/>т. 8 (495) 545-37-00 доб.5348<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.606900949738, 55.614476558052&amp;z=13&amp;l=map&amp;pt=37.606900949738, 55.614476558052" data-index="3" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">InMyRoom</span><span class="address-detail__subtitle">Hybrid+Concept</span></div>
+                      <div class="address-detail__description">г. Москва, Ломоносовский проспект, д. 29, корп.1<br/>9-20<br/>8-495-286-70-10, 8-800-505-48-69<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.516257703705, 55.70307985493&amp;z=13&amp;l=map&amp;pt=37.516257703705, 55.70307985493" data-index="4" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">2Shades</span><span class="address-detail__subtitle">Hybrid+Concept</span></div>
+                      <div class="address-detail__description">ул.Нижняя Сыромятническая, д.10, стр.9 Центр дизайна Artplay<br/>10-21<br/>8-495-414-31-31<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.666995133591, 55.753222311217&amp;z=13&amp;l=map&amp;pt=37.666995133591, 55.753222311217" data-index="5" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">Rockstar Home</span><span class="address-detail__subtitle">Hybrid+Concept</span></div>
+                      <div class="address-detail__description">г. Москва, Нахимовский проспект, дом 24 , Выставочный Центр МебельЭкспо, 3 подъезд, павильон П 6, корнер Rockstar Home<br/>11-20<br/>8-495-971-85-00<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.584398755295, 55.671911929992&amp;z=13&amp;l=map&amp;pt=37.584398755295, 55.671911929992" data-index="6" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">Orange Mebel</span><span class="address-detail__subtitle">Hybrid</span></div>
+                      <div class="address-detail__description">г. Москва, ул. Коцюбинского, дом 4 , шоу-рум Orange Mebel<br/>11-20<br/>8-925-039-57-57<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.431095525131, 55.728614786861&amp;z=13&amp;l=map&amp;pt=37.431095525131, 55.728614786861" data-index="7" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">PushaStore</span><span class="address-detail__subtitle">Hybrid</span></div>
+                      <div class="address-detail__description">Московская область, Минское ш. 2 км от МКАД, Луговая ул., д. 1, 3 этаж, ТРИ КИТА<br/>10-21<br/>8-495 118-37-13, 8-916-818-16-27<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.355633182127, 55.702998027666&amp;z=13&amp;l=map&amp;pt=37.355633182127, 55.702998027666" data-index="8" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                  <li class="address-list__item address-detail">
+                    <div class="address-detail__container">
+                      <div class="address-detail__title-wrap"><span class="address-detail__title">Homeme</span><span class="address-detail__subtitle">Hybrid</span></div>
+                      <div class="address-detail__description">г. Москва, ТЦ 'Строительный комплекс', Москва, м. Семеновская, ул. Ткацкая, д.5, с.4, 2 этаж<br/>10-21<br/>8-495-663-21-07<br/>
+                      </div><a class="address-detail__link btn-other btn-other_bordered btn-other_bg_blue js--balloon-open" href="http://maps.yandex.ru/?ll=37.722705246033, 55.786381523564&amp;z=13&amp;l=map&amp;pt=37.722705246033, 55.786381523564" data-index="9" target="_blank">Посмотреть на карте</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="partners__map js--ymap" id="map-partners"></div>
+            </div>
+          </div>
+          <!-- список адресов-->
+          <script>var partnersList = "{&quot;MAP_CENTER&quot;:[55.75370903771494,37.61981338262558],&quot;CURRENT_CITY&quot;:4,&quot;CITY&quot;:{&quot;4&quot;:{&quot;NAME&quot;:&quot;Адреса шоу-румов в Москве&quot;,&quot;NAME_DROPDOWN&quot;:&quot;Москва&quot;,&quot;ELEMENTS&quot;:[{&quot;ID&quot;:&quot;826&quot;,&quot;NAME&quot;:&quot;Blue Sleep&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid+Concept&quot;,&quot;ADRESS&quot;:&quot;г. Москва, Малый Черкасский переулок, дом 2, Cabinet Lounge, 6 этаж, шоу-рум 7 &quot;,&quot;PHONE&quot;:&quot;8-495-127-86-15&quot;,&quot;WORK_TIME&quot;:&quot;пн - пт 10-20, cб - вс  11-18&quot;,&quot;CORDS&quot;:[&quot;55.758321371448&quot;,&quot;37.625950042328&quot;]},{&quot;ID&quot;:&quot;780&quot;,&quot;NAME&quot;:&quot;Orthosleep&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid+Concept&quot;,&quot;ADRESS&quot;:&quot;г. Москва, ул. Профсоюзная, д.56 Третий этаж, линия 3Ж, рядом с WC&quot;,&quot;PHONE&quot;:&quot;8-916-775-65-55&quot;,&quot;WORK_TIME&quot;:&quot;10-21&quot;,&quot;CORDS&quot;:[&quot;55.670407846831&quot;,&quot;37.552349471942&quot;]},{&quot;ID&quot;:&quot;825&quot;,&quot;NAME&quot;:&quot;Orthosleep&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid&quot;,&quot;ADRESS&quot;:&quot;г. Москва, Киевское шоссе, 22-й километр, дв4с1кА, БЦ Румянцево, Корпус А, вход №3, 2 этаж&quot;,&quot;PHONE&quot;:&quot;8-925-465-66-18&quot;,&quot;WORK_TIME&quot;:&quot;10-21&quot;,&quot;CORDS&quot;:[&quot;55.633903446315&quot;,&quot;37.440125277771&quot;]},{&quot;ID&quot;:&quot;980&quot;,&quot;NAME&quot;:&quot;Шатура Dream Store&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid&quot;,&quot;ADRESS&quot;:&quot;г. Москва, ул. Кировоградская д. 11, к.1  ТЦ 'Армада' 3 этаж.&quot;,&quot;PHONE&quot;:&quot;т. 8 (495) 545-37-00 доб.5348&quot;,&quot;WORK_TIME&quot;:&quot;10-20&quot;,&quot;CORDS&quot;:[&quot;55.614476558052&quot;,&quot;37.606900949738&quot;]},{&quot;ID&quot;:&quot;819&quot;,&quot;NAME&quot;:&quot;InMyRoom&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid+Concept&quot;,&quot;ADRESS&quot;:&quot;г. Москва, Ломоносовский проспект, д. 29, корп.1&quot;,&quot;PHONE&quot;:&quot;8-495-286-70-10, 8-800-505-48-69&quot;,&quot;WORK_TIME&quot;:&quot;9-20&quot;,&quot;CORDS&quot;:[&quot;55.70307985493&quot;,&quot;37.516257703705&quot;]},{&quot;ID&quot;:&quot;1245&quot;,&quot;NAME&quot;:&quot;2Shades&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid+Concept&quot;,&quot;ADRESS&quot;:&quot;ул.Нижняя Сыромятническая, д.10, стр.9 Центр дизайна Artplay&quot;,&quot;PHONE&quot;:&quot;8-495-414-31-31&quot;,&quot;WORK_TIME&quot;:&quot;10-21&quot;,&quot;CORDS&quot;:[&quot;55.753222311217&quot;,&quot;37.666995133591&quot;]},{&quot;ID&quot;:&quot;866&quot;,&quot;NAME&quot;:&quot;Rockstar Home&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid+Concept&quot;,&quot;ADRESS&quot;:&quot;г. Москва, Нахимовский проспект, дом 24 , Выставочный Центр МебельЭкспо, 3 подъезд, павильон П 6, корнер Rockstar Home&quot;,&quot;PHONE&quot;:&quot;8-495-971-85-00&quot;,&quot;WORK_TIME&quot;:&quot;11-20&quot;,&quot;CORDS&quot;:[&quot;55.671911929992&quot;,&quot;37.584398755295&quot;]},{&quot;ID&quot;:&quot;865&quot;,&quot;NAME&quot;:&quot;Orange Mebel&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid&quot;,&quot;ADRESS&quot;:&quot;г. Москва, ул. Коцюбинского, дом 4 , шоу-рум Orange Mebel&quot;,&quot;PHONE&quot;:&quot;8-925-039-57-57&quot;,&quot;WORK_TIME&quot;:&quot;11-20&quot;,&quot;CORDS&quot;:[&quot;55.728614786861&quot;,&quot;37.431095525131&quot;]},{&quot;ID&quot;:&quot;828&quot;,&quot;NAME&quot;:&quot;PushaStore&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid&quot;,&quot;ADRESS&quot;:&quot;Московская область, Минское ш. 2 км от МКАД, Луговая ул., д. 1, 3 этаж, ТРИ КИТА&quot;,&quot;PHONE&quot;:&quot;8-495 118-37-13, 8-916-818-16-27&quot;,&quot;WORK_TIME&quot;:&quot;10-21&quot;,&quot;CORDS&quot;:[&quot;55.702998027666&quot;,&quot;37.355633182127&quot;]},{&quot;ID&quot;:&quot;781&quot;,&quot;NAME&quot;:&quot;Homeme&quot;,&quot;SUBTITLE&quot;:&quot;Hybrid&quot;,&quot;ADRESS&quot;:&quot;г. Москва, ТЦ 'Строительный комплекс', Москва, м. Семеновская, ул. Ткацкая, д.5, с.4, 2 этаж&quot;,&quot;PHONE&quot;:&quot;8-495-663-21-07&quot;,&quot;WORK_TIME&quot;:&quot;10-21&quot;,&quot;CORDS&quot;:[&quot;55.786381523564&quot;,&quot;37.722705246033&quot;]}]},&quot;5&quot;:{&quot;NAME&quot;:&quot;Адреса шоу-румов в Санкт-Петербурге&quot;,&quot;NAME_DROPDOWN&quot;:&quot;Санкт-Петербург&quot;},&quot;19&quot;:{&quot;NAME&quot;:&quot;Адреса шоу-румов в Краснодаре&quot;,&quot;NAME_DROPDOWN&quot;:&quot;Краснодар&quot;},&quot;20&quot;:{&quot;NAME&quot;:&quot;Адреса шоу-румов во Владивостоке&quot;,&quot;NAME_DROPDOWN&quot;:&quot;Владивосток&quot;}}}".replace(/&quot;/g, '"');</script>
         </div>
         <div class="basket-modal" data-basket-modal="data-basket-modal">
           <div class="basket-modal__form" action="" data-basket-modal-form="data-basket-modal-form">

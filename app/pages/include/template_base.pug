@@ -11,7 +11,6 @@ html(lang="ru")
 		- title_page = typeof title ==="undefined" ? 'Bluesleep' : 'Bluesleep | '+title
 			title #{title_page}
 		meta(name="viewport", content="width=device-width initial-scale=1.0")
-		script(src='https://api-maps.yandex.ru/2.1/?apikey=<727ed760-7379-4492-a814-6646636915f4>&lang=ru_RU', type='text/javascript')
 		block assets
 			link(rel="stylesheet", href="css/style.css")
 
@@ -19,6 +18,8 @@ html(lang="ru")
 
 			script(src="js/jquery-3.3.1.min.js")
 			script(src="js/ion.rangeSlider.js")
+			script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=AOdAv1sBAAAAXICWVQIAnR0v82iJhgxR0a27DXyuEK4B5l4AAAAAAAAAAACfKz601Ig5Q29mUYdHawLx3ww6ZQ==" type="text/javascript")
+
 
 			//- not include in bitrix
 			script(src="js/svg-sprite.js")
@@ -30,6 +31,7 @@ html(lang="ru")
 			script(src="js/scripts.js")
 
 	body
+
 		.main-wrapper
 
 			include header.pug

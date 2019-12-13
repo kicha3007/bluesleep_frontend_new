@@ -1,0 +1,55 @@
+extend include/template_base
+
+block variables
+	-
+		var title = 'Партнеры';
+		var $curCity = '4';
+
+
+block content
+	.partners
+		.partners__head
+			.partners__main-title
+				- var $splitTitileWords = $partnersList['CITY'][$curCity]['NAME'].split(" ");
+				each titleItem, titleIndx in $splitTitileWords
+					if titleIndx == $splitTitileWords.length - 1
+						span.partners__dropdown-wrap
+							span.partners__dropdown-head(data-partners-dropdown-head) #{titleItem}
+							span.partners__dropdown-content
+								ul.partners__dropdown-list
+									each drodownTitleItem, dropdownTitleIndx in $partnersList['CITY']
+										if dropdownTitleIndx == $curCity
+											- continue
+										li.partners__dropdown-item
+											a.partners__dropdown-link(href="?city=#{dropdownTitleIndx}")
+												| #{drodownTitleItem['NAME_DROPDOWN']}
+					else
+						| #{titleItem + " " }
+		.partners__container.container
+			.partners__wrap
+				.partners__addresses
+					ul.address-list
+						each item, indx in $partnersList['CITY'][$curCity]['ELEMENTS']
+							li.address-list__item.address-detail
+								.address-detail__container
+									.address-detail__title-wrap
+										span.address-detail__title #{item['NAME']}
+										span.address-detail__subtitle #{item['SUBTITLE']}
+									.address-detail__description
+										if typeof item['ADRESS'] != 'undefined' && item['ADRESS']
+											| #{item['ADRESS']}
+											br
+										if typeof item['WORK_TIME'] != 'undefined' && item['WORK_TIME']
+											| #{item['WORK_TIME']}
+											br
+										if typeof item['PHONE'] != 'undefined' && item['PHONE']
+											| #{item['PHONE']}
+											br
+									a.address-detail__link.btn-other.btn-other_bordered.btn-other_bg_blue.js--balloon-open(href=`http://maps.yandex.ru/?ll=${item['CORDS']['1']}, ${item['CORDS']['0']}&z=13&l=map&pt=${item['CORDS']['1']}, ${item['CORDS']['0']}` data-index=indx target="_blank") Посмотреть на карте
+				.partners__map.js--ymap#map-partners
+
+
+
+		// список адресов
+		- var $partnersListJson = JSON.stringify($partnersList )
+		script var partnersList = "#{$partnersListJson}".replace(/&quot;/g, '"');

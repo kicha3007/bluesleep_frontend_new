@@ -1,6 +1,8 @@
 ;
 "use strict";
 
+var myMapPartners;
+
 function DOMready() {
 
     // Глобальные настройки
@@ -778,157 +780,165 @@ function DOMready() {
 
 
 
-
-
-    /*
-
-
-
-
-        // "Корзина" изменение ТП
-        $('#bx-soa-order-form').on('change', '.js-select__control', function(){
-            var basketId = parseInt($(this).data('basket-id'));
-            var productId = parseInt($(this).val());
-            if (isNaN(basketId)) return;
-
-            BX.Sale.OrderAjaxComponent.startLoader();
-            BluesleepBasketUpdate({
-                action: 'updateProductId',
-                basketId: basketId,
-                productId: productId
-            });
-        });
+    if (typeof partnersList !== typeof undefined && partnersList) {
+        var jsonPartners = JSON.parse(partnersList);
+    }
 
 
 
+    //Подключаем карту
+    var curSect = jsonPartners['CURRENT_CITY'];
 
+    //Заменить на '<?=SITE_TEMPLATE_PATH?>' при интеграции
+    var site_template_path = "";
 
-
-
-        // "Идеальная пара" изменение ТП
-        $('#bx-soa-order-form').on('change', '.js-select-complect__control', function(){
-            var productId = parseInt($(this).val());
-            if (isNaN(productId)) return;
-            BX.Sale.OrderAjaxComponent.startLoader();
-            BluesleepBasketUpdate({
-                action: 'updateComplectProductId',
-                productId: productId
-            });
-        });
-
-        // "Идеальная пара" добавление ТП в корзину
-        $('#bx-soa-order-form').on('click', '.js-add-complect', function(){
-            var productId = parseInt($(this).attr('data-productId'));
-            var parentProductId = parseInt($(this).attr('data-parent-productId'));
-            BX.Sale.OrderAjaxComponent.startLoader();
-            BluesleepBasketUpdate({
-                action: 'addComplectProduct',
-                productId: productId
-            });
-
-            // VK Pixel
-            EndorphinGtm.VK_Pixel.add_to_cart({
-                products: [{id: parentProductId}]
-            });
-        });
-
-        // При первой загрузке проверяем нужно ли обновить заказ
-        if (NEED_UPDATE_PAYMENT == 'Y')
-        {
-            BluesleepBasketUpdate({
-                action: 'changePayment',
-                paySystemId: $('[name="PAY_SYSTEM_ID"]:checked').val()
-            });
+    function map_partners() {
+        if (window.ymaps) {
+            ymaps.ready(init);
         }
 
+        function init() {
+            myMapPartners = new ymaps.Map("map-partners", {
+                center: jsonPartners['MAP_CENTER'],
+                zoom: 10,
+                controls: [],
+            }),
+
+                ZoomLayout = ymaps.templateLayoutFactory.createClass(
+                    "<div>" +
+                    "<div id='zoom-in' class='ymap__zoom ymap__zoom_plus'>+</div><br>" +
+                    "<div id='zoom-out' class='ymap__zoom ymap__zoom_minus'>―</div>" +
+                    "</div>", {
+
+                        // Переопределяем методы макета, чтобы выполнять дополнительные действия
+                        // при построении и очистке макета.
+                        build: function() {
+                            // Вызываем родительский метод build.
+                            ZoomLayout.superclass.build.call(this);
+
+                            // Привязываем функции-обработчики к контексту и сохраняем ссылки
+                            // на них, чтобы потом отписаться от событий.
+                            this.zoomInCallback = ymaps.util.bind(this.zoomIn, this);
+                            this.zoomOutCallback = ymaps.util.bind(this.zoomOut, this);
+
+                            // Начинаем слушать клики на кнопках макета.
+                            $('#zoom-in').bind('click', this.zoomInCallback);
+                            $('#zoom-out').bind('click', this.zoomOutCallback);
+                        },
+
+                        clear: function() {
+                            // Снимаем обработчики кликов.
+                            $('#zoom-in').unbind('click', this.zoomInCallback);
+                            $('#zoom-out').unbind('click', this.zoomOutCallback);
+
+                            // Вызываем родительский метод clear.
+                            ZoomLayout.superclass.clear.call(this);
+                        },
+
+                        zoomIn: function() {
+                            var map = this.getData().control.getMap();
+                            map.setZoom(map.getZoom() + 1, { checkZoomRange: true });
+                        },
+
+                        zoomOut: function() {
+                            var map = this.getData().control.getMap();
+                            map.setZoom(map.getZoom() - 1, { checkZoomRange: true });
+                        }
+                    }),
+                zoomControl = new ymaps.control.ZoomControl({
+                    options: {
+                        layout: ZoomLayout,
+                        position: {
+                            top: '250px',
+                            right: '25px'
+                        }
+                    }
+                }),
+                curCollection = new ymaps.GeoObjectCollection(null, {
+                    preset: "twirl#lightblueDotIcon",
+                    iconImageHref: "http://www.kpf.ru/bitrix/templates/kpf/images/map-placemark.png",
+                    iconImageSize: [19, 22]
+                }),
+                pins = jsonPartners['CITY'][curSect]['ELEMENTS'];
+
+            myMapPartners.controls.add(zoomControl);
 
 
+            for (var i = 0, l = jsonPartners['CITY'][curSect]['ELEMENTS'].length; i < l; i++) {
+                var balloonContent = '';
+                if ((tempValue = jsonPartners['CITY'][curSect]['ELEMENTS'][i]['ADRESS']).length) {
+                    balloonContent += (tempValue + '<br>');
+                    tempValue = '';
+                };
+                if ((tempValue = jsonPartners['CITY'][curSect]['ELEMENTS'][i]['WORK_TIME']).length) {
+                    balloonContent += ('Часы работы: ' + tempValue + '<br>');
+                    tempValue = '';
+                };
+                if ((tempValue = jsonPartners['CITY'][curSect]['ELEMENTS'][i]['PHONE']).length) {
+                    balloonContent += ('Тел.: ' + tempValue + '<br>');
+                    tempValue = '';
+                };
 
-
-
-
-
-/*
-
-function BluesleepBasketUpdate(data)
-{
-    if (data == undefined)
-        return;
-
-    // var typing = BX.Sale.OrderAjaxComponent.typingTimer || false;
-    // if(typing)
-    //     clearTimeout(typing);
-    //
-    // BX.Sale.OrderAjaxComponent.typingTimer = setTimeout(function(){
-
-        var preventAction = data['action'];
-        var url = '/local/ajax/basket.php';
-
-        BX.Sale.OrderAjaxComponent.startLoader();
-        $.ajax({
-            url: url,
-            type: 'POST',
-            data: data,
-            success: function(data)
-            {
-                // Аналитика
-                mindbox("async", {
-                    operation: "SetCartList40",
-                    data: {
-                        productList: data['mindboxProductList']
-                    },
-                    onSuccess: function() {},
-                    onError: function(error) {console.log(error)}
-                });
-
-                // Если удалили последний товар
-                if ($('.order-item__remove').length == 0)
-                {
-                    window.location.reload();
-                    return;
+                let options = {};
+                if (jsonPartners['CITY'][curSect]['ELEMENTS'][i]['ID'] == 826) {
+                    options = {
+                        iconLayout: 'default#image',
+                        iconImageHref: site_template_path+'/img/yandex_icon_bluesleep.png',
+                        iconImageSize: [34, 46],
+                        // iconImageOffset: [-5, -38]
+                    };
+                } else {
+                    options = {
+                        iconLayout: 'default#image',
+                        iconImageHref: site_template_path+'/img/yandex_icon_default.png',
+                        iconImageSize: [32, 43],
+                        // iconImageOffset: [-5, -38]
+                    };
                 }
 
-                // Обновляем кол-во товара в шапке
-                if (data['countProductInBasket'] > 0)
-                    $('.js-order-button__count').html(data['countProductInBasket']);
-
-                // Перезагружаем страницу заказа
-                BleesleepReloadOrder(preventAction);
-            },
-            dataType: 'json'
-        });
-    // }, 1200);
-}
-
-function BleesleepReloadOrder(preventAction)
-{
-    BX.Sale.OrderAjaxComponent.startLoader();
-
-    var data = {};
-    data['AJAX_REQUEST'] = 'Y';
-    data['COUPON'] = $('#bluesleep_coupon').val();
-    data['PREVENT_ACTION'] = preventAction;
-    data['BASKET_COMPLECT_OFFERS'] = [];
-    $('[name="BASKET_COMPLECT_OFFERS[]"]').each(function(){
-        data['BASKET_COMPLECT_OFFERS'].push($(this).val());
-    });
-
-    $.ajax({
-        url: window.location.href,
-        type: 'POST',
-        data: data,
-        success: function(data)
-        {
-            $('#js-order__cart').html(data);
-            BX.Sale.OrderAjaxComponent.endLoader();
-        },
-        dataType: 'html'
-    });
+                myMapPartners.geoObjects.add(new ymaps.Placemark(
+                    jsonPartners['CITY'][curSect]['ELEMENTS'][i]['CORDS'], {
+                        balloonContentHeader: "<span class='ymap__balloon-header'>" + jsonPartners['CITY'][curSect]['ELEMENTS'][i]['NAME'] + "</span>",
+                        balloonContentBody: "<span class='ymap__balloon-body'>" + balloonContent + "</span>",
+                    }, options
+                ));
+            };
 
 
-}
+            //myMapPartners.geoObjects.add(curCollection);
 
-*/
+            curCollection.events.add('click', function (e) {
+                var target = e.get('target');
+                console.log(target);
+            });
+
+            $('.js--balloon-open').on('click', function(e) {
+                if (window.innerWidth > globParam.getMediaSize().PHONES){
+                    e.preventDefault();
+                    // Открываем балун
+                    var index = parseInt($(this).attr('data-index'));
+                    var bal = myMapPartners.geoObjects.get(index);
+                    bal.balloon.open();
+
+                    // Центруем карту
+                    myMapPartners.setCenter(bal.geometry._coordinates);
+                }
+            });
+        }
+    };
+
+    if ($('.js--ymap')) {
+        map_partners();
+    }
+
+
+    // Открываем списко городов в партнерах
+    $('[data-partners-dropdown-head]').on('click', function(e){
+        e.preventDefault();
+        $(this).parent().toggleClass('partners__dropdown-wrap_show');
+
+    })
+
 
 
 };

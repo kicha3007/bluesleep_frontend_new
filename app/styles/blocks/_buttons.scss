@@ -39,6 +39,48 @@
 	&:active{
 		background-color:  #5191ff;
 	}
+}
 
+.btn-other{
 
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 500;
+	padding: 10px 18px;
+	user-select: none;
+	text-decoration: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: pointer;
+	@extend %ts-bg;
+	&,
+	&:focus,
+	&:active,
+	&:hover{
+		outline: none
+	}
+	&:not(.not-hover):hover{
+		cursor: pointer;
+	}
+	&_bordered{
+		border-radius: 5px;
+	}
+	&_bg_blue{
+		display: inline-block;
+		background-color: $color_button_blue;
+		color: $color_white;
+		text-align: center;
+		&:not(.not-hover):hover{
+			background-color: lighten($color_button_blue, 10%);
+			color: $color_white;
+		}
+	}
+	&_wide{
+		@include ph(44px);
+	}
+	&_size_md{
+		line-height: 18px;
+		font-size: 18px;
+		padding: 13px 22px;
+	}
 }

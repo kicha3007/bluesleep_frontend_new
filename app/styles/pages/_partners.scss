@@ -1,0 +1,123 @@
+.partners {
+  &__wrap {
+    border: 1px solid #e8e8e8;
+    height: 80vh;
+    display: flex;
+    margin-bottom: 60px;
+    @include phones {
+        height: auto;
+    }
+  }
+
+  &__addresses{
+    width: 100%;
+    max-width: 355px;
+    height: 100%;
+    &::-webkit-scrollbar-thumb {
+      width: 8px;
+      background-image: -webkit-linear-gradient(#F5F5F5, #8A8A8A);
+    }
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border: 1px solid black;
+      background-color: #F5F5F5;
+    }
+    @include laptop {
+      max-width: 270px;
+        
+    }
+    @include phones {
+      max-width: 100%;
+        
+    }
+  }
+  &__map {
+    width: calc(100% - 355px);
+    //height: 100%;
+
+  /*  [class$="-inner-panes"] {
+      //overflow: hidden;
+      //width: 100%;
+      //height: 100%;
+    }
+    .ymaps-2-1-75-inner-panes, .ymaps-2-1-75-outer-panes {
+      //display: block;
+      //position: absolute;
+      //padding: 0!important;
+      //margin: 0!important;
+    }*/
+    @include laptop {
+      width: calc(100% - 270px);
+
+    }
+    @include phones {
+        display: none;
+    }
+  }
+  &__head {
+    text-align: center;
+  }
+  &__main-title {
+    color: #005eff;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    @include laptop {
+      font-size: 33.6px;
+      line-height: 33.6px;
+      margin-bottom: 33px;
+    }
+    @include phones {
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 25px;
+    }
+  }
+  &__dropdown-head {
+    text-decoration: underline dashed;
+    cursor: pointer;
+
+
+  }
+  &__dropdown-wrap {
+    position: relative;
+
+    &_show .partners__dropdown-content {
+      display: inline-block;
+    }
+  }
+  &__dropdown-list {
+    margin: 0;
+    padding: 0;
+  }
+  &__dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    top: 105%;
+    padding: 4px 10px;
+    margin: 0;
+  }
+  &__dropdown-item {
+    display: inline-block;
+
+  }
+  &__dropdown-link {
+    color: #005eff;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+
+
+
