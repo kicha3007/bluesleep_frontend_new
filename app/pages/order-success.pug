@@ -1,0 +1,22 @@
+extend include/template_base
+
+block variables
+	-
+		var title = 'Спасибо за заказ';
+
+
+block content
+	.order-success
+		.order-success__container.container
+			.order-success__wrap
+				.order-success__content
+					.order-success__img-box
+						img.order-success__img(src="img/order-success.png", alt='')
+					.order-success__text
+						| Ваш заказ #BS0Y9RR96 принят
+						br
+						| Наш менеджер свяжется с вами, чтобы уточнить детали
+					.order-success__bottom
+						a.order-success__link(href="/") На главную
+
+
