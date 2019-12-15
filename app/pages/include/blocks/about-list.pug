@@ -1,0 +1,10 @@
+mixin about-list(data, mods)
+	section.about-list&attributes(attributes)
+		.about-list__container.container
+			.about-list__wrap.js-about-list-wrap
+				each item in $aboutListList
+					.about-list__item
+						.about-list__img-box
+							img.about-list__img(src=item.img, title=item.alt alt=item.alt)
+						.about-list__title !{item.title}
+						.about-list__desc #{item.desc}

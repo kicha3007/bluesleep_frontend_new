@@ -1,0 +1,18 @@
+extend include/template_base
+
+include include/blocks/about-banner
+include include/blocks/about-simple
+include include/blocks/about-list
+include include/blocks/about-team
+include include/blocks/about-bottom
+
+block variables
+	- var title = 'О нас';
+
+block content
+	.about-us
+		+about-banner()()
+		+about-simple()()
+		+about-list()()
+		+about-team()()
+		+about-bottom()()

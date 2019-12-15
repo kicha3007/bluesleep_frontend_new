@@ -1,0 +1,16 @@
+.about-bottom {
+  &__wrap {
+    padding: 90px 0 110px;
+  }
+  &__container {
+    max-width: 960px;
+  }
+  &__desc {
+    text-align: center;
+    color: #000000;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+}

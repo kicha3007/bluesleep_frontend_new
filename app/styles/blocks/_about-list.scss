@@ -1,0 +1,156 @@
+.about-list {
+  position: relative;
+  background-image: linear-gradient(-83deg, #e9e4e0 0%, #e9e4e0 100%);
+
+  &__wrap {
+    display: flex;
+    margin: 0 -20px;
+    padding: 135px 0 50px;
+    flex-wrap: wrap;
+    @include laptop {
+      display: block;
+      padding: 15px 0;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1250px;
+    position: relative;
+    @include laptop {
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      max-width: 473px;
+      margin-left: -237px;
+      width: 100%;
+      height: 25px;
+      background: url("../img/decor_waves_2.png") repeat-x center;
+      @include phones {
+        max-width: 145px;
+        height: 8px;
+        margin-left: -72px;
+        background-size: cover;
+        bottom: -25px;
+      }
+    }
+  }
+
+  &__item {
+    margin: 0 20px;
+    width: calc(20% - 40px);
+    text-align: center;
+    @include phones {
+        max-width: 160px;
+    }
+  }
+
+  &__img-box {
+
+    width: 143px;
+    height: 143px;
+    background-color: #ffffff;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    @include phones {
+      width: 41px;
+      height: 41px;
+    }
+
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  &__title {
+    color: #1d1d1d;
+    font-size: 12px;
+    margin-bottom: 15px;
+    font-weight: 700;
+
+    @include phones {
+      font-size: 11px;
+      font-weight: 400;
+    }
+
+  }
+  &__icon {
+    fill: #005eff;
+  }
+
+  &__desc {
+    color: #1d1d1d;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    @include phones {
+      font-size: 12px;
+    }
+
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    display: inline-flex;
+    left: 50%;
+    padding: 0;
+    z-index: 10;
+    margin-left: -33px;
+    @include laptop {
+      bottom: -20px;
+    }
+
+    & > li {
+      width: 6px;
+      height: 6px;
+      margin-right: 12px;
+      border-radius: 50%;
+      list-style-type: none;
+      cursor: pointer;
+      border: 1px solid #124afd;
+      @include laptop {
+        width: 5px;
+        height: 5px;
+        margin-right: 8px;
+      }
+
+      &.slick-active {
+        border-color: #124afd;
+        background-color: #124afd;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+
+  .slick-slide {
+    //width: 150px !important;;
+  }
+
+  .slick-list {
+    overflow: visible !important;
+  }
+
+
+}
+

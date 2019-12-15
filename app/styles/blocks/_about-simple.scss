@@ -1,0 +1,24 @@
+.about-simple {
+  &__container {
+    max-width: 950px;
+  }
+  &__wrap {
+    padding: 35px 0 50px;
+  }
+  &__main-title {
+    color: #005eff;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+
+  }
+  &__desc {
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'CoText-Light', sans-serif;
+
+  }
+}
