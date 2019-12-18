@@ -1,7 +1,6 @@
 include card-info-tabs
 include stars-rating
 include choice-size
-include flexibox-tooltip
 
 mixin card-info(data)
 	.card-info&attributes(attributes)
@@ -24,7 +23,7 @@ mixin card-info(data)
 						span.card-info__price-other-number(data-card-info-price-other-number) &#32; #{$offersList[0]["data"].CREDIT_RENT}
 						|&#32; р. /мес
 					|	без переплат
-				+flexibox-tooltip()(class="flexibox-tooltip_indent")
+					//+flexibox-tooltip()(class="flexibox-tooltip_indent")
 				+choice-size()(class="card-info__choice-size")
 			.card-info__center
 				+card-info-tabs()(class="card-info__tabs")

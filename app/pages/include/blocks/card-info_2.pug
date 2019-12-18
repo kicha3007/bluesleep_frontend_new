@@ -3,7 +3,7 @@ include stars-rating
 include choice-size
 include detail-color
 include detail-parameters
-include flexibox-tooltip
+
 
 mixin card-info_2(data)
 	.card-info&attributes(attributes)
@@ -23,7 +23,7 @@ mixin card-info_2(data)
 					|	без переплат
 				+detail-color()(class="card-info__colors card-info__colors_indent_big")
 				+choice-size()(class="card-info__choice-size card-info__choice-size_indent_min")
-				+flexibox-tooltip()(class="")
+				//+flexibox-tooltip()(class="")
 				+detail-parameters()()
 			.card-info__center
 				+card-info-tabs()(class="card-info__tabs")
