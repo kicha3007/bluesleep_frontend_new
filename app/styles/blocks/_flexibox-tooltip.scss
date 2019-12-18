@@ -1,0 +1,112 @@
+.flexibox-tooltip {
+
+
+  &_indent {
+    margin-bottom: 50px;
+  }
+
+  & {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__content {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 15px;
+    box-sizing: content-box;
+    @include phones {
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: -25px;
+      margin-left: -25px;
+    }
+  }
+
+  /*&:hover &__content {*/
+  /*visibility: visible;*/
+  /*}*/
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    color: #005eff;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  &__payments {
+    display: flex;
+    flex-direction: row;
+    width: 285px;
+  }
+
+  &__payments__item {
+    width: 100%;
+  }
+
+  &__payments__title {
+    text-align: center;
+    color: #787878;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  &__payments__price {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+  }
+
+  &__quarter__wrapper {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #787878;
+    margin: auto;
+  }
+
+  &__quarter {
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  &__quarter1 {
+    top: 2px;
+    right: 2px;
+    background-color: #787878;
+    border-radius: 0 100% 0 0;
+  }
+
+  &__quarter2 {
+    bottom: 2px;
+    right: 2px;
+    background-color: #787878;
+    border-radius: 0 0 100% 0;
+  }
+
+  &__quarter3 {
+    bottom: 2px;
+    left: 2px;
+    background-color: #787878;
+    border-radius: 0 0 0 100%;
+  }
+
+  &__quarter4 {
+    top: 2px;
+    left: 2px;
+    background-color: #787878;
+    border-radius: 100% 0 0 0;
+  }
+
+}

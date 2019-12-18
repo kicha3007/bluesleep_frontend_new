@@ -1,0 +1,45 @@
+mixin flexibox-tooltip(data)
+	section.flexibox-tooltip&attributes(attributes)
+		// ?// Всплывающее окно?
+		.flexibox-tooltip__content.js-product-flexibox__form
+			a.product-flexibox__close.js-product-flexibox__close(href='#')
+			.flexibox-tooltip__title
+				| Подписка Blue Sleep – это рассрочка
+				br
+				|  на 4 месяца
+			.flexibox-tooltip__payments
+				.flexibox-tooltip__payments__item
+					.flexibox-tooltip__quarter__wrapper
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter1
+					.flexibox-tooltip__payments__title 1-й месяц
+					.flexibox-tooltip__payments__price.js-flexibox-tooltip__payments__price
+						// ?=$arResult['CURR_OFFER']['FLEXIBOX_PRICE_QUARTER']?
+						| ₽
+				.flexibox-tooltip__payments__item
+					.flexibox-tooltip__quarter__wrapper
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter1
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter2
+					.flexibox-tooltip__payments__title 2-й месяц
+					.flexibox-tooltip__payments__price.js-flexibox-tooltip__payments__price
+						// ?=$arResult['CURR_OFFER']['FLEXIBOX_PRICE_QUARTER']?
+						| ₽
+				.flexibox-tooltip__payments__item
+					.flexibox-tooltip__quarter__wrapper
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter1
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter2
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter3
+					.flexibox-tooltip__payments__title 3-й месяц
+					.flexibox-tooltip__payments__price.js-flexibox-tooltip__payments__price
+						// ?=$arResult['CURR_OFFER']['FLEXIBOX_PRICE_QUARTER']?
+						| ₽
+				.flexibox-tooltip__payments__item
+					.flexibox-tooltip__quarter__wrapper
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter1
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter2
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter3
+						.flexibox-tooltip__quarter.flexibox-tooltip__quarter4
+					.flexibox-tooltip__payments__title 4-й месяц
+					.flexibox-tooltip__payments__price.js-flexibox-tooltip__payments__price
+						// ?=$arResult['CURR_OFFER']['FLEXIBOX_PRICE_QUARTER']?
+						| ₽
+			a.flexibox-tooltip__link.js-happy-button-link(href='#', data-paysystemid='<?=\FLEXY_PAYSYSTEM_ID?>') Оформить
