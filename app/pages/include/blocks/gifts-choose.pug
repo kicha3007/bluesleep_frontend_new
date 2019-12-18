@@ -1,0 +1,31 @@
+include gifts-form
+
+mixin gifts-choose(data)
+	section.gifts-choose(data-gifts-choose)&attributes(attributes )
+		.gifts-choose__container.container
+			.gifts-choose__wrap
+				.gifts-choose__column.gifts-choose__column_pos_1
+					.gifts-choose__item.gifts-choose__item_background_1(data-gifts-choose-item)
+						.gifts-choose__inner-wrap
+							.gifts-choose__sert.gifts-choose__sert_background_1
+								img(src="img/s_bl_1.png", alt="")
+							.gifts-choose__footer
+								.gifts-choose__name Подарочная карта Blue Sleep
+								.gifts-choose__bottom
+									.gifts-choose__text Для тех, кого вы <br> действительно любите
+									button.btn-other.gifts-choose__btn.btn-other_bordered(data-gifts-form-btn="hide-sibling") Купить
+						+gifts-form()(class="gifts-choose__form")
+
+
+
+				.gifts-choose__column.gifts-choose__column_pos_2
+					.gifts-choose__item.gifts-choose__item_background_2(data-gifts-choose-item)
+						.gifts-choose__inner-wrap
+							.gifts-choose__sert.gifts-choose__sert_background_2
+								img(src="img/s_bl_2.png", alt="")
+							.gifts-choose__footer
+								.gifts-choose__name Виртуальный подарочный сертификат Blue&nbsp;Sleep
+								.gifts-choose__bottom
+									.gifts-choose__text Для тех, кого вы <br> действительно любите
+									button.btn-other.gifts-choose__btn.btn-other_bordered(data-gifts-form-btn="hide-sibling") Купить
+						+gifts-form()(class="gifts-choose__form")

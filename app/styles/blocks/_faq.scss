@@ -1,5 +1,15 @@
 .faq {
-  padding: 60px 0;
+  //padding: 60px 0;
+
+  &_indent_top {
+    margin-top: 60px;
+
+  }
+  &_indent_bottom {
+    margin-bottom: 60px;
+
+  }
+
   margin-bottom: 80px;
   @include phones {
     margin-bottom: 35px;

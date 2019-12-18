@@ -782,12 +782,15 @@ function DOMready() {
 
     if (typeof partnersList !== typeof undefined && partnersList) {
         var jsonPartners = JSON.parse(partnersList);
+
+        //Подключаем карту
+        var curSect = jsonPartners['CURRENT_CITY'];
+
     }
 
 
 
-    //Подключаем карту
-    var curSect = jsonPartners['CURRENT_CITY'];
+
 
     //Заменить на '<?=SITE_TEMPLATE_PATH?>' при интеграции
     var site_template_path = "";
@@ -927,7 +930,7 @@ function DOMready() {
         }
     };
 
-    if ($('.js--ymap')) {
+    if ($('.js--ymap').length > 0) {
         map_partners();
     }
 
@@ -937,6 +940,21 @@ function DOMready() {
         e.preventDefault();
         $(this).parent().toggleClass('partners__dropdown-wrap_show');
 
+    })
+
+
+    // Переключение форм покупки серфтификатов (физический и виртуальный)
+    $('[data-gifts-choose]').on('click', '[data-gifts-form-btn="hide-sibling"]', function(e) {
+        var activeItem = $(e.delegateTarget).find('[data-gifts-choose-item]');
+        console.log("working");
+        if (activeItem.hasClass("active") == true) {
+            activeItem.removeClass("active");
+        }
+    });
+
+    //Переключаем форму в выобре сертификатов
+    $('[data-gifts-choose]').on('click', '[data-gifts-form-btn]', function(){
+        $(this).closest('[data-gifts-choose-item]').toggleClass('active');
     })
 
 

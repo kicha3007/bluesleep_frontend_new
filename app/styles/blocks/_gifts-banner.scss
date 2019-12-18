@@ -1,0 +1,95 @@
+.gifts-banner {
+  background-color: #d6ddea;
+  overflow: hidden;
+
+  &_indent_big {
+    margin-bottom: 70px;
+    @include phones {
+      margin-bottom: 20px;
+    }
+  }
+
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  &__img {
+    position: absolute;
+
+    &_pos_1 {
+      top: -280px;
+      right: 48%;
+      @include phones {
+        top: -394px;
+        left: -453px;
+        transform: scale(0.5);
+      }
+    }
+
+    &_pos_2 {
+      top: -80px;
+      left: 59%;
+      @include phones {
+        top: -116px;
+        left: 105px;
+        transform: scale(0.7);
+
+      }
+    }
+  }
+
+  &__info {
+    max-width: 320px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    padding: 50px 0 40px;
+    @include phones {
+      padding-top: 30px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__title,
+  &__text {
+    color: $color_title_blue;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 30px;
+    @include phones {
+      padding-top: 180px;
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      max-width: 208px;
+      @include mh(auto);
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+
+    @include phones {
+      font-size: 12px;
+      line-height: 12px;
+      padding-bottom: 10px;
+      max-width: 250px;
+      @include mh(auto);
+    }
+  }
+}
+
+
+
+

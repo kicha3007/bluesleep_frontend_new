@@ -1,0 +1,196 @@
+.gifts-choose {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__container {
+    max-width: 1160px;
+  }
+  &__column {
+    margin-bottom: 80px;
+    width: 46%;
+    @include tablets {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    @include phones {
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    display: flex;
+    min-height: 625px;
+    position: relative;
+    overflow: hidden;
+    padding: 25px;
+    background-color: #f6f6f6;
+    &_background_1 {
+      background-color: #005eff;
+    }
+    &_background_1:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200%;
+      height: 300px;
+      background-color: #e3d6c6;
+      transform: rotate(152deg);
+      top: -107px;
+      left: -85%;
+    }
+    &_background_1 .gifts-choose__btn {
+      background-color: #fff;
+      color: #005eff;
+    }
+    &_background_1 .gifts-choose__name,
+    &_background_1 .gifts-choose__text {
+      color: #f6f6f6;
+    }
+    @include laptop {
+      min-height: 570px;
+    }
+    @include phones {
+      min-height: 390px;
+    }
+
+
+    &.active .gifts-choose__form {
+      z-index: 10;
+      opacity: 1;
+      position: relative;
+    }
+
+    &.active .gifts-choose__inner-wrap {
+      opacity: 0;
+      z-index: -1;
+      position: absolute;
+    }
+    &.active {
+      background-color: #f6f6f6;;
+    }
+    &.active:after {
+      display: none;
+    }
+
+  }
+
+  &__inner-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 1s ease;
+    z-index: 1;
+    opacity: 1;
+
+  }
+
+  &__sert {
+    margin-top: 125px;
+    width: 82%;
+    height: 223px;
+    z-index: 15;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #005eff;
+    @include laptop {
+      margin-bottom: 20px;
+      width: 82%;
+      height: 170px;
+    }
+    @include tablets {
+
+    }
+    @include phones {
+      margin-top: 50px;
+      height: 125px;
+    }
+
+    &_background_1 {
+      background-color: #fff;
+
+    }
+
+    img {
+      @include laptop {
+        max-width: 66%;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 1s ease;
+    z-index: 1;
+    opacity: 1;
+  }
+
+  &__name {
+    margin-bottom: 17px;
+    color: #005eff;
+
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    @include phones {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  &__text {
+    color: #005eff;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22.92px;
+    @include phones {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  &__btn {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #005eff;
+    color: #fff;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__img {
+
+
+  }
+
+
+  &__footer {
+  }
+
+  &__form {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease;
+    width: 100%;
+    min-height: calc(100% - 50px);
+  }
+
+
+
+
+}
+

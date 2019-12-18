@@ -1,0 +1,51 @@
+
+.gifts-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_half {
+    width: 45%;
+  }
+
+  &__legend {
+    font-size: 11px;
+    margin-bottom: 5px;
+    &_alert {
+      color: $color_blue;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  &__enter {
+    outline: none !important;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $color_blue;
+    border-radius: 5px;
+    padding: 4px 10px;
+    background-color: transparent;
+
+    &[type=number]::-webkit-outer-spin-button,
+    &[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__textarea {
+
+    resize: none;
+    height: 110px;
+    @include pv(7px);
+
+    outline: 0!important;
+    width: 100%;
+    border: 1px solid #005eff;
+    border-radius: 5px;
+    padding: 4px 10px;
+    background-color: transparent;
+  }
+}

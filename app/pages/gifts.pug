@@ -1,0 +1,27 @@
+extend include/template_base
+
+include include/blocks/gifts-banner
+include include/blocks/gifts-section-one
+include include/blocks/gifts-section-second
+include include/blocks/gifts-section-third
+include include/blocks/gifts-choose
+include include/blocks/faq
+
+
+block variables
+	- var title = 'Подарочные сертификаты';
+
+block content
+	.gifts
+		+gifts-banner()(class='gifts-banner_indent_big')
+		+gifts-section-one()()
+		+gifts-section-second()()
+		+gifts-section-third()()
+		.container
+			.gifts__title
+				h2.gifts__title-text
+					| Для тех,
+					span кто не определился
+		+gifts-choose()()
+		+faq()(class=" faq_indent_bottom")
+

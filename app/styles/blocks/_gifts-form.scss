@@ -1,0 +1,90 @@
+.gifts-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f6f6f6;;
+  @include tablets {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: $color_blue;
+    @include mv(20px, 30px);
+    @include phones {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    &_no-ai {
+      align-items: initial;
+      margin-bottom: 115px;
+    }
+    &_in-footer{
+      @include mv(100px, 0);
+    }
+  }
+
+  &__column {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include phones {
+      width: 48%;
+    }
+  }
+
+  &__btn-back {
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    margin-left: auto;
+    border-bottom: 1px dashed rgba(200, 200, 200, 1);
+    padding: 0;
+    cursor: pointer;
+    @include phones {
+      font-size: 12px;
+    }
+  }
+
+  &__btn-submit {
+    background-color: $color_bg_blue;
+    color: #fff;
+    -webkit-appearance: none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  &__footer {
+    margin-top: 40px;
+    @include phones {
+      margin-top: 0;
+    }
+  }
+
+  &__footnote {
+    font-size: 12px;
+    color: $color_blue;
+    font-weight: bold;
+  }
+}
+

@@ -1,0 +1,62 @@
+mixin gifts-form(data)
+	.gifts-form&attributes(attributes)
+		button.gifts-form__btn-back(data-gifts-form-btn) вернуться назад
+		form.gifts-form__content(action="#")
+			span.gifts-form__title Подарочный сертификат <br> Blue&nbsp;Sleep
+	
+			.gifts-form__row
+				.gifts-input.gifts-input_half
+					.gifts-input__legend Имя получателя *
+					input.gifts-input__enter(type="text", required)
+				.gifts-input.gifts-input_half
+					.gifts-input__legend E-mail получателя *
+					input.gifts-input__enter(type="mail", required)
+	
+			.gifts-form__row.gifts-form__row_no-ai
+				.gifts-input.gifts-input_half
+					.gifts-input__legend Ваше персональное сообщение
+					textarea.gifts-input__textarea()
+				.gifts-form__column
+					.gifts-input
+						.gifts-input__legend Выбрать номинал сертификата *
+						select.gifts-input__enter.gifts-input__control(name='GIFT_CART__PRODUCT', required='')
+							option(value='') Выберите номинал
+							option(value='938')
+								| 1 000 руб.
+							option(value='939')
+								| 2 000 руб.
+							option(value='940')
+								| 3 000 руб.
+							option(value='941')
+								| 5 000 руб.
+							option(value='942')
+								| 7 000 руб.
+							option(value='943')
+								| 10 000 руб.
+							option(value='944')
+								| 15 000 руб.
+							option(value='945')
+								| 20 000 руб.
+							option(value='946')
+								| 25 000 руб.
+							option(value='947')
+								| 30 000 руб.
+							option(value='948')
+								| 35 000 руб.
+							option(value='949')
+								| 40 000 руб.
+							option(value='950')
+								| 45 000 руб.
+							option(value='951')
+								| 50 000 руб.
+							option(value='952')
+								| 100 000 руб.
+					input.btn-other.btn-other_bordered.gifts-form__btn-submit(type="submit", value="Оформить")
+
+			.gifts-form__row
+				.gifts-input.gifts-input_half
+					.gifts-input__legend Ваш телефон *
+					input.gifts-input__enter(type="phone", required)
+				.gifts-input.gifts-input_half
+					.gifts-input__legend Ваш E-mail *
+					input.gifts-input__enter(type="mail", required)

@@ -39,6 +39,7 @@
 	&:active{
 		background-color:  #5191ff;
 	}
+
 }
 
 .btn-other{
@@ -52,6 +53,7 @@
 	vertical-align: middle;
 	white-space: nowrap;
 	cursor: pointer;
+	border: none;
 	@extend %ts-bg;
 	&,
 	&:focus,
