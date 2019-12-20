@@ -4,6 +4,9 @@
   }
   &__wrap {
     padding: 35px 0 50px;
+    @include phones {
+      padding: 15px 15px;
+    }
   }
   &__main-title {
     color: #005eff;
@@ -11,6 +14,10 @@
     font-size: 24px;
     margin-bottom: 25px;
     text-align: center;
+    @include phones {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
 
   }
   &__desc {
@@ -19,6 +26,34 @@
     font-size: 18px;
     font-weight: 300;
     font-family: 'CoText-Light', sans-serif;
+    @include phones {
+      font-size: 10px;
+    }
+    >:first-child ~*:not(.about-simple__link-wrap) {
+      @include phones {
+        display: none;
 
+      }
+    }
+    &.active>:first-child ~*:not(.about-simple__link-wrap) {
+      @include phones {
+        display: block;
+
+      }
+
+    }
+  }
+  &__link-wrap {
+    display: none;
+    text-align: center;
+    @include phones {
+        display: block;
+    }
+  }
+  &__show-all-btn {
+    color: #005eff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: underline;
   }
 }

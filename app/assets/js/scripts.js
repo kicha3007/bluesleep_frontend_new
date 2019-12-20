@@ -957,6 +957,79 @@ function DOMready() {
         $(this).closest('[data-gifts-choose-item]').toggleClass('active');
     })
 
+    $(".js--about-simple-show-all-btn").on("click", function () {
+        $(this).closest("[data-hidding-for-hide]").toggleClass("active");
+        changeTextInBtn.call(this)
+    })
+
+
+
+    // Изменить текст в кнопке при клике ( кнопка показать скрыть)
+    function changeTextInBtn() {
+        var $this = $(this),
+            showAllInnerText = "",
+            showAllText,
+            showAllTextWrap = $this.find("[data-show-all-text]");
+
+            showAllInnerText = $this.data("show-all");
+            showAllText = showAllTextWrap.text();
+
+        showAllTextWrap.text(showAllInnerText);
+        $this.data("show-all", showAllText);
+    }
+
+    if (globParam.windowWidth() < globParam.getMediaSize().LAPTOP) {
+        // Инициализация слайдера about-list
+        $(".js--about-list-wrap").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+
+
+        // Инициализация слайдера about-team
+        $(".js--about-team-wrap").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+
+    }
+
 
 
 };

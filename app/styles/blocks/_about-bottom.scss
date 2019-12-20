@@ -1,6 +1,9 @@
 .about-bottom {
   &__wrap {
     padding: 90px 0 110px;
+    @include phones {
+      padding: 20px 0 30px;
+    }
   }
   &__container {
     max-width: 960px;
@@ -11,6 +14,9 @@
     font-family: 'CoText-Light', sans-serif;
     font-size: 18px;
     font-weight: 300;
+    @include phones {
+      font-size: 10px;
+    }
   }
 
 }

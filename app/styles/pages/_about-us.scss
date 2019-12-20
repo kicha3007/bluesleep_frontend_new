@@ -1,3 +1,6 @@
 .about-us {
   padding-top: 15px;
+  @include phones {
+    padding-top: 0;
+  }
 }

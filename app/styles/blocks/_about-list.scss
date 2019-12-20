@@ -5,11 +5,12 @@
   &__wrap {
     display: flex;
     margin: 0 -20px;
-    padding: 135px 0 50px;
+    padding: 40px 0 50px;
     flex-wrap: wrap;
     @include laptop {
       display: block;
-      padding: 15px 0;
+      //padding: 15px 0;
+
     }
   }
   &__container {
@@ -22,15 +23,31 @@
       display: block;
     }
 
+
+  }
+  &__main-title {
+    color: #000000;
+    padding-bottom: 70px;
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 70px;
+    position: relative;
+    text-align: center;
+    @include phones {
+      font-size: 18px;
+      margin-bottom: 10px;
+      padding-top: 20px;
+      padding-bottom: 0;
+    }
     &::before {
       content: '';
       display: block;
       position: absolute;
-      top: 40px;
+      bottom: 15px;
       left: 50%;
-      max-width: 473px;
+      width: 473px;
       margin-left: -237px;
-      width: 100%;
+      //width: 100%;
       height: 25px;
       background: url("../img/decor_waves_2.png") repeat-x center;
       @include phones {
@@ -41,15 +58,15 @@
         bottom: -25px;
       }
     }
+
   }
+
 
   &__item {
     margin: 0 20px;
     width: calc(20% - 40px);
     text-align: center;
-    @include phones {
-        max-width: 160px;
-    }
+
   }
 
   &__img-box {
@@ -65,8 +82,10 @@
     border-radius: 50%;
     margin-bottom: 15px;
     @include phones {
-      width: 41px;
-      height: 41px;
+
+      width: 114px;
+      height: 114px;
+      margin-bottom: 10px;
     }
 
   }
@@ -85,8 +104,9 @@
     font-weight: 700;
 
     @include phones {
-      font-size: 11px;
-      font-weight: 400;
+      max-width: 200px;
+      width: 100%;
+      margin: 0 auto 10px;;
     }
 
   }
@@ -101,7 +121,9 @@
     margin-bottom: 10px;
     line-height: 1.4;
     @include phones {
-      font-size: 12px;
+      font-size: 10px;
+      max-width: 200px;
+      margin: 0 auto;
     }
 
   }
@@ -115,7 +137,10 @@
     z-index: 10;
     margin-left: -33px;
     @include laptop {
-      bottom: -20px;
+      bottom: 5px;
+    }
+    @include phones {
+      bottom: 10px;
     }
 
     & > li {
@@ -126,11 +151,6 @@
       list-style-type: none;
       cursor: pointer;
       border: 1px solid #124afd;
-      @include laptop {
-        width: 5px;
-        height: 5px;
-        margin-right: 8px;
-      }
 
       &.slick-active {
         border-color: #124afd;
@@ -143,13 +163,6 @@
     }
   }
 
-  .slick-slide {
-    //width: 150px !important;;
-  }
-
-  .slick-list {
-    overflow: visible !important;
-  }
 
 
 }
