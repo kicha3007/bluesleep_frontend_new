@@ -9,12 +9,14 @@ include include/blocks/brands
 include include/blocks/convenience
 include include/blocks/faq
 include include/blocks/reviews-main
+include include/blocks/main-slider
 
 
 block variables
 	- var title = 'Главная';
 
 block content
+	+main-slider()()
 	+main-banner(class="main-banner__indent")
 	+choice()
 	+advantages()()

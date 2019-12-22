@@ -1030,6 +1030,30 @@ function DOMready() {
 
     }
 
+    // Инициализация слайдера main-slider
+    $(".js--main-slider-wrap").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        infinite: true,
+    });
+
+/*
+    //Позиционирум точки отсносительно верхнего отступа
+    var bannerDots = $(".js--main-banner .slick-dots");
+    bannerDots.css("top", bannerItem.css("padding-top"));
+
+    //Позиционирум стрелку под точками при изменениии количества слайдов
+    var arrowNextOffsetTop = 220,
+        bannerDotsPositionTop = bannerDots.offset().top - bannerItem.offset().top;
+    bannerDotsHeight = bannerDots.outerHeight(true);
+    $(".js--main-banner .slick-next").css("top", bannerDotsPositionTop + bannerDotsHeight);
+*/
+
+
+
+
 
 
 };

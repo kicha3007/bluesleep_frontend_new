@@ -1,0 +1,146 @@
+.main-slider {
+  padding-top: 60px;
+  padding-bottom: 115px;
+  @include tablets {
+    background: greenyellow;
+  }
+  @include phones {
+    padding-bottom: 130px;
+    background: #fff;
+  }
+  &__item {
+    display: block;
+  }
+  &__column {
+    &_pos_2 {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top:0;
+      padding: 20px 7%;
+      @include laptop {
+        padding: 20px 5%;
+      }
+      @include tablets {
+        padding: 20px;
+      }
+    }
+  }
+  &__inner-wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    @include phones {
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    &_size_desktop {
+      @include tablets {
+        display: none !important;
+      }
+    }
+    &_size_laptop {
+      display: none !important;
+      @include tablets {
+        display: block !important;
+      }
+      @include phones {
+        display: none !important;
+      }
+    }
+
+    &_size_mobile {
+      display: none !important;
+      @include phones {
+        display: block !important;
+      }
+    }
+  }
+  &__container {
+    max-width: 1520px;
+    padding: 0;
+    position: relative;
+  }
+  &__content {
+    max-width: 41%;
+    background-color: darkgrey;
+    @include tablets {
+      max-width: 45%;
+    }
+    @include phones {
+      max-width: 300px;
+    }
+  }
+  .main-slider__title {
+    color: #fefefe;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    @include laptop {
+      font-size: 24px;
+      color: green;
+    }
+    @include phones {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+  &__desc {
+    color: #fefefe;
+    font-family: 'CoText-Light', sans-serif;
+    font-weight: 300;
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 1.2;
+    @include laptop {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    @include phones {
+      font-size: 12px;
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: -60px;
+    display: inline-flex;
+    left: 50%;
+    padding: 0;
+    z-index: 10;
+    margin-left: -33px;
+    @include phones {
+      bottom: -45px;
+    }
+
+    & > li {
+      width: 10px;
+      height: 10px;
+      margin-right: 25px;
+      border-radius: 50%;
+      list-style-type: none;
+      cursor: pointer;
+      border: 1px solid #124afd;
+      @include phones {
+        width: 6px;
+        height: 6px;
+        margin-right: 12px;
+      }
+      &.slick-active {
+        border-color: #124afd;
+        background-color: #124afd;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+}
