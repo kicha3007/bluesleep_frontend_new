@@ -1,0 +1,114 @@
+extend include/template_base
+
+include include/blocks/sidebar
+include include/blocks/faq
+
+block variables
+	-
+		var title = 'Спасибо за заказ';
+
+
+block content
+	.static-content
+		.static-content__container.container
+			.static-content__wrap
+				.static-content__column.static-content__column_pos_1
+					+sidebar()()
+				.static-content__column.static-content__column_pos_2
+					.static-content__head
+						.static-content__main-title.all-page-title Сотрудничество
+					.static-content__content.html-area
+						.content-coop__image
+							img(src='img/content-coop_1.png', alt='матрас, blue sleep кровать', title='матрас blue sleep кровать')
+						.static-content__header.content-coop__subheader
+							h2.section-title
+								| Мебельным шоу-румам, интерьерным салонам, архитектурным бюро, дизайнерам
+								| интерьеров
+							p
+								| Мы заинтересованы в долгосрочном сотрудничестве с мебельными шоу-румами и магазинами,
+								| специализирующимися на продажах товаров для здорового сна.
+								| Презентацию для производителей мебели можно скачать
+								a.content-coop__download(target="_blank" href="/upload/cooperation/manufactors.pdf") тут
+								| , или написать на почту
+								a.content-coop__mail(href="mailto:rena@bluesleep.ru") rena@bluesleep.ru
+							p
+								| А также, если вы являетесь дизайнером или архитектором, и занимаетесь полной комплектацией
+								| объектов,
+								| которые вы ведете, то у нас есть возможность вас заинтересовать высококлассным продуктом,
+								| сервисом и условиями. Презентацию для дизайнеров можно скачать
+								a.content-coop__download(target="_blank" href="/upload/cooperation/designers.pdf") тут
+								| , или написать на почту
+								a.content-coop__mail(href="mailto:rena@bluesleep.ru") rena@bluesleep.ru
+						.content-coop__features
+							.content-coop__features__list
+								.content-coop__features__list__item
+									.content-coop__features__list__item__image
+										img(src="img/coop-icon-1.png" alt="")
+									.content-coop__features__list__item__title
+										p
+											| Агентское
+											| вознаграждение
+								.content-coop__features__list__item
+									.content-coop__features__list__item__image
+										img(src="img/coop-icon-1.png" alt="")
+									.content-coop__features__list__item__title
+										p
+											| Скидка для ваших
+											| клиентов и участие
+											| в акциях
+								.content-coop__features__list__item
+									.content-coop__features__list__item__image
+										img(src="img/coop-icon-1.png" alt="")
+									.content-coop__features__list__item__title
+										p
+											| Возможность
+											| сотрудничать с нами
+											| на условиях договора
+											| поставки
+								.content-coop__features__list__item
+									.content-coop__features__list__item__image
+										img(src="img/coop-icon-1.png" alt="")
+									.content-coop__features__list__item__title
+										p
+											| 100-дневный
+											| тест
+								.content-coop__features__list__item
+									.content-coop__features__list__item__image
+										img(src="img/coop-icon-1.png" alt="")
+									.content-coop__features__list__item__title
+										p
+											| Услуга забора старого
+											| матраса за 1 000 руб.
+								.content-coop__features__list__item
+									.content-coop__features__list__item__image
+										img(src="img/coop-icon-1.png" alt="")
+									.content-coop__features__list__item__title
+										p
+											| Бесплатная*
+											| своевременная
+											| доставка
+								.content-coop__features__list__item
+									.content-coop__features__list__item__image
+										img(src="img/coop-icon-1.png" alt="")
+									.content-coop__features__list__item__title
+										p
+											| Фирменный стенд
+											| Blue Sleep и всех
+											| необходимых рекламных
+											| POS-материалов
+								.content-coop__features__list__item
+									.content-coop__features__list__item__image
+										img(src="img/coop-icon-1.png" alt="")
+									.content-coop__features__list__item__title
+										p
+											| Настоящие отзывы
+											| реальных клиентов
+								.content-coop__features__list__item
+									.content-coop__features__list__item__image
+										img(src="img/coop-icon-1.png" alt="")
+									.content-coop__features__list__item__title
+										p
+											| Обучение персонала
+											| про товару
+							p
+								| * по Москве, МО, С-Петербургу, Ленинградской области специально для Вашего проекта, потому что товар всегда есть в наличии

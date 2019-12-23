@@ -14191,4 +14191,118 @@ body.compensate-for-scrollbar {
   display: none;
 }
 
+.content-coop__image {
+  text-align: center;
+}
+
+.content-coop__image img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.content-coop__subheader {
+  width: 100%;
+  max-width: 780px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 0;
+}
+
+.content-coop__subheader .section-title {
+  margin-top: 30px;
+  font-size: 32px;
+  line-height: normal;
+  margin-bottom: 0;
+  color: #005eff;
+}
+
+@media screen and (max-width: 767px) {
+  .content-coop__subheader .section-title {
+    font-size: 24px;
+  }
+}
+
+.content-coop__subheader p {
+  margin-top: 10px;
+}
+
+.content-coop__features__list {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 510px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 575px) {
+  .content-coop__features__list {
+    width: 100%;
+  }
+}
+
+.content-coop__features__list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -ms-flex-preferred-size: 29%;
+  flex-basis: 29%;
+  margin-top: 30px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 575px) {
+  .content-coop__features__list__item {
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
+  }
+}
+
+.content-coop__features__list__item__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 90px;
+}
+
+.content-coop__features__list__item__title p {
+  margin: 0;
+}
+
+.content-coop__features > p {
+  font-size: 9.21px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.content-coop__download {
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+}
+
+.content-coop__mail {
+  color: #000;
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=maps/style.css.map */
