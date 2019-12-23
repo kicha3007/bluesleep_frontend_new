@@ -1,20 +1,26 @@
 mixin main-slider(data)
 	section.main-slider&attributes(attributes)
 
-
 		- var $allDeskStyle = "";
 
-
-		.main-slider__wrap.js--main-slider-wrap
+		.main-slider__wrap.js--main-slider-wrap(data-all-slider)
 			each item, indx in $mainSliderList
 				- var $bButtonLink = (typeof item.INFO_LINK_LABEL !== 'undefined' && item.INFO_LINK_LABEL)
 				- var $bSliderLink = (!$bButtonLink && item.LINK)
 
 				.main-slider__item(class="main-slider__item_num_" + indx)
-					- $allDeskStyle += ".main-slider__title_num_" + indx +  " {" + item.TITLE_CSS +"}"
-					- $allDeskStyle += ".main-slider__desc_num_" + indx +  " {" + item.SUB_TITLE_CSS +"}"
-					- $allDeskStyle += ".main-slider__btn_num_" + indx +  " {" + item.BUTTON_CSS +"}"
-					- $allDeskStyle += ".main-slider__item_num_" + indx +  " {" + "background:" + item.BACKGROUND_COLOR +"}"
+					if(typeof  item.TITLE_CSS !== "undefined" && item.TITLE_CSS)
+						- $allDeskStyle += ".main-slider__title_num_" + indx +  " {" + item.TITLE_CSS +"}"
+					if(typeof  item.SUB_TITLE_CSS !== "undefined" && item.SUB_TITLE_CSS)
+						- $allDeskStyle += ".main-slider__desc_num_" + indx +  " {" + item.SUB_TITLE_CSS +"}"
+					if(typeof  item.BUTTON_CSS !== "undefined" && item.BUTTON_CSS)
+						- $allDeskStyle += ".main-slider__btn_num_" + indx +  " {" + item.BUTTON_CSS +"}"
+					if(typeof  item.BUTTON_HOVER_CSS !== "undefined" && item.BUTTON_HOVER_CSS)
+						- $allDeskStyle += ".main-slider__btn_num_" + indx + ":hover " + " {" + item.BUTTON_HOVER_CSS +"}"
+					if(typeof  item.BUTTON_POSITION !== "undefined" && item.BUTTON_POSITION)
+						- $allDeskStyle += ".main-slider__btn-wrap_num_" + indx +  " {" + item.BUTTON_POSITION +"}"
+					if(typeof  item.BACKGROUND_COLOR !== "undefined" && item.BACKGROUND_COLOR)
+						- $allDeskStyle += ".main-slider__item_num_" + indx +  " {" + "background:" +item.BACKGROUND_COLOR +"}"
 					.main-slider__container.container
 						.main-slider__column.main-slider__column_pos_1
 							img.main-slider__img.img.main-slider__img_size_desktop(src=item.PICTURE, alt='')
@@ -31,21 +37,47 @@ mixin main-slider(data)
 										.main-slider__desc(class="main-slider__desc_num_" + indx)
 											| !{item.SUB_TITLE}
 									if($bButtonLink)
-										.btn.main-slider__btn(class="main-slider__btn_num_" + indx) #{item.INFO_LINK_LABEL}
+										.main-slider__btn-wrap(class="main-slider__btn-wrap_num_" + indx)
+											.btn.main-slider__btn(class="main-slider__btn_num_" + indx) #{item.INFO_LINK_LABEL}
 
 	style.
+		.main-slider__title {
+			color: #fefefe;
+			font-size: 36px;
+			font-weight: 700;
+			margin-bottom: 30px;
+			line-height: 1.2;
+		}
+
+		.main-slider__desc {
+			color: #fefefe;
+			font-family: 'CoText-Light', sans-serif;
+			font-weight: 300;
+			margin-bottom: 50px;
+			font-size: 24px;
+			line-height: 1.2;
+		}
+
 		!{$allDeskStyle}
 
 		@media screen and (max-width: 991px) {
+			.main-slider__title {
+				font-size: 24px;
+			}
 			.main-slider__desc {
-				color: #726fd1;
+				margin-bottom: 30px;
+				font-size: 16px;
 
 			}
 		}
 
 		@media screen and (max-width: 575px) {
+			.main-slider__title {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
 			.main-slider__desc {
-				color: #ff8597;
+				font-size: 12px;
 
 			}
 		}

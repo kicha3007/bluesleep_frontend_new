@@ -1039,19 +1039,15 @@ function DOMready() {
         infinite: true,
     });
 
-/*
-    //Позиционирум точки отсносительно верхнего отступа
-    var bannerDots = $(".js--main-banner .slick-dots");
-    bannerDots.css("top", bannerItem.css("padding-top"));
 
-    //Позиционирум стрелку под точками при изменениии количества слайдов
-    var arrowNextOffsetTop = 220,
-        bannerDotsPositionTop = bannerDots.offset().top - bannerItem.offset().top;
-    bannerDotsHeight = bannerDots.outerHeight(true);
-    $(".js--main-banner .slick-next").css("top", bannerDotsPositionTop + bannerDotsHeight);
-*/
+    // Центрируем точки в слайдерах
+if($("[data-all-slider] .slick-dots").length > 0) {
 
+    $("[data-all-slider] .slick-dots").each(function (ndx, item) {
+        $(item).css("margin-left", "-" + (+$("[data-all-slider] .slick-dots").outerWidth() / 2));
+    })
 
+}
 
 
 
