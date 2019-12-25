@@ -29,7 +29,7 @@
   }
 
 
-  .slick {
+ /* .slick {
     &-arrow {
 
       background-color: rgba(0,0,0,.2);
@@ -70,6 +70,43 @@
       transform: rotate(180deg);
     }
 
+  }*/
+
+  .slick-dots {
+    position: absolute;
+    bottom: -70px;
+    display: inline-flex;
+    left: 50%;
+    padding: 0;
+    z-index: 10;
+    margin-left: -27px;
+    @include phones {
+      bottom: -40px;
+      margin-left: -55px;
+    }
+
+    & > li {
+      width: 11px;
+      height: 11px;
+      margin-right: 16px;
+      border-radius: 50%;
+      list-style-type: none;
+      cursor: pointer;
+      border: 1px solid #005eff;
+      @include phones {
+        width: 6px;
+        height: 6px;
+      }
+
+      &.slick-active {
+        border-color: #005eff;
+        background-color: #005eff;
+      }
+
+      button {
+        display: none;
+      }
+    }
   }
 
 

@@ -1,0 +1,9 @@
+mixin complement-video(data)
+	section.complement-video&attributes(attributes)
+		.complement-video__wrap
+			.complement-video__container.container
+				.complement-video__title.all-page-decoration-title
+					h2.complement-video__title-text.all-page-decoration-title__text
+						| КАК МЫ ШЬЕМ НАШЕ БЕЛЬе
+				video(width='100%' controls='controls' poster='img/kpb_big_photo.jpg')
+					source(src='/video/cpb_video.mp4' type='video/mp4')

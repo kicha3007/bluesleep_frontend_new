@@ -6,6 +6,10 @@ a {
   text-decoration: none;
 }
 
+b, strong {
+  font-weight: 700;
+}
+
 html {
   max-width: 100vw;
   overflow-x: hidden;
@@ -41,6 +45,70 @@ body {
   }
 
 }
+
+
+
+
+.all-page-decoration-title {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin-bottom: 65px;
+    @include phones {
+      margin-top: 5px;
+      margin-bottom: 45px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #005eff;
+      left: 0;
+      top: 50%;
+      z-index: 1;
+    }
+  &_decor_none:before  {
+      display: none;
+  }
+
+  &__text {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    color: #005eff;
+    background-color: #fff;
+    position: relative;
+    z-index: 5;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include phones {
+      font-size: 18px;
+      line-height: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 .flex-br {
   display: block;

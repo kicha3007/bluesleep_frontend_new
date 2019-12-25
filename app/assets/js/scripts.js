@@ -295,6 +295,21 @@ function DOMready() {
 
     }
 
+
+    if (globParam.windowWidth() < globParam.getMediaSize().PHONES) {
+        // Инициализация слайдера complement-boxing
+        $(".js--complement-boxing-list").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+        });
+
+
+    }
+
+
     // Инициализация слайдера идеальная пара в корзине
     $(".js--more-products-list").slick({
         slidesToShow: 1,
@@ -354,10 +369,10 @@ function DOMready() {
 
     // Инициализация слайдера reviews-slider
     $(".js-reviews-slider-wrap").slick({
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        arrows: true,
-        dots: false,
+        arrows: false,
+        dots: true,
         infinite: true,
 
         responsive: [
@@ -439,7 +454,7 @@ function DOMready() {
         wrap.removeClass("active");
         item.removeClass("active");
         $this.addClass("active");
-        $(e.delegateTarget).find("[data-choice-size-dropdown-active-item-text]").text($this.text());
+        $(e.delegateTarget).find("[data-choice-size-dropdown-active-item-text]").text($this.find("[data-choice-size-dropdown-text]").text());
 
         var offerId = $this.data("choice-size-dropdown-item");
 
@@ -1048,7 +1063,6 @@ if($("[data-all-slider] .slick-dots").length > 0) {
     })
 
 }
-
 
 
 

@@ -1,0 +1,43 @@
+mixin timer(data)
+	.timer&attributes(attributes)
+		.timer__title До конца акции осталось:
+		.timer__wrap.js--timer
+			span.timerDisplay
+				span.displaySection
+					span.numberDisplay
+						| #{$timerList["days"]}
+					span.periodDisplay
+						| #{$timerList['words']['days']}
+				span.displaySection
+					span.numberDisplay
+						| #{$timerList['hours']}
+					span.periodDisplay
+						| #{$timerList['words']['hours']}
+				span.displaySection
+					span.numberDisplay
+						| #{$timerList['minutes']}
+					span.periodDisplay
+						| #{$timerList['words']['minutes']}
+				//span.displaySection
+					span.numberDisplay
+						| #{$timerList['seconds']}
+					span.periodDisplay
+						| #{$timerList['words']['seconds']}
+
+	script.
+		$(function () {
+			var $jsExpirationDateTime =  "2019/12/30 23:59";
+
+				var timerParameters = {
+					dateAndTime: $jsExpirationDateTime,
+					labelsFormat: true,
+					//displayFormat: "DHMS",
+					displayFormat: "DHM",
+					padZeroes: true,
+					timeZone: +3,
+				};
+
+			// Для деталки товара
+			if ($(".js--timer").length > 0)
+				// $(".js--timer").countdowntimer(timerParameters);
+		});

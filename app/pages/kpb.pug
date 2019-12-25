@@ -1,0 +1,42 @@
+extend include/template_base
+
+include include/blocks/slider-derail
+include include/blocks/card-info_3
+include include/blocks/advantages-detail_3
+include include/blocks/complement-advantages
+include include/blocks/complement-boxing
+include include/blocks/complement-video
+include include/blocks/reviews-main
+include include/blocks/reviews-slider
+
+
+
+block variables
+	- var title = 'КПБ';
+
+block content
+	.detail
+		.detail__container.container
+			.detail__wrap
+				.detail__column.detail__column_pos_1
+					+slider-detail()()
+				.detail__column.detail__column_pos_2
+					+card-info_3()()
+			.detail__title Преимущества матраса
+			.detail__subtitle
+				| Мы производим наше белье из ткани безупречного
+				br
+				|	 качества с высокими требованиями к технологиям
+				br
+				| изготовления.
+		+advantages-detail_3()()
+		+complement-advantages()()
+		+complement-video()(class="complement-video_indent_bottom")
+		+complement-boxing()(class="complement-boxing_indent_bottom")
+		+reviews-main()(class="reviews-main_indent_bottom")
+		+reviews-slider()()
+
+
+	// список ТП
+	- var $offersListJson = JSON.stringify($offersList)
+	script var offersList = "#{$offersListJson}".replace(/&quot;/g, '"');

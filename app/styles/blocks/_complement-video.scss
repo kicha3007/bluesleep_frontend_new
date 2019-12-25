@@ -1,0 +1,14 @@
+.complement-video {
+  &_indent_bottom {
+    margin-bottom: 140px;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__title-text {
+    @include phones {
+      max-width: 175px;
+    }
+  }
+
+}

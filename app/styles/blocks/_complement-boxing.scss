@@ -1,0 +1,72 @@
+.complement-boxing {
+  &_indent_bottom {
+    margin-bottom: 140px;
+  }
+  &__title-text {
+      margin-bottom: 0;
+  }
+  &__title-text {
+    @include phones {
+        max-width: 300px;
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 705px;
+    width: 100%;
+    margin: 50px   auto;
+    text-align: center;
+    font-family: 'CoText-Light', sans-serif;
+  }
+  &__list {
+    margin: 0 -25px;
+    display: flex;
+  }
+  &__item {
+    margin: 0 25px;
+    width: calc(33.333333% - 50px);
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    display: inline-flex;
+    left: 50%;
+    padding: 0;
+    z-index: 10;
+    margin-left: -33px;
+    @include laptop {
+      bottom: -40px;
+    }
+
+    & > li {
+      width: 6px;
+      height: 6px;
+      margin-right: 12px;
+      border-radius: 50%;
+      list-style-type: none;
+      cursor: pointer;
+      border: 1px solid #124afd;
+      @include laptop {
+        width: 5px;
+        height: 5px;
+        margin-right: 8px;
+      }
+
+      &.slick-active {
+        border-color: #124afd;
+        background-color: #124afd;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+}

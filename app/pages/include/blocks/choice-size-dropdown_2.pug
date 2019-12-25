@@ -1,0 +1,21 @@
+mixin choice-size-dropdown_2(data)
+	.choice-size-dropdown(data-choice-size-dropdown)&attributes(attributes)
+		.choice-size-dropdown__wrap(data-choice-size-dropdown-wrap)
+			.choice-size-dropdown__active-item(data-choice-size-dropdown-active-item="")
+				.choice-size-dropdown__active-item-pre-text.choice-size-dropdown__active-item-pre-text_show_mobile Размер
+				.choice-size-dropdown__active-item-text(data-choice-size-dropdown-active-item-text="") #{$offersList[0]["data"].SIZE}
+
+				.choice-size-dropdown__active-item-discount(data-choice-size-dropdown-active-item-discount) - &#32; #{$offersList[0]["data"].DISCOUNT}  &#32; #{$offersList[0]["data"].DISCOUNT_TYPE}
+				.choice-size-dropdown__active-item-price.choice-size-dropdown__active-item-price_show_mobile(data-card-info-price-new) #{$offersList[0]["data"].BASE_PRICE}
+				.choice-size-dropdown__active-item-arrow
+					img.choice-size-dropdown__active-item-img.choice-size-dropdown__active-item-img_show_desktop(src="img/dropdown_arrow.png", alt='')
+					img.choice-size-dropdown__active-item-img.choice-size-dropdown__active-item-img_show_mobile(src="img/plus.png", alt='')
+			.choice-size-dropdown__inner-wrap(data-choice-size-dropdown-inner-wrap)
+				.choice-size-dropdown__list
+					each  sizeItem, sizeIndx in $offersList
+						- var activeSize = sizeIndx == 0 ? "active" : ""
+						.choice-size-dropdown__item(data-choice-size-dropdown-item="" + sizeItem["data"].PRODUCT_ID  class="" + activeSize)
+							span.choice-size-dropdown__text(data-choice-size-dropdown-text) #{sizeItem["data"].SIZE}
+							if(typeof $offersList[sizeIndx]["data"].DISCOUNT !== 'undefined' && $offersList[sizeIndx]["data"].DISCOUNT)
+								span.choice-size-dropdown__discount - &#32; #{$offersList[sizeIndx]["data"].DISCOUNT}  &#32; #{$offersList[sizeIndx]["data"].DISCOUNT_TYPE}
+				//a.choice-size-dropdown__other-size(href="#") Свой размер

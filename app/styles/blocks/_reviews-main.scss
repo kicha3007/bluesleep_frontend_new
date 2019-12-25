@@ -1,4 +1,8 @@
 .reviews-main {
+  background-color: #f4f4f4;
+  &_indent_bottom {
+    margin-bottom: 80px;
+  }
   &__wrap {
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +78,7 @@
       margin-bottom: 40px;
     }
     @include phones {
-      display: block;
+      //display: block;
       text-align: center;
     }
   }
@@ -85,7 +89,7 @@
       margin-left: 50px;
     }
     @include phones {
-      margin-top: 20px;
+      margin-top: 0px;
       margin-right: auto;
       margin-left: auto;
 

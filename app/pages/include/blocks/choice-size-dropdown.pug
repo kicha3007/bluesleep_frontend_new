@@ -14,5 +14,8 @@ mixin choice-size-dropdown(data)
 				.choice-size-dropdown__list
 					each  sizeItem, sizeIndx in $offersList
 						- var activeSize = sizeIndx == 0 ? "active" : ""
-						.choice-size-dropdown__item(data-choice-size-dropdown-item="" + sizeItem["data"].PRODUCT_ID  class="" + activeSize) #{sizeItem["data"].SIZE}
-				a.choice-size-dropdown__other-size(href="#") Свой размер
+						.choice-size-dropdown__item(data-choice-size-dropdown-item="" + sizeItem["data"].PRODUCT_ID  class="" + activeSize)
+							span.choice-size-dropdown__text(data-choice-size-dropdown-text) #{sizeItem["data"].SIZE}
+							if(typeof $offersList[sizeIndx]["data"].DISCOUNT !== 'undefined' && $offersList[sizeIndx]["data"].DISCOUNT)
+								span.choice-size-dropdown__discount - &#32; #{$offersList[sizeIndx]["data"].DISCOUNT}  &#32; #{$offersList[sizeIndx]["data"].DISCOUNT_TYPE}
+					a.choice-size-dropdown__other-size(href="#") Свой размер

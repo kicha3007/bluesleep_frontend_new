@@ -1,5 +1,24 @@
 .card-info {
+
   &__wrap {
+
+  }
+  &__center-block {
+    margin-bottom: 80px;
+    @include laptop {
+      margin-bottom: 60px;
+    }
+    @include phones {
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-bottom: 30px;
+    }
+  }
+  &__center_indent_big {
+    margin-bottom: 25px;
+    @include phones {
+      margin-bottom: 10px;
+    }
 
   }
   &__top {
@@ -123,6 +142,9 @@
     margin-bottom: 50px;
     @include phones {
       margin-bottom: 30px;
+    }
+    &_indendt_min {
+      margin-bottom: 0;
     }
   }
   &__delivery-img-box {

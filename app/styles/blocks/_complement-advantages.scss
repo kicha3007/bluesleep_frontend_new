@@ -1,0 +1,144 @@
+.complement-advantages {
+  &_indent_top {
+    @include laptop {
+      padding-top: 55px;
+    }
+  }
+  &_indent_bottom {
+    padding-bottom: 100px;
+  }
+  &__wrap {
+    margin-bottom: -70px;
+    @include phones {
+      margin-bottom: -60px;
+    }
+  }
+  &__item {
+    display: flex;
+    margin-bottom: 70px;
+    position: relative;
+    @include phones {
+      margin-bottom: 60px;
+        flex-wrap: wrap;
+    }
+    &:nth-child(odd)  .complement-advantages__column_pos_2 {
+      box-shadow: 5px 5px 10px rgba(0,0,0,.1);
+      left: auto;
+      right: 0;
+      order: 1;
+    }
+    &:nth-child(even)  .complement-advantages__column_pos_2 {
+      box-shadow: -5px 5px 10px rgba(0,0,0,.1);
+      right: auto;
+      left: 0;
+      order: 2;
+    }
+    &:nth-child(even) .complement-advantages__img-box {
+      justify-content: flex-end;
+    }
+    &:nth-child(even) {
+      justify-content: flex-end;
+
+    }
+  }
+  &__column {
+    &_pos_1 {
+      width: 60%;
+      @include desktop {
+          width: 100%;
+      }
+
+
+    }
+    &_pos_2 {
+      width: 40%;
+      padding: 50px 70px 25px;
+      position: absolute;
+      background-color: #fff;
+      min-height: 100%;
+      min-width: 550px;
+      @include desktop {
+        padding: 25px 50px 25px 50px;
+      }
+      @include laptop {
+        min-width: 420px;
+      }
+      @include phones {
+          position: static;
+        min-width: auto;
+      }
+
+    }
+    @include phones {
+        width: 100%;
+    }
+  }
+  &__img-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__img {
+    display: block;
+    //max-width: 100%;
+    height: auto;
+    width:100%;
+    @include desktop {
+        width: auto;
+    }
+    @include phones {
+        max-width: 100%;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    color: #005eff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+  }
+  &__desk {
+    font-weight: 300;
+    font-family: 'CoText-Light', sans-serif;
+    font-size: 18px;
+    @include desktop {
+      font-size: 16px;
+    }
+    @include laptop {
+      font-size: 14px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    margin:  20px 0 -5px;
+  }
+  &__bottom-column {
+    width: 50%;
+    margin: 0 5px;
+  }
+  &__bottom-img-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  &__bottom-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__bottom-desc {
+    font-size: 12px;
+    color: #949494;
+    margin-top: 10px;
+    @include laptop {
+      font-size: 10px;
+    }
+    &_pos_center {
+      text-align: center;
+    }
+  }
+
+}

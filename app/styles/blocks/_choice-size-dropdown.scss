@@ -56,8 +56,27 @@
     color: #fff;
     @include phones {
       font-size: 8px;
-
       margin-right: 5px;
+    }
+  }
+  &__discount {
+    border-radius: 10px;
+    background-color: #005eff;
+    display: flex;
+    //flex-wrap: wrap;
+    //justify-content: center;
+    align-items: center;
+    padding: 4px;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 10px;
+    max-height: 27px;
+    font-weight: 400  ;
+    @include phones {
+      font-size: 8px;
+      //margin-right: 5px;
+      margin-left: 5px;
+      max-height: 19px;
     }
   }
 
