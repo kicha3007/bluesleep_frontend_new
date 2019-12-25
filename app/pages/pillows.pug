@@ -1,0 +1,30 @@
+extend include/template_base
+
+include include/blocks/slider-derail
+include include/blocks/card-info_4_pillows
+include include/blocks/advantages-detail_4_pillows
+include include/blocks/advantages-detail_5_pillows
+include include/blocks/characteristics
+include include/blocks/pillows-advantages
+
+block variables
+	- var title = 'Подушки';
+
+block content
+	.detail
+		.detail__container.container
+			.detail__wrap
+				.detail__column.detail__column_pos_1
+					+slider-detail()()
+				.detail__column.detail__column_pos_2
+					+card-info_4_pillows()()
+			.detail__title Преимущества подушки
+		+advantages-detail_4_pillows()(class="detail__advantages")
+		+pillows-advantages()(class="pillows-advantages_indent_bottom")
+		.detail__title Сервис
+		+advantages-detail_5_pillows()(class="detail__advantages")
+
+	// список ТП
+	- var $offersListJson = JSON.stringify($offersList)
+	script var offersList = "#{$offersListJson}".replace(/&quot;/g, '"');
+

@@ -89,11 +89,16 @@
   }
   &__title {
     color: #005eff;
-    font-family: 'CoText-Light', sans-serif;
     font-size: 30px;
     letter-spacing: -0.38px;
     text-align: center;
       margin-bottom: 40px;
+    font-weight: 700;
+    font-family: "CoHeadlineCorp-Regular", "CoHeadline-Bold", sans-serif;
+
+    //&_mod_font {
+    //
+    //}
     @include phones {
       font-size: 18px;
       margin-bottom: 20px;

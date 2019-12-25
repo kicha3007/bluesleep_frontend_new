@@ -1,8 +1,5 @@
 .card-info {
 
-  &__wrap {
-
-  }
   &__center-block {
     margin-bottom: 80px;
     @include laptop {
@@ -41,6 +38,7 @@
     font-weight: 700;
     margin-bottom: 8px;
     font-family: "CoHeadlineCorp-Regular", "CoHeadline-Bold", sans-serif;
+    line-height: 1.3;
     @include phones {
       font-size: 24px;
       font-weight: 400;
@@ -67,6 +65,9 @@
     align-items: center;
     @include phones {
       display: none;
+    }
+    &_mod_pillows {
+      margin-bottom: 10px;
     }
   }
   &__price-new {

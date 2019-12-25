@@ -306,6 +306,15 @@ function DOMready() {
             infinite: false,
         });
 
+        // Инициализация слайдера pillows-advantages
+        $(".js--pillows-advantages-list").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+        });
+
 
     }
 

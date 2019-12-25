@@ -1,0 +1,166 @@
+.pillows-advantages {
+  background-color: #eae5e1;
+  padding: 65px 0 30px;
+  @include phones {
+    padding: 30px 0 0;
+  }
+  &_indent_bottom {
+    margin-bottom: 90px;
+    @include phones {
+      margin-bottom: 40px;
+    }
+  }
+  &__container {
+    max-width: 890px;
+  }
+  &__title {
+    color: #005eff;
+    font-size: 30px;
+    letter-spacing: -0.38px;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.1;
+    font-family: "CoHeadlineCorp-Regular", "CoHeadline-Bold", sans-serif;
+
+
+
+
+    //&_mod_font {
+    //
+    //}
+    @include phones {
+      margin-bottom: 20px;
+      color: #005eff;
+      font-size: 18px;
+    }
+  }
+  &__advantages {
+    margin-bottom: 70px;
+    @include phones {
+      margin-bottom: 40px;
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'CoText-Light', sans-serif;
+    padding-bottom: 13%;
+
+    color: #000000;
+    letter-spacing: -0.45px;
+    @include phones {
+      font-size: 11px;
+      padding: 0 15px;
+      line-height: 1.4;
+      letter-spacing: -0.28px;
+      margin-bottom: 35px;
+    }
+  }
+  &__list {
+    display: flex;
+    margin: 0 -33px 0;
+    padding-bottom: 21%;
+    align-items: flex-start;
+    justify-content: center;
+    @include laptop {
+      margin: 0 -15px 0;
+    }
+    @include phones {
+      padding-bottom: 0;
+      margin-bottom: 90px;
+    }
+
+
+  }
+  &__item {
+    margin: 0 33px 0;
+    display: flex !important;
+
+
+    @include laptop {
+      margin: 0 15px 0;
+    }
+    @include phones {
+      justify-content: center;
+    }
+
+  }
+  &__img-box {
+    margin-right: 20px;
+    padding-top: 10px;
+    display: inline-block;
+    @include phones {
+      margin-right: 10px;
+      padding-top: 5px;
+    }
+
+  }
+  &__img {
+    @include phones {
+      width: 18px;
+      height: 18px;
+    }
+
+  }
+  &__desc {
+    display: inline-block;
+    color: #000000;
+    font-size: 24px;
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablets {
+      font-size: 18px;
+    }
+    @include phones {
+      font-size: 14px;
+    }
+  }
+  &__main-img-box {
+
+  }
+  &__main-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    display: inline-flex;
+    left: 50%;
+    padding: 0;
+    z-index: 10;
+    margin-left: -33px;
+    @include phones {
+      bottom: -45px;
+    }
+
+    & > li {
+      width: 6px;
+      height: 6px;
+      margin-right: 12px;
+      border-radius: 50%;
+      list-style-type: none;
+      cursor: pointer;
+      border: 1px solid #124afd;
+      @include laptop {
+        width: 5px;
+        height: 5px;
+        margin-right: 8px;
+      }
+
+      &.slick-active {
+        border-color: #124afd;
+        background-color: #124afd;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+}

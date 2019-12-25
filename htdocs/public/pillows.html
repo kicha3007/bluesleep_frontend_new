@@ -1,0 +1,899 @@
+<!DOCTYPE hmtl>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Bluesleep | Подушки</title>
+    <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,600,700|Play:400,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=AOdAv1sBAAAAXICWVQIAnR0v82iJhgxR0a27DXyuEK4B5l4AAAAAAAAAAACfKz601Ig5Q29mUYdHawLx3ww6ZQ==" type="text/javascript"></script>
+    <script src="js/svg-sprite.js"></script>
+    <script src="js/ion.rangeSlider.js"></script>
+    <script src="js/typo.js"></script>
+    <script src="js/countdownTimer.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <!--script(src="js/jquery.selectric.min.js")-->
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="header-buffer"></div>
+      <header class="header">
+        <div class="header__container container">
+          <div class="header__wrap">
+            <div class="header__top header__top_show_desktop">
+              <div class="header__column header__column_size_1">
+                      <div class="logo"><a class="logo__link" href="/"><img class="logo__img" src="img/logo.png" alt=""/></a></div>
+              </div>
+              <div class="header__column header__column_size_2">
+                <ul class="main-menu" data-main-menu="data-main-menu">
+                  <li class="main-menu__item active" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="index.html">Матрасы</a>
+                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
+                                      <div class="dropdown-menu__container container">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
+                                          <div class="dropdown-menu__column dropdown-menu__column_pos_1">
+                                            <div class="dropdown-menu__list-title">Матрасы + 1</div>
+                                            <ul class="dropdown-menu__list">
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="hybrid"><a class="dropdown-menu__link" href="/detail.html">Hybrid</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="concept"><a class="dropdown-menu__link" href="/detail.html">Concept</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="gravity" data-dropdown-menu-new="true"><a class="dropdown-menu__link" href="/detail.html">Gravity
+                                                  <div class="dropdown-menu__tooltip">Новинка</div></a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="matrass"><a class="dropdown-menu__link" href="#">Чехол на матрас</a></li>
+                                            </ul><a class="dropdown-menu__show-more" href="#">Смотреть все</a>
+                                          </div>
+                                          <div class="dropdown-menu__column dropdown-menu__column_pos_2">
+                                            <div class="dropdown-menu__inner-wrap">
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Hybrid</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Concept</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Gravity</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Чехол на матрас</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 63 000 руб.</span></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                  </li>
+                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Подушки</a></li>
+                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Аксессуары</a>
+                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
+                                      <div class="dropdown-menu__container container">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
+                                          <div class="dropdown-menu__column dropdown-menu__column_pos_1">
+                                            <div class="dropdown-menu__list-title">Матрасы + 2</div>
+                                            <ul class="dropdown-menu__list">
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="hybrid"><a class="dropdown-menu__link" href="/detail.html">Hybrid</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="concept"><a class="dropdown-menu__link" href="/detail.html">Concept</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="gravity" data-dropdown-menu-new="true"><a class="dropdown-menu__link" href="/detail.html">Gravity
+                                                  <div class="dropdown-menu__tooltip">Новинка</div></a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="matrass"><a class="dropdown-menu__link" href="#">Чехол на матрас</a></li>
+                                            </ul><a class="dropdown-menu__show-more" href="#">Смотреть все</a>
+                                          </div>
+                                          <div class="dropdown-menu__column dropdown-menu__column_pos_2">
+                                            <div class="dropdown-menu__inner-wrap">
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Hybrid</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Concept</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Gravity</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Чехол на матрас</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 63 000 руб.</span></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                  </li>
+                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="/kpb.html">Комплекты</a></li>
+                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Подарки</a></li>
+                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Доставка</a></li>
+                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="/gifts.html">Подарки</a>
+                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
+                                      <div class="dropdown-menu__container container">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
+                                          <div class="dropdown-menu__column dropdown-menu__column_pos_1">
+                                            <div class="dropdown-menu__list-title">Матрасы + 3</div>
+                                            <ul class="dropdown-menu__list">
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="hybrid"><a class="dropdown-menu__link" href="/detail.html">Hybrid</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="concept"><a class="dropdown-menu__link" href="/detail.html">Concept</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="gravity" data-dropdown-menu-new="true"><a class="dropdown-menu__link" href="/detail.html">Gravity
+                                                  <div class="dropdown-menu__tooltip">Новинка</div></a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="matrass"><a class="dropdown-menu__link" href="#">Чехол на матрас</a></li>
+                                            </ul><a class="dropdown-menu__show-more" href="#">Смотреть все</a>
+                                          </div>
+                                          <div class="dropdown-menu__column dropdown-menu__column_pos_2">
+                                            <div class="dropdown-menu__inner-wrap">
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Hybrid</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Concept</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Gravity</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Чехол на матрас</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 63 000 руб.</span></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                  </li>
+                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="/gifts.html">Подарки</a>
+                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
+                                      <div class="dropdown-menu__container container">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
+                                          <div class="dropdown-menu__column dropdown-menu__column_pos_1">
+                                            <div class="dropdown-menu__list-title">Матрасы + 4</div>
+                                            <ul class="dropdown-menu__list">
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="hybrid"><a class="dropdown-menu__link" href="/detail.html">Hybrid</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="concept"><a class="dropdown-menu__link" href="/detail.html">Concept</a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="gravity" data-dropdown-menu-new="true"><a class="dropdown-menu__link" href="/detail.html">Gravity
+                                                  <div class="dropdown-menu__tooltip">Новинка</div></a></li>
+                                              <li class="dropdown-menu__item" data-dropdown-menu-id="matrass"><a class="dropdown-menu__link" href="#">Чехол на матрас</a></li>
+                                            </ul><a class="dropdown-menu__show-more" href="#">Смотреть все</a>
+                                          </div>
+                                          <div class="dropdown-menu__column dropdown-menu__column_pos_2">
+                                            <div class="dropdown-menu__inner-wrap">
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Hybrid</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Concept</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Blue sleep Gravity</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
+                                              </div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                                <div class="dropdown-menu__title">Чехол на матрас</div>
+                                                <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
+                                                    Cамый популярный матрас из Британии,  на нем уже спит более
+                                                       10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 63 000 руб.</span></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__column header__column_size_3">
+                      <div class="h-contacts">
+                        <div class="h-contacts__inner-wrap">
+                          <!--a(href="mailto:multibrand@mail.ru" ).h-contacts__item.h-contacts__item_link
+                          +icon('mail', "h-contacts__icon").
+                          span.h-contacts__text multibrand@mail.ru
+                          --><a class="h-contacts__item h-contacts__item_link" href="tel:84951279564">
+                            <!--+icon('phone', "h-contacts__icon").-->
+                            <div class="h-contacts__info h-contacts__info_number">8 (495) 127-95-64</div>
+                            <div class="h-contacts__info h-contacts__info_text">Позвоните нам сейчас!</div></a>
+                        </div>
+                        <!--.h-contacts__item
+                        +icon('time', "h-contacts__icon")
+                        span.h-contacts__text 08:00–19:00
+                        -->
+                      </div><a class="btn-actions-icon" href="#" data-actions-btn-basket="data-actions-btn-basket">
+                        <div class="btn-actions-icon__icon-box">
+                          <svg class="svg-icon svg-icon-basket btn-actions-icon__icon svg-icon-basket">
+                            <use xlink:href="#icon-basket"></use>
+                          </svg>
+                          <div class="btn-actions-icon__order-count">2</div>
+                        </div></a>
+              </div>
+              <!--.header__column.header__column_size_4-->
+            </div>
+            <div class="header__bottom header__bottom_show_laptop">
+              <div class="header__bottom-column header__bottom-column_pos_1">
+                <div class="header__inner-bottom-column">
+                        <div class="logo-mini"><a class="logo-mini__link" href="/"><img class="logo-mini__img" src="img/logo-mini.png" alt=""/></a></div>
+                </div>
+                <div class="header__inner-bottom-column"><a class="btn-actions-icon" href="#" data-mobile-menu-btn="data-mobile-menu-btn">
+                    <div class="btn-actions-icon__icon-box"><img class="btn-actions-icon__img btn-actions-icon__img_prop_close" src="img/mobile-menu-btn.png" alt=""/><img class="btn-actions-icon__img btn-actions-icon__img_prop_open" src="img/menu-close.png" alt=""/></div></a></div>
+              </div>
+              <div class="header__bottom-column header__bottom-column_pos_2">
+                <div class="header__inner-bottom-column"><a class="btn-actions-icon" href="#" data-h-phone-btn="data-h-phone-btn">
+                          <div class="btn-actions-icon__icon-box">
+                            <svg class="svg-icon svg-icon-phone_chat btn-actions-icon__icon svg-icon-phone_chat">
+                              <use xlink:href="#icon-phone_chat"></use>
+                            </svg>
+                          </div></a>
+                </div>
+                <div class="header__inner-bottom-column"><a class="btn-actions-icon" href="#" data-actions-btn-basket="data-actions-btn-basket">
+                          <div class="btn-actions-icon__icon-box">
+                            <svg class="svg-icon svg-icon-basket btn-actions-icon__icon svg-icon-basket">
+                              <use xlink:href="#icon-basket"></use>
+                            </svg>
+                          </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="h-mobile-contacts" data-h-mobile-contacts="data-h-mobile-contacts">
+              <div class="h-mobile-contacts__column h-mobile-contacts__column_pos_1"><a class="h-mobile-contacts__link" href="tel:84951279564">Позвоните нам</a></div>
+              <div class="h-mobile-contacts__column h-mobile-contacts__column_pos_2"><a class="h-mobile-contacts__link" href="mailto:name@email.com">Напишите нам</a></div>
+            </div>
+                  <div class="mobile-menu" data-mobile-menu="data-mobile-menu">
+                    <div class="mobile-menu__wrapper">
+                      <div class="mobile-menu__inner-wrap js-mobile-menu-inner-wrap">
+                        <div class="mobile-menu__item" data-accord-item="data-accord-item">
+                          <div class="mobile-menu__toggle" data-accord-toggle="data-accord-toggle">
+                            <div class="mobile-menu__column mobile-menu__column_pos_1">
+                              <div class="mobile-menu__toggle-title">Матрасы</div>
+                            </div>
+                            <div class="mobile-menu__column mobile-menu__column_pos_2">
+                              <div class="mobile-menu__toggle-inner-btn"><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_plus" src="img/plus.png" alt=""/><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_minus" src="img/minus.png" alt=""/></div>
+                            </div>
+                            <div class="mobile-menu__title"></div>
+                          </div>
+                          <div class="mobile-menu__content" data-accord-content="data-accord-content">
+                            <ul class="mobile-menu__list">
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Hybrid</a></li>
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Concept</a></li>
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Sonnic
+                                  <div class="mobile-menu__tooltip">Новинка</div></a></li>
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Чехол на матрас</a></li>
+                            </ul><a class="mobile-menu__show-more" href="#">Смотреть все</a>
+                          </div>
+                        </div>
+                        <div class="mobile-menu__item" data-accord-item="data-accord-item">
+                          <div class="mobile-menu__toggle" data-accord-toggle="data-accord-toggle">
+                            <div class="mobile-menu__column mobile-menu__column_pos_1">
+                              <div class="mobile-menu__toggle-title">Кровати</div>
+                            </div>
+                            <div class="mobile-menu__column mobile-menu__column_pos_2">
+                              <div class="mobile-menu__toggle-inner-btn" data-toggle-inner-btn="data-toggle-inner-btn"><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_plus" src="img/plus.png" alt=""/><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_minus" src="img/minus.png" alt=""/></div>
+                            </div>
+                            <div class="mobile-menu__title"></div>
+                          </div>
+                          <div class="mobile-menu__content" data-accord-content="data-accord-content">
+                            <ul class="mobile-menu__list">
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Hybrid</a></li>
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Concept</a></li>
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Sonnic
+                                  <div class="mobile-menu__tooltip">Новинка</div></a></li>
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Чехол на матрас</a></li>
+                            </ul><a class="mobile-menu__show-more" href="#">Смотреть все</a>
+                          </div>
+                        </div>
+                        <div class="mobile-menu__item" data-accord-item="data-accord-item">
+                          <div class="mobile-menu__toggle" data-accord-toggle="data-accord-toggle">
+                            <div class="mobile-menu__column mobile-menu__column_pos_1">
+                              <div class="mobile-menu__toggle-title">Подушки</div>
+                            </div>
+                            <div class="mobile-menu__column mobile-menu__column_pos_2">
+                              <div class="mobile-menu__toggle-inner-btn"><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_plus" src="img/plus.png" alt=""/><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_minus" src="img/minus.png" alt=""/></div>
+                            </div>
+                            <div class="mobile-menu__title"></div>
+                          </div>
+                          <div class="mobile-menu__content" data-accord-content="data-accord-content">
+                            <ul class="mobile-menu__list">
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Hybrid</a></li>
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Concept</a></li>
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Sonnic
+                                  <div class="mobile-menu__tooltip">Новинка</div></a></li>
+                              <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Чехол на матрас</a></li>
+                            </ul><a class="mobile-menu__show-more" href="#">Смотреть все</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mobile-menu__other">
+                        <div class="mobile-menu__other-item">
+                          <div class="mobile-menu__other-item-column mobile-menu__other-item-column_pos_1"><a class="mobile-menu__text" href="#">Отзывы</a></div>
+                          <div class="mobile-menu__other-item-column mobile-menu__other-item-column_pos_2"><a class="mobile-menu__city" href="#">Москва</a></div>
+                        </div>
+                        <div class="mobile-menu__other-item">
+                          <div class="mobile-menu__other-item-column mobile-menu__other-item-column_pos_1"><a class="mobile-menu__text" href="#">Оферта</a></div>
+                          <div class="mobile-menu__other-item-column mobile-menu__other-item-column_pos_2"><a class="mobile-menu__phone" href="tel:84951279564">
+                              <div class="mobile-menu__phone-text">8 (495) 127-95-64</div></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="detail">
+          <div class="detail__container container">
+            <div class="detail__wrap">
+              <div class="detail__column detail__column_pos_1">
+                <sectionn class="slider-detail">
+                  <div class="slider-detail__wrap">
+                    <sectionn class="label slider-detail__label" data-label="data-label">
+                      <div class="label__wrap">
+                        <div class="label__top">
+                          <div class="label__number"><span class="label__number-numeric" data-label-numeric="data-label-numeric">15</span><span class="label__number-format" data-label-format="data-label-format">%</span></div>
+                          <div class="label__text">скидка</div>
+                        </div>
+                        <div class="label__bottom">
+                          <div class="label__date" data-label-date="data-label-date">до 05.06</div>
+                        </div>
+                      </div>
+                    </sectionn>
+                    <div class="slider-detail__top">
+                      <div class="slider-detail__icon-wrap">
+                        <!--each iconItem in $detailList.slides.icons
+                        .label.catalog-item__label(title=iconItem.description)
+                        	+icon(iconItem.label, 'svg-icon_label-normal slider-detail__icon')
+                        -->
+                      </div>
+                      <div class="slider-detail__inner-wrap js--slider-detail-for"><a class="slider-detail__view" href="img/c/slider_1.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_1.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_2.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_2.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_3.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_3.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_4.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_4.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_5.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_5.jpg" alt=""/></a>
+                      </div>
+                    </div>
+                    <div class="slider-detail__bottom">
+                      <div class="slider-detail__preview" data-slide-detail-nav="1"><img class="slider-detail__preview-img" src="img/c/slider_1.jpg" alt=""/></div>
+                      <div class="slider-detail__preview" data-slide-detail-nav="2"><img class="slider-detail__preview-img" src="img/c/slider_2.jpg" alt=""/></div>
+                      <div class="slider-detail__preview" data-slide-detail-nav="3"><img class="slider-detail__preview-img" src="img/c/slider_3.jpg" alt=""/></div>
+                      <div class="slider-detail__preview" data-slide-detail-nav="4"><img class="slider-detail__preview-img" src="img/c/slider_4.jpg" alt=""/></div>
+                      <div class="slider-detail__preview" data-slide-detail-nav="5"><img class="slider-detail__preview-img" src="img/c/slider_5.jpg" alt=""/></div>
+                    </div>
+                  </div>
+                </sectionn>
+              </div>
+              <div class="detail__column detail__column_pos_2">
+                <div class="card-info">
+                  <div class="card-info__wrap">
+                    <div class="card-info__top">
+                      <div class="card-info__main-title">Кровать BlueSleep без изголовья</div>
+                      <div class="stars-rating card-info__star-rating stars-rating_mod_pillows">
+                        <div class="stars-rating__wrap">
+                          <div class="stars-rating__stars">
+                            <div class="stars-rating__list">
+                              <div class="stars-rating__on" style="width: 68%"></div>
+                              <div class="stars-rating__live"><span class="stars-rating__star"></span><span class="stars-rating__star"></span><span class="stars-rating__star"></span><span class="stars-rating__star"></span><span class="stars-rating__star"></span></div>
+                            </div>
+                          </div>
+                          <div class="stars-rating__text">337 отзывов</div>
+                        </div>
+                      </div>
+                      <div class="card-info__price card-info__price_mod_pillows">
+                        <div class="card-info__price-new" data-card-info-price-new="data-card-info-price-new">49 491 р.</div>
+                        <div class="card-info__price-old" data-card-info-price-old="data-card-info-price-old">54 990 р.</div>
+                      </div>
+                      <div class="card-info__price-other" data-card-info-price-other="data-card-info-price-other">Или<span class="card-info__price-other-numeric">от<span class="card-info__price-other-number" data-card-info-price-other-number="data-card-info-price-other-number">&#32; 3 000</span>&#32; р. /мес</span>	без переплат
+                        <!--+flexibox-tooltip()(class="flexibox-tooltip_indent")-->
+                      </div>
+                      <div class="choice-size">
+                        <div class="choice-size__wrap choice-size__wrap_mod_pillows">
+                          <div class="choice-size__column choice-size__column_pos_1">
+                            <div class="choice-size__title">Размер</div>
+                            <div class="choice-size__value" data-choice-size-value=""><span class="choice-size__value-size" data-choice-size-value-size="data-choice-size-value-size">180 X 200 X 24 см.</span><span class="choice-size__value-divider">/</span><span class="choice-size__value-weight" data-choice-size-value-weight="data-choice-size-value-weight">29 кг.</span></div>
+                          </div>
+                          <div class="choice-size__column choice-size__column_pos_2 choice-size__column_mod_pillows">
+                            <div class="choice-size-dropdown choice-size__dropdown">
+                              <div class="choice-size-dropdown__wrap">
+                                <div class="choice-size-dropdown__active-item">
+                                  <div class="choice-size-dropdown__active-item-text">One size</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-info__desc">Состав:<br/>Анатомическая основа подушки:<br/>Инновационная пена Memory Granular Foam<br/>Съемный чехол:<br/>Высокопрочный бельгийский трикотаж, состав:<br/>60 % полиэстер, 40 % лиоцель</div>
+                    </div>
+                    <div class="card-info__center-block">
+                      <div class="timer">
+                        <div class="timer__title">До конца акции осталось:</div>
+                        <div class="timer__wrap js--timer"><span class="timerDisplay"><span class="displaySection"><span class="numberDisplay">10</span><span class="periodDisplay">день</span></span><span class="displaySection"><span class="numberDisplay">10</span><span class="periodDisplay">часов</span></span><span class="displaySection"><span class="numberDisplay">41</span><span class="periodDisplay">минута</span></span>
+                            <!--span.displaySection
+                            span.numberDisplay
+                            	| 10
+                            span.periodDisplay
+                            	| секунд
+                            
+                            --></span></div>
+                      </div>
+                      <script>
+                        $(function () {
+                        	var $jsExpirationDateTime =  "2019/12/30 23:59";
+                        
+                        		var timerParameters = {
+                        			dateAndTime: $jsExpirationDateTime,
+                        			labelsFormat: true,
+                        			//displayFormat: "DHMS",
+                        			displayFormat: "DHM",
+                        			padZeroes: true,
+                        			timeZone: +3,
+                        		};
+                        
+                        	// Для деталки товара
+                        	if ($(".js--timer").length > 0)
+                        		// $(".js--timer").countdowntimer(timerParameters);
+                        });
+                      </script>
+                    </div>
+                    <div class="card-info__center"></div>
+                    <div class="card-info__center card-info__center_indent_big">
+                      <div class="card-info__btn-wrap">
+                        <div class="card-info__btn btn"><span class="card-info__btn-text card-info__btn-text_pos_1">Купить<span class="card-info__btn-text card-info__btn-text_pos_2"> сейчас</span></span></div>
+                        <div class="card-info__btn btn card-info__btn_credit" data-card-info-btn-credit="data-card-info-btn-credit"><span class="card-info__btn-text card-info__btn-text_credit_pos_1">0-0-024</span><span class="card-info__btn-text card-info__btn-text_credit_pos_2"> Рассрочка</span></div>
+                      </div>
+                    </div>
+                    <div class="card-info__bottom">
+                      <div class="card-info__delivery card-info__delivery_indendt_min">
+                        <div class="card-info__delivery-img-box"><img class="card-info__delivery-img" src="img/delivery.png" alt=""/></div>
+                        <div class="card-info__delivery-text">Бесплатная доставка в день заказа</div>
+                        <div class="card-info__delivery-tooltip" title="текст подсказки"><img class="card-info__delivery-tooltip-img" src="img/question.png" alt=""/></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="detail__title">Преимущества подушки</div>
+          </div>
+          <section class="advantages-detail detail__advantages">
+            <div class="advantages-detail__container container">
+              <div class="advantages-detail__wrap">
+                <div class="advantages-detail__item">
+                  <div class="advantages-detail__img-box"><img class="advantages-detail__img" src="img/pillows_1.png" alt=""/></div>
+                  <div class="advantages-detail__title">Экологически чистые<br/>материалы</div>
+                </div>
+                <div class="advantages-detail__item">
+                  <div class="advantages-detail__img-box"><img class="advantages-detail__img" src="img/pillows_2.png" alt=""/></div>
+                  <div class="advantages-detail__title">Антибактериальные<br/>свойства</div>
+                </div>
+                <div class="advantages-detail__item">
+                  <div class="advantages-detail__img-box"><img class="advantages-detail__img" src="img/pillows_3.png" alt=""/></div>
+                  <div class="advantages-detail__title"> Охлаждает в жару<br/>и греет в холод</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="pillows-advantages pillows-advantages_indent_bottom">
+            <div class="pillows-advantages__container container">
+              <div class="pillows-advantages__wrap">
+                <div class="pillows-advantages__title">Подушка нового поколения</div>
+                <div class="pillows-advantages__subtitle">Зачем выбирать между низкой и высокой подушкой, если можно получить сразу две?<br/>Мы изобрели уникальную подушку в подушке, которая понравится каждому.</div>
+                <div class="pillows-advantages__list js--pillows-advantages-list" data-all-slider="data-all-slider">
+                  <div class="pillows-advantages__item">
+                    <div class="pillows-advantages__img-box"><img class="pillows-advantages__img" src="img/check.png" alt=""/></div>
+                    <div class="pillows-advantages__desc">Позволяет<br/>коже дышать</div>
+                  </div>
+                  <div class="pillows-advantages__item">
+                    <div class="pillows-advantages__img-box"><img class="pillows-advantages__img" src="img/check.png" alt=""/></div>
+                    <div class="pillows-advantages__desc">Легко впитывает<br/>и испаряет влагу</div>
+                  </div>
+                  <div class="pillows-advantages__item">
+                    <div class="pillows-advantages__img-box"><img class="pillows-advantages__img" src="img/check.png" alt=""/></div>
+                    <div class="pillows-advantages__desc">Позволяет<br/>коже дышать</div>
+                  </div>
+                </div>
+                <div class="pillows-advantages__main-img-box"><img class="pillows-advantages__main-img" src="img/pillow_main.png" alt=""/></div>
+              </div>
+            </div>
+          </section>
+          <div class="detail__title">Сервис</div>
+          <section class="advantages-detail detail__advantages">
+            <div class="advantages-detail__container container">
+              <div class="advantages-detail__wrap">
+                <div class="advantages-detail__item">
+                  <div class="advantages-detail__img-box"><img class="advantages-detail__img" src="img/pillows_4.png" alt=""/></div>
+                  <div class="advantages-detail__title">5 лет<br/>гарантии</div>
+                </div>
+                <div class="advantages-detail__item">
+                  <div class="advantages-detail__img-box"><img class="advantages-detail__img" src="img/pillows_5.png" alt=""/></div>
+                  <div class="advantages-detail__title">Бесплатная<br/>доставка</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- список ТП-->
+        <script>var offersList = "[{&quot;id&quot;:&quot;1&quot;,&quot;data&quot;:{&quot;PRODUCT_ID&quot;:&quot;1070&quot;,&quot;BASE_PRICE&quot;:&quot;49 491 р.&quot;,&quot;OLD_PRICE&quot;:&quot;54 990 р.&quot;,&quot;SIZE&quot;:&quot;140 x 200&quot;,&quot;SIZE_ID&quot;:&quot;11&quot;,&quot;NAME&quot;:&quot;Матрас Blue Sleep Concept 180 X 200&quot;,&quot;GABARITY&quot;:&quot;180 X 200 X 24 см.&quot;,&quot;CREDIT_RENT&quot;:&quot;3 000&quot;,&quot;CREDIT_RENT_IS_SHOW&quot;:&quot;TRUE&quot;,&quot;WEIGHT&quot;:&quot;29 кг.&quot;,&quot;DISCOUNT&quot;:&quot;15&quot;,&quot;DISCOUNT_TYPE&quot;:&quot;%&quot;,&quot;DISCOUNT_PERCENT_TIME&quot;:&quot;до 05.06&quot;,&quot;IMG&quot;:&quot;img/c/sets_1.jpg&quot;}},{&quot;id&quot;:&quot;2&quot;,&quot;data&quot;:{&quot;PRODUCT_ID&quot;:&quot;1071&quot;,&quot;BASE_PRICE&quot;:&quot;29 491 р.&quot;,&quot;OLD_PRICE&quot;:&quot;24 990 р.&quot;,&quot;SIZE&quot;:&quot;80 X 200&quot;,&quot;SIZE_ID&quot;:&quot;12&quot;,&quot;NAME&quot;:&quot;Матрас Blue Sleep Concept 80 X 200&quot;,&quot;GABARITY&quot;:&quot;80 X 200 X 24 см.&quot;,&quot;CREDIT_RENT&quot;:&quot;2 000&quot;,&quot;WEIGHT&quot;:&quot;24 кг.&quot;,&quot;DISCOUNT&quot;:&quot;&quot;,&quot;DISCOUNT_TYPE&quot;:&quot;%&quot;,&quot;CREDIT_RENT_IS_SHOW&quot;:&quot;FALSE&quot;,&quot;DISCOUNT_PERCENT_TIME&quot;:&quot;до 01.06&quot;}},{&quot;id&quot;:&quot;3&quot;,&quot;data&quot;:{&quot;PRODUCT_ID&quot;:&quot;1073&quot;,&quot;BASE_PRICE&quot;:&quot;39 491 р.&quot;,&quot;OLD_PRICE&quot;:&quot;&quot;,&quot;SIZE&quot;:&quot;120 X 200&quot;,&quot;SIZE_ID&quot;:&quot;13&quot;,&quot;NAME&quot;:&quot;Матрас Blue Sleep Concept 120 X 200&quot;,&quot;GABARITY&quot;:&quot;120 X 200 X 24 см.&quot;,&quot;CREDIT_RENT&quot;:&quot;3 100&quot;,&quot;WEIGHT&quot;:&quot;23 кг.&quot;,&quot;DISCOUNT&quot;:&quot;1500&quot;,&quot;DISCOUNT_TYPE&quot;:&quot;Р&quot;,&quot;DISCOUNT_PERCENT_TIME&quot;:&quot;до 05.09&quot;,&quot;CREDIT_RENT_IS_SHOW&quot;:&quot;TRUE&quot;}},{&quot;id&quot;:&quot;4&quot;,&quot;data&quot;:{&quot;PRODUCT_ID&quot;:&quot;1074&quot;,&quot;BASE_PRICE&quot;:&quot;44 491 р.&quot;,&quot;OLD_PRICE&quot;:&quot;&quot;,&quot;SIZE&quot;:&quot;140 x 200&quot;,&quot;SIZE_ID&quot;:&quot;14&quot;,&quot;NAME&quot;:&quot;Матрас Blue Sleep Concept 140x200&quot;,&quot;GABARITY&quot;:&quot;140 x 200 X 24 см.&quot;,&quot;CREDIT_RENT&quot;:&quot;1 100&quot;,&quot;WEIGHT&quot;:&quot;21 кг.&quot;,&quot;DISCOUNT&quot;:&quot;&quot;,&quot;DISCOUNT_TYPE&quot;:&quot;Р&quot;,&quot;CREDIT_RENT_IS_SHOW&quot;:&quot;TRUE&quot;,&quot;DISCOUNT_PERCENT_TIME&quot;:&quot;до 01.09&quot;}},{&quot;id&quot;:&quot;5&quot;,&quot;data&quot;:{&quot;PRODUCT_ID&quot;:&quot;1075&quot;,&quot;BASE_PRICE&quot;:&quot;59 491 р.&quot;,&quot;OLD_PRICE&quot;:&quot;59 990 р.&quot;,&quot;SIZE&quot;:&quot;160 X 200&quot;,&quot;SIZE_ID&quot;:&quot;15&quot;,&quot;NAME&quot;:&quot;Матрас Blue Sleep Concept 160 X 200&quot;,&quot;GABARITY&quot;:&quot;160 X 200 X 22 см.&quot;,&quot;CREDIT_RENT&quot;:&quot;1 200&quot;,&quot;WEIGHT&quot;:&quot;22 кг.&quot;,&quot;DISCOUNT&quot;:&quot;20&quot;,&quot;DISCOUNT_TYPE&quot;:&quot;%&quot;,&quot;CREDIT_RENT_IS_SHOW&quot;:&quot;TRUE&quot;,&quot;DISCOUNT_PERCENT_TIME&quot;:&quot;до 05.01&quot;}}]".replace(/&quot;/g, '"');</script>
+        <div class="basket-modal" data-basket-modal="data-basket-modal">
+          <div class="basket-modal__form" action="" data-basket-modal-form="data-basket-modal-form">
+            <div class="basket-modal__wrap">
+              <div class="basket-modal__title-count"><span class="basket-modal__title-count-text basket-modal__title-count-text_size_big">В вашей корзине</span><span class="basket-modal__title-count-number" data-basket-modal-title-count-number="data-basket-modal-title-count-number">12</span><span class="basket-modal__title-count-text">товара</span></div>
+              <div class="basket-modal__close" data-basket-modal-close="data-basket-modal-close"><img class="basket-modal__img-close" src="img/basket_plus.png" alt=""/></div>
+              <div class="basket-modal__delivery">
+                <div class="basket-modal__delivery-img-box"><img class="basket-modal__delivery-img" src="img/delivery.png" alt=""/></div>
+                <div class="basket-modal__delivery-text">Бесплатная доставка в день заказа</div>
+              </div>
+              <div class="basket-modal__inner-wrap" data-promo-outer-wrap="data-promo-outer-wrap">
+                <div class="basket-modal__list">
+                  <div class="basket-modal__item" data-basket-modal-item="data-basket-modal-item" data-basket-modal-item-data-prop-id="831">
+                    <div class="basket-modal__column basket-modal__column_pos_1"><a class="basket-modal__img-box" href="https://bluesleep.ru/catalog/odeyalo/odeyalo_duvet/"><img class="basket-modal__img" src="img/c/basket_1.jpg" alt="Одеяло Blue Sleep Duvet 205x140" title="Одеяло Blue Sleep Duvet 205x140"/></a></div>
+                    <div class="basket-modal__column basket-modal__column_pos_2">
+                      <div class="basket-modal__row basket-modal__row_pos_1">
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_1"><a class="basket-modal__title" href="https://bluesleep.ru/catalog/odeyalo/odeyalo_duvet/" basket-modal-title="basket-modal-title">Одеяло Blue Sleep Duvet 205x140</a></div>
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_2">
+                          <button class="basket-modal__remove" data-basket-modal-remove="data-basket-modal-remove"><img class="basket-modal__remove-img" src="img/basket-remove.png" alt=""/></button>
+                        </div>
+                      </div>
+                      <div class="basket-modal__row basket-modal__row_pos_2">
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_1">
+                          <div class="basket-modal__price"><span class="basket-modal__price-text">12 990</span><span class="basket-modal__price-currency">руб.</span></div>
+                          <div class="basket-modal__price-free hide">Бесплатно</div>
+                        </div>
+                      </div>
+                      <div class="basket-modal__row basket-modal__row_pos_3" data-counter-amount-wrap="data-counter-amount-wrap">
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_1">
+                          <input class="basket-modal__counter-amount-value" value="2" data-counter-amount-value="data-counter-amount-value" data-counter-amount-basket-id="data-counter-amount-basket-id" data-counter-amount-product-id="data-counter-amount-product-id"/>
+                          <div class="basket-modal__counter-amount-text">шт.</div>
+                        </div>
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_2">
+                          <div class="counter-amount" data-counter-amount="data-counter-amount">
+                            <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_minus.png" alt=""/></button>
+                            <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_plus.png" alt=""/></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="basket-modal__item" data-basket-modal-item="data-basket-modal-item" data-basket-modal-item-data-prop-id="836">
+                    <div class="basket-modal__column basket-modal__column_pos_1"><a class="basket-modal__img-box" href="https://bluesleep.ru/catalog/pillow/podushka_anatomicheskay/"><img class="basket-modal__img" src="img/c/basket_2.jpg" alt="Комплект Perfect Hybrid 160" title="Комплект Perfect Hybrid 160"/></a></div>
+                    <div class="basket-modal__column basket-modal__column_pos_2">
+                      <div class="basket-modal__row basket-modal__row_pos_1">
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_1"><a class="basket-modal__title" href="https://bluesleep.ru/catalog/pillow/podushka_anatomicheskay/" basket-modal-title="basket-modal-title">Комплект Perfect Hybrid 160</a></div>
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_2">
+                          <button class="basket-modal__remove" data-basket-modal-remove="data-basket-modal-remove"><img class="basket-modal__remove-img" src="img/basket-remove.png" alt=""/></button>
+                        </div>
+                      </div>
+                      <div class="basket-modal__row basket-modal__row_pos_2">
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_1">
+                          <div class="basket-modal__price"><span class="basket-modal__price-text">66 495</span><span class="basket-modal__price-currency">руб.</span></div>
+                          <div class="basket-modal__price-free hide">Бесплатно</div>
+                        </div>
+                      </div>
+                      <div class="basket-modal__row basket-modal__row_pos_3" data-counter-amount-wrap="data-counter-amount-wrap">
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_1">
+                          <input class="basket-modal__counter-amount-value" value="1" data-counter-amount-value="data-counter-amount-value" data-counter-amount-basket-id="data-counter-amount-basket-id" data-counter-amount-product-id="data-counter-amount-product-id"/>
+                          <div class="basket-modal__counter-amount-text">шт.</div>
+                        </div>
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_2">
+                          <div class="counter-amount" data-counter-amount="data-counter-amount">
+                            <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_minus.png" alt=""/></button>
+                            <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_plus.png" alt=""/></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="basket-modal__item" data-basket-modal-item="data-basket-modal-item" data-basket-modal-item-data-prop-id="836">
+                    <div class="basket-modal__column basket-modal__column_pos_1"><a class="basket-modal__img-box" href="https://bluesleep.ru/catalog/pillow/podushka_anatomicheskay/"><img class="basket-modal__img" src="img/c/basket_3.jpg" alt="Комплект Perfect Hybrid 160" title="Комплект Perfect Hybrid 160"/></a></div>
+                    <div class="basket-modal__column basket-modal__column_pos_2">
+                      <div class="basket-modal__row basket-modal__row_pos_1">
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_1"><a class="basket-modal__title" href="https://bluesleep.ru/catalog/pillow/podushka_anatomicheskay/" basket-modal-title="basket-modal-title">Комплект Perfect Hybrid 160</a></div>
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_2">
+                          <button class="basket-modal__remove" data-basket-modal-remove="data-basket-modal-remove"><img class="basket-modal__remove-img" src="img/basket-remove.png" alt=""/></button>
+                        </div>
+                      </div>
+                      <div class="basket-modal__row basket-modal__row_pos_2">
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_1">
+                          <div class="basket-modal__price"><span class="basket-modal__price-text">66 495</span><span class="basket-modal__price-currency">руб.</span></div>
+                          <div class="basket-modal__price-free hide">Бесплатно</div>
+                        </div>
+                      </div>
+                      <div class="basket-modal__row basket-modal__row_pos_3" data-counter-amount-wrap="data-counter-amount-wrap">
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_1">
+                          <input class="basket-modal__counter-amount-value" value="1" data-counter-amount-value="data-counter-amount-value" data-counter-amount-basket-id="data-counter-amount-basket-id" data-counter-amount-product-id="data-counter-amount-product-id"/>
+                          <div class="basket-modal__counter-amount-text">шт.</div>
+                        </div>
+                        <div class="basket-modal__inner-column basket-modal__inner-column_pos_2">
+                          <div class="counter-amount" data-counter-amount="data-counter-amount">
+                            <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_minus.png" alt=""/></button>
+                            <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_plus.png" alt=""/></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <sectionn class="promo basket-modal__promo">
+                  <div class="promo__wrap" data-promo-wrap="data-promo-wrap">
+                    <div class="promo__top active" data-promo-top="data-promo-top">
+                      <button class="promo__btn"><span class="promo__btn-text">У меня есть промокод</span><img class="promo__btn-img" src="img/plus_blue.png" alt=""/></button>
+                    </div>
+                    <div class="promo__bottom" data-promo-bottom="data-promo-bottom">
+                      <div class="promo__btn-text promo__btn-text_indent_big">Промокод</div>
+                      <div class="promo__inner-wrap">
+                        <!--span.promo__legend Промокод:-->
+                        <input class="promo__input" type="search" placeholder="" data-promo-input="data-promo-input" value=""/>
+                      </div>
+                      <button class="promo__btn-submit" data-promo-btn-submit="data-promo-btn-submit"><span class="promo__btn-submit-text">Применить</span></button>
+                      <div class="promo__error">Промокод устарел</div>
+                    </div>
+                  </div>
+                </sectionn>
+                <div class="basket-modal__bottom">
+                  <div class="basket-modal__bottom-row">
+                    <div class="basket-modal__bottom-column basket-modal__bottom-column_pos_1">
+                      <div class="basket-modal__bottom-text">Общая сумма:</div>
+                    </div>
+                    <div class="basket-modal__bottom-column basket-modal__bottom-column_pos_2">
+                      <div class="basket-modal__sum"><span class="basket-modal__sum-text-number">75 787</span><span class="basket-modal__sum-text-currency">руБ.</span></div>
+                    </div>
+                  </div>
+                  <div class="basket-modal__bottom-row">
+                    <div class="basket-modal__bottom-column basket-modal__bottom-column_pos_1">
+                      <div class="basket-modal__bottom-text">Доставка:</div>
+                    </div>
+                    <div class="basket-modal__bottom-column basket-modal__bottom-column_pos_2">
+                      <div class="basket-modal__bottom-text">Бесплатно</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="promo-part" data-promo-part="data-promo-part">
+                  <div class="promo-part__wrap">
+                    <div class="promo-part__row promo-part__row_pos_1">
+                      <div class="promo-part__column promo-part__column_pos_1">
+                        <div class="promo-part__inner-wrap"><span class="promo-part__title" data-promo-part-title="data-promo-part-title">BLACKFRIDAY</span>
+                          <div class="promo-part__btn" data-promo-part-btn="data-promo-part-btn"><img class="promo-part__img" src="img/plus.png" alt=""/></div>
+                        </div>
+                      </div>
+                      <div class="promo-part__column promo-part__column_pos_2">
+                        <div class="promo-part__discount" data-promo-part-count="data-promo-part-count">- 13 123 руб.</div>
+                      </div>
+                    </div>
+                    <div class="promo-part__row promo-part__row_pos_2">
+                      <div class="promo-part__column promo-part__column_pos_1">
+                        <div class="promo-part__title-sum">Общая сумма:</div>
+                      </div>
+                      <div class="promo-part__column promo-part__column_pos_2">
+                        <div class="promo-part__price">
+                          <div class="promo-part__old-price" data-promo-part-old-price="data-promo-part-old-price">75 789 РУБ.</div>
+                          <div class="promo-part__new-price" data-promo-part-new-price="data-promo-part-new-price">62 666 РУБ.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basket-modal__btn-wrap"><a class="basket-modal__btn btn" href="#">Оформить заказ</a></div>
+                <div class="basket-modal__credit"><span class="basket-modal__credit-text">0-0-24 от  3 000 руб./месяц</span><a class="basket-modal__credit-link" href="#">Подробнее</a></div>
+                <div class="more-products basket-modal__more-products">
+                  <div class="more-products__wrap">
+                    <div class="more-products__main-title">Идеальная пара к Вашему заказу</div>
+                    <div class="more-products__list js--more-products-list" data-more-products-list="data-more-products-list">
+                      <div class="more-products__item">
+                        <div class="more-products__top"><a class="more-products__title" href="#">Одеяло Blue Sleep Duvet</a></div>
+                        <div class="more-products__bottom">
+                          <div class="more-products__bottom-column more-products__bottom-column_pos_1"><a class="more-products__img-box" href="#"><img class="more-products__img" src="img/c/blogers_1.jpg" alt=""/></a></div>
+                          <div class="more-products__bottom-column more-products__bottom-column_pos_2">
+                            <div class="counter-amount more-products__counter-amount" data-counter-amount-wrap="data-counter-amount-wrap">
+                              <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/minus.png" alt=""/></button>
+                              <input class="counter-amount__value" value="1" data-counter-amount-value="data-counter-amount-value"/>
+                              <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/plus.png" alt=""/></button>
+                            </div>
+                            <div class="more-products__btn-wrap">
+                              <button class="more-products__btn btn">Добавить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="more-products__item">
+                        <div class="more-products__top"><a class="more-products__title" href="#">Одеяло Blue Sleep Duvet</a></div>
+                        <div class="more-products__bottom">
+                          <div class="more-products__bottom-column more-products__bottom-column_pos_1"><a class="more-products__img-box" href="#"><img class="more-products__img" src="img/c/blogers_1.jpg" alt=""/></a></div>
+                          <div class="more-products__bottom-column more-products__bottom-column_pos_2">
+                            <div class="counter-amount more-products__counter-amount">
+                              <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_minus.png" alt=""/></button>
+                              <input class="counter-amount__value js--counter-amount-value basket-order__counter-amount-value" value="1"/>
+                              <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_plus.png" alt=""/></button>
+                            </div>
+                            <div class="more-products__btn-wrap">
+                              <button class="more-products__btn btn">Добавить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="more-products__item">
+                        <div class="more-products__top"><a class="more-products__title" href="#">Одеяло Blue Sleep Duvet</a></div>
+                        <div class="more-products__bottom">
+                          <div class="more-products__bottom-column more-products__bottom-column_pos_1"><a class="more-products__img-box" href="#"><img class="more-products__img" src="img/c/blogers_1.jpg" alt=""/></a></div>
+                          <div class="more-products__bottom-column more-products__bottom-column_pos_2">
+                            <div class="counter-amount more-products__counter-amount">
+                              <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/minus.png" alt=""/></button>
+                              <input class="counter-amount__value js--counter-amount-value basket-order__counter-amount-value" value="1"/>
+                              <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/plus.png" alt=""/></button>
+                            </div>
+                            <div class="more-products__btn-wrap">
+                              <button class="more-products__btn btn">Добавить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="footer__container container">
+            <div class="subscription footer__subscription_show-mobile">
+              <div class="subscription__wrap">
+                <div class="subscription__title">Останемся на связи?</div>
+                <div class="subscription__sub-title">	Подпишитесь на новости и акции,<br/>	обещаем не будем спамить бла бла</div>
+                <div class="subscription__input-wrap">
+                  <input class="subscription__input" name="" type="text" placeholder="Ваш e-mail"/>
+                </div>
+                <button class="subscription__btn btn">Подписаться</button>
+              </div>
+            </div>
+        <div class="footer__wrap">
+          <div class="footer__inner-wrap">
+            <div class="footer__column footer__column_pos_1">
+              <div class="footer__logo">
+                <div class="footer__logo-img-box"><img class="footer__logo-img" src="img/b-logo.png" alt=""/></div>
+              </div>
+              <div class="footer__scl scl">
+                <div class="scl__list"><a class="scl__item" href="#">
+                    <svg class="svg-icon svg-icon-i-fb scl__icon">
+                      <use xlink:href="#icon-i-fb"></use>
+                    </svg>
+                    <div class="scl__text"> Facebook</div></a><a class="scl__item" href="#">
+                    <svg class="svg-icon svg-icon-i-vk scl__icon">
+                      <use xlink:href="#icon-i-vk"></use>
+                    </svg>
+                    <div class="scl__text">Vkontakte</div></a><a class="scl__item" href="#">
+                    <svg class="svg-icon svg-icon-i-inst scl__icon">
+                      <use xlink:href="#icon-i-inst"></use>
+                    </svg>
+                    <div class="scl__text">Instagram</div></a><a class="scl__item" href="#">
+                    <svg class="svg-icon svg-icon-i-odn scl__icon">
+                      <use xlink:href="#icon-i-odn"></use>
+                    </svg>
+                    <div class="scl__text">Odnoklassniki</div></a><a class="scl__item" href="#">
+                    <svg class="svg-icon svg-icon-i-ytb scl__icon">
+                      <use xlink:href="#icon-i-ytb"></use>
+                    </svg>
+                    <div class="scl__text">Youtube</div></a></div>
+              </div>
+              <div class="footer__pay pay">
+                <div class="pay__top">
+                  <div class="pay__img-box"><img class="pay__img" src="img/pay_ya.png" alt=""/></div>
+                </div>
+                <div class="pay__bottom">
+                  <div class="pay__list">
+                    <div class="pay__item"><img class="pay__list-img" src="img/ps-visa.png" alt=""/></div>
+                    <div class="pay__item"><img class="pay__list-img" src="img/ps-maca.png" alt=""/></div>
+                    <div class="pay__item"><img class="pay__list-img" src="img/ps-mir.png" alt=""/></div>
+                    <div class="pay__item"><img class="pay__list-img pay__list-img_size_min" src="img/ps-ap_pay.png" alt=""/></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__column footer__column_pos_2">
+              <div class="bottom-menu__list">
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">Матрасы</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">Кровати</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">Подушки</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">Аксессуары</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="/sets.html">Комплекты</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="/gifts.html">Подарки</a></div>
+              </div>
+            </div>
+            <div class="footer__column footer__column_pos_3">
+              <div class="bottom-menu__list">
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="/about-us.html">О нас</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="/reviews.html">Отзывы</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="/partners.html">Где полежать</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="/static-content.html">Контакты</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">Доставка и оплата</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">Условия возврата и обмена</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">FAQ</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">Оптовым клиентам</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">Политика конфиденциальности</a></div>
+                <div class="bottom-menu__item"><a class="bottom-menu__link" href="#">Публичная оферта</a></div>
+              </div>
+            </div>
+            <div class="footer__column footer__column_pos_4">
+              <div class="bottom-contacts">
+                <div class="bottom-contacts__text">Клиентская поддержка</div><a class="bottom-contacts__phone" href="tel:84951279564">8 (495) 153-50-27</a><a class="bottom-contacts__phone" href="tel:84951279564">8 (800) 153-50-27</a>
+                <div class="bottom-contacts__text bottom-contacts__text_indent_big">(по будням с 10:00 до 20:00<br/>	по выходным с 11:00 до 18:00)</div><a class="bottom-contacts__mail" href="mailto:info@bluesleep.ru">info@bluesleep.ru</a>
+              </div><a class="footer__city" href="#">Москва</a>
+            </div>
+            <div class="footer__column footer__column_pos_5">
+                  <div class="subscription footer__subscription">
+                    <div class="subscription__wrap">
+                      <div class="subscription__title">Останемся на связи?</div>
+                      <div class="subscription__sub-title">	Подпишитесь на новости и акции,<br/>	обещаем не будем спамить бла бла</div>
+                      <div class="subscription__input-wrap">
+                        <input class="subscription__input" name="" type="text" placeholder="Ваш e-mail"/>
+                      </div>
+                      <button class="subscription__btn btn">Подписаться</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div style="display: none;">
+      <!--.box-modal.box-modal_size_middle#notification
+      .box-modal__container
+      	.box-modal__header
+      		span.box-modal__title Уведомление
+      		.box-modal__close.arcticmodal-close
+      			+icon('close')
+      	.box-modal__body
+      		.text-center
+      			h2 Вы успешно зарегистрировались
+      			botton.btn.arcticmodal-close ок
+      -->
+    </div>
+  </body>
+  <div class="overlay" data-overlay="data-overlay"></div>
+</html>
