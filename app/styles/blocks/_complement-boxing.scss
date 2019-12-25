@@ -9,15 +9,24 @@
     @include phones {
         max-width: 300px;
     }
+
+  }
+  &__title {
+    @include phones {
+      margin-bottom: 40px;
+    }
   }
   &__subtitle {
     font-size: 18px;
-    line-height: 22px;
     max-width: 705px;
     width: 100%;
     margin: 50px   auto;
     text-align: center;
     font-family: 'CoText-Light', sans-serif;
+    @include phones {
+      font-size: 11px;
+      margin-top: 0;
+    }
   }
   &__list {
     margin: 0 -25px;

@@ -3271,7 +3271,6 @@ body.compensate-for-scrollbar {
 
 .detail__subtitle {
   font-size: 18px;
-  line-height: 22px;
   text-align: center;
   font-weight: 300;
   font-family: 'CoText-Light', sans-serif;
@@ -14660,7 +14659,13 @@ body.compensate-for-scrollbar {
 }
 
 .complement-advantages_indent_bottom {
-  padding-bottom: 100px;
+  padding-bottom: 140px;
+}
+
+@media screen and (max-width: 575px) {
+  .complement-advantages_indent_bottom {
+    padding-bottom: 80px;
+  }
 }
 
 .complement-advantages__wrap {
@@ -14679,6 +14684,8 @@ body.compensate-for-scrollbar {
   display: flex;
   margin-bottom: 70px;
   position: relative;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 575px) {
@@ -14690,8 +14697,6 @@ body.compensate-for-scrollbar {
 }
 
 .complement-advantages__item:nth-child(odd) .complement-advantages__column_pos_2 {
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   left: auto;
   right: 0;
   -webkit-box-ordinal-group: 2;
@@ -14700,8 +14705,6 @@ body.compensate-for-scrollbar {
 }
 
 .complement-advantages__item:nth-child(even) .complement-advantages__column_pos_2 {
-  -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
-  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
   right: auto;
   left: 0;
   -webkit-box-ordinal-group: 3;
@@ -14719,6 +14722,8 @@ body.compensate-for-scrollbar {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .complement-advantages__column_pos_1 {
@@ -14881,14 +14886,26 @@ body.compensate-for-scrollbar {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .complement-boxing__title {
+    margin-bottom: 40px;
+  }
+}
+
 .complement-boxing__subtitle {
   font-size: 18px;
-  line-height: 22px;
   max-width: 705px;
   width: 100%;
   margin: 50px   auto;
   text-align: center;
   font-family: 'CoText-Light', sans-serif;
+}
+
+@media screen and (max-width: 575px) {
+  .complement-boxing__subtitle {
+    font-size: 11px;
+    margin-top: 0;
+  }
 }
 
 .complement-boxing__list {
@@ -14959,14 +14976,30 @@ body.compensate-for-scrollbar {
   margin-bottom: 140px;
 }
 
+@media screen and (max-width: 575px) {
+  .complement-video_indent_bottom {
+    margin-bottom: 80px;
+  }
+}
+
 .complement-video__title {
-  margin-bottom: 40px;
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 575px) {
+  .complement-video__title {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 575px) {
   .complement-video__title-text {
     max-width: 175px;
   }
+}
+
+.complement-video__video {
+  background-color: #000;
 }
 
 .pillows-advantages {

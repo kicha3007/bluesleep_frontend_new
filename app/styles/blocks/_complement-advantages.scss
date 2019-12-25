@@ -5,7 +5,10 @@
     }
   }
   &_indent_bottom {
-    padding-bottom: 100px;
+    padding-bottom: 140px;
+    @include phones {
+      padding-bottom: 80px;
+    }
   }
   &__wrap {
     margin-bottom: -70px;
@@ -17,18 +20,19 @@
     display: flex;
     margin-bottom: 70px;
     position: relative;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.1);
     @include phones {
       margin-bottom: 60px;
         flex-wrap: wrap;
     }
     &:nth-child(odd)  .complement-advantages__column_pos_2 {
-      box-shadow: 5px 5px 10px rgba(0,0,0,.1);
+
       left: auto;
       right: 0;
       order: 1;
     }
     &:nth-child(even)  .complement-advantages__column_pos_2 {
-      box-shadow: -5px 5px 10px rgba(0,0,0,.1);
+
       right: auto;
       left: 0;
       order: 2;
@@ -38,6 +42,7 @@
     }
     &:nth-child(even) {
       justify-content: flex-end;
+      box-shadow: -5px 5px 10px rgba(0,0,0,.1);
 
     }
   }
