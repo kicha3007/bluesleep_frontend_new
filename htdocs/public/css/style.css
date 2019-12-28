@@ -6810,6 +6810,30 @@ body.compensate-for-scrollbar {
   }
 }
 
+.card-info__timer {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 470px;
+}
+
+@media screen and (max-width: 991px) {
+  .card-info__timer {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .card-info__timer {
+    margin-top: 30px;
+  }
+}
+
 .card-info__center-block {
   margin-bottom: 80px;
 }
@@ -14561,6 +14585,10 @@ body.compensate-for-scrollbar {
   display: inline-block;
 }
 
+.timer__wrap {
+  display: inline-block;
+}
+
 .timer__title {
   color: #005eff;
   font-size: 15px;
@@ -14591,6 +14619,10 @@ body.compensate-for-scrollbar {
   .timer .displaySection:first-child {
     margin-right: 10px;
   }
+}
+
+.timer .displaySection:last-child {
+  margin-right: 0;
 }
 
 .timer .displaySection:nth-child(2) .numberDisplay::before,

@@ -1,5 +1,8 @@
 .timer {
   display: inline-block;
+  &__wrap {
+    display: inline-block;
+  }
   &__title {
     color: #005eff;
     font-size: 15px;
@@ -19,6 +22,9 @@
       @include phones {
         margin-right: 10px;
       }
+    }
+    &:last-child {
+      margin-right: 0;
     }
     &:nth-child(2) .numberDisplay::before,
     &:nth-child(2) .numberDisplay::after {

@@ -426,8 +426,8 @@ function DOMready() {
                         arrows: true,
                         fade: true,
                         infinite: false,
-                        lazyLoad: 'ondemand',
                         adaptiveHeight: true,
+                        lazyLoad: 'ondemand',
                         responsive: [
                             {
                                 breakpoint: 980,

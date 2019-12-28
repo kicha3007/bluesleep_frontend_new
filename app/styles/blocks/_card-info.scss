@@ -1,4 +1,17 @@
 .card-info {
+  &__timer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 470px;
+    @include laptop {
+        max-width: none;
+    }
+    @include phones {
+      margin-top: 30px;
+    }
+  }
 
   &__center-block {
     margin-bottom: 80px;

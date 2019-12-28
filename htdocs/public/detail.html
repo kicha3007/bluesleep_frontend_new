@@ -394,13 +394,13 @@
                         	+icon(iconItem.label, 'svg-icon_label-normal slider-detail__icon')
                         -->
                       </div>
-                      <div class="slider-detail__inner-wrap js--slider-detail-for"><a class="slider-detail__view" href="img/c/slider_1.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_1.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_2.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_2.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_3.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_3.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_4.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_4.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_5.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_5.jpg" alt=""/></a>
+                      <div class="slider-detail__inner-wrap js--slider-detail-for"><a class="slider-detail__view" href="img/c/slider_3.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_3.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_2.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_2.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_1.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_1.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_4.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_4.jpg" alt=""/></a><a class="slider-detail__view" href="img/c/slider_5.jpg" data-fancybox="slider-detail"><img class="slider-detail__img" src="img/c/slider_5.jpg" alt=""/></a>
                       </div>
                     </div>
                     <div class="slider-detail__bottom">
-                      <div class="slider-detail__preview" data-slide-detail-nav="1"><img class="slider-detail__preview-img" src="img/c/slider_1.jpg" alt=""/></div>
+                      <div class="slider-detail__preview" data-slide-detail-nav="1"><img class="slider-detail__preview-img" src="img/c/slider_3.jpg" alt=""/></div>
                       <div class="slider-detail__preview" data-slide-detail-nav="2"><img class="slider-detail__preview-img" src="img/c/slider_2.jpg" alt=""/></div>
-                      <div class="slider-detail__preview" data-slide-detail-nav="3"><img class="slider-detail__preview-img" src="img/c/slider_3.jpg" alt=""/></div>
+                      <div class="slider-detail__preview" data-slide-detail-nav="3"><img class="slider-detail__preview-img" src="img/c/slider_1.jpg" alt=""/></div>
                       <div class="slider-detail__preview" data-slide-detail-nav="4"><img class="slider-detail__preview-img" src="img/c/slider_4.jpg" alt=""/></div>
                       <div class="slider-detail__preview" data-slide-detail-nav="5"><img class="slider-detail__preview-img" src="img/c/slider_5.jpg" alt=""/></div>
                     </div>
@@ -548,6 +548,37 @@
                         <div class="card-info__btn btn"><span class="card-info__btn-text card-info__btn-text_pos_1">Купить<span class="card-info__btn-text card-info__btn-text_pos_2"> сейчас</span></span></div>
                         <div class="card-info__btn btn card-info__btn_credit" data-card-info-btn-credit="data-card-info-btn-credit"><span class="card-info__btn-text card-info__btn-text_credit_pos_1">0-0-024</span><span class="card-info__btn-text card-info__btn-text_credit_pos_2"> Рассрочка</span></div>
                       </div>
+                    </div>
+                    <div class="card-info__timer">
+                      <div class="timer">
+                        <div class="timer__title">До конца акции осталось:</div>
+                        <div class="timer__wrap js--timer"><span class="timerDisplay"><span class="displaySection"><span class="numberDisplay">10</span><span class="periodDisplay">день</span></span><span class="displaySection"><span class="numberDisplay">10</span><span class="periodDisplay">часов</span></span><span class="displaySection"><span class="numberDisplay">41</span><span class="periodDisplay">минута</span></span>
+                            <!--span.displaySection
+                            span.numberDisplay
+                            	| 10
+                            span.periodDisplay
+                            	| секунд
+                            
+                            --></span></div>
+                      </div>
+                      <script>
+                        $(function () {
+                        	var $jsExpirationDateTime =  "2019/12/30 23:59";
+                        
+                        		var timerParameters = {
+                        			dateAndTime: $jsExpirationDateTime,
+                        			labelsFormat: true,
+                        			//displayFormat: "DHMS",
+                        			displayFormat: "DHM",
+                        			padZeroes: true,
+                        			timeZone: +3,
+                        		};
+                        
+                        	// Для деталки товара
+                        	if ($(".js--timer").length > 0)
+                        		$(".js--timer").countdowntimer(timerParameters);
+                        });
+                      </script>
                     </div>
                   </div>
                 </div>

@@ -3,6 +3,7 @@ include stars-rating
 include choice-size
 include detail-color
 include detail-parameters
+include timer
 
 
 mixin card-info_2(data)
@@ -41,5 +42,7 @@ mixin card-info_2(data)
 					.card-info__btn.btn.card-info__btn_credit(data-card-info-btn-credit)
 						span.card-info__btn-text.card-info__btn-text_credit_pos_1 0-0-024
 						span.card-info__btn-text.card-info__btn-text_credit_pos_2  Рассрочка
+			.card-info__timer
+				+timer()()
 
 
