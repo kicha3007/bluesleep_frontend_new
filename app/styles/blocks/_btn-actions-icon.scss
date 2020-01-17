@@ -1,6 +1,14 @@
 .btn-actions-icon {
 	display: block;
+	&__order-count_mod_mobile {
+		padding-right: 30px;
 
+		.btn-actions-icon__order-count {
+			right: -25px;
+			top: 0;
+			color: #010101;
+		}
+	}
 
 	&__img_prop_open {
 		display: none;
@@ -62,4 +70,5 @@
 		color: #ffffff;
 		text-align: center;
 	}
+
 }

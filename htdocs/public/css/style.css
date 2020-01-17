@@ -4309,6 +4309,16 @@ body.compensate-for-scrollbar {
   position: relative;
 }
 
+.btn-actions-icon__order-count_mod_mobile {
+  padding-right: 30px;
+}
+
+.btn-actions-icon__order-count_mod_mobile .btn-actions-icon__order-count {
+  right: -25px;
+  top: 0;
+  color: #010101;
+}
+
 .btn-actions-icon__img_prop_open {
   display: none;
 }
