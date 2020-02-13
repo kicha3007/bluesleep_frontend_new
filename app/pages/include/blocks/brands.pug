@@ -2,37 +2,10 @@ mixin brands(data, mods)
 	section.brands&attributes(attributes)
 		.brands__container.container
 			.brands__wrap.js-brands-wrap
-				.brands__item
-					.brands__img-box
-						img.brands__img(src="img/brands_1.png", alt='')
-					.brands__title 100 дней на тест
-					.brands__desc
-						|(Не понравился?
-						| Вернем деньги.)
-				.brands__item
-					.brands__img-box
-						img.brands__img(src="img/brands_2.png", alt='')
-					.brands__title 10 лет гарантии
-					.brands__desc
-						| (Бла бла ченить
-						| написать милое)
-				.brands__item
-					.brands__img-box
-						img.brands__img(src="img/brands_3.png", alt='')
-					.brands__title Бесплатная доставка
-					.brands__desc
-						|(По Москве и Московской области)
-				.brands__item
-					.brands__img-box
-						img.brands__img(src="img/brands_4.png", alt='')
-					.brands__title Британские технологии
-					.brands__desc
-						|(Да да, мы сохранили англиское качество.)
-				.brands__item
-					.brands__img-box
-						img.brands__img(src="img/brands_5.png", alt='')
-					.brands__title Рассрочка 0-0-24
-					.brands__desc
-						| (Бла бла ченить
-						| написать милое.)
-
+				each item in $brandList
+					- mod = typeof item.mod !== "undefined" && item.mod ? "brands__img-box_" + item.mod : ""
+					a.brands__item(href="#")
+						.brands__img-box(class=mod)
+							.brands__inner-img-box
+								img.brands__img(src=item.img.hover, alt='')
+								img.brands__img.brands__img_hov(src=item.img.normal, alt='')

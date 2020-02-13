@@ -236,9 +236,34 @@ function DOMready() {
             ]
         });
 
-    }
+        $(".js-brands-wrap").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: true,
+                        variableWidth: true,
+                    }
+                }
+            ]
+        });
 
-    if (globParam.windowWidth() < globParam.getMediaSize().LAPTOP) {
+
+
+
+
         // Инициализация слайдера advantages-detail
         $(".js-advantages-detail-wrap").slick({
             slidesToShow: 3,
