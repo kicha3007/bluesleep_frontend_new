@@ -1,7 +1,24 @@
 extend include/template_base
 
+include include/blocks/faq
+
 
 block variables
 	- var title = 'Блог детальная';
 
 block content
+	.blog-detail
+		.blog-detail__container.container
+			.blog-detail__link-back-wrap
+				a.blog-detail__link-back(href="#")
+					.blog-detail__link-back-img-box
+						img.blog-detail__link-back__img(src="img/arrow.png", alt='')
+					.blog-detail__link-back-text Вернуться ко всем постам
+			.blog-detail__inner-container
+				.blog-detail__wrap
+					.blog-detail__main-title Здоровый сон: мифы и реальность
+					.blog-detail__date 14:00 30 АВГ 19
+						.blog-detail__content
+		+faq()
+
+
