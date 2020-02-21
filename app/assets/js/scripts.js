@@ -249,14 +249,6 @@ function DOMready() {
                         slidesToShow: 3,
                     }
                 },
-                {
-                    breakpoint: 575,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: true,
-                        variableWidth: true,
-                    }
-                }
             ]
         });
 
