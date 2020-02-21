@@ -2,68 +2,58 @@
   &__content {
     display: flex;
     justify-content: center;
-   padding: 110px 0;
-    @include phones {
-      padding: 40px 0;
+    padding: 200px 0;
+    @include laptop {
+      padding: 100px 0;
     }
-
+    @include phones {
+      padding: 50px 0;
+    }
   }
 
   &__img-box {
     overflow: hidden;
-
+    max-width: 630px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    margin-bottom: 45px;
-
-
+    margin-bottom: 50px;
+    @include laptop {
+      max-width: 400px;
+      margin-bottom: 40px;
+    }
+    @include phones {
+        max-width: 250px;
+    }
   }
 
   &__img {
-display: block;
-max-width: 100%;
-height: auto;
-    width: 170px;
-    @include phones {
-        width: 140px;
-    }
+    display: block;
+    max-width: 100%;
+    height: auto;
+   
   }
 
   &__title {
-    margin-bottom: 20px;
+    color: #000000;
     text-align: center;
-    font-weight: 700;
-    font-size: 46px;
-    font-family: "CoHeadlineCorp-Regular", "CoHeadline-Bold", sans-serif;
-    line-height: 1.3;
-    @include tablets {
-      font-size: 36px;
-    }
-    @include phones {
-      font-size: 30px;
-      margin-bottom: 10px;
-      line-height: 1.1;
-    }
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 18px;
   }
 
-  &__subtitle {
+  &__link {
+    color: #000000;
     text-align: center;
-    color: #1f2633;
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 35px;
-    line-height: 1.5;
-    font-family: 'CoText-Light', sans-serif;
-    @include desktop {
-      font-size: 14px;
-    }
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    margin: 0 auto;
+    display: inline-block;
+    //font-family: "CoText-Bold", sans-serif;
   }
 
-  &__btn.btn-other {
-    width: 245px;
-    padding: 19px 10px;
-    @include phones {
-      padding: 14px 10px;
-    }
+  &__inner-wrap {
+    text-align: center;
   }
 }
