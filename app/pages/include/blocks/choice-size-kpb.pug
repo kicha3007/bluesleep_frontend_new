@@ -1,0 +1,13 @@
+include choice-size-dropdown_no-self-size
+
+mixin choice-size-kpb(data)
+	.choice-size&attributes(attributes)
+		.choice-size-kpb__wrap
+			.choice-size-kpb__column.choice-size-kpb__column_pos_1
+				.choice-size-kpb__title Выберите размер
+				.choice-size-kpb__value(data-choice-size-value="" )
+					span.choice-size-kpb__value-size(data-choice-size-value-size) #{$offersList[0]["data"].GABARITY}
+					span.choice-size-kpb__value-divider /
+					span.choice-size-kpb__value-weight(data-choice-size-value-weight) #{$offersList[0]["data"].WEIGHT}
+			.choice-size-kpb__column.choice-size-kpb__column_pos_2
+				+choice-size-dropdown_no-self-size()(class="choice-size-kpb__dropdown")

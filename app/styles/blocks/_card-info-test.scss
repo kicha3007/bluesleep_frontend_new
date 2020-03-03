@@ -1,0 +1,60 @@
+.card-info-test {
+  display: flex;
+
+
+  &__img-box {
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    @include phones {
+      max-width: 14px;
+    }
+  }
+
+  &__text {
+
+    font-family: 'CoText-Bold', sans-serif;
+    padding-right: 10px;
+
+    color: #005eff;
+    font-size: 18px;
+    font-weight: 700;
+    @include phones {
+      font-size: 10px;
+    }
+  }
+
+  &__tooltip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 23px;
+    background-color: #ff8596;
+    border-radius: 50%;
+    @include phones {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__tooltip-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    @include phones {
+      width: 5px;
+      height: 8px;
+    }
+  }
+
+
+}

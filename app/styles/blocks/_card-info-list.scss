@@ -1,0 +1,44 @@
+.card-info-list {
+  &__wrap {
+    display: flex;
+    margin: 0 -10px;
+    @include phones {
+        display: none;
+    }
+  }
+
+  &__item {
+    margin: 0 10px;
+  }
+
+  &__link {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    transition: .3s ease;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #005eff;
+      display: none;
+    }
+  }
+
+  &__item.active .card-info-list__link {
+    color: #005eff;
+  }
+
+  &__item.active .card-info-list__link:before {
+    display: block;
+  }
+}

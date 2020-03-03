@@ -1,46 +1,139 @@
 // в этом файле исключительно только размеры иконок и больше никакого оформления
-
 // ! Ничего кроме размеров в заданном формате!!!
 // ! Ничего кроме размеров в заданном формате!!!
 // ! Ничего кроме размеров в заданном формате!!!
-
 .svg-icon {
-	&-basket {
-		@include size(28px, 26px)
-	}
-	&-phone_chat {
-		@include size(25px, 27px)
-	}
-	&-advantages_1 {
-		@include size(65px)
-	}
-	&-advantages_2 {
-		@include size(65px)
-	}
-	&-advantages_3 {
-		@include size(65px)
-	}
-	&-advantages_4 {
-		@include size(65px)
-	}
-	&-advantages_5 {
-		@include size(65px)
-	}
-	&-i-fb {
-		@include size(20px)
-	}
-	&-i-inst {
-		@include size(20px)
-	}
-	&-i-odn {
-		@include size(20px)
-	}
-	&-i-vk {
-		@include size(20px)
-	}
-	&-i-ytb {
-		@include size(20px)
-	}
+  &-basket {
+    @include size(28px, 26px)
+  }
+
+  &-phone_chat {
+    @include size(25px, 27px)
+  }
+
+  &-advantages_1 {
+    @include size(65px)
+  }
+
+  &-advantages_2 {
+    @include size(65px)
+  }
+
+  &-advantages_3 {
+    @include size(65px)
+  }
+
+  &-advantages_4 {
+    @include size(65px)
+  }
+
+  &-advantages_5 {
+    @include size(65px)
+  }
+
+  &-i-fb {
+    @include size(20px)
+  }
+
+  &-i-inst {
+    @include size(20px)
+  }
+
+  &-i-odn {
+    @include size(20px)
+  }
+
+  &-i-vk {
+    @include size(20px)
+  }
+
+  &-i-ytb {
+    @include size(20px)
+  }
+
+  &-100days {
+    @include size(127px)
+  }
+
+  &-british_tech {
+    @include size(117px, 99px)
+  }
+
+  &-cart {
+    @include size(127px, 115px)
+  }
+
+  &-concept_2 {
+    @include size(91px, 95px)
+  }
+
+  &-concept_3 {
+    @include size(150px, 150px)
+  }
+
+  &-delivery {
+    @include size(150px, 91px)
+  }
+
+  &-garantee {
+    @include size(107px, 126px)
+  }
+
+  &-rassrochka {
+    @include size(125px)
+  }
+
+  &-subscribe {
+    @include size(354px, 305px)
+  }
+
+  &-bed {
+    @include size(81px, 49px)
+  }
+
+  &-pillow_1 {
+    @include size(65px, 62px)
+  }
+
+  &-pillow_2 {
+    @include size(65px, 62px)
+  }
+
+  &-pillow_3 {
+    @include size(65px, 62px)
+  }
+
+  &-Hypoallergenic {
+    @include size(72px, 49px)
+  }
+
+  &-2zones {
+    @include size(93px, 49px)
+  }
+
+  &-springs {
+    @include size(35px, 52px)
+  }
+
+  &-high {
+    @include size(58px)
+  }
+
+  &-vk {
+    @include size(20px)
+  }
+
+  &-odnoklassniki {
+    @include size(20px)
+  }
+
+  &-youtube {
+    @include size(20px)
+  }
+
+  &-instagram {
+    @include size(20px)
+  }
 }
 
 

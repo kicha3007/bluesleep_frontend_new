@@ -1,0 +1,14 @@
+include choice-self-size-input
+
+mixin choice-self-size(data)
+	.choice-self-size&attributes(attributes)
+		.choice-self-size__wrap
+			.choice-self-size__column.choice-self-size__column_pos_1
+				.choice-self-size__title Свой размер
+				.choice-self-size__value(data-choice-self-size-value="" )
+					span.choice-self-size__value-size(data-choice-self-size-value-size) #{$offersList[0]["data"].GABARITY}
+					span.choice-self-size__value-divider /
+					span.choice-self-size__value-weight(data-choice-self-size-value-weight) #{$offersList[0]["data"].WEIGHT}
+			.choice-self-size__column.choice-self-size__column_pos_2
+				+choice-self-size-input()
+

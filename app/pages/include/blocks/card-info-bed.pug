@@ -1,0 +1,56 @@
+include card-info-tabs
+include stars-rating
+include choice-size-bed
+include detail-color
+include detail-parameters
+include timer
+include card-info-showroom
+
+
+mixin card-info-bed(data)
+	.card-info-bed&attributes(attributes)
+		.card-info-bed__wrap
+			.card-info-bed__top
+				.card-info-bed__main-title
+					| Кровать BlueSleep
+					br
+					| без изголовья
+				+stars-rating()(class="card-info-bed__star-rating card-info-bed__star-rating_indent_min")
+				.card-info-bed__price
+					.card-info-bed__price-new(data-card-info-price-new) #{$offersList[0]["data"].BASE_PRICE}
+					.card-info-bed__price-old(data-card-info-price-old) #{$offersList[0]["data"].OLD_PRICE}
+				.card-info-bed__price-other.card-info-bed__price-other_indent_min(data-card-info-price-other)
+					| Или
+					span.card-info-bed__price-other-numeric
+						| от
+						span.card-info-bed__price-other-number(data-card-info-price-other-number) &#32; #{$offersList[0]["data"].CREDIT_RENT}
+						|&#32; р. /мес
+					|	без переплат
+				+detail-color()(class="card-info-bed__colors card-info-bed__colors_indent_big")
+				+choice-size-bed()(class="card-info-bed__choice-size-bed card-info-bed__choice-size-bed_indent_min")
+				//+flexibox-tooltip()(class="")
+					.card-info-bed__center
+			.card-info-bed__detail-parameter
+				+detail-parameters()()
+			.card-info-bed__card-info-showroom
+				+card-info-showroom()
+			.card-info-bed__center
+				+card-info-tabs()(class="card-info-bed__tabs")
+			.card-info-bed__bottom
+				.card-info-bed__delivery
+					.card-info-bed__delivery-img-box
+						img.card-info-bed__delivery-img(src="img/delivery.png", alt='')
+					.card-info-bed__delivery-text Бесплатная доставка в день заказа
+					.card-info-bed__delivery-tooltip(title="текст подсказки")
+						img.card-info-bed__delivery-tooltip-img(src="img/question.png", alt='')
+				.card-info-bed__btn-wrap
+					.card-info-bed__btn.btn
+						span.card-info-bed__btn-text.card-info-bed__btn-text_pos_1 Купить
+							span.card-info-bed__btn-text.card-info-bed__btn-text_pos_2  сейчас
+					.card-info-bed__btn.btn.card-info-bed__btn_credit(data-card-info-btn-credit)
+						span.card-info-bed__btn-text.card-info-bed__btn-text_credit_pos_1 0-0-024
+						span.card-info-bed__btn-text.card-info-bed__btn-text_credit_pos_2  Рассрочка
+			.card-info-bed__timer
+				+timer()()
+
+

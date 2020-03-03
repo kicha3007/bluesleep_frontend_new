@@ -1,13 +1,14 @@
-<!DOCTYPE hmtl>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
     <title>Bluesleep | Спасибо за заказ</title>
-    <meta name="viewport" content="width=device-width initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,600,700|Play:400,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,600,700|Play:400,700&amp;amp;subset=cyrillic" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=AOdAv1sBAAAAXICWVQIAnR0v82iJhgxR0a27DXyuEK4B5l4AAAAAAAAAAACfKz601Ig5Q29mUYdHawLx3ww6ZQ==" type="text/javascript"></script>
+    <script src="jquery.inputmask.min.js" type="text/javascript"></script>
     <script src="js/svg-sprite.js"></script>
     <script src="js/ion.rangeSlider.js"></script>
     <script src="js/typo.js"></script>
@@ -25,14 +26,14 @@
           <div class="header__wrap">
             <div class="header__top header__top_show_desktop">
               <div class="header__column header__column_size_1">
-                      <div class="logo"><a class="logo__link" href="/"><img class="logo__img" src="img/logo.png" alt=""/></a></div>
+                      <div class="logo"><a class="logo__link" href="/"><img class="logo__img" src="img/logo.png" alt=""></a></div>
               </div>
               <div class="header__column header__column_size_2">
-                <ul class="main-menu" data-main-menu="data-main-menu">
-                  <li class="main-menu__item active" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="index.html">Матрасы</a>
-                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
+                <ul class="main-menu" data-main-menu>
+                  <li class="main-menu__item active" data-main-menu-item><a class="main-menu__link" href="index.html">Матрасы</a>
+                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu>
                                       <div class="dropdown-menu__container container">
-                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_1">
                                             <div class="dropdown-menu__list-title">Матрасы + 1</div>
                                             <ul class="dropdown-menu__list">
@@ -45,29 +46,29 @@
                                           </div>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_2">
                                             <div class="dropdown-menu__inner-wrap">
-                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Hybrid</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Concept</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Gravity</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Чехол на матрас</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
@@ -79,11 +80,11 @@
                                       </div>
                                     </div>
                   </li>
-                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Подушки</a></li>
-                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Аксессуары</a>
-                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
+                  <li class="main-menu__item" data-main-menu-item><a class="main-menu__link" href="/pillows.html">Подушки</a></li>
+                  <li class="main-menu__item" data-main-menu-item><a class="main-menu__link" href="#">Аксессуары</a>
+                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu>
                                       <div class="dropdown-menu__container container">
-                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_1">
                                             <div class="dropdown-menu__list-title">Матрасы + 2</div>
                                             <ul class="dropdown-menu__list">
@@ -96,29 +97,29 @@
                                           </div>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_2">
                                             <div class="dropdown-menu__inner-wrap">
-                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Hybrid</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Concept</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Gravity</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Чехол на матрас</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
@@ -130,13 +131,13 @@
                                       </div>
                                     </div>
                   </li>
-                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="/kpb.html">Комплекты</a></li>
-                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Подарки</a></li>
-                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="#">Доставка</a></li>
-                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="/gifts.html">Подарки</a>
-                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
+                  <li class="main-menu__item" data-main-menu-item><a class="main-menu__link" href="/kpb.html">Комплекты</a></li>
+                  <li class="main-menu__item" data-main-menu-item><a class="main-menu__link" href="/gifts.html">Подарки</a></li>
+                  <li class="main-menu__item" data-main-menu-item><a class="main-menu__link" href="#">Доставка</a></li>
+                  <li class="main-menu__item" data-main-menu-item><a class="main-menu__link" href="/gifts.html">Подарки</a>
+                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu>
                                       <div class="dropdown-menu__container container">
-                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_1">
                                             <div class="dropdown-menu__list-title">Матрасы + 3</div>
                                             <ul class="dropdown-menu__list">
@@ -149,29 +150,29 @@
                                           </div>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_2">
                                             <div class="dropdown-menu__inner-wrap">
-                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Hybrid</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Concept</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Gravity</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Чехол на матрас</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
@@ -183,10 +184,10 @@
                                       </div>
                                     </div>
                   </li>
-                  <li class="main-menu__item" data-main-menu-item="data-main-menu-item"><a class="main-menu__link" href="/gifts.html">Подарки</a>
-                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu="data-dropdown-menu">
+                  <li class="main-menu__item" data-main-menu-item><a class="main-menu__link" href="/gifts.html">Подарки</a>
+                                    <div class="dropdown-menu main-menu__dropdown" data-dropdown-menu>
                                       <div class="dropdown-menu__container container">
-                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap="data-dropdown-menu-wrap">
+                                        <div class="dropdown-menu__wrap" data-dropdown-menu-wrap>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_1">
                                             <div class="dropdown-menu__list-title">Матрасы + 4</div>
                                             <ul class="dropdown-menu__list">
@@ -199,29 +200,29 @@
                                           </div>
                                           <div class="dropdown-menu__column dropdown-menu__column_pos_2">
                                             <div class="dropdown-menu__inner-wrap">
-                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item active" id="hybrid" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/11.jpg" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Hybrid</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 23 020 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="concept" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_2.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Concept</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        13 000 счастливых семей!</span><span class="dropdown-menu__price">Цена от 23 000 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="gravity" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/choice_3.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Blue sleep Gravity</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
                                                        10 000 счастливых семей.</span><span class="dropdown-menu__price">Цена от 26 000 руб.</span></div>
                                               </div>
-                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item="data-dropdown-menu-inner-item">
-                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""/></div>
+                                              <div class="dropdown-menu__inner-item" id="matrass" data-dropdown-menu-inner-item>
+                                                <div class="dropdown-menu__img-box"><img class="dropdown-menu__img" src="img/c/banner_2.png" alt=""></div>
                                                 <div class="dropdown-menu__title">Чехол на матрас</div>
                                                 <div class="dropdown-menu__desc"><span class="dropdown-menu__text">
                                                     Cамый популярный матрас из Британии,  на нем уже спит более
@@ -250,7 +251,7 @@
                         +icon('time', "h-contacts__icon")
                         span.h-contacts__text 08:00–19:00
                         -->
-                      </div><a class="btn-actions-icon" href="#" data-actions-btn-basket="data-actions-btn-basket">
+                      </div><a class="btn-actions-icon" href="#" data-actions-btn-basket>
                         <div class="btn-actions-icon__icon-box">
                           <svg class="svg-icon svg-icon-basket btn-actions-icon__icon svg-icon-basket">
                             <use xlink:href="#icon-basket"></use>
@@ -263,20 +264,20 @@
             <div class="header__bottom header__bottom_show_laptop">
               <div class="header__bottom-column header__bottom-column_pos_1">
                 <div class="header__inner-bottom-column">
-                        <div class="logo-mini"><a class="logo-mini__link" href="/"><img class="logo-mini__img" src="img/logo-mini.png" alt=""/></a></div>
+                        <div class="logo-mini"><a class="logo-mini__link" href="/"><img class="logo-mini__img" src="img/logo-mini.png" alt=""></a></div>
                 </div>
-                <div class="header__inner-bottom-column"><a class="btn-actions-icon" href="#" data-mobile-menu-btn="data-mobile-menu-btn">
-                    <div class="btn-actions-icon__icon-box"><img class="btn-actions-icon__img btn-actions-icon__img_prop_close" src="img/mobile-menu-btn.png" alt=""/><img class="btn-actions-icon__img btn-actions-icon__img_prop_open" src="img/menu-close.png" alt=""/></div></a></div>
+                <div class="header__inner-bottom-column"><a class="btn-actions-icon" href="#" data-mobile-menu-btn>
+                    <div class="btn-actions-icon__icon-box"><img class="btn-actions-icon__img btn-actions-icon__img_prop_close" src="img/mobile-menu-btn.png" alt=""><img class="btn-actions-icon__img btn-actions-icon__img_prop_open" src="img/menu-close.png" alt=""></div></a></div>
               </div>
               <div class="header__bottom-column header__bottom-column_pos_2">
-                <div class="header__inner-bottom-column"><a class="btn-actions-icon" href="#" data-h-phone-btn="data-h-phone-btn">
+                <div class="header__inner-bottom-column"><a class="btn-actions-icon" href="#" data-h-phone-btn>
                           <div class="btn-actions-icon__icon-box">
                             <svg class="svg-icon svg-icon-phone_chat btn-actions-icon__icon svg-icon-phone_chat">
                               <use xlink:href="#icon-phone_chat"></use>
                             </svg>
                           </div></a>
                 </div>
-                <div class="header__inner-bottom-column"><a class="btn-actions-icon btn-actions-icon__order-count_mod_mobile" href="#" data-actions-btn-basket="data-actions-btn-basket">
+                <div class="header__inner-bottom-column"><a class="btn-actions-icon btn-actions-icon__order-count_mod_mobile" href="#" data-actions-btn-basket>
                           <div class="btn-actions-icon__icon-box">
                             <svg class="svg-icon svg-icon-basket btn-actions-icon__icon svg-icon-basket">
                               <use xlink:href="#icon-basket"></use>
@@ -286,24 +287,24 @@
                 </div>
               </div>
             </div>
-            <div class="h-mobile-contacts" data-h-mobile-contacts="data-h-mobile-contacts">
+            <div class="h-mobile-contacts" data-h-mobile-contacts>
               <div class="h-mobile-contacts__column h-mobile-contacts__column_pos_1"><a class="h-mobile-contacts__link" href="tel:84951279564">Позвоните нам</a></div>
               <div class="h-mobile-contacts__column h-mobile-contacts__column_pos_2"><a class="h-mobile-contacts__link" href="mailto:name@email.com">Напишите нам</a></div>
             </div>
-                  <div class="mobile-menu" data-mobile-menu="data-mobile-menu">
+                  <div class="mobile-menu" data-mobile-menu>
                     <div class="mobile-menu__wrapper">
                       <div class="mobile-menu__inner-wrap js-mobile-menu-inner-wrap">
-                        <div class="mobile-menu__item" data-accord-item="data-accord-item">
-                          <div class="mobile-menu__toggle" data-accord-toggle="data-accord-toggle">
+                        <div class="mobile-menu__item" data-accord-item>
+                          <div class="mobile-menu__toggle" data-accord-toggle>
                             <div class="mobile-menu__column mobile-menu__column_pos_1">
                               <div class="mobile-menu__toggle-title">Матрасы</div>
                             </div>
                             <div class="mobile-menu__column mobile-menu__column_pos_2">
-                              <div class="mobile-menu__toggle-inner-btn"><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_plus" src="img/plus.png" alt=""/><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_minus" src="img/minus.png" alt=""/></div>
+                              <div class="mobile-menu__toggle-inner-btn"><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_plus" src="img/plus.png" alt=""><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_minus" src="img/minus.png" alt=""></div>
                             </div>
                             <div class="mobile-menu__title"></div>
                           </div>
-                          <div class="mobile-menu__content" data-accord-content="data-accord-content">
+                          <div class="mobile-menu__content" data-accord-content>
                             <ul class="mobile-menu__list">
                               <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Hybrid</a></li>
                               <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Concept</a></li>
@@ -313,17 +314,17 @@
                             </ul><a class="mobile-menu__show-more" href="#">Смотреть все</a>
                           </div>
                         </div>
-                        <div class="mobile-menu__item" data-accord-item="data-accord-item">
-                          <div class="mobile-menu__toggle" data-accord-toggle="data-accord-toggle">
+                        <div class="mobile-menu__item" data-accord-item>
+                          <div class="mobile-menu__toggle" data-accord-toggle>
                             <div class="mobile-menu__column mobile-menu__column_pos_1">
                               <div class="mobile-menu__toggle-title">Кровати</div>
                             </div>
                             <div class="mobile-menu__column mobile-menu__column_pos_2">
-                              <div class="mobile-menu__toggle-inner-btn" data-toggle-inner-btn="data-toggle-inner-btn"><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_plus" src="img/plus.png" alt=""/><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_minus" src="img/minus.png" alt=""/></div>
+                              <div class="mobile-menu__toggle-inner-btn" data-toggle-inner-btn><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_plus" src="img/plus.png" alt=""><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_minus" src="img/minus.png" alt=""></div>
                             </div>
                             <div class="mobile-menu__title"></div>
                           </div>
-                          <div class="mobile-menu__content" data-accord-content="data-accord-content">
+                          <div class="mobile-menu__content" data-accord-content>
                             <ul class="mobile-menu__list">
                               <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Hybrid</a></li>
                               <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Concept</a></li>
@@ -333,17 +334,17 @@
                             </ul><a class="mobile-menu__show-more" href="#">Смотреть все</a>
                           </div>
                         </div>
-                        <div class="mobile-menu__item" data-accord-item="data-accord-item">
-                          <div class="mobile-menu__toggle" data-accord-toggle="data-accord-toggle">
+                        <div class="mobile-menu__item" data-accord-item>
+                          <div class="mobile-menu__toggle" data-accord-toggle>
                             <div class="mobile-menu__column mobile-menu__column_pos_1">
                               <div class="mobile-menu__toggle-title">Подушки</div>
                             </div>
                             <div class="mobile-menu__column mobile-menu__column_pos_2">
-                              <div class="mobile-menu__toggle-inner-btn"><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_plus" src="img/plus.png" alt=""/><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_minus" src="img/minus.png" alt=""/></div>
+                              <div class="mobile-menu__toggle-inner-btn"><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_plus" src="img/plus.png" alt=""><img class="mobile-menu__toggle-inner-btn-img mobile-menu__toggle-inner-btn-img_prop_minus" src="img/minus.png" alt=""></div>
                             </div>
                             <div class="mobile-menu__title"></div>
                           </div>
-                          <div class="mobile-menu__content" data-accord-content="data-accord-content">
+                          <div class="mobile-menu__content" data-accord-content>
                             <ul class="mobile-menu__list">
                               <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Hybrid</a></li>
                               <li class="mobile-menu__inner-item"><a class="mobile-menu__link" href="#">Concept</a></li>
@@ -655,9 +656,9 @@
             <div class="subscription footer__subscription_show-mobile">
               <div class="subscription__wrap">
                 <div class="subscription__title">Останемся на связи?</div>
-                <div class="subscription__sub-title">	Подпишитесь на новости и акции,<br/>	обещаем не будем спамить бла бла</div>
+                <div class="subscription__sub-title">	Подпишитесь на новости и акции,<br>	обещаем не будем спамить бла бла</div>
                 <div class="subscription__input-wrap">
-                  <input class="subscription__input" name="" type="text" placeholder="Ваш e-mail"/>
+                  <input class="subscription__input" name="" type="text" placeholder="Ваш e-mail">
                 </div>
                 <button class="subscription__btn btn">Подписаться</button>
               </div>
@@ -666,7 +667,7 @@
           <div class="footer__inner-wrap">
             <div class="footer__column footer__column_pos_1">
               <div class="footer__logo">
-                <div class="footer__logo-img-box"><img class="footer__logo-img" src="img/b-logo.png" alt=""/></div>
+                <div class="footer__logo-img-box"><img class="footer__logo-img" src="img/b-logo.png" alt=""></div>
               </div>
               <div class="footer__scl scl">
                 <div class="scl__list"><a class="scl__item" href="#">
@@ -674,33 +675,33 @@
                       <use xlink:href="#icon-i-fb"></use>
                     </svg>
                     <div class="scl__text"> Facebook</div></a><a class="scl__item" href="#">
-                    <svg class="svg-icon svg-icon-i-vk scl__icon">
-                      <use xlink:href="#icon-i-vk"></use>
+                    <svg class="svg-icon svg-icon-vk scl__icon">
+                      <use xlink:href="#icon-vk"></use>
                     </svg>
                     <div class="scl__text">Vkontakte</div></a><a class="scl__item" href="#">
-                    <svg class="svg-icon svg-icon-i-inst scl__icon">
-                      <use xlink:href="#icon-i-inst"></use>
+                    <svg class="svg-icon svg-icon-instagram scl__icon">
+                      <use xlink:href="#icon-instagram"></use>
                     </svg>
                     <div class="scl__text">Instagram</div></a><a class="scl__item" href="#">
-                    <svg class="svg-icon svg-icon-i-odn scl__icon">
-                      <use xlink:href="#icon-i-odn"></use>
+                    <svg class="svg-icon svg-icon-odnoklassniki scl__icon">
+                      <use xlink:href="#icon-odnoklassniki"></use>
                     </svg>
                     <div class="scl__text">Odnoklassniki</div></a><a class="scl__item" href="#">
-                    <svg class="svg-icon svg-icon-i-ytb scl__icon">
-                      <use xlink:href="#icon-i-ytb"></use>
+                    <svg class="svg-icon svg-icon-youtube scl__icon">
+                      <use xlink:href="#icon-youtube"></use>
                     </svg>
                     <div class="scl__text">Youtube</div></a></div>
               </div>
               <div class="footer__pay pay">
                 <div class="pay__top">
-                  <div class="pay__img-box"><img class="pay__img" src="img/pay_ya.png" alt=""/></div>
+                  <div class="pay__img-box"><img class="pay__img" src="img/pay_ya.png" alt=""></div>
                 </div>
                 <div class="pay__bottom">
                   <div class="pay__list">
-                    <div class="pay__item"><img class="pay__list-img" src="img/ps-visa.png" alt=""/></div>
-                    <div class="pay__item"><img class="pay__list-img" src="img/ps-maca.png" alt=""/></div>
-                    <div class="pay__item"><img class="pay__list-img" src="img/ps-mir.png" alt=""/></div>
-                    <div class="pay__item"><img class="pay__list-img pay__list-img_size_min" src="img/ps-ap_pay.png" alt=""/></div>
+                    <div class="pay__item"><img class="pay__list-img" src="img/ps-visa.png" alt=""></div>
+                    <div class="pay__item"><img class="pay__list-img" src="img/ps-maca.png" alt=""></div>
+                    <div class="pay__item"><img class="pay__list-img" src="img/ps-mir.png" alt=""></div>
+                    <div class="pay__item"><img class="pay__list-img pay__list-img_size_min" src="img/ps-ap_pay.png" alt=""></div>
                   </div>
                 </div>
               </div>
@@ -732,16 +733,16 @@
             <div class="footer__column footer__column_pos_4">
               <div class="bottom-contacts">
                 <div class="bottom-contacts__text">Клиентская поддержка</div><a class="bottom-contacts__phone" href="tel:84951279564">8 (495) 153-50-27</a><a class="bottom-contacts__phone" href="tel:84951279564">8 (800) 153-50-27</a>
-                <div class="bottom-contacts__text bottom-contacts__text_indent_big">(по будням с 10:00 до 20:00<br/>	по выходным с 11:00 до 18:00)</div><a class="bottom-contacts__mail" href="mailto:info@bluesleep.ru">info@bluesleep.ru</a>
+                <div class="bottom-contacts__text bottom-contacts__text_indent_big">(по будням с 10:00 до 20:00<br>	по выходным с 11:00 до 18:00)</div><a class="bottom-contacts__mail" href="mailto:info@bluesleep.ru">info@bluesleep.ru</a>
               </div><a class="footer__city" href="#">Москва</a>
             </div>
             <div class="footer__column footer__column_pos_5">
                   <div class="subscription footer__subscription">
                     <div class="subscription__wrap">
                       <div class="subscription__title">Останемся на связи?</div>
-                      <div class="subscription__sub-title">	Подпишитесь на новости и акции,<br/>	обещаем не будем спамить бла бла</div>
+                      <div class="subscription__sub-title">	Подпишитесь на новости и акции,<br>	обещаем не будем спамить бла бла</div>
                       <div class="subscription__input-wrap">
-                        <input class="subscription__input" name="" type="text" placeholder="Ваш e-mail"/>
+                        <input class="subscription__input" name="" type="text" placeholder="Ваш e-mail">
                       </div>
                       <button class="subscription__btn btn">Подписаться</button>
                     </div>
@@ -765,5 +766,5 @@
       -->
     </div>
   </body>
-  <div class="overlay" data-overlay="data-overlay"></div>
+  <div class="overlay" data-overlay></div>
 </html>

@@ -1,0 +1,13 @@
+include choice-size-dropdown_no-self-size
+
+mixin choice-size-bed(data)
+	.choice-size-bed&attributes(attributes)
+		.choice-size-bed__wrap
+			.choice-size-bed__column.choice-size-bed__column_pos_1
+				.choice-size-bed__title Выберите размер
+				.choice-size-bed__value(data-choice-size-value="" )
+					span.choice-size-bed__value-size(data-choice-size-value-size) #{$offersList[0]["data"].GABARITY}
+					span.choice-size-bed__value-divider /
+					span.choice-size-bed__value-weight(data-choice-size-value-weight) #{$offersList[0]["data"].WEIGHT}
+			.choice-size-bed__column.choice-size-bed__column_pos_2
+				+choice-size-dropdown_no-self-size()(class="choice-size-bed__dropdown")

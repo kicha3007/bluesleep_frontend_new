@@ -1,8 +1,8 @@
 extend include/template_base
 
 include include/blocks/slider-derail
-include include/blocks/card-info_3
-include include/blocks/advantages-detail_3
+include include/blocks/card-info-kpb
+include include/blocks/advantages-detail_other-icon-3
 include include/blocks/complement-advantages
 include include/blocks/complement-boxing
 include include/blocks/complement-video
@@ -21,7 +21,7 @@ block content
 				.detail__column.detail__column_pos_1
 					+slider-detail()()
 				.detail__column.detail__column_pos_2
-					+card-info_3()()
+					+card-info-kpb()()
 			.detail__title Преимущества матраса
 			.detail__subtitle
 				| Мы производим наше белье из ткани безупречного
@@ -29,7 +29,7 @@ block content
 				|	 качества с высокими требованиями к технологиям
 				br
 				| изготовления.
-		+advantages-detail_3()()
+		+advantages-detail_other-icon-3()()
 		+complement-advantages()()
 		+complement-video()(class="complement-video_indent_bottom")
 		+complement-boxing()(class="complement-boxing_indent_bottom")

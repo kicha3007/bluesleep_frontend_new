@@ -1,0 +1,9 @@
+mixin choice-size-one-size(data)
+	.choice-size-one-size&attributes(attributes)
+		.choice-size-one-size__wrap
+			.choice-size-one-size__item
+				input.choice-size-one-size__input(value="" placeholder="One size" disabled)
+				.choice-size-one-size__inner-wrap
+					.choice-size-one-size__item-price.choice-size-one-size__item-price_show_mobile(data-card-info-price-new) #{$offersList[0]["data"].BASE_PRICE}
+					.choice-size-one-size__item-arrow
+						img.choice-size-one-size__item-img.choice-size-one-size__item-img_show_mobile(src="img/plus.png", alt='')

@@ -1,0 +1,13 @@
+include choice-size-one-size
+
+mixin choice-size-pillows(data)
+	.choice-size&attributes(attributes)
+		.choice-size-pillows__wrap.choice-size-pillows__wrap_mod_pillows
+			.choice-size-pillows__column.choice-size-pillows__column_pos_1
+				.choice-size-pillows__title Размер
+				.choice-size-pillows__value(data-choice-size-value="" )
+					span.choice-size-pillows__value-size(data-choice-size-value-size) #{$offersList[0]["data"].GABARITY}
+					span.choice-size-pillows__value-divider /
+					span.choice-size-pillows__value-weight(data-choice-size-value-weight) #{$offersList[0]["data"].WEIGHT}
+			.choice-size-pillows__column.choice-size-pillows__column_pos_2.choice-size-pillows__column_mod_pillows
+				+choice-size-one-size()(class="choice-size-pillows__choice-size-one-size")

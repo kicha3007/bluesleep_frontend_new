@@ -1,18 +1,17 @@
 .detail-parameters {
-  margin-bottom: 80px;
   &_indent_min {
     margin-bottom: 40px;
   }
 
-  @include phones {
-    margin-bottom: 50px;
-  }
+
+
   &_indent_min-2 {
     margin-bottom: 40px;
     @include phones {
       margin-bottom: 25px;
     }
   }
+
   &__text {
     color: #000000;
     font-family: 'CoText-Light', sans-serif;
@@ -23,10 +22,8 @@
       line-height: 1.2;
     }
   }
-  //&__text + .detail-parameters__text {
-  //  margin-left: 3px;
-  //  display: inline-block;
-  //}
 
+  &__detail-parameter {
 
+  }
 }

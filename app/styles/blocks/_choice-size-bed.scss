@@ -1,0 +1,49 @@
+.choice-size-bed {
+
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    &_mod_pillows {
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
+  }
+  &__column {
+    &_pos_1 {
+      flex-grow: 1;
+      @include phones {
+        display: none;
+      }
+
+    }
+    &_pos_2 {
+      min-width: 190px;
+
+    }
+    @include phones {
+      width: 100%;
+
+    }
+    &_mod_pillows {
+      max-width: 200px;
+      margin-top: 15px;
+    }
+
+  }
+  &__title {
+    color: #1d1d1d;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+
+  }
+  &__value {
+    color: #1d1d1d;
+    font-size: 14px;
+    font-family: 'CoText-Light', sans-serif;
+
+  }
+}

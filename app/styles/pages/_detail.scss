@@ -48,7 +48,7 @@
 
     &_pos_1 {
       //flex-basis: calc(56% - 70px);
-      width: calc(56% - 70px);
+      width: calc(60% - 70px);
       @include phones {
         margin-right: 0;
         margin-left: 0;
@@ -59,7 +59,7 @@
       }
     }
     &_pos_2 {
-      width: calc(44% - 70px);
+      width: calc(40% - 70px);
       //flex-basis:calc(44% - 140px);
       flex-grow: 10000;
       min-width: 450px;

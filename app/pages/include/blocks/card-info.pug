@@ -1,12 +1,18 @@
 include card-info-tabs
 include stars-rating
 include choice-size
+include choice-self-size
 include timer
+include card-info-list
+include card-info-count
+include card-info-showroom
+include card-info-test
 
 mixin card-info(data)
 	.card-info&attributes(attributes)
 		.card-info__wrap
 			.card-info__top
+				+card-info-list()(class="card-info__card-info-list")
 				.card-info__main-title Матрас Blue Sleep Hybrid
 				+stars-rating()(class="card-info__star-rating")
 				.card-info__desc
@@ -25,16 +31,17 @@ mixin card-info(data)
 						|&#32; р. /мес
 					|	без переплат
 					//+flexibox-tooltip()(class="flexibox-tooltip_indent")
-				+choice-size()(class="card-info__choice-size")
+				.card-info__choice-size-wrap
+					.card-info__choice-size-column.choice-size-column_pos_1
+						+choice-size()(class="card-info__choice-size")
+						+card-info-count()(class="card-info__card-info-count")
+					.card-info__choice-size-column.choice-size-column_pos_2
+						+choice-self-size()(class="card-info__choice-self-size")
 			.card-info__center
+				+card-info-showroom()(class="card-info__card-info-showroom")
+				+card-info-test()(class="card-info__card-info-test")
 				+card-info-tabs()(class="card-info__tabs")
 			.card-info__bottom
-				.card-info__delivery
-					.card-info__delivery-img-box
-						img.card-info__delivery-img(src="img/delivery.png", alt='')
-					.card-info__delivery-text Бесплатная доставка в день заказа
-					.card-info__delivery-tooltip(title="текст подсказки")
-						img.card-info__delivery-tooltip-img(src="img/question.png", alt='')
 				.card-info__btn-wrap
 					.card-info__btn.btn
 						span.card-info__btn-text.card-info__btn-text_pos_1 Купить
@@ -42,6 +49,12 @@ mixin card-info(data)
 					.card-info__btn.btn.card-info__btn_credit(data-card-info-btn-credit)
 						span.card-info__btn-text.card-info__btn-text_credit_pos_1 0-0-024
 						span.card-info__btn-text.card-info__btn-text_credit_pos_2  Рассрочка
+				.card-info__delivery
+					.card-info__delivery-img-box
+						img.card-info__delivery-img(src="img/delivery.png", alt='')
+					.card-info__delivery-text Бесплатная доставка в день заказа
+					.card-info__delivery-tooltip(title="текст подсказки")
+						img.card-info__delivery-tooltip-img(src="img/question.png", alt='')
 			.card-info__timer
 				+timer()()
 

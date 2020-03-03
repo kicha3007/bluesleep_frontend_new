@@ -1,0 +1,57 @@
+include choice-size-pillows
+include timer
+include stars-rating
+include card-info-showroom
+
+mixin card-info-pillows(data)
+	.card-info-pillows&attributes(attributes)
+		.card-info-pillows__wrap
+			.card-info-pillows__top
+				.card-info-pillows__main-title Подушка BlueSleep
+				+stars-rating()(class="card-info-pillows__star-rating stars-rating_mod_pillows")
+				.card-info-pillows__price.card-info-pillows__price_mod_pillows
+					.card-info-pillows__price-new(data-card-info-price-new) #{$offersList[0]["data"].BASE_PRICE}
+					.card-info-pillows__price-old(data-card-info-price-old) #{$offersList[0]["data"].OLD_PRICE}
+				.card-info-pillows__price-other(data-card-info-price-other)
+					| Или
+					span.card-info-pillows__price-other-numeric
+						| от
+						span.card-info-pillows__price-other-number(data-card-info-price-other-number) &#32; #{$offersList[0]["data"].CREDIT_RENT}
+						|&#32; р. /мес
+					|	без переплат
+					//+flexibox-tooltip()(class="flexibox-tooltip_indent")
+				+choice-size-pillows()(class="")
+				.card-info-pillows__desc
+					| Состав:
+					br
+					| Анатомическая основа подушки:
+					br
+					| Инновационная пена Memory Granular Foam
+					br
+					| Съемный чехол:
+					br
+					| Высокопрочный бельгийский трикотаж, состав:
+					br
+					| 60 % полиэстер, 40 % лиоцель
+			.card-info-pillows__card-info-showroom
+				+card-info-showroom()
+			.card-info-pillows__center-block
+				+timer()()
+			.card-info-pillows__center
+
+			.card-info-pillows__center.card-info-pillows__center_indent_big
+				.card-info-pillows__btn-wrap
+					.card-info-pillows__btn.btn
+						span.card-info-pillows__btn-text.card-info-pillows__btn-text_pos_1 Купить
+							span.card-info-pillows__btn-text.card-info-pillows__btn-text_pos_2  сейчас
+					.card-info-pillows__btn.btn.card-info-pillows__btn_credit(data-card-info-btn-credit)
+						span.card-info-pillows__btn-text.card-info-pillows__btn-text_credit_pos_1 0-0-024
+						span.card-info-pillows__btn-text.card-info-pillows__btn-text_credit_pos_2  Рассрочка
+			.card-info-pillows__bottom
+				.card-info-pillows__delivery.card-info-pillows__delivery_indendt_min
+					.card-info-pillows__delivery-img-box
+						img.card-info-pillows__delivery-img(src="img/delivery.png", alt='')
+					.card-info-pillows__delivery-text Бесплатная доставка в день заказа
+					.card-info-pillows__delivery-tooltip(title="текст подсказки")
+						img.card-info-pillows__delivery-tooltip-img(src="img/question.png", alt='')
+

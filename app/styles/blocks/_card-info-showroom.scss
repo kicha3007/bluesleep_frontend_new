@@ -1,0 +1,42 @@
+.card-info-showroom {
+    display: flex;
+
+  &__img-box {
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    @include phones {
+      max-width: 14px;
+    }
+  }
+
+  &__text {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'CoText-Light', sans-serif;
+    padding-right: 10px;
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+      font-family: 'CoText-Bold', sans-serif;
+      color: #000000;
+      margin: 0 2px;
+    }
+    @include phones {
+      font-size: 10px;
+    }
+  }
+
+
+
+
+
+}
