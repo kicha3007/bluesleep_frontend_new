@@ -11520,6 +11520,9 @@ body.compensate-for-scrollbar {
 }
 
 .sets-info__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   list-style-type: none;
   padding-left: 35px;
   position: relative;
@@ -11558,6 +11561,17 @@ body.compensate-for-scrollbar {
     height: 5px;
     top: 5px;
   }
+}
+
+.sets-info__list-item-column_pos_1 {
+  width: 70%;
+}
+
+.sets-info__list-item-column_pos_2 {
+  width: 30%;
+  margin-left: 20px;
+  color: #005eff;
+  font-weight: 700;
 }
 
 .sets-info__list-title {

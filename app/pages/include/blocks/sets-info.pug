@@ -14,12 +14,37 @@ mixin sets-info(data)
 				.sets-info__list-wrap
 					.sets-info__list-title Состав комплекта:
 					ul.sets-info__list
-						li.sets-info__list-item Гибридный матрас BlueSleep 140х200
-						li.sets-info__list-item Чехол на матрас 140x200
-						li.sets-info__list-item Одеяло Blue Sleep Duvet 205x172
-						li.sets-info__list-item Подушка в подушке BlueSleep (2 шт.)
-						li.sets-info__list-item Чехол на подушку (2 шт.)
-						li.sets-info__list-item КПБ Bluesleep satin white двухспальный
+						li.sets-info__list-item
+							.sets-info__list-item-column.sets-info__list-item-column_pos_1
+								.sets-info__list-item-text Гибридный матрас BlueSleep 140х200
+							.sets-info__list-item-column.sets-info__list-item-column_pos_2
+								.sets-info__list-item-price 12 999 р.
+						li.sets-info__list-item
+							.sets-info__list-item-column.sets-info__list-item-column_pos_1
+								.sets-info__list-item-text Чехол на матрас 140x200
+							.sets-info__list-item-column.sets-info__list-item-column_pos_2
+								.sets-info__list-item-price 999 р.
+						li.sets-info__list-item
+							.sets-info__list-item-column.sets-info__list-item-column_pos_1
+								.sets-info__list-item-text Одеяло Blue Sleep Duvet 205x172
+							.sets-info__list-item-column.sets-info__list-item-column_pos_2
+								.sets-info__list-item-price 1 999 р.
+						li.sets-info__list-item
+							.sets-info__list-item-column.sets-info__list-item-column_pos_1
+								.sets-info__list-item-text Подушка в подушке BlueSleep (2 шт.)
+							.sets-info__list-item-column.sets-info__list-item-column_pos_2
+								.sets-info__list-item-price 2 999 р.
+						li.sets-info__list-item
+							.sets-info__list-item-column.sets-info__list-item-column_pos_1
+								.sets-info__list-item-text Чехол на подушку (2 шт.)
+							.sets-info__list-item-column.sets-info__list-item-column_pos_2
+								.sets-info__list-item-price 299 р.
+						li.sets-info__list-item
+							.sets-info__list-item-column.sets-info__list-item-column_pos_1
+								.sets-info__list-item-text КПБ Bluesleep satin white двухспальный
+							.sets-info__list-item-column.sets-info__list-item-column_pos_2
+								.sets-info__list-item-price 3 199 р.
+
 				+sets-size()(class="sets-info__sets-size")
 				.sets-info__price
 					.sets-info__price-new(data-card-info-price-new) #{data.offersList[0]["data"].BASE_PRICE}
