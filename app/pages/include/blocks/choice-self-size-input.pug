@@ -1,6 +1,8 @@
 mixin choice-self-size-input(data)
-	.choice-self-size-input(data-choice-size-dropdown)&attributes(attributes)
+	.choice-self-size-input&attributes(attributes)
 		.choice-self-size-input__wrap
-			input.choice-self-size-input__input(placeholder="Введите размер" name="selfSize")
+			input.choice-self-size-input__input(placeholder="Введите размер" name="selfSize" data-choice-self-size-input)
+			.choice-self-size-input__clear(data-choice-self-size-clear)
+				img.choice-self-size-input__clear-img(src="img/menu-close.png", alt='')
 
 

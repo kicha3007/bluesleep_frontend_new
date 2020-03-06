@@ -1,0 +1,57 @@
+.tooltip-all {
+  position: relative;
+
+  //  display: flex;
+  //  flex-wrap: wrap;
+  //  justify-content: center;
+  //  align-items: center;
+  //  width: 24px;
+  //  height: 23px;
+  //  background-color: #ff8596;
+  //  border-radius: 50%;
+  //  @include phones {
+  //    width: 14px;
+  //    height: 14px;
+  //  }
+  //}
+  //
+  //&__delivery-tooltip-img {
+  //  display: block;
+  //  max-width: 100%;
+  //  height: auto;
+  //  @include phones {
+  //    width: 5px;
+  //    height: 8px;
+  //  }
+  //}
+
+
+  &__box {
+    position: absolute;
+    bottom: 70%;
+    left: 10px;
+    width: 150px;
+    display: none;
+    min-height: 54px;
+    border-radius: 14px;
+    border: 1px solid #726fd1;
+    background-color: #005eff;
+    padding: 6px 10px;
+    color: #fefefe;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+
+
+    &.active {
+      display: flex;
+    }
+
+    span {
+
+    }
+  }
+}

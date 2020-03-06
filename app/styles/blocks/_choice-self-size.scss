@@ -1,10 +1,8 @@
 .choice-self-size {
   &__wrap {
-    //display: flex;
     align-items: center;
 
     &_mod_pillows {
-      //display: block;
       margin-top: 30px;
       margin-bottom: 25px;
     }
@@ -13,13 +11,9 @@
   &__column {
     &_pos_1 {
       flex-grow: 1;
-      @include phones {
-        display: none;
-      }
     }
 
     &_pos_2 {
-      //display: none;
     }
 
     @include phones {
@@ -37,11 +31,20 @@
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 2px;
+    @include phones {
+      color: #005eff;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      font-size: 12px;
+    }
   }
 
   &__value {
     color: #1d1d1d;
     font-size: 14px;
     font-family: 'CoText-Light', sans-serif;
+    @include phones {
+      display: none;
+    }
   }
 }

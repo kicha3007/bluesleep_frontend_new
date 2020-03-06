@@ -143,7 +143,7 @@
     .choice-size__column {
       margin-bottom: 13px;
       @include phones {
-        margin-bottom: 6px;
+        margin-bottom: 0;
       }
     }
 
@@ -360,4 +360,22 @@
       margin-bottom: 20px;
     }
   }
+
+  &__choice-size-title {
+    display: none;
+    color: #005eff;
+    font-size: 14px;
+    padding-left: 10px;
+    @include phones {
+      display: block;
+      margin-bottom: 2px;
+
+    }
+    &_indent_big {
+      @include phones {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
 }

@@ -1,5 +1,5 @@
 .basket-modal {
-  background-color: #fff;
+  background-color: #ffffff;
   width: 100%;
   max-width: 418px;
   position: absolute;
@@ -15,6 +15,7 @@
   &.active {
     right: 0;
   }
+
   &__title-count {
     display: flex;
     flex-wrap: wrap;
@@ -24,9 +25,8 @@
     @include phones {
       display: none;
     }
-
-
   }
+
   &__close {
     position: absolute;
     top: 15px;
@@ -34,26 +34,31 @@
     transform: rotate(45deg);
     cursor: pointer;
     @include phones {
-        display: none;
+      display: none;
     }
   }
+
   &__title-count-text,
   &__title-count-number {
     color: #005eff;
     font-size: 13px;
     text-align: center;
   }
+
   &__title-count-text {
     @include phones {
       font-size: 11px;
     }
+
     &_size_big {
       width: 100%;
     }
   }
+
   &__title-count-number {
     margin-right: 5px;
   }
+
   &__delivery {
     display: flex;
     margin-bottom: 10px;
@@ -62,12 +67,14 @@
     padding: 18px 15px;
     text-align: center;
   }
+
   &__delivery-img-box {
     padding-right: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
+
   &__delivery-img {
     display: block;
     max-width: 100%;
@@ -76,6 +83,7 @@
       max-width: 14px;
     }
   }
+
   &__delivery-text {
     color: #000000;
     font-size: 16px;
@@ -86,18 +94,21 @@
       font-size: 10px;
     }
   }
+
   &__inner-wrap {
     padding: 0 20px;
     @include phones {
       padding: 0 15px;
     }
   }
+
   &__list {
     margin-bottom: 5px;
     @include phones {
       margin-bottom: 0;
     }
   }
+
   &__item {
     padding: 30px 0;
     margin: 0 -6px;
@@ -108,15 +119,16 @@
       margin: 0 -5px;
     }
   }
+
   &__column {
     display: flex;
     flex-wrap: wrap;
-
     margin: 0 5px;
     @include phones {
       margin: 0 4px;
     }
   }
+
   &__img-box {
     display: flex;
     flex-wrap: wrap;
@@ -129,34 +141,39 @@
       width: 87px;
       height: 74px;
     }
-
   }
+
   &__img {
     display: block;
     max-width: 100%;
     height: auto;
   }
+
   &__title {
     color: #000000;
     font-family: 'CoText-Light', sans-serif;
     font-size: 14px;
     font-weight: 300;
+    line-height: 1.1; 
     @include phones {
       font-size: 11px;
     }
   }
+
   &__row {
     display: flex;
     flex-grow: 1;
     width: 100%;
+
     &_pos_1 {
       margin-bottom: 2px;
     }
+
     &_pos_3 {
       align-items: center;
     }
-
   }
+
   &__remove {
     cursor: pointer;
     background-color: transparent;
@@ -166,15 +183,16 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     @include phones {
-        width: 23px;
+      width: 23px;
     }
-   
   }
+
   &__remove-img {
     display: block;
     max-width: 100%;
     height: auto;
   }
+
   &__price {
     color: #ff8596;
     font-size: 16px;
@@ -183,27 +201,46 @@
     @include phones {
       font-size: 12px;
     }
+
     &.free {
       color: #575757;
       text-decoration: line-through;
-
     }
   }
+
+  &__inner-price {
+    display: inline-block;
+
+    &_price-old {
+      color: #575757;
+      text-decoration: line-through;
+    }
+  }
+
   &__price-free {
     color: #ff8596;
     font-size: 16px;
     font-weight: 700;
-    margin-left: 3px;
+    margin-left: 5px;
     display: inline-block;
+    @include phones {
+      font-size: 12px;
+    }
   }
+
   &__price-text + #{&}__price-currency {
     margin-left: 3px;
   }
+
   &__inner-column {
     &_pos_1 {
       flex-grow: 1;
+      @include phones {
+        line-height: 1.1;
+      }
     }
   }
+
   &__counter-amount-value {
     max-width: 18px;
     width: 100%;
@@ -216,8 +253,8 @@
     @include phones {
       font-size: 11px;
     }
-
   }
+
   &__counter-amount-text {
     display: inline-block;
     font-size: 14px;
@@ -227,6 +264,7 @@
       font-size: 11px;
     }
   }
+
   &__promo {
     display: block;
     margin-bottom: 50px;
@@ -234,16 +272,18 @@
       margin-bottom: 0;
     }
   }
+
   &__bottom {
     margin-bottom: -5px;
-
   }
+
   &__bottom-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 5px;
   }
+
   &__bottom-text {
     color: #000000;
     font-family: 'CoText-Light', sans-serif;
@@ -253,15 +293,18 @@
       font-size: 11px;
     }
   }
+
   &__sum {
     text-transform: uppercase;
     @include phones {
       font-size: 11px;
     }
   }
+
   &__sum-text-currency {
     margin-left: 5px;
   }
+
   &__btn-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -272,6 +315,7 @@
       margin-bottom: 10px;
     }
   }
+
   &__btn {
     min-width: 223px;
     text-align: center;
@@ -280,10 +324,11 @@
     padding-bottom: 8px;
     font-family: "CoHeadlineCorp-Regular", sans-serif;
     @include phones {
-        min-width: 170px;
+      min-width: 170px;
       font-size: 10px;
     }
   }
+
   &__credit {
     text-align: center;
     margin-bottom: 30px;
@@ -301,11 +346,13 @@
       @include phones {
         font-size: 10px;
       }
+
       &:hover {
         text-decoration: none;
       }
     }
   }
+
   &__credit-text {
     color: #000000;
     font-family: 'CoText-Light', sans-serif;
@@ -315,8 +362,26 @@
       font-size: 10px;
     }
   }
+
   &__more-products {
     //margin-top: 50px;
   }
+
+  &__counter-amount-btn-img {
+    &_plus {
+      @include phones {
+        width: 12px;
+        height: 11px;
+      }
+    }
+
+    &_minus {
+      @include phones {
+        width: 9px;
+        height: 1px;
+      }
+    }
+  }
+
 
 }

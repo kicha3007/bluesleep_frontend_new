@@ -1,7 +1,7 @@
 mixin choice-size-dropdown(data)
 	.choice-size-dropdown(data-choice-size-dropdown)&attributes(attributes)
 		.choice-size-dropdown__wrap(data-choice-size-dropdown-wrap)
-			.choice-size-dropdown__active-item(data-choice-size-dropdown-active-item="")
+			.choice-size-dropdown__active-item(data-choice-size-dropdown-active-item="mattress" )
 				.choice-size-dropdown__active-item-pre-text.choice-size-dropdown__active-item-pre-text_show_mobile Размер
 				.choice-size-dropdown__active-item-text(data-choice-size-dropdown-active-item-text="") #{$offersList[0]["data"].SIZE}
 
@@ -18,4 +18,4 @@ mixin choice-size-dropdown(data)
 							span.choice-size-dropdown__text(data-choice-size-dropdown-text) #{sizeItem["data"].SIZE}
 							if(typeof $offersList[sizeIndx]["data"].DISCOUNT !== 'undefined' && $offersList[sizeIndx]["data"].DISCOUNT)
 								span.choice-size-dropdown__discount - &#32; #{$offersList[sizeIndx]["data"].DISCOUNT}  &#32; #{$offersList[sizeIndx]["data"].DISCOUNT_TYPE}
-					a.choice-size-dropdown__other-size(href="#") Свой размер
+					a.choice-size-dropdown__other-size(href="#") Свой размер 

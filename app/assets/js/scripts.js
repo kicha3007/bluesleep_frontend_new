@@ -141,35 +141,30 @@ function DOMready() {
 
     var overlayMain = (function () {
 
+        $("[data-overlay]").on("click", function () {
+            if ($("[data-overlay]").hasClass("under-all")) {
+                $("[data-overlay]").removeClass("under-all");
+            }
 
-
-            $("[data-overlay]").on("click", function () {
-                if($("[data-overlay]").hasClass("under-all")) {
-                    $("[data-overlay]").removeClass("under-all");
-                }
-
-                if($("[data-mobile-menu-btn]").hasClass("active") ) {
-                    mobileMenu.toggleShow.call($("[data-mobile-menu-btn]"));
-                }
-                if($("[data-basket-modal]").hasClass("active") ) {
-                    $("[data-basket-modal]").removeClass("active");
-                    overlayMain.toggleOverlayShowHide();
-                }
-            });
-
+            if ($("[data-mobile-menu-btn]").hasClass("active")) {
+                mobileMenu.toggleShow.call($("[data-mobile-menu-btn]"));
+            }
+            if ($("[data-basket-modal]").hasClass("active")) {
+                $("[data-basket-modal]").removeClass("active");
+                overlayMain.toggleOverlayShowHide();
+            }
+        });
 
         return {
             toggleOverlayShowHide: function (underAll) {
-                if(typeof underAll !== typeof undefined && underAll) {
+                if (typeof underAll !== typeof undefined && underAll) {
                     $("[data-overlay]").toggleClass("under-all");
                 }
 
-
-
                 $("[data-overlay]").toggleClass("active");
                 $("html").toggleClass("overflow-hidden");
-                if($("[data-overlay]").hasClass("active")) {
-                     overleyCheck = true;
+                if ($("[data-overlay]").hasClass("active")) {
+                    overleyCheck = true;
 
                 } else {
                     overleyCheck = false;
@@ -185,7 +180,7 @@ function DOMready() {
                 var self = this;
                 $("[data-mobile-menu-btn]").on("click", function () {
 
-                    if(overleyCheck == false || $("[data-mobile-menu]").hasClass("active")) {
+                    if (overleyCheck == false || $("[data-mobile-menu]").hasClass("active")) {
                         self.toggleShow.call(this);
                     }
                 });
@@ -252,17 +247,13 @@ function DOMready() {
             ]
         });
 
-
-
-
-
         // Инициализация слайдера advantages-detail
         $(".js-advantages-detail-wrap").slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: false,
             dots: true,
-            infinite: false,
+            infinite: true,
             responsive: [
                 {
                     breakpoint: 575,
@@ -309,9 +300,7 @@ function DOMready() {
             ]
         });
 
-
     }
-
 
     if (globParam.windowWidth() < globParam.getMediaSize().PHONES) {
         // Инициализация слайдера complement-boxing
@@ -332,9 +321,7 @@ function DOMready() {
             infinite: false,
         });
 
-
     }
-
 
     // Инициализация слайдера идеальная пара в корзине
     $(".js--more-products-list").slick({
@@ -443,7 +430,7 @@ function DOMready() {
                         arrows: true,
                         fade: true,
                         infinite: false,
-                        adaptiveHeight: true,
+                        // adaptiveHeight: true,
                         lazyLoad: 'ondemand',
                         responsive: [
                             {
@@ -468,18 +455,31 @@ function DOMready() {
         sliderDetail.initFirstActiveSlide();
     }
 
+    $("[data-choice-size-dropdown-active-item='mattress']").on("click", function () {
+        $("[data-choice-self-size-input]").val('');
+    });
+
+    $("[data-choice-self-size-clear]").on("click", function () {
+        $("[data-choice-self-size-input]").val('');
+    });
+
     $("[data-choice-size-dropdown-wrap]").on("click", "[data-choice-size-dropdown-active-item]", function (e) {
         $(e.delegateTarget).find("[data-choice-size-dropdown-inner-wrap]").toggleClass("active");
+      
     });
 
     $("[data-choice-size-dropdown-wrap]").on("click", "[data-choice-size-dropdown-item]", function (e) {
+
         var $this = $(e.currentTarget);
+
         var wrap = $this.closest("[data-choice-size-dropdown-inner-wrap]");
         var item = wrap.find("[data-choice-size-dropdown-item]");
 
         wrap.removeClass("active");
         item.removeClass("active");
         $this.addClass("active");
+
+
         $(e.delegateTarget).find("[data-choice-size-dropdown-active-item-text]").text($this.find("[data-choice-size-dropdown-text]").text());
 
         var offerId = $this.data("choice-size-dropdown-item");
@@ -647,7 +647,7 @@ function DOMready() {
 
     //Показываем модалку корзины
     $("[data-actions-btn-basket]").on("click", function () {
-        if(overleyCheck == false || $("[data-basket-modal]").hasClass("active")) {
+        if (overleyCheck == false || $("[data-basket-modal]").hasClass("active")) {
             overlayMain.toggleOverlayShowHide(true);
             $("[data-basket-modal]").toggleClass("active");
         }
@@ -660,29 +660,17 @@ function DOMready() {
         $("[data-basket-modal]").toggleClass("active");
     });
 
-
     // Гасим нажатие enter
-    $('[data-basket-modal-form]').keydown(function(event){
-        if (event.keyCode == 13)
-        {
+    $('[data-basket-modal-form]').keydown(function (event) {
+        if (event.keyCode == 13) {
             event.preventDefault();
             event.stopPropagation();
             return false;
         }
     });
 
-
-
-
-
-
-
-
-
-
-
     // Корзина минус кол-во
-    $('[data-counter-amount-wrap]').on('click', '[data-counter-amount-btn="minus"]', function(e){
+    $('[data-counter-amount-wrap]').on('click', '[data-counter-amount-btn="minus"]', function (e) {
         var $input = $(e.delegateTarget).find('[data-counter-amount-value]');
         var basketId = parseInt($input.data('counter-amount-basket-id'));
         var productId = parseInt($input.data('counter-amount-product-id'));
@@ -690,8 +678,7 @@ function DOMready() {
 
         // if (isNaN(basketId) || isNaN(currCount)) return;
 
-        if (currCount > 1)
-        {
+        if (currCount > 1) {
             currCount -= 1;
             $input.val(currCount);
             // BluesleepBasketUpdate({
@@ -704,12 +691,12 @@ function DOMready() {
     });
 
     // Корзина плюс кол-во
-    $('[data-counter-amount-wrap]').on('click', '[data-counter-amount-btn="plus"]', function(e){
+    $('[data-counter-amount-wrap]').on('click', '[data-counter-amount-btn="plus"]', function (e) {
         var $input = $(e.delegateTarget).find('[data-counter-amount-value]');
         var basketId = parseInt($input.data('counter-amount-basket-id'));
         var productId = parseInt($input.data('counter-amount-product-id'));
         var currCount = parseInt($input.val());
-       // if (isNaN(basketId) || isNaN(currCount)) return;
+        // if (isNaN(basketId) || isNaN(currCount)) return;
 
         currCount += 1;
         $input.val(currCount);
@@ -721,14 +708,13 @@ function DOMready() {
         // });
     });
 
-
     // Корзина "изменение руками" кол-во
-    $('[data-counter-amount-value]').on('input', function(){
+    $('[data-counter-amount-value]').on('input', function () {
         var $input = $(this);
         var basketId = parseInt($input.data('counter-amount-basket-id'));
         var productId = parseInt($input.data('counter-amount-product-id'));
         var currCount = parseInt($input.val());
-       // if (isNaN(basketId) || isNaN(currCount)) return;
+        // if (isNaN(basketId) || isNaN(currCount)) return;
 
         // BluesleepBasketUpdate({
         //     action: 'updateQuantity',
@@ -752,13 +738,12 @@ function DOMready() {
         }
     });
 
-
     // Корзина удаление товара
-    $('[data-basket-modal-form]').on('click', '[data-basket-modal-remove]', function(){
+    $('[data-basket-modal-form]').on('click', '[data-basket-modal-remove]', function () {
         var basketId = parseInt($(this).data('counter-amount-basket-id'));
         var productId = parseInt($(this).data('counter-amount-product-id'));
         var parentProductId = parseInt($(this).data('parent-product-id'));
-       // if (isNaN(basketId)) return;
+        // if (isNaN(basketId)) return;
 
         //BX.Sale.OrderAjaxComponent.startLoader();
         $(this).closest('[data-basket-modal-item]').remove();
@@ -774,7 +759,7 @@ function DOMready() {
     });
 
     // Применить купон
-    $('[data-basket-modal-form]').on('click', '#order__promocode_apply', function(){
+    $('[data-basket-modal-form]').on('click', '#order__promocode_apply', function () {
         var coupon = $('#bluesleep_coupon').val();
         if (coupon == '')
             return;
@@ -785,19 +770,18 @@ function DOMready() {
         });
     });
 
-
     //Блок с промо кодом
-    $("[data-promo-wrap]").on("click", "[data-promo-top]",  function(e) {
+    $("[data-promo-wrap]").on("click", "[data-promo-top]", function (e) {
         var $this = $(this);
         $this.removeClass("active");
         $(e.delegateTarget).find("[data-promo-bottom]").addClass("active");
     });
 
-    $("[data-promo-wrap]").on("click", "[data-promo-btn-submit]",  function(e) {
+    $("[data-promo-wrap]").on("click", "[data-promo-btn-submit]", function (e) {
         var inputValue = $(e.delegateTarget).find("[data-promo-input]").val();
         var wrapBottom = $(e.delegateTarget).find("[data-promo-bottom]");
         var promoPart = $(this).closest("[data-promo-outer-wrap]").find("[data-promo-part]");
-        if(typeof  inputValue !== typeof undefined && inputValue) {
+        if (typeof inputValue !== typeof undefined && inputValue) {
             wrapBottom.removeClass("active");
             promoPart.addClass("active");
             promoPart.find("[data-promo-part-title]").text(inputValue);
@@ -805,7 +789,7 @@ function DOMready() {
 
     });
 
-    $("[ data-promo-part]").on("click", "[data-promo-part-btn]", function(e) {
+    $("[ data-promo-part]").on("click", "[data-promo-part-btn]", function (e) {
         $(e.delegateTarget).removeClass("active");
         $(this).closest("[data-promo-outer-wrap]").find("[data-promo-top]").addClass("active");
     })
@@ -813,13 +797,11 @@ function DOMready() {
     //Переключаем платежные системы
     $("[data-basket-payment-list]").on("click", "[data-basket-payment-inner-wrap]", function (e) {
         var $this = $(this);
-        if(!$this.hasClass("active")) {
+        if (!$this.hasClass("active")) {
             $(e.delegateTarget).find("[data-basket-payment-inner-wrap]").removeClass("active");
             $this.addClass("active");
         }
     });
-
-
 
     if (typeof partnersList !== typeof undefined && partnersList) {
         var jsonPartners = JSON.parse(partnersList);
@@ -828,10 +810,6 @@ function DOMready() {
         var curSect = jsonPartners['CURRENT_CITY'];
 
     }
-
-
-
-
 
     //Заменить на '<?=SITE_TEMPLATE_PATH?>' при интеграции
     var site_template_path = "";
@@ -856,7 +834,7 @@ function DOMready() {
 
                         // Переопределяем методы макета, чтобы выполнять дополнительные действия
                         // при построении и очистке макета.
-                        build: function() {
+                        build: function () {
                             // Вызываем родительский метод build.
                             ZoomLayout.superclass.build.call(this);
 
@@ -870,7 +848,7 @@ function DOMready() {
                             $('#zoom-out').bind('click', this.zoomOutCallback);
                         },
 
-                        clear: function() {
+                        clear: function () {
                             // Снимаем обработчики кликов.
                             $('#zoom-in').unbind('click', this.zoomInCallback);
                             $('#zoom-out').unbind('click', this.zoomOutCallback);
@@ -879,14 +857,14 @@ function DOMready() {
                             ZoomLayout.superclass.clear.call(this);
                         },
 
-                        zoomIn: function() {
+                        zoomIn: function () {
                             var map = this.getData().control.getMap();
-                            map.setZoom(map.getZoom() + 1, { checkZoomRange: true });
+                            map.setZoom(map.getZoom() + 1, {checkZoomRange: true});
                         },
 
-                        zoomOut: function() {
+                        zoomOut: function () {
                             var map = this.getData().control.getMap();
-                            map.setZoom(map.getZoom() - 1, { checkZoomRange: true });
+                            map.setZoom(map.getZoom() - 1, {checkZoomRange: true});
                         }
                     }),
                 zoomControl = new ymaps.control.ZoomControl({
@@ -907,34 +885,35 @@ function DOMready() {
 
             myMapPartners.controls.add(zoomControl);
 
-
             for (var i = 0, l = jsonPartners['CITY'][curSect]['ELEMENTS'].length; i < l; i++) {
                 var balloonContent = '';
                 if ((tempValue = jsonPartners['CITY'][curSect]['ELEMENTS'][i]['ADRESS']).length) {
                     balloonContent += (tempValue + '<br>');
                     tempValue = '';
-                };
+                }
+
                 if ((tempValue = jsonPartners['CITY'][curSect]['ELEMENTS'][i]['WORK_TIME']).length) {
                     balloonContent += ('Часы работы: ' + tempValue + '<br>');
                     tempValue = '';
-                };
+                }
+
                 if ((tempValue = jsonPartners['CITY'][curSect]['ELEMENTS'][i]['PHONE']).length) {
                     balloonContent += ('Тел.: ' + tempValue + '<br>');
                     tempValue = '';
-                };
+                }
 
                 let options = {};
                 if (jsonPartners['CITY'][curSect]['ELEMENTS'][i]['ID'] == 826) {
                     options = {
                         iconLayout: 'default#image',
-                        iconImageHref: site_template_path+'/img/yandex_icon_bluesleep.png',
+                        iconImageHref: site_template_path + '/img/yandex_icon_bluesleep.png',
                         iconImageSize: [34, 46],
                         // iconImageOffset: [-5, -38]
                     };
                 } else {
                     options = {
                         iconLayout: 'default#image',
-                        iconImageHref: site_template_path+'/img/yandex_icon_default.png',
+                        iconImageHref: site_template_path + '/img/yandex_icon_default.png',
                         iconImageSize: [32, 43],
                         // iconImageOffset: [-5, -38]
                     };
@@ -946,8 +925,7 @@ function DOMready() {
                         balloonContentBody: "<span class='ymap__balloon-body'>" + balloonContent + "</span>",
                     }, options
                 ));
-            };
-
+            }
 
             //myMapPartners.geoObjects.add(curCollection);
 
@@ -956,8 +934,8 @@ function DOMready() {
                 console.log(target);
             });
 
-            $('.js--balloon-open').on('click', function(e) {
-                if (window.innerWidth > globParam.getMediaSize().PHONES){
+            $('.js--balloon-open').on('click', function (e) {
+                if (window.innerWidth > globParam.getMediaSize().PHONES) {
                     e.preventDefault();
                     // Открываем балун
                     var index = parseInt($(this).attr('data-index'));
@@ -975,17 +953,15 @@ function DOMready() {
         map_partners();
     }
 
-
     // Открываем списко городов в партнерах
-    $('[data-partners-dropdown-head]').on('click', function(e){
+    $('[data-partners-dropdown-head]').on('click', function (e) {
         e.preventDefault();
         $(this).parent().toggleClass('partners__dropdown-wrap_show');
 
     })
 
-
     // Переключение форм покупки серфтификатов (физический и виртуальный)
-    $('[data-gifts-choose]').on('click', '[data-gifts-form-btn="hide-sibling"]', function(e) {
+    $('[data-gifts-choose]').on('click', '[data-gifts-form-btn="hide-sibling"]', function (e) {
         var activeItem = $(e.delegateTarget).find('[data-gifts-choose-item]');
         console.log("working");
         if (activeItem.hasClass("active") == true) {
@@ -994,7 +970,7 @@ function DOMready() {
     });
 
     //Переключаем форму в выобре сертификатов
-    $('[data-gifts-choose]').on('click', '[data-gifts-form-btn]', function(){
+    $('[data-gifts-choose]').on('click', '[data-gifts-form-btn]', function () {
         $(this).closest('[data-gifts-choose-item]').toggleClass('active');
     })
 
@@ -1003,8 +979,6 @@ function DOMready() {
         changeTextInBtn.call(this)
     })
 
-
-
     // Изменить текст в кнопке при клике ( кнопка показать скрыть)
     function changeTextInBtn() {
         var $this = $(this),
@@ -1012,8 +986,8 @@ function DOMready() {
             showAllText,
             showAllTextWrap = $this.find("[data-show-all-text]");
 
-            showAllInnerText = $this.data("show-all");
-            showAllText = showAllTextWrap.text();
+        showAllInnerText = $this.data("show-all");
+        showAllText = showAllTextWrap.text();
 
         showAllTextWrap.text(showAllInnerText);
         $this.data("show-all", showAllText);
@@ -1043,7 +1017,6 @@ function DOMready() {
                 }
             ]
         });
-
 
         // Инициализация слайдера about-team
         $(".js--about-team-wrap").slick({
@@ -1080,19 +1053,32 @@ function DOMready() {
         infinite: true,
     });
 
-
     // Центрируем точки в слайдерах
-if($("[data-all-slider] .slick-dots").length > 0) {
+    if ($("[data-all-slider] .slick-dots").length > 0) {
 
-    $("[data-all-slider] .slick-dots").each(function (ndx, item) {
-        $(item).css("margin-left", "-" + (+$("[data-all-slider] .slick-dots").outerWidth() / 2));
-    })
+        $("[data-all-slider] .slick-dots").each(function (ndx, item) {
+            $(item).css("margin-left", "-" + (+$("[data-all-slider] .slick-dots").outerWidth() / 2));
+        })
 
-}
+    }
 
+        //Добавляем тултип
+    function simple_tooltip(target_items, name) {
+        $(target_items).each(function (i) {
+            $(this).append("<div class='" + name + "' id='" + name + i + "'><span>" + $(this).attr('title') + "</span></div>");
+            var my_tooltip = $("#" + name + i);
+            $(this).removeAttr("title")
+        });
+    }
 
+    $("[data-tooltip-item]").mouseover(function () {
+        $(this).find(".tooltip-all__box").addClass("active");
+    }).mouseout(function () {
+        $(this).find(".tooltip-all__box").removeClass("active");
+    });
+
+    simple_tooltip("[data-tooltip-item]", "tooltip-all__box");
 
 };
-
 
 document.addEventListener("DOMContentLoaded", DOMready);

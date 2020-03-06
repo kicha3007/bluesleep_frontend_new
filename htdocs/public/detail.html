@@ -456,7 +456,7 @@
                               <div class="choice-size__column choice-size__column_pos_2">
                                 <div class="choice-size-dropdown choice-size__dropdown" data-choice-size-dropdown="data-choice-size-dropdown">
                                   <div class="choice-size-dropdown__wrap" data-choice-size-dropdown-wrap="data-choice-size-dropdown-wrap">
-                                    <div class="choice-size-dropdown__active-item" data-choice-size-dropdown-active-item="">
+                                    <div class="choice-size-dropdown__active-item" data-choice-size-dropdown-active-item="mattress">
                                       <div class="choice-size-dropdown__active-item-pre-text choice-size-dropdown__active-item-pre-text_show_mobile">Размер</div>
                                       <div class="choice-size-dropdown__active-item-text" data-choice-size-dropdown-active-item-text="">140 x 200</div>
                                       <div class="choice-size-dropdown__active-item-discount" data-choice-size-dropdown-active-item-discount="data-choice-size-dropdown-active-item-discount">- &#32; 15  &#32; %</div>
@@ -474,7 +474,7 @@
                                         <div class="choice-size-dropdown__item" data-choice-size-dropdown-item="1074"><span class="choice-size-dropdown__text" data-choice-size-dropdown-text="data-choice-size-dropdown-text">140 x 200</span>
                                         </div>
                                         <div class="choice-size-dropdown__item" data-choice-size-dropdown-item="1075"><span class="choice-size-dropdown__text" data-choice-size-dropdown-text="data-choice-size-dropdown-text">160 X 200</span><span class="choice-size-dropdown__discount">- &#32; 20  &#32; %</span>
-                                        </div><a class="choice-size-dropdown__other-size" href="#">Свой размер</a>
+                                        </div><a class="choice-size-dropdown__other-size" href="#">Свой размер </a>
                                       </div>
                                     </div>
                                   </div>
@@ -501,9 +501,10 @@
                                 <div class="choice-self-size__value" data-choice-self-size-value=""><span class="choice-self-size__value-size" data-choice-self-size-value-size="data-choice-self-size-value-size">180 X 200 X 24 см.</span><span class="choice-self-size__value-divider">/</span><span class="choice-self-size__value-weight" data-choice-self-size-value-weight="data-choice-self-size-value-weight">29 кг.</span></div>
                               </div>
                               <div class="choice-self-size__column choice-self-size__column_pos_2">
-                                <div class="choice-self-size-input" data-choice-size-dropdown="data-choice-size-dropdown">
+                                <div class="choice-self-size-input">
                                   <div class="choice-self-size-input__wrap">
-                                    <input class="choice-self-size-input__input" placeholder="Введите размер" name="selfSize"/>
+                                    <input class="choice-self-size-input__input" placeholder="Введите размер" name="selfSize" data-choice-self-size-input="data-choice-self-size-input"/>
+                                    <div class="choice-self-size-input__clear" data-choice-self-size-clear="data-choice-self-size-clear"><img class="choice-self-size-input__clear-img" src="img/menu-close.png" alt=""/></div>
                                   </div>
                                 </div>
                               </div>
@@ -520,7 +521,7 @@
                       <div class="card-info-test card-info__card-info-test">
                         <div class="card-info-test__img-box"><img class="card-info-test__img" src="img/calc.png" alt=""/></div>
                         <div class="card-info-test__text">100 дней на тест и возврат без проблем</div>
-                        <div class="card-info-test__tooltip" title="текст подсказки"><img class="card-info-test__tooltip-img" src="img/question.png" alt=""/></div>
+                        <div class="card-info-test__tooltip tooltip-all" title="текст подсказки" data-tooltip-item=""><img class="card-info-test__tooltip-img" src="img/question.png" alt=""/></div>
                       </div>
                       <div class="card-info-tabs js--card-info-tabs card-info__tabs">
                         <div class="card-info-tabs__wrap">
@@ -595,7 +596,7 @@
                       <div class="card-info__delivery">
                         <div class="card-info__delivery-img-box"><img class="card-info__delivery-img" src="img/delivery.png" alt=""/></div>
                         <div class="card-info__delivery-text">Бесплатная доставка в день заказа</div>
-                        <div class="card-info__delivery-tooltip" title="текст подсказки"><img class="card-info__delivery-tooltip-img" src="img/question.png" alt=""/></div>
+                        <div class="card-info__delivery-tooltip tooltip-all" title="текст подсказки" data-tooltip-item="data-tooltip-item"><img class="card-info__delivery-tooltip-img" src="img/question.png" alt=""/></div>
                       </div>
                     </div>
                     <div class="card-info__timer">
@@ -784,8 +785,10 @@
                       </div>
                       <div class="basket-modal__row basket-modal__row_pos_2">
                         <div class="basket-modal__inner-column basket-modal__inner-column_pos_1">
-                          <div class="basket-modal__price"><span class="basket-modal__price-text">12 990</span><span class="basket-modal__price-currency">руб.</span></div>
-                          <div class="basket-modal__price-free hide">Бесплатно</div>
+                          <div class="basket-modal__price">
+                            <div class="basket-modal__inner-price basket-modal__inner-price_price-old"><span class="basket-modal__price-text">12 990</span><span class="basket-modal__price-currency">руб.</span></div>
+                            <div class="basket-modal__price-free">Бесплатно</div>
+                          </div>
                         </div>
                       </div>
                       <div class="basket-modal__row basket-modal__row_pos_3" data-counter-amount-wrap="data-counter-amount-wrap">
@@ -795,8 +798,8 @@
                         </div>
                         <div class="basket-modal__inner-column basket-modal__inner-column_pos_2">
                           <div class="counter-amount" data-counter-amount="data-counter-amount">
-                            <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_minus.png" alt=""/></button>
-                            <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_plus.png" alt=""/></button>
+                            <button class="counter-amount__btn counter-amount__btn_minus" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img basket-modal__counter-amount-btn-img_minus" src="img/basket_minus.png" alt=""/></button>
+                            <button class="counter-amount__btn counter-amount__btn_plus" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img basket-modal__counter-amount-btn-img_plus" src="img/basket_plus.png" alt=""/></button>
                           </div>
                         </div>
                       </div>
@@ -813,8 +816,10 @@
                       </div>
                       <div class="basket-modal__row basket-modal__row_pos_2">
                         <div class="basket-modal__inner-column basket-modal__inner-column_pos_1">
-                          <div class="basket-modal__price"><span class="basket-modal__price-text">66 495</span><span class="basket-modal__price-currency">руб.</span></div>
-                          <div class="basket-modal__price-free hide">Бесплатно</div>
+                          <div class="basket-modal__price">
+                            <div class="basket-modal__inner-price"><span class="basket-modal__price-text">66 495</span><span class="basket-modal__price-currency">руб.</span></div>
+                            <div class="basket-modal__price-free hide">Бесплатно</div>
+                          </div>
                         </div>
                       </div>
                       <div class="basket-modal__row basket-modal__row_pos_3" data-counter-amount-wrap="data-counter-amount-wrap">
@@ -824,8 +829,8 @@
                         </div>
                         <div class="basket-modal__inner-column basket-modal__inner-column_pos_2">
                           <div class="counter-amount" data-counter-amount="data-counter-amount">
-                            <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_minus.png" alt=""/></button>
-                            <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_plus.png" alt=""/></button>
+                            <button class="counter-amount__btn counter-amount__btn_minus" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img basket-modal__counter-amount-btn-img_minus" src="img/basket_minus.png" alt=""/></button>
+                            <button class="counter-amount__btn counter-amount__btn_plus" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img basket-modal__counter-amount-btn-img_plus" src="img/basket_plus.png" alt=""/></button>
                           </div>
                         </div>
                       </div>
@@ -842,8 +847,10 @@
                       </div>
                       <div class="basket-modal__row basket-modal__row_pos_2">
                         <div class="basket-modal__inner-column basket-modal__inner-column_pos_1">
-                          <div class="basket-modal__price"><span class="basket-modal__price-text">66 495</span><span class="basket-modal__price-currency">руб.</span></div>
-                          <div class="basket-modal__price-free hide">Бесплатно</div>
+                          <div class="basket-modal__price">
+                            <div class="basket-modal__inner-price"><span class="basket-modal__price-text">66 495</span><span class="basket-modal__price-currency">руб.</span></div>
+                            <div class="basket-modal__price-free hide">Бесплатно</div>
+                          </div>
                         </div>
                       </div>
                       <div class="basket-modal__row basket-modal__row_pos_3" data-counter-amount-wrap="data-counter-amount-wrap">
@@ -853,8 +860,8 @@
                         </div>
                         <div class="basket-modal__inner-column basket-modal__inner-column_pos_2">
                           <div class="counter-amount" data-counter-amount="data-counter-amount">
-                            <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_minus.png" alt=""/></button>
-                            <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_plus.png" alt=""/></button>
+                            <button class="counter-amount__btn counter-amount__btn_minus" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img basket-modal__counter-amount-btn-img_minus" src="img/basket_minus.png" alt=""/></button>
+                            <button class="counter-amount__btn counter-amount__btn_plus" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img basket-modal__counter-amount-btn-img_plus" src="img/basket_plus.png" alt=""/></button>
                           </div>
                         </div>
                       </div>
@@ -932,9 +939,9 @@
                           <div class="more-products__bottom-column more-products__bottom-column_pos_1"><a class="more-products__img-box" href="#"><img class="more-products__img" src="img/c/blogers_1.jpg" alt=""/></a></div>
                           <div class="more-products__bottom-column more-products__bottom-column_pos_2">
                             <div class="counter-amount more-products__counter-amount" data-counter-amount-wrap="data-counter-amount-wrap">
-                              <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/minus.png" alt=""/></button>
+                              <button class="counter-amount__btn counter-amount__btn_minus" data-counter-amount-btn="minus"><img class="counter-amount__btn-img counter-amount__btn-img_minus" src="img/basket_minus.png" alt=""/></button>
                               <input class="counter-amount__value" value="1" data-counter-amount-value="data-counter-amount-value"/>
-                              <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/plus.png" alt=""/></button>
+                              <button class="counter-amount__btn counter-amount__btn_plus" data-counter-amount-btn="plus"><img class="counter-amount__btn-img counter-amount__btn-img_plus" src="img/basket_plus.png" alt=""/></button>
                             </div>
                             <div class="more-products__btn-wrap">
                               <button class="more-products__btn btn">Добавить</button>
@@ -948,9 +955,9 @@
                           <div class="more-products__bottom-column more-products__bottom-column_pos_1"><a class="more-products__img-box" href="#"><img class="more-products__img" src="img/c/blogers_1.jpg" alt=""/></a></div>
                           <div class="more-products__bottom-column more-products__bottom-column_pos_2">
                             <div class="counter-amount more-products__counter-amount">
-                              <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_minus.png" alt=""/></button>
-                              <input class="counter-amount__value js--counter-amount-value basket-order__counter-amount-value" value="1"/>
-                              <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/basket_plus.png" alt=""/></button>
+                              <button class="counter-amount__btn counter-amount__btn_minus" data-counter-amount-btn="minus"><img class="counter-amount__btn-img counter-amount__btn-img_minus" src="img/basket_minus.png" alt=""/></button>
+                              <input class="counter-amount__value js--counter-amount-value" value="1"/>
+                              <button class="counter-amount__btn counter-amount__btn_plus" data-counter-amount-btn="plus"><img class="counter-amount__btn-img counter-amount__btn-img_plus" src="img/basket_plus.png" alt=""/></button>
                             </div>
                             <div class="more-products__btn-wrap">
                               <button class="more-products__btn btn">Добавить</button>
@@ -964,9 +971,9 @@
                           <div class="more-products__bottom-column more-products__bottom-column_pos_1"><a class="more-products__img-box" href="#"><img class="more-products__img" src="img/c/blogers_1.jpg" alt=""/></a></div>
                           <div class="more-products__bottom-column more-products__bottom-column_pos_2">
                             <div class="counter-amount more-products__counter-amount">
-                              <button class="counter-amount__btn counter-amount__btn_minus basket-order__counter-amount-btn" data-counter-amount-btn="minus"><img class="basket-modal__counter-amount-btn-img" src="img/minus.png" alt=""/></button>
-                              <input class="counter-amount__value js--counter-amount-value basket-order__counter-amount-value" value="1"/>
-                              <button class="counter-amount__btn counter-amount__btn_plus basket-order__counter-amount-btn" data-counter-amount-btn="plus"><img class="basket-modal__counter-amount-btn-img" src="img/plus.png" alt=""/></button>
+                              <button class="counter-amount__btn counter-amount__btn_minus" data-counter-amount-btn="minus"><img class="counter-amount__btn-img counter-amount__btn-img_minus" src="img/basket_minus.png" alt=""/></button>
+                              <input class="counter-amount__value js--counter-amount-value" value="1"/>
+                              <button class="counter-amount__btn counter-amount__btn_plus" data-counter-amount-btn="plus"><img class="counter-amount__btn-img counter-amount__btn-img_plus" src="img/basket_plus.png" alt=""/></button>
                             </div>
                             <div class="more-products__btn-wrap">
                               <button class="more-products__btn btn">Добавить</button>

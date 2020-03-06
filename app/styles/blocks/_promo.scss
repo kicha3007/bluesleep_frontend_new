@@ -58,6 +58,9 @@
     align-items: center;
     padding: 8px 4px 4px 0;
     position: relative;
+    @include phones {
+      padding-top: 10px;
+    }
   }
   &__inner-wrap {
     display: flex;

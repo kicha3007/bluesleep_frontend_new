@@ -11,5 +11,6 @@ mixin sets-size-dropdown(data)
 				.sets-size-dropdown__list
 					each  sizeItem, sizeIndx in $offersList
 						- var activeSize = sizeIndx == 0 ? "active" : ""
-						.sets-size-dropdown__item(data-choice-size-dropdown-item="" + sizeItem["data"].PRODUCT_ID  class="" + activeSize) #{sizeItem["data"].SIZE}
+						.sets-size-dropdown__item(data-choice-size-dropdown-item="" + sizeItem["data"].PRODUCT_ID  class="" + activeSize)
+							span.sets-size-dropdown__text(data-choice-size-dropdown-text) #{sizeItem["data"].SIZE}
 				a.sets-size-dropdown__other-size(href="#") Свой размер

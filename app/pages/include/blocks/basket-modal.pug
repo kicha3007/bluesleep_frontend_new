@@ -33,19 +33,26 @@ mixin basket-modal(data)
 									.basket-modal__row.basket-modal__row_pos_2
 										.basket-modal__inner-column.basket-modal__inner-column_pos_1
 											.basket-modal__price
-												span.basket-modal__price-text #{itemBasket.product.price}
-												span.basket-modal__price-currency руб.
-											.basket-modal__price-free.hide Бесплатно
+												if(itemBasketIndx == 0)
+													.basket-modal__inner-price.basket-modal__inner-price_price-old
+														span.basket-modal__price-text #{itemBasket.product.price}
+														span.basket-modal__price-currency руб.
+													.basket-modal__price-free Бесплатно
+												else
+													.basket-modal__inner-price
+														span.basket-modal__price-text #{itemBasket.product.price}
+														span.basket-modal__price-currency руб.
+													.basket-modal__price-free.hide Бесплатно
 									.basket-modal__row.basket-modal__row_pos_3(data-counter-amount-wrap)
 										.basket-modal__inner-column.basket-modal__inner-column_pos_1
 											input.basket-modal__counter-amount-value( value=itemBasket.count data-counter-amount-value data-counter-amount-basket-id data-counter-amount-product-id)
 											.basket-modal__counter-amount-text шт.
 										.basket-modal__inner-column.basket-modal__inner-column_pos_2
 											.counter-amount(data-counter-amount)
-												button.counter-amount__btn.counter-amount__btn_minus(data-counter-amount-btn="minus").basket-order__counter-amount-btn
-													img.basket-modal__counter-amount-btn-img(src="img/basket_minus.png", alt='')
-												button.counter-amount__btn.counter-amount__btn_plus(data-counter-amount-btn="plus").basket-order__counter-amount-btn
-													img.basket-modal__counter-amount-btn-img(src="img/basket_plus.png", alt='')
+												button.counter-amount__btn.counter-amount__btn_minus(data-counter-amount-btn="minus")
+													img.basket-modal__counter-amount-btn-img.basket-modal__counter-amount-btn-img_minus(src="img/basket_minus.png", alt='')
+												button.counter-amount__btn.counter-amount__btn_plus(data-counter-amount-btn="plus")
+													img.basket-modal__counter-amount-btn-img.basket-modal__counter-amount-btn-img_plus(src="img/basket_plus.png", alt='')
 					+promo()(class="basket-modal__promo")
 					.basket-modal__bottom
 						.basket-modal__bottom-row

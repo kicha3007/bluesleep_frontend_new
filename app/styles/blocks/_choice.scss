@@ -132,6 +132,9 @@
     display: block;
     max-width: 100%;
     height: auto;
+    @include laptop {
+        max-height: 100%;
+    }
 
   }
 
@@ -142,8 +145,10 @@
     margin-left: -40px;
     width: 80px;
     @include laptop {
+      top: 19px;
       display: none;
     }
+
 
   }
 
@@ -247,6 +252,7 @@
     width: 46px;
     text-transform: lowercase;
 
+
     color: #005eff;
     font-size: 16px;
     font-weight: 700;
@@ -258,6 +264,11 @@
       left: 50%;
       margin-left: -23px;
       padding-top: 8px;
+    }
+    @include phones {
+      padding-top: 0;
+      min-height: 24px;
+      bottom: -10px;
     }
   }
 

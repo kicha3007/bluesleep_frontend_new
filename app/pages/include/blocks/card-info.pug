@@ -53,7 +53,7 @@ mixin card-info(data)
 					.card-info__delivery-img-box
 						img.card-info__delivery-img(src="img/delivery.png", alt='')
 					.card-info__delivery-text Бесплатная доставка в день заказа
-					.card-info__delivery-tooltip(title="текст подсказки")
+					.card-info__delivery-tooltip.tooltip-all(title="текст подсказки" data-tooltip-item)
 						img.card-info__delivery-tooltip-img(src="img/question.png", alt='')
 			.card-info__timer
 				+timer()()

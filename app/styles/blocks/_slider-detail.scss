@@ -55,12 +55,11 @@
     @include laptop {
       margin-bottom: 50px;
     }
-
-
   }
 
   &__view {
-
+    height: 560px;
+    //margin-bottom: 35px;
     overflow: hidden;
     text-align: center;
     display: flex !important;
@@ -68,24 +67,35 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    @include desktop {
+      height: 370px;
+    }
+    @include laptop {
+      height: 400px;
+    }
     @include phones {
       border-radius: 0;
-      display: block !important;
+      height: 265px;
     }
 
     &:focus {
       outline: none;
     }
-
   }
 
   &__img {
+    border-radius: 10px;
+    overflow: hidden;
     display: inline-block;
     height: auto;
     width: auto;
     max-width: 100%;
+    max-height: 100%;
     //border-radius: 10px;
     //overflow: hidden;
+    @include phones {
+      border-radius: 0;
+    }
   }
 
   &__preview-img {
@@ -187,7 +197,6 @@
       }
     }
 
-
     &-disabled {
       border-left-color: #ebebeb;
       cursor: auto;
@@ -202,6 +211,4 @@
       transform: rotate(180deg);
     }
   }
-
-
 }
