@@ -1,0 +1,24 @@
+mixin youtube-modal(data, mods)
+	.youtube-modal
+		.youtube-modal__container
+			.youtube-modal__wrap
+				.youtube-modal__content
+					.youtube-modal__text
+						| Знаменитый тест
+						br
+						|  с бокалом
+					a#youtube-modal.youtube-modal__button(href='#youtube-modal-box', data-fancybox='youtube-modal')
+						span.youtube-modal__button-icon
+							span.youtube-modal__button-inner-icon
+								span.youtube-modal__button-inner-second-icon
+						span.youtube-modal__button-text Cмотреть видео
+			.youtube-modal__bottom
+				.youtube-modal__bottom-text
+					| Смотрите больше на нашем
+					a(href='https://www.youtube.com/channel/UCIxb7uexxWLNrbRmIy4T-CQ', target='_blank') YouTube
+					|  канале
+	#youtube-modal-box.youtube-modal-box
+		.youtube-modal-box__wrap
+			video#youtube-modal-box-video-frame(width='100%', height='auto', controls='controls')
+				source(src='video/stars_and_supermans.mp4', type='video/mp4')
+				| 			Тег video не поддерживается вашим браузером.

@@ -3,6 +3,9 @@ extend include/template_base
 include include/blocks/banner-simple
 include include/blocks/list-section
 include include/blocks/faq
+include include/blocks/reviews-slider
+include include/blocks/youtube-modal
+include include/blocks/medal-icon
 
 block variables
 	- var title = 'Страница раздела';
@@ -11,4 +14,7 @@ block content
 	.catalog-section
 		+banner-simple()()
 		+list-section()()
-		+faq()(class="faq_indent_top faq_indent_bottom")
+		+youtube-modal()
+		+reviews-slider()(class="reviews-slider_indent_big")
+		+medal-icon()
+		+faq()(class="faq_indent_top faq_indent_bottom ")

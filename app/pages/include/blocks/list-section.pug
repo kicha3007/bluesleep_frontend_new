@@ -1,59 +1,40 @@
+include stock-note
 include tooltip
 
 mixin list-section(data)
 	section.list-section&attributes(attributes)
 		.list-section__container.container
 			.list-section__main-title Найди свою зону комфорта
-			.list-section__main-sub-title Выбери между двумя совершенно разными матрасами
-			.list-section__wrap
-				a(href="#").list-section__item
-					.list-section__img-box
-						img.list-section__img(src="img/c/choice_1.png", alt='')
-					.list-section__content
-						.list-section__title
-							| Анатомическая подушка
-							| Blue Sleep
-
-						.list-section__price-wrap
-							span.list-section__price-prifix От
-							span.list-section__price-old 54 990 р.
-							span.list-section__price-new 49 491 р.
-						.list-section__btn-wrap
-							.list-section__btn.btn
-								span.list-section__btn-text.list-section__btn-text_pos_1 Купить
-								span.list-section__btn-text.list-section__btn-text_pos_2 сейчас
-				a(href="#").list-section__item
-					.list-section__img-box
-						img.list-section__img(src="img/c/choice_1.png", alt='')
-					.list-section__content
-						.list-section__title
-							| Подушка в подушке
-							| BlueSleep
-						.list-section__price-wrap
-							span.list-section__price-prifix От
-							span.list-section__price-old 54 990 р.
-							span.list-section__price-new 49 491 р.
-						.list-section__btn-wrap
-							.list-section__btn.btn
-								span.list-section__btn-text.list-section__btn-text_pos_1 Купить
-								span.list-section__btn-text.list-section__btn-text_pos_2 сейчас
-				a(href="#").list-section__item
-					.list-section__img-box
-						img.list-section__img(src="img/c/choice_1.png", alt='')
-						+tooltip({"title": "Новинка"})(class="list-section__tooltip")
-					.list-section__content
-						.list-section__title
-							| Чехол на подушку
-						.list-section__price-wrap
-							span.list-section__price-prifix От
-							span.list-section__price-old 54 990 р.
-							span.list-section__price-new 49 491 р.
-						.list-section__btn-wrap
-							.list-section__btn.btn
-								span.list-section__btn-text.list-section__btn-text_pos_1 Купить
-								span.list-section__btn-text.list-section__btn-text_pos_2 сейчас
-
-
-
-
-		
+			.list-section__wrap.js--list-section-wrap(data-list-section-wrap)
+				each item in listSectionList
+					.list-section__item(data-list-section-item)
+						a.list-section__top(href="#")
+							.list-section__inner-wrap
+								if(typeof item.stock.number !== "undefined" && item.stock.number)
+									.list-section__stock
+										+stock-note({"number": item.stock.number, "currency": item.stock.currency})
+								.list-section__content
+									.list-section__title= item.title
+									.list-section__tooltip
+										if(typeof item.label !== "undefined" && item.label)
+											+tooltip({"title": item.label})
+									.list-section__desc !{item.desc}
+									.list-section__test
+										.list-section__test-text= item.test
+										img.list-section__test-img(src="img/wave.png", alt='')
+							.list-section__img-box
+								img.list-section__img(src=item.img, alt='')
+						.list-section__center
+							.list-section__price
+								.list-section__price-new
+									| #{item.price.prefix}
+									span #{item.price.number}
+									| #{item.price.currency}
+								.list-section__price-old
+									| #{item["old-price"].prefix}
+									span #{item["old-price"].number}
+									| #{item["old-price"].currency}
+						.list-section__bottom
+							.list-section__btn-wrap
+								a.list-section__btn.btn(href="#") Хочу такой
+							.list-section__note цена зависит от размера матраса

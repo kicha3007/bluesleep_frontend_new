@@ -1,88 +1,47 @@
 .reviews-slider {
-  &_indnet_big {
+  &_indent_big {
     margin-bottom: 150px;
   }
+
   &__wrap {
-
-
   }
+
   &__item {
     margin: 0 20px;
   }
+
   &__img-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
   }
+
   &__img {
     display: block;
     max-width: 100%;
     height: auto;
-
   }
+
   .slick-list {
     margin-right: -20px;
     margin-left: -20px;
   }
 
 
- /* .slick {
-    &-arrow {
-
-      background-color: rgba(0,0,0,.2);
-      position: absolute;
-      top: 50%;
-      right: 0;
-      font-size: 0;
-      outline: none;
-      padding: 0;
-      cursor: pointer;
-      margin-top: -40px;
-
-      z-index: 10;
-      width: 40px;
-      height: 80px;
-
-      outline: 0!important;
-
-      border: 0;
-      transition: all .3s ease;
-
-      &:before {
-        content: "<";
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
-        font-family: slick;
-        line-height: 1;
-        opacity: .75;
-      }
-    }
-    &-next {
-      left: 0;
-      right: auto;
-    }
-
-    &-prev {
-      transform: rotate(180deg);
-    }
-
-  }*/
-
   .slick-dots {
     position: absolute;
     bottom: -70px;
-    display: inline-flex;
-    left: 50%;
+    left: 0;
     padding: 0;
     z-index: 10;
-    margin-left: -27px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     @include phones {
       bottom: -40px;
-      margin-left: -55px;
+
     }
 
     & > li {
@@ -97,6 +56,9 @@
         width: 6px;
         height: 6px;
       }
+      &:last-child {
+        margin-right: 0;
+      }
 
       &.slick-active {
         border-color: #005eff;
@@ -108,8 +70,6 @@
       }
     }
   }
-
-
 }
 
 

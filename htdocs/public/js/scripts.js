@@ -465,7 +465,7 @@ function DOMready() {
 
     $("[data-choice-size-dropdown-wrap]").on("click", "[data-choice-size-dropdown-active-item]", function (e) {
         $(e.delegateTarget).find("[data-choice-size-dropdown-inner-wrap]").toggleClass("active");
-      
+
     });
 
     $("[data-choice-size-dropdown-wrap]").on("click", "[data-choice-size-dropdown-item]", function (e) {
@@ -478,7 +478,6 @@ function DOMready() {
         wrap.removeClass("active");
         item.removeClass("active");
         $this.addClass("active");
-
 
         $(e.delegateTarget).find("[data-choice-size-dropdown-active-item-text]").text($this.find("[data-choice-size-dropdown-text]").text());
 
@@ -1062,7 +1061,7 @@ function DOMready() {
 
     }
 
-        //Добавляем тултип
+    //Добавляем тултип
     function simple_tooltip(target_items, name) {
         $(target_items).each(function (i) {
             $(this).append("<div class='" + name + "' id='" + name + i + "'><span>" + $(this).attr('title') + "</span></div>");
@@ -1078,6 +1077,37 @@ function DOMready() {
     });
 
     simple_tooltip("[data-tooltip-item]", "tooltip-all__box");
+
+    //Ховер 3 матраса
+
+    if ($("[data-list-section-item]").length > 0) {
+
+        if (globParam.windowWidth() > globParam.getMediaSize().LAPTOP) {
+            $("[data-list-section-item]").mouseover(function () {
+
+                $(this).closest("[data-list-section-wrap]").find("[data-list-section-item]").not(this).addClass("size-min");
+
+            }).mouseout(function () {
+                $(this).closest("[data-list-section-wrap]").find("[data-list-section-item]").not(this).removeClass("size-min");
+            });
+
+        }
+
+        if (globParam.windowWidth() < globParam.getMediaSize().LAPTOP) {
+
+            $(".js--list-section-wrap").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                variableWidth: true,
+                centerMode: true,
+                infinite: false,
+            });
+
+        }
+
+    }
 
 };
 

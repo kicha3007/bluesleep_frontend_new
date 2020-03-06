@@ -1,0 +1,63 @@
+.stock-note {
+  position: absolute;
+  background-color: #ff8597;
+  top: 0;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  text-align: center;
+  padding: 10px 5px 5px 5px;
+  right: 20px;
+  width: 60px;
+  @include phones {
+    font-size: 16px;
+    width: 44px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+  }
+
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -50%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid #ff8597;
+    border-right: 30px solid transparent;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    z-index: 2;
+    pointer-events: none;
+    @include phones {
+      bottom: -20px;
+      border-left: 35px solid #ff8597;
+      border-right: 20px solid transparent;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
+  }
+
+  &:before {
+    transform: scale(-1);
+    left: auto;
+    right: 0
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 3;
+    span {
+      font-size: 17px;
+      margin-left: 2px;
+      @include phones {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
