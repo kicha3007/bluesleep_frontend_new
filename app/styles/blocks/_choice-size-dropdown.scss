@@ -17,27 +17,18 @@
     height: 64px;
     cursor: pointer;
     @include phones {
-      padding: 0;
-      border: none;
-      border-bottom: 1px solid #000000;
-      border-radius: 0;
-      text-transform: none;
-      padding-bottom: 5px;
-      height: auto;
+      font-size: 10px;
+      padding: 9px 5px;
+      height: 50px;
     }
   }
 
 
   &__active-item-text {
     margin-right: 15px;
-    @include phones {
-      color: #000000;
-      font-size: 11px;
-      font-weight: 300;
-      line-height: 14px;
-      flex-grow: 1;
-      margin-right: 5px;
-    }
+   @include phones {
+     margin-right: 5px;
+   }
   }
 
   &__active-item-discount {
@@ -51,10 +42,11 @@
     font-size: 14px;
     margin-right: 10px;
     color: #ffffff;
-    @include phones {
-      font-size: 8px;
-      margin-right: 5px;
-    }
+   @include phones {
+     margin-right: 4px;
+     padding: 2px;
+     font-size: 10px;
+   }
   }
 
   &__discount {
@@ -70,12 +62,11 @@
     margin-left: 10px;
     max-height: 27px;
     font-weight: 400;
-    @include phones {
-      font-size: 8px;
-      //margin-right: 5px;
-      margin-left: 5px;
-      max-height: 19px;
-    }
+  @include phones {
+    max-height: 20px;
+    font-size: 9px;
+    margin-left: 5px;
+  }
   }
 
   &__inner-wrap {
@@ -113,11 +104,18 @@
     //flex-wrap: wrap;
     line-height: 32px;
     align-items: center;
+    @include phones {
+      padding-left: 5px;
+      font-size: 10px;
+    }
 
     &.active {
       background-color: #e0ebff;
       font-size: 16px;
       font-weight: 700;
+      @include phones {
+        font-size: 12px;
+      }
     }
   }
 
@@ -128,6 +126,10 @@
     font-size: 12px;
     padding: 8px 0;
     padding-left: 30px;
+    @include phones {
+      font-size: 10px;
+      padding-left: 5px;
+    }
   }
 
   &__active-item-pre-text {
@@ -138,11 +140,14 @@
     line-height: 14px;
     padding-right: 5px;
 
+
+
     &_show_mobile {
       display: none;
-      @include phones {
-        display: inline-block;
-      }
+
+      //@include phones {
+      //  display: inline-block;
+      //}
     }
   }
 
@@ -156,25 +161,23 @@
 
     &_show_mobile {
       display: none;
-      @include phones {
-        display: inline-block;
-        margin-right: 5px;
-      }
+      //@include phones {
+      //  display: inline-block;
+      //  margin-right: 5px;
+      //}
     }
   }
 
   &__active-item-img {
     &_show_mobile {
       display: none;
-      @include phones {
-        display: inline-block;
-      }
+
     }
 
     &_show_desktop {
       display: inline-block;
       @include phones {
-        display: none;
+        width: 8px;
       }
     }
   }

@@ -1,49 +1,67 @@
 .choice-size-kpb {
-
-
   &__wrap {
     display: flex;
     align-items: center;
     max-width: 500px;
-    &_mod_pillows {
-      display: block;
-      margin-top: 30px;
-      margin-bottom: 25px;
+    margin-bottom: 45px;
+    @include phones {
+      margin: 0 -5px 25px;
     }
   }
+
   &__column {
+    @include phones {
+      margin: 0 5px;
+    }
+
     &_pos_1 {
       flex-grow: 1;
       @include phones {
-        display: none;
+        width: calc(50% - 10px);
       }
-
     }
+
     &_pos_2 {
+      position: relative;
       min-width: 190px;
-
+      @include phones {
+        min-width: 126px;
+        width: calc(50% - 10px);
+      }
     }
-    @include phones {
-      width: 100%;
-
-    }
-    &_mod_pillows {
-      max-width: 200px;
-      margin-top: 15px;
-    }
-
   }
+
+  &__card-info-count {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: -28px;
+    @include phones {
+      margin-top: 3px;
+      bottom: -20px;
+    }
+
+    .card-info-count__wrap {
+      display: inline-flex;
+    }
+  }
+
   &__title {
     color: #1d1d1d;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 2px;
-
+    @include phones {
+      font-size: 10px;
+    }
   }
+
   &__value {
     color: #1d1d1d;
     font-size: 14px;
     font-family: 'CoText-Light', sans-serif;
-
+    @include phones {
+      font-size: 9px;
+    }
   }
 }

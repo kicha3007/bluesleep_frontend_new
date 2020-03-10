@@ -89,7 +89,7 @@
     margin-bottom: 7px;
     align-items: center;
     @include phones {
-      display: none;
+        flex-wrap: nowrap;
     }
 
     &_mod_pillows {
@@ -102,6 +102,9 @@
     font-size: 36px;
     font-weight: 700;
     margin-right: 15px;
+    @include phones {
+      font-size: 24px;
+    }
   }
 
   &__price-old {
@@ -109,6 +112,9 @@
     font-size: 24px;
     font-weight: 700;
     text-decoration: line-through;
+    @include phones {
+      font-size: 16px;
+    }
   }
 
   &__price-other {
@@ -116,8 +122,10 @@
     font-family: 'CoText-Light', sans-serif;
     margin-bottom: 45px;
     @include phones {
-      display: none;
+      font-size: 12px;
+      margin-bottom: 25px;
     }
+
 
     &_indent_min {
       margin-bottom: 15px;
@@ -143,7 +151,7 @@
     .choice-size__column {
       margin-bottom: 13px;
       @include phones {
-        margin-bottom: 0;
+        margin-bottom: 9px;
       }
     }
 
@@ -156,7 +164,7 @@
     .choice-self-size__column {
       margin-bottom: 15px;
       @include phones {
-        margin-bottom: 0;
+        margin-bottom: 9px;
       }
     }
   }
@@ -164,9 +172,9 @@
   &__choice-size-wrap {
     display: flex;
     margin: 0 -25px 30px;
-    @include phones {
-      flex-wrap: wrap;
-    }
+   @include phones {
+     margin: 0 -5px 15px;
+   }
   }
 
   &__choice-size-column {
@@ -174,7 +182,8 @@
     //width: calc(50% - 50px);
     flex-basis: 230px;
     @include phones {
-      flex-basis: 100%;
+
+      margin: 0 5px;
     }
 
     &_pos_1 {
@@ -356,7 +365,7 @@
     justify-content: center;
     align-items: center;
     @include phones {
-      justify-content: flex-start;
+      justify-content: center;
       margin-bottom: 20px;
     }
   }

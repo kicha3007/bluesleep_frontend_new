@@ -7,6 +7,7 @@ include timer
 include card-info-showroom
 
 
+
 mixin card-info-bed(data)
 	.card-info-bed&attributes(attributes)
 		.card-info-bed__wrap
@@ -26,10 +27,9 @@ mixin card-info-bed(data)
 						span.card-info-bed__price-other-number(data-card-info-price-other-number) &#32; #{$offersList[0]["data"].CREDIT_RENT}
 						|&#32; р. /мес
 					|	без переплат
+
 				+detail-color()(class="card-info-bed__colors card-info-bed__colors_indent_big")
 				+choice-size-bed()(class="card-info-bed__choice-size-bed card-info-bed__choice-size-bed_indent_min")
-				//+flexibox-tooltip()(class="")
-					.card-info-bed__center
 			.card-info-bed__detail-parameter
 				+detail-parameters()()
 			.card-info-bed__card-info-showroom

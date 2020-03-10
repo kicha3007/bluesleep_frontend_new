@@ -1,4 +1,5 @@
 include choice-size-dropdown_no-self-size
+include card-info-count
 
 mixin choice-size-bed(data)
 	.choice-size-bed&attributes(attributes)
@@ -11,3 +12,4 @@ mixin choice-size-bed(data)
 					span.choice-size-bed__value-weight(data-choice-size-value-weight) #{$offersList[0]["data"].WEIGHT}
 			.choice-size-bed__column.choice-size-bed__column_pos_2
 				+choice-size-dropdown_no-self-size()(class="choice-size-bed__dropdown")
+				+card-info-count()(class="choice-size-bed__card-info-count")

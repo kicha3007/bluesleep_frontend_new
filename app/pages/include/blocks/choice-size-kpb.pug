@@ -1,4 +1,5 @@
 include choice-size-dropdown_no-self-size
+include  card-info-count
 
 mixin choice-size-kpb(data)
 	.choice-size&attributes(attributes)
@@ -11,3 +12,4 @@ mixin choice-size-kpb(data)
 					span.choice-size-kpb__value-weight(data-choice-size-value-weight) #{$offersList[0]["data"].WEIGHT}
 			.choice-size-kpb__column.choice-size-kpb__column_pos_2
 				+choice-size-dropdown_no-self-size()(class="choice-size-kpb__dropdown")
+				+card-info-count()(class="choice-size-kpb__card-info-count")

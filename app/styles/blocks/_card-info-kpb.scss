@@ -82,13 +82,9 @@
     flex-wrap: wrap;
     margin-bottom: 7px;
     align-items: center;
-    @include phones {
-      display: none;
-    }
 
-    &_mod_pillows {
-      margin-bottom: 10px;
-    }
+
+
   }
 
   &__price-new {
@@ -96,6 +92,9 @@
     font-size: 36px;
     font-weight: 700;
     margin-right: 15px;
+    @include phones {
+      font-size: 24px;
+    }
   }
 
   &__price-old {
@@ -103,14 +102,16 @@
     font-size: 24px;
     font-weight: 700;
     text-decoration: line-through;
+    @include phones {
+      font-size: 16px;
+    }
   }
 
   &__price-other {
     font-size: 14px;
     font-family: 'CoText-Light', sans-serif;
-    //margin-bottom: 50px;
     @include phones {
-      display: none;
+      font-size: 12px;
     }
 
     &_indent_min {

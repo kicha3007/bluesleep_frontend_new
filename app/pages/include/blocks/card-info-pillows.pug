@@ -2,6 +2,7 @@ include choice-size-pillows
 include timer
 include stars-rating
 include card-info-showroom
+include card-info-count
 
 mixin card-info-pillows(data)
 	.card-info-pillows&attributes(attributes)
@@ -20,7 +21,9 @@ mixin card-info-pillows(data)
 						|&#32; р. /мес
 					|	без переплат
 					//+flexibox-tooltip()(class="flexibox-tooltip_indent")
-				+choice-size-pillows()(class="")
+				.card-info-pillows__choice-size-wrap
+					+choice-size-pillows()(class="")
+					+card-info-count()(class="card-info-pillows__card-info-count")
 				.card-info-pillows__desc
 					| Состав:
 					br
@@ -35,10 +38,6 @@ mixin card-info-pillows(data)
 					| 60 % полиэстер, 40 % лиоцель
 			.card-info-pillows__card-info-showroom
 				+card-info-showroom()
-			.card-info-pillows__center-block
-				+timer()()
-			.card-info-pillows__center
-
 			.card-info-pillows__center.card-info-pillows__center_indent_big
 				.card-info-pillows__btn-wrap
 					.card-info-pillows__btn.btn
@@ -54,4 +53,6 @@ mixin card-info-pillows(data)
 					.card-info-pillows__delivery-text Бесплатная доставка в день заказа
 					.card-info-pillows__delivery-tooltip(title="текст подсказки" data-tooltip-item)
 						img.card-info-pillows__delivery-tooltip-img(src="img/question.png", alt='')
+			.card-info-pillows__timer
+				+timer()()
 

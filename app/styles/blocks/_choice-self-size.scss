@@ -32,11 +32,9 @@
     font-weight: 700;
     margin-bottom: 2px;
     @include phones {
-      color: #005eff;
-      margin-bottom: 10px;
-      padding-left: 10px;
-      font-size: 12px;
+      font-size: 10px;
     }
+
   }
 
   &__value {
@@ -44,7 +42,8 @@
     font-size: 14px;
     font-family: 'CoText-Light', sans-serif;
     @include phones {
-      display: none;
+      font-size: 9px;
     }
+
   }
 }

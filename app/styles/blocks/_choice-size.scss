@@ -2,29 +2,19 @@
   &__wrap {
     align-items: center;
 
-    &_mod_pillows {
-      margin-top: 30px;
-      margin-bottom: 25px;
-    }
   }
 
   &__column {
+
     &_pos_1 {
       flex-grow: 1;
-      //@include phones {
-      //  display: none;
-      //}
-      
+
     }
 
     @include phones {
       width: 100%;
     }
 
-    &_mod_pillows {
-      max-width: 200px;
-      margin-top: 15px;
-    }
   }
 
   &__title {
@@ -33,9 +23,7 @@
     font-weight: 700;
     margin-bottom: 2px;
     @include phones {
-      color: #005eff;
-      font-size: 12px;
-      padding-left: 10px;
+      font-size: 10px;
     }
   }
 
@@ -44,8 +32,7 @@
     font-size: 14px;
     font-family: 'CoText-Light', sans-serif;
     @include phones {
-        display: none;
-
+      font-size: 9px;
     }
   }
 }

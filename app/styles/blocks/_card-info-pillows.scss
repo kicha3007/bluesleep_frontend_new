@@ -12,6 +12,20 @@
       margin-top: 30px;
     }
   }
+  &__choice-size-wrap {
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+  &__card-info-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include phones {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+  }
 
   &__center-block {
     margin-bottom: 80px;
@@ -78,9 +92,7 @@
     flex-wrap: wrap;
     margin-bottom: 7px;
     align-items: center;
-    @include phones {
-      display: none;
-    }
+
 
     &_mod_pillows {
       margin-bottom: 10px;
@@ -92,6 +104,9 @@
     font-size: 36px;
     font-weight: 700;
     margin-right: 15px;
+    @include phones {
+      font-size: 12px;
+    }
   }
 
   &__price-old {
@@ -99,6 +114,9 @@
     font-size: 24px;
     font-weight: 700;
     text-decoration: line-through;
+    @include phones {
+      font-size: 16px;
+    }
   }
 
   &__price-other {
@@ -137,10 +155,7 @@
     }
   }
 
-  &__choice-size-wrap {
-    display: flex;
-    margin: 0 -25px 40px;
-  }
+
 
   &__choice-size-column {
     margin: 0 25px;
