@@ -1,19 +1,35 @@
 .basket-modal {
+
   background-color: #ffffff;
   width: 100%;
   max-width: 418px;
   position: absolute;
   top: 0;
+  bottom: 0;
   right: -100%;
   z-index: 901;
-  min-height: 100vh;
+  //min-height: 100vh;
   padding-bottom: 50px;
   transition: right .5s;
-  overflow-x: auto;
-  max-height: 100vh;
+
+  overflow-y: auto;
+  height: 90vh;
+
+
   //height: 100vh;
-  @include phones {
-    padding-bottom: 100px;
+
+  &__form {
+    //height:100px;
+    //overflow-x: hidden;
+    //min-height: calc(100vh + 200px);
+    @include phones {
+      padding-bottom: 100px;
+
+    }
+  }
+  &__wrap {
+
+
   }
   &.active {
     right: 0;

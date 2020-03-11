@@ -27,8 +27,6 @@ mixin card-info-kpb(data)
 					+detail-parameters()(class="detail-parameters_indent_min-2")
 				.card-info-kpb__card-info-showroom
 					+card-info-showroom()
-			.card-info-kpb__center-block
-				+timer()()
 			.card-info-kpb__center.card-info-kpb__center_indent_big
 				.card-info-kpb__btn-wrap
 					.card-info-kpb__btn.btn
@@ -41,6 +39,8 @@ mixin card-info-kpb(data)
 					.card-info-kpb__delivery-text Бесплатная доставка в день заказа
 					.card-info-kpb__delivery-tooltip.tooltip-all(title="текст подсказки" data-tooltip-item)
 						img.card-info-kpb__delivery-tooltip-img(src="img/question.png", alt='')
+			.card-info-kpb__timer
+				+timer()()
 
 
 
