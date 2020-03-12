@@ -8834,8 +8834,12 @@ body.compensate-for-scrollbar {
   padding-bottom: 50px;
   -webkit-transition: right .5s;
   transition: right .5s;
-  overflow-y: auto;
-  height: 90vh;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.basket-modal__form {
+  display: block;
 }
 
 @media screen and (max-width: 575px) {

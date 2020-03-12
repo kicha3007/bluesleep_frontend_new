@@ -12,22 +12,28 @@
   padding-bottom: 50px;
   transition: right .5s;
 
-  overflow-y: auto;
-  height: 90vh;
+  overflow-y: scroll;
+  height: 100vh ;
 
 
   //height: 100vh;
+  @include phones {
+
+  }
 
   &__form {
     //height:100px;
     //overflow-x: hidden;
     //min-height: calc(100vh + 200px);
+    display: block;
+
     @include phones {
       padding-bottom: 100px;
 
     }
   }
   &__wrap {
+
 
 
   }
